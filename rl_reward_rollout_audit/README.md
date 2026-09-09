@@ -13,7 +13,15 @@
 9. 推荐的最小 patch 点：先审计后修改 `mhqa_train.compute_score_em_batch()`；若需结构化 tool metadata，再给 `BatchRewardManager.verify()` 增加少量转发。
 10. 是否建议进入 Experiment 1：`NEED_RUNTIME_VERIFICATION`，先运行 1–5 steps 的 audit-only logging。
 
-本次只新增 `rl_reward_rollout_audit/` 下的诊断文件和脚本，没有修改训练源码、数据或 checkpoint，也没有启动正式训练。
+专项审计已完成。本次只新增 `rl_reward_rollout_audit/` 下的诊断文件和脚本，没有修改训练源码、数据或 checkpoint，也没有启动正式训练。
+
+
+### 补充审计结论
+
+- Reward：`compute_score_em_batch()` 对每条 trajectory 输出一个 scalar，写入该 trajectory 最后一个有效 response token，最终使用 `token_level_rewards`。
+- Search：实际标签是 `<wiki_search>...</wiki_search>`；`|` 会拆成并发 query，但当前执行的是多个单 query HTTP 请求。逻辑 batch 可以解析，实际 HTTP cost 仍需 `NEED_RUNTIME_VERIFICATION`。
+- GRPO：按 `uid` 做组内 mean/std normalization。toy 实验已证明 `[1,1,0,...]` 与 `[1,0.8,0,...]` 会产生不同 advantage，因此无需修改 GRPO estimator。
+- 训练 artifact：当前没有训练 rollout artifact；已有 validation dump 为 n=1 且无 `uid`。Experiment 1 状态为 `NEED_RUNTIME_VERIFICATION`，建议先运行 1–5 steps audit logging。
 
 ## 最终决策表
 
@@ -56,15 +64,25 @@ run_gen_bs_supervisor.sh
 
 ## 文件导航
 
-- [01_reward_pipeline.md](01_reward_pipeline.md)：reward 注册、输入输出、聚合和 policy loss 链路。
-- [02_rollout_grouping.md](02_rollout_grouping.md)：n=8 展开、uid/index、过滤和 group 可见性。
-- [03_rollout_data_schema.md](03_rollout_data_schema.md)：parquet、DataProto 和 rollout metadata 字段。
+报告入口：`rl_reward_rollout_audit/README.md`
+
+主要附录：
+
 - [04_search_batch_tracking.md](04_search_batch_tracking.md)：XML search、parallel query、HTTP 语义和 edge cases。
 - [05_grpo_advantage_pipeline.md](05_grpo_advantage_pipeline.md)：当前 GRPO 代码与 toy 结果。
 - [06_candidate_patch_points.md](06_candidate_patch_points.md)：三个候选最小修改点。
 - [07_runtime_verification_plan.md](07_runtime_verification_plan.md)：1–5 steps 的 audit-only logging 方案。
+
+配置索引：
+
 - [key_locations.csv](key_locations.csv)：路径、函数、行号和用途索引。
 - [config_summary.json](config_summary.json)：当前实际相关配置摘要。
+
+其他审计材料：
+
+- [01_reward_pipeline.md](01_reward_pipeline.md)：reward 注册、输入输出、聚合和 policy loss 链路。
+- [02_rollout_grouping.md](02_rollout_grouping.md)：n=8 展开、uid/index、过滤和 group 可见性。
+- [03_rollout_data_schema.md](03_rollout_data_schema.md)：parquet、DataProto 和 rollout metadata 字段。
 
 ## 已运行的轻量检查
 
