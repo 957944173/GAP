@@ -1,0 +1,37 @@
+category,file,function_or_class,start_line,end_line,purpose,importance,notes
+TRAIN_ENTRY,Agent/train/mhqa_agent/rl/run_gen_bs_supervisor.sh,launcher,1,38,Launches gen_bs_supervisor.py,high,Supervisor is the user-facing RL entry
+TRAIN_ENTRY,Agent/train/mhqa_agent/rl/gen_bs_supervisor.py,Supervisor,219,245,Restarts training with dynamic GEN_BS,high,Runtime gen batch size is not fixed
+TRAIN_ENTRY,Agent/train/mhqa_agent/rl/train_dapo_mhqa_agent_wiki.sh,training command,115,185,Sets active RL/GRPO/reward/tool overrides,high,Uses n=8 and custom EM scorer
+CONFIG,Agent/train/mhqa_agent/rl/train_dapo_mhqa_agent_wiki.sh,parameter block,34,80,Defines batch sizes context lengths N and tool config,high,TRAIN_BS=32 PPO_MINI_BS=32 N=8
+CONFIG,verl/verl/trainer/config/ppo_trainer.yaml,reward_model/algorithm/trainer defaults,687,829,Defines reward model KL filter and advantage defaults,high,Script overrides adv_estimator and filter_groups
+CONFIG,Agent/train/mhqa_agent/rl/gen_bs_supervisor.py,CLI arguments,441,443,Defines supervisor initial/min/max GEN_BS,medium,Initial 128 range 96-160
+ROLLOUT,verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py,_req_level_generate_sequences,1119,1140,Creates n requests per prompt and sorts completed requests,high,Validation forces n=1; training uses config.n
+ROLLOUT,verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py,_preprocess_prompt_to_async_rollout_requests,1273,1325,Expands each data index over rollout_offset,high,Creates batch_data_id and rollout_offset
+ROLLOUT,verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py,rollout DataProto construction,1142,1270,Builds tensors and tool metadata fields,high,Includes detailed_tool_metrics
+GROUPING,verl/verl/trainer/ppo/ray_trainer.py,uid assignment and repeat/union,1734,1738,Aligns original metadata with repeated rollout rows,high,uid comes from original index
+GROUPING,verl/verl/protocol.py,DataProto.repeat/concat/reorder,691,758,Preserves row alignment across tensor and non-tensor fields,high,interleave=True preserves group adjacency at this stage
+GROUPING,verl/verl/trainer/ppo/ray_trainer.py,filter_groups,1758,1832,Computes group std and keeps/drops whole uid groups,high,Uses seq_final_reward before advantage
+REWARD,verl/verl/trainer/ppo/reward.py,get_custom_reward_fn,26,66,Dynamically imports configured scorer,high,Train scorer path/name comes from Hydra config
+REWARD,verl/verl/trainer/ppo/reward.py,load_reward_manager,69,118,Loads BatchRewardManager and injects scorer,high,Manager registry and custom scorer are separate
+REWARD,verl/verl/trainer/ppo/reward.py,compute_reward,121,139,Invokes reward manager on whole DataProto,high,Active path is synchronous
+REWARD,verl/verl/workers/reward_manager/batch.py,BatchRewardManager.verify,34,70,Decodes responses and calls scorer with batch lists,high,extra_infos already reaches scorer
+REWARD,verl/verl/workers/reward_manager/batch.py,BatchRewardManager.__call__,72,128,Writes scalar score into reward tensor and acc,high,Reward is placed at final valid response token
+EM_SCORER,verl/verl/utils/reward_score/mhqa_train.py,normalize_answer/em_check/extract_solution,38,110,Normalizes and extracts final answer,high,Training EM splits final answer content by pipe
+EM_SCORER,verl/verl/utils/reward_score/mhqa_train.py,compute_score_em,113,142,Computes correctness scalar/dict,high,Correct score defaults to 1 and failure to 0
+EM_SCORER,verl/verl/utils/reward_score/mhqa_train.py,compute_score_em_batch,144,158,Current batch scorer loops independently over rows,high,Current minimum patch point
+SEARCH_PARSE,verl/verl/tools/xml_tool_parser.py,XMLToolParser.__init__,30,55,Builds XML tool regexes and detects nonempty calls,high,Active tag is wiki_search
+SEARCH_PARSE,verl/verl/tools/xml_tool_parser.py,_parse_search_queries/parse_non_stream,63,135,Splits pipe queries and creates ParsedToolCall objects,high,Pipe split is unconditional
+SEARCH_PARSE,verl/verl/tools/xml_tool_parser.py,_get_search_count,167,193,Counts parsed search queries from text,medium,No block count is stored
+PARALLEL_EXECUTION,verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py,_async_rollout_a_request,783,853,Executes parsed tool calls concurrently and appends tool responses,high,asyncio.gather is per parsed call
+PARALLEL_EXECUTION,verl/verl/tools/search_tool.py,SearchTool.execute,201,240,Wraps scalar query into one-element query list and calls retrieval,high,Active wiki path performs single-query HTTP payloads
+PARALLEL_EXECUTION,verl/verl/tools/utils/search_r1_like_utils.py,call_search_api,34,116,Posts retrieval payload and retries failures,medium,HTTP retry count is not tool-call count
+PARALLEL_EXECUTION,verl/verl/tools/utils/search_r1_like_utils.py,perform_single_search_batch,130,214,Formats multi-query API result and status metadata,medium,Function supports lists but active parser path passes one query
+ADVANTAGE,verl/verl/trainer/ppo/ray_trainer.py,compute_advantage GRPO branch,216,274,Dispatches token rewards and uid to GRPO estimator,high,Uses data.non_tensor_batch[uid]
+ADVANTAGE,verl/verl/trainer/ppo/ray_trainer.py,fit reward-to-advantage section,1938,1954,Calls compute_advantage after reward/filter,high,No new reward API needed here
+GRPO,verl/verl/trainer/ppo/core_algos.py,compute_grpo_outcome_advantage,172,227,Computes group mean/std normalized outcome advantages,high,Returns advantages and returns identically
+LOGGING,verl/verl/trainer/ppo/ray_trainer.py,_process_tool_metrics_from_rollout,628,685,Aggregates rollout tool metrics for logs,medium,Aggregate metrics lack uid grouping
+LOGGING,verl/verl/trainer/ppo/ray_trainer.py,_dump_generations,543,590,Dumps generation text and score when configured,medium,Current rollout_data_dir is null and default dump has no uid
+LOGGING,verl/verl/trainer/ppo/ray_trainer.py,training dump call site,1972,1986,Calls generation dump after actor update,medium,Current call passes no uid or detailed rollout metadata
+LOGGING,verl/verl/workers/rollout/schemas.py,tool metric tracking,201,247,Tracks tool call counts and sequence,high,No direct search-batch field
+SCHEMA,verl/verl/utils/dataset/rl_dataset.py,RLHFDataset.__getitem__,212,317,Builds original sample metadata including index and tools kwargs,high,extra_info.index is source group identity
+SCHEMA,verl/verl/workers/rollout/schemas.py,AsyncRolloutRequest,69,109,Defines request/group internal fields and tool metrics,high,batch_data_id/rollout_offset are internal

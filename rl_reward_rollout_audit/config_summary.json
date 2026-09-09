@@ -1,0 +1,71 @@
+{
+  "advantage_estimator": "grpo",
+  "norm_adv_by_std_in_grpo": true,
+  "rollout_n": 8,
+  "train_batch_size": 32,
+  "gen_batch_size": {
+    "train_script_default": 64,
+    "supervisor_initial": 128,
+    "supervisor_min": 96,
+    "supervisor_max": 160,
+    "observed_in_existing_log": 96,
+    "runtime_note": "The supervisor can override GEN_BS across restarts; this is not a single fixed value."
+  },
+  "ppo_mini_batch_size": 32,
+  "ppo_micro_batch_size": null,
+  "ppo_micro_batch_size_per_gpu": 2,
+  "log_prob_micro_batch_size_per_gpu": 8,
+  "max_prompt_length": 2048,
+  "max_response_length": 8192,
+  "actor_ppo_max_token_len_per_gpu": 10240,
+  "reward_function": {
+    "train_path": "verl/verl/utils/reward_score/mhqa_train.py",
+    "train_name": "compute_score_em_batch",
+    "val_path": "verl/verl/utils/reward_score/mhqa_eval.py",
+    "val_name": "compute_score_em_batch"
+  },
+  "reward_manager": "batch",
+  "reward_model_enable": false,
+  "launch_reward_fn_async": false,
+  "tool_config": {
+    "path": "verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml",
+    "class_name": "verl.tools.search_tool.SearchTool",
+    "tool_name": "wiki_search"
+  },
+  "rollout": {
+    "name": "sglang_async",
+    "temperature": 1.0,
+    "multi_turn_enable": true,
+    "multi_turn_max_turns": 8,
+    "use_xml_tool_parser": true
+  },
+  "filter_groups": {
+    "enable": true,
+    "metric": "seq_final_reward",
+    "max_num_gen_batches": 0
+  },
+  "use_kl_in_reward": false,
+  "actor_use_kl_loss": false,
+  "data": {
+    "shuffle": true,
+    "return_raw_chat": true,
+    "train_file": "Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet",
+    "validation_file": "Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet"
+  },
+  "trainer": {
+    "total_training_steps": 200,
+    "rollout_data_dir": null,
+    "validation_data_dir": null
+  },
+  "unknown_or_not_single_valued": {
+    "effective_runtime_gen_batch_size": "Dynamic under gen_bs_supervisor; see gen_bs_supervisor.py and existing log.",
+    "ppo_micro_batch_size": "The deprecated global field is null; the active per-GPU override is 2.",
+    "actual_http_search_request_count": "Not represented as a stable reward-stage field."
+  },
+  "sources": {
+    "training_shell": "Agent/train/mhqa_agent/rl/train_dapo_mhqa_agent_wiki.sh:34-80,115-185",
+    "supervisor": "Agent/train/mhqa_agent/rl/gen_bs_supervisor.py:219-245,441-443",
+    "default_config": "verl/verl/trainer/config/ppo_trainer.yaml:687-695,766-772,810-829,928-932",
+    "existing_resolved_log": "verl/logs/gen_bs_supervisor_run/train_console.run1.log:122,253-254,393-400"
+  }
+}
