@@ -1,0 +1,16 @@
+{
+  "reused": true,
+  "started_this_run": false,
+  "pid": 1016459,
+  "process_cmd": "python3 /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/wiki_rag_server.py --index_path .../wiki_rag/e5_Flat.index --corpus_path .../wiki_rag/wiki-18.jsonl --topk 3 --retriever_name e5 --retriever_model .../models/e5-base-v2 --faiss_gpu --host 127.0.0.1 --port 8008",
+  "bind_host": "127.0.0.1",
+  "bind_port": 8008,
+  "url_used_by_e10": "http://127.0.0.1:8008/retrieve",
+  "url_environment_sh_would_set": "http://<hostname -I>:8008/retrieve",
+  "hostname_ip_reachable": false,
+  "hostname_ip_note": "server binds 127.0.0.1 only; POST to hostname IP fails to connect (HTTP_CODE=000). E1-0 launch script overrides WIKI_RAG_SERVER_URL to 127.0.0.1 post-environment.sh, same precedent as gen_bs_supervisor.py line ~251.",
+  "http_status_empty_probe": 200,
+  "http_status_real_query": 200,
+  "functional_check_passed": true,
+  "killed_by_e10": false
+}

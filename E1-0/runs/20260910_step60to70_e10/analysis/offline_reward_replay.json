@@ -1,0 +1,227 @@
+{
+  "cost_xml_lambda0.0": {
+    "reward_range": [
+      0.0,
+      1.0
+    ],
+    "advantage_range": [
+      -2.4748666286468506,
+      2.4748666286468506
+    ],
+    "advantage_mean": -4.251690014548924e-12,
+    "advantage_std": 0.12715502900116055,
+    "all_finite_no_nan_inf": true,
+    "correct_gt_incorrect_always": true,
+    "min_correct_minus_max_incorrect": 1.0,
+    "efficiency_active_groups": 95,
+    "efficiency_active_rows": 733,
+    "correct_efficient_adv_mean": 0.043335609983328464,
+    "correct_inefficient_adv_mean": 0.05246177719811262,
+    "efficient_minus_inefficient_adv": -0.009126167214784153,
+    "within_group_efficiency_adv_diff_mean": 0.0,
+    "within_group_efficiency_adv_diff_min": 0.0,
+    "groups_efficient_strictly_above_inefficient": 0,
+    "groups_with_both_efficient_and_inefficient_correct": 95,
+    "all_correct_group_adv_std": 0.0,
+    "all_correct_group_adv_absmax": 0.0,
+    "mixed_group_adv_std": 0.9354121233371229,
+    "n_rows": 147200
+  },
+  "cost_xml_lambda0.05": {
+    "reward_range": [
+      0.0,
+      1.05
+    ],
+    "advantage_range": [
+      -2.4748666286468506,
+      2.4748666286468506
+    ],
+    "advantage_mean": -1.0891311356554861e-08,
+    "advantage_std": 0.14199504308212058,
+    "all_finite_no_nan_inf": true,
+    "correct_gt_incorrect_always": true,
+    "min_correct_minus_max_incorrect": 1.0,
+    "efficiency_active_groups": 95,
+    "efficiency_active_rows": 733,
+    "correct_efficient_adv_mean": 0.7302040426271886,
+    "correct_inefficient_adv_mean": -0.6830162107523552,
+    "efficient_minus_inefficient_adv": 1.413220253379544,
+    "within_group_efficiency_adv_diff_mean": 2.076912441536,
+    "within_group_efficiency_adv_diff_min": 0.09234410524368286,
+    "groups_efficient_strictly_above_inefficient": 95,
+    "groups_with_both_efficient_and_inefficient_correct": 95,
+    "all_correct_group_adv_std": 0.09476337161720436,
+    "all_correct_group_adv_absmax": 2.474738597869873,
+    "mixed_group_adv_std": 0.935412125286941,
+    "n_rows": 147200
+  },
+  "cost_xml_lambda0.1": {
+    "reward_range": [
+      0.0,
+      1.1
+    ],
+    "advantage_range": [
+      -2.4748666286468506,
+      2.4748666286468506
+    ],
+    "advantage_mean": 1.2294470292070638e-09,
+    "advantage_std": 0.14199570357993707,
+    "all_finite_no_nan_inf": true,
+    "correct_gt_incorrect_always": true,
+    "min_correct_minus_max_incorrect": 1.0,
+    "efficiency_active_groups": 95,
+    "efficiency_active_rows": 733,
+    "correct_efficient_adv_mean": 0.7336642636000953,
+    "correct_inefficient_adv_mean": -0.6869883621058895,
+    "efficient_minus_inefficient_adv": 1.4206526257059848,
+    "within_group_efficiency_adv_diff_mean": 2.0889655601037176,
+    "within_group_efficiency_adv_diff_min": 0.18085956573486328,
+    "groups_efficient_strictly_above_inefficient": 95,
+    "groups_with_both_efficient_and_inefficient_correct": 95,
+    "all_correct_group_adv_std": 0.09476559598802708,
+    "all_correct_group_adv_absmax": 2.4748024940490723,
+    "mixed_group_adv_std": 0.9354121270981474,
+    "n_rows": 147200
+  },
+  "cost_xml_lambda0.2": {
+    "reward_range": [
+      0.0,
+      1.2
+    ],
+    "advantage_range": [
+      -2.4748666286468506,
+      2.4748666286468506
+    ],
+    "advantage_mean": 2.7665088925024737e-09,
+    "advantage_std": 0.14199603293263455,
+    "all_finite_no_nan_inf": true,
+    "correct_gt_incorrect_always": true,
+    "min_correct_minus_max_incorrect": 1.0,
+    "efficiency_active_groups": 95,
+    "efficiency_active_rows": 733,
+    "correct_efficient_adv_mean": 0.7397595365632492,
+    "correct_inefficient_adv_mean": -0.6944732033452914,
+    "efficient_minus_inefficient_adv": 1.4342327399085406,
+    "within_group_efficiency_adv_diff_mean": 2.110964699677731,
+    "within_group_efficiency_adv_diff_min": 0.33910077810287476,
+    "groups_efficient_strictly_above_inefficient": 95,
+    "groups_with_both_efficient_and_inefficient_correct": 95,
+    "all_correct_group_adv_std": 0.09476670412159637,
+    "all_correct_group_adv_absmax": 2.474839210510254,
+    "mixed_group_adv_std": 0.9354121304838167,
+    "n_rows": 147200
+  },
+  "cost_structured_lambda0.0": {
+    "reward_range": [
+      0.0,
+      1.0
+    ],
+    "advantage_range": [
+      -2.4748666286468506,
+      2.4748666286468506
+    ],
+    "advantage_mean": -4.251690014548924e-12,
+    "advantage_std": 0.12715502900116055,
+    "all_finite_no_nan_inf": true,
+    "correct_gt_incorrect_always": true,
+    "min_correct_minus_max_incorrect": 1.0,
+    "efficiency_active_groups": 95,
+    "efficiency_active_rows": 733,
+    "correct_efficient_adv_mean": 0.043335609983328464,
+    "correct_inefficient_adv_mean": 0.05246177719811262,
+    "efficient_minus_inefficient_adv": -0.009126167214784153,
+    "within_group_efficiency_adv_diff_mean": 0.0,
+    "within_group_efficiency_adv_diff_min": 0.0,
+    "groups_efficient_strictly_above_inefficient": 0,
+    "groups_with_both_efficient_and_inefficient_correct": 95,
+    "all_correct_group_adv_std": 0.0,
+    "all_correct_group_adv_absmax": 0.0,
+    "mixed_group_adv_std": 0.9354121233371229,
+    "n_rows": 147200
+  },
+  "cost_structured_lambda0.05": {
+    "reward_range": [
+      0.0,
+      1.05
+    ],
+    "advantage_range": [
+      -2.4748666286468506,
+      2.4748666286468506
+    ],
+    "advantage_mean": -1.0891311356554861e-08,
+    "advantage_std": 0.14199504308212058,
+    "all_finite_no_nan_inf": true,
+    "correct_gt_incorrect_always": true,
+    "min_correct_minus_max_incorrect": 1.0,
+    "efficiency_active_groups": 95,
+    "efficiency_active_rows": 733,
+    "correct_efficient_adv_mean": 0.7302040426271886,
+    "correct_inefficient_adv_mean": -0.6830162107523552,
+    "efficient_minus_inefficient_adv": 1.413220253379544,
+    "within_group_efficiency_adv_diff_mean": 2.076912441536,
+    "within_group_efficiency_adv_diff_min": 0.09234410524368286,
+    "groups_efficient_strictly_above_inefficient": 95,
+    "groups_with_both_efficient_and_inefficient_correct": 95,
+    "all_correct_group_adv_std": 0.09476337161720436,
+    "all_correct_group_adv_absmax": 2.474738597869873,
+    "mixed_group_adv_std": 0.935412125286941,
+    "n_rows": 147200
+  },
+  "cost_structured_lambda0.1": {
+    "reward_range": [
+      0.0,
+      1.1
+    ],
+    "advantage_range": [
+      -2.4748666286468506,
+      2.4748666286468506
+    ],
+    "advantage_mean": 1.2294470292070638e-09,
+    "advantage_std": 0.14199570357993707,
+    "all_finite_no_nan_inf": true,
+    "correct_gt_incorrect_always": true,
+    "min_correct_minus_max_incorrect": 1.0,
+    "efficiency_active_groups": 95,
+    "efficiency_active_rows": 733,
+    "correct_efficient_adv_mean": 0.7336642636000953,
+    "correct_inefficient_adv_mean": -0.6869883621058895,
+    "efficient_minus_inefficient_adv": 1.4206526257059848,
+    "within_group_efficiency_adv_diff_mean": 2.0889655601037176,
+    "within_group_efficiency_adv_diff_min": 0.18085956573486328,
+    "groups_efficient_strictly_above_inefficient": 95,
+    "groups_with_both_efficient_and_inefficient_correct": 95,
+    "all_correct_group_adv_std": 0.09476559598802708,
+    "all_correct_group_adv_absmax": 2.4748024940490723,
+    "mixed_group_adv_std": 0.9354121270981474,
+    "n_rows": 147200
+  },
+  "cost_structured_lambda0.2": {
+    "reward_range": [
+      0.0,
+      1.2
+    ],
+    "advantage_range": [
+      -2.4748666286468506,
+      2.4748666286468506
+    ],
+    "advantage_mean": 2.7665088925024737e-09,
+    "advantage_std": 0.14199603293263455,
+    "all_finite_no_nan_inf": true,
+    "correct_gt_incorrect_always": true,
+    "min_correct_minus_max_incorrect": 1.0,
+    "efficiency_active_groups": 95,
+    "efficiency_active_rows": 733,
+    "correct_efficient_adv_mean": 0.7397595365632492,
+    "correct_inefficient_adv_mean": -0.6944732033452914,
+    "efficient_minus_inefficient_adv": 1.4342327399085406,
+    "within_group_efficiency_adv_diff_mean": 2.110964699677731,
+    "within_group_efficiency_adv_diff_min": 0.33910077810287476,
+    "groups_efficient_strictly_above_inefficient": 95,
+    "groups_with_both_efficient_and_inefficient_correct": 95,
+    "all_correct_group_adv_std": 0.09476670412159637,
+    "all_correct_group_adv_absmax": 2.474839210510254,
+    "mixed_group_adv_std": 0.9354121304838167,
+    "n_rows": 147200
+  },
+  "_note": "Offline replay only -- E1-0 training used the original EM reward. Uses the real verl compute_grpo_outcome_advantage with norm_adv_by_std_in_grpo=True, exactly as this run's config does."
+}

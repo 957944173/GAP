@@ -1,0 +1,609 @@
+=== E1-0 hang-diagnostics stack watcher started, pid=1850745 ===
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/utils.py", line 935 in broadcast_pyobj
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 872 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2730 in broadcast
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/utils.py", line 935 in broadcast_pyobj
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 810 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1287 in check_memory
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2730 in broadcast
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/utils.py", line 947 in broadcast_pyobj
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 872 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2726 in broadcast
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/utils.py", line 935 in broadcast_pyobj
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 817 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2730 in broadcast
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/utils.py", line 947 in broadcast_pyobj
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 872 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2730 in broadcast
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/utils.py", line 947 in broadcast_pyobj
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 817 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2730 in broadcast
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/utils.py", line 947 in broadcast_pyobj
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 817 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2730 in broadcast
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/utils.py", line 947 in broadcast_pyobj
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 872 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2726 in broadcast
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/utils.py", line 935 in broadcast_pyobj
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 878 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2730 in broadcast
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/utils.py", line 947 in broadcast_pyobj
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 872 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2730 in broadcast
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/utils.py", line 935 in broadcast_pyobj
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 878 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 872 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>
+Timeout (0:01:30)!
+Thread 0x00007f4990ff9000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 1829 in watchdog_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4947c9b000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 130 in forward_thread_func_
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 118 in forward_thread_func
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f49917fa000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 324 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 607 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4a5907f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4b7cf6e000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2730 in broadcast
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/utils.py", line 947 in broadcast_pyobj
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 872 in recv_requests
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 661 in event_loop_overlap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116 in decorate_context
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/sglang/srt/managers/scheduler.py", line 2311 in run_scheduler_process
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 108 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/process.py", line 314 in _bootstrap
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 129 in _main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/spawn.py", line 116 in spawn_main
+  File "<string>", line 1 in <module>

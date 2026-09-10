@@ -1,0 +1,14 @@
+=== conda env ===
+# * -> active
+parallel-agent       *   /home/nf5468m6/miniconda3/envs/parallel-agent
+=== python ===
+/home/nf5468m6/miniconda3/envs/parallel-agent/bin/python3
+Python 3.10.14
+=== WIKI_RAG_SERVER_URL (as set by environment.sh, before E1-0 override) ===
+http://10.29.128.7:8008/retrieve
+=== GRM_API_KEY set? ===
+yes (placeholder)
+=== post-override check (what E1-0 launch script actually uses) ===
+http://127.0.0.1:8008/retrieve
+=== re-verify wiki functional health after sourcing environment.sh ===
+{"result":[]}

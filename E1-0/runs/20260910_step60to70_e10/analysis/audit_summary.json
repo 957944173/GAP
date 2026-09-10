@@ -1,0 +1,105 @@
+{
+  "run_dir": "/data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10",
+  "pids": [
+    2552655
+  ],
+  "n_rollout_records": 147200,
+  "n_group_records_from_manager": 18400,
+  "n_groups_recomputed": 18400,
+  "n_call_records": 115,
+  "group_size_histogram": {
+    "8": 18400
+  },
+  "correct_count_histogram": {
+    "0": 9876,
+    "1": 68,
+    "2": 45,
+    "3": 40,
+    "4": 40,
+    "5": 45,
+    "6": 33,
+    "7": 69,
+    "8": 8184
+  },
+  "P_group_size_8": null,
+  "global_steps_covered": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70
+  ],
+  "P_group8": 100.0,
+  "P_correct_ge_2": 45.95652173913044,
+  "P_all_correct": 44.47826086956522,
+  "P_var_xml_given_ge2": 1.1234626300851467,
+  "P_var_structured_given_ge2": 1.1234626300851467,
+  "P_all_correct_costvar_xml": 1.0263929618768328,
+  "P_all_correct_costvar_structured": 1.0263929618768328,
+  "P_zero_search_correct_xml": 0.0,
+  "P_zero_search_correct_structured": 0.0,
+  "signal_density_xml": 0.5163043478260869,
+  "signal_density_structured": 0.5163043478260869,
+  "reward_identity": {
+    "compared": 147200,
+    "mismatch_count": 0,
+    "max_abs_diff": 0.0,
+    "equality_rate": 1.0,
+    "equality_rate_pct": 100.0,
+    "score_eq_em_mismatch_count": 0,
+    "answer_parse_missing": 360,
+    "note": "reward_e10 is the value actually written into reward_tensor (what GRPO consumes); reward_original is an independent re-computation with the unmodified original mhqa_train.compute_score_em_batch on the same decoded prompt/response/ground-truth."
+  },
+  "xml_vs_structured": {
+    "both_valid_count": 147200,
+    "exact_match_count": 147200,
+    "exact_match_rate_pct": 100.0,
+    "mean_abs_difference": 0.0,
+    "mismatch_count": 0,
+    "mismatch_rate_pct": 0.0,
+    "correct_group_ranking_agreement": 8456,
+    "correct_group_ranking_groups": 8456,
+    "ranking_changed_group_count": 0,
+    "ranking_changed_group_rate_pct": 0.0,
+    "mismatch_direction": "logical_search_batches >= structured_search_rounds always (a round is a distinct assistant turn, a batch is a distinct (turn, XML-block) pair), so every mismatch is the multiple-XML-blocks-in-one-turn case"
+  },
+  "group_statistics": {
+    "P_group8": 100.0,
+    "P_correct_ge_2": 45.95652173913044,
+    "P_all_correct": 44.47826086956522,
+    "P_var_xml_given_ge2": 1.1234626300851467,
+    "P_var_structured_given_ge2": 1.1234626300851467,
+    "P_all_correct_costvar_xml": 1.0263929618768328,
+    "P_all_correct_costvar_structured": 1.0263929618768328,
+    "P_zero_search_correct_xml": 0.0,
+    "P_zero_search_correct_structured": 0.0,
+    "signal_density_xml": 0.5163043478260869,
+    "signal_density_structured": 0.5163043478260869
+  },
+  "filter_simulation": {
+    "groups_before_filter": 18400,
+    "groups_expected_kept_by_original_reward": 340,
+    "groups_expected_kept_rate_pct": 1.8478260869565217,
+    "groups_expected_removed": 18060,
+    "all_correct_groups_removed": 8184,
+    "all_wrong_groups_removed": 9876,
+    "rule": "verl ray_trainer.py:1780-1781 with metric=seq_reward/seq_final_reward and EM 0/1 rewards: kept iff np.std(group rewards) > 0 or group size == 1, i.e. iff 0 < correct_count < group_size",
+    "newly_retained_groups_shaped_cost_xml": {
+      "lambda_0.05": 84,
+      "lambda_0.10": 84,
+      "lambda_0.20": 84,
+      "explanation": "A_i=1 for every rollout of an all-correct group, so R_i=1+lambda*E_i varies iff the correct-costs vary; all-wrong groups stay 0 and are never revived."
+    },
+    "newly_retained_groups_shaped_cost_structured": {
+      "lambda_0.05": 84,
+      "lambda_0.10": 84,
+      "lambda_0.20": 84,
+      "explanation": "A_i=1 for every rollout of an all-correct group, so R_i=1+lambda*E_i varies iff the correct-costs vary; all-wrong groups stay 0 and are never revived."
+    }
+  }
+}

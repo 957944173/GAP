@@ -1,0 +1,31 @@
+=== E1-0 hang-diagnostics stack watcher started, pid=2502481 ===
+Thread 0x00007f6b4776f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Current thread 0x00007f6c66e5d000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/resource_tracker.py", line 197 in main
+  File "<string>", line 1 in <module>
+Thread 0x00007f6b4776f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Current thread 0x00007f6c66e5d000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/resource_tracker.py", line 197 in main
+  File "<string>", line 1 in <module>
+Thread 0x00007f6b4776f000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Current thread 0x00007f6c66e5d000 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/multiprocessing/resource_tracker.py", line 197 in main
+  File "<string>", line 1 in <module>

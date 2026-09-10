@@ -1,0 +1,630 @@
+=== E1-0 hang-diagnostics stack watcher started, pid=1837314 ===
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main
+Timeout (0:01:30)!
+Thread 0x00007ff877889700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 957 in print_logs
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff87808a700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2228 in listen_error_messages
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff71a81c700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8e07274c0 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 893 in get_objects
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/worker.py", line 2771 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103 in wrapper
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 21 in auto_init_wrapper
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 55 in run_ppo
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 32 in main
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/core/utils.py", line 186 in run_job
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458 in <lambda>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220 in run_and_report
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457 in _run_app
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394 in _run_hydra
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/hydra/main.py", line 94 in decorated_main
+  File "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/main_ppo.py", line 263 in <module>
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 86 in _run_code
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/runpy.py", line 196 in _run_module_as_main

@@ -1,0 +1,98 @@
+=== E1-0 hang-diagnostics stack watcher started, pid=2490007 ===
+Thread 0x00007fabf77ff700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/node_launcher.py", line 219 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fabf85ff700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/node_launcher.py", line 219 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fabf93ff700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/selectors.py", line 416 in select
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/socketserver.py", line 232 in serve_forever
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fac0d4a0700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Current thread 0x00007fadd5076180 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/monitor.py", line 458 in _run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/monitor.py", line 604 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/monitor.py", line 719 in <module>
+Thread 0x00007fabf77ff700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/node_launcher.py", line 219 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fabf85ff700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/node_launcher.py", line 219 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fabf93ff700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/selectors.py", line 416 in select
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/socketserver.py", line 232 in serve_forever
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fac0d4a0700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Current thread 0x00007fadd5076180 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/monitor.py", line 458 in _run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/monitor.py", line 604 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/monitor.py", line 719 in <module>
+Thread 0x00007fabf77ff700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/node_launcher.py", line 219 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fabf85ff700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 320 in wait
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/queue.py", line 171 in get
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/node_launcher.py", line 219 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fabf93ff700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/selectors.py", line 416 in select
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/socketserver.py", line 232 in serve_forever
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fac0d4a0700 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 53 in _recv_msg
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 161 in _read_thread
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 953 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Current thread 0x00007fadd5076180 (most recent call first):
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/monitor.py", line 458 in _run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/monitor.py", line 604 in run
+  File "/home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/ray/autoscaler/_private/monitor.py", line 719 in <module>
+=== process exiting, stack watcher stopping ===

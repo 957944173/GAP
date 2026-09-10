@@ -1,0 +1,110 @@
+{
+  "run_id": "20260910_step60to70_e10",
+  "run_dir": "/data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10",
+  "repo": {
+    "root": "/data01/wyy/Graph-Agent-Planning",
+    "is_git_repo": true,
+    "branch": "main",
+    "commit": null,
+    "commit_note": "repo has zero commits (freshly initialized .git, all files untracked); file-level sha256/size/mtime capture used instead of git diff -- see code/original_files_manifest.txt",
+    "dirty_files": "all top-level dirs untracked (no baseline commit exists)"
+  },
+  "input_files": [
+    {
+      "path": "Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet",
+      "role": "train",
+      "exists": true,
+      "size_bytes": 61978764,
+      "mtime": "2026-07-02T15:38:06.950881197+08:00",
+      "rows": 169595,
+      "columns": ["question", "answer", "data_source", "prompt", "reward_model", "extra_info"]
+    },
+    {
+      "path": "Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet",
+      "role": "val",
+      "exists": true,
+      "size_bytes": 1108051,
+      "mtime": "2026-07-02T18:24:40.972352996+08:00",
+      "rows": 3610,
+      "columns": ["data_source", "prompt", "reward_model", "extra_info"]
+    },
+    {
+      "path": "verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml",
+      "role": "tool_config",
+      "exists": true,
+      "size_bytes": 502,
+      "mtime": "2026-07-01T10:52:23.801979160+08:00"
+    },
+    {
+      "path": "experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu",
+      "role": "base_model_sft",
+      "exists": true,
+      "is_dir": true,
+      "mtime": "2026-09-04T16:41:50.475521207+08:00"
+    }
+  ],
+  "step60_checkpoint": {
+    "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60",
+    "unique_candidate": true,
+    "sibling_checkpoints": ["global_step_120", "global_step_180", "global_step_200"],
+    "latest_checkpointed_iteration_at_source_experiment": 200,
+    "ranks_present": [0, 1, 2, 3],
+    "model_files_present": true,
+    "optimizer_files_present": true,
+    "extra_state_files_present": true,
+    "dataloader_state_present": true,
+    "model_config": {
+      "architectures": ["Qwen2ForCausalLM"],
+      "hidden_size": 2048,
+      "num_hidden_layers": 36,
+      "vocab_size": 151936
+    },
+    "resume_mode": "resume_path",
+    "resume_sets_global_steps_directly": true,
+    "full_state_resume_verified_by_source_read": true
+  },
+  "output_collision_check": {
+    "experiment_name": "DAPO-GAP3B-MHQA-Agent-E10-step60to70-4gpu",
+    "pre_existing_before_launch": false,
+    "log_file": "verl/logs/DAPO-GAP3B-MHQA-Agent-E10-step60to70-4gpu.log",
+    "log_file_collides_with_original": false,
+    "run_dir_pre_existing_content_overwritten": false,
+    "experiment_tracker": "disabled (WANDB_MODE=disabled, trainer.logger=['console'])",
+    "original_experiment_dir_write_access": "read-only (E1-0 only reads global_step_60 from it)"
+  },
+  "wiki": {
+    "reused": true,
+    "started_this_run": false,
+    "pid": 1016459,
+    "bind_host": "127.0.0.1",
+    "bind_port": 8008,
+    "functional_check_passed": true,
+    "functional_check_query": "what is the capital of France",
+    "environment_sh_url_reachable": false,
+    "environment_sh_url": "http://10.29.128.7:8008/retrieve",
+    "e10_used_url": "http://127.0.0.1:8008/retrieve",
+    "fix_location": "E1-0 launch script (run_e10_step60to70.sh), NOT environment.sh",
+    "fix_precedent": "gen_bs_supervisor.py line ~251 (same override, same reasoning)"
+  },
+  "config_dry_run": {
+    "method": "hydra --cfg job --resolve",
+    "exit_code": 0,
+    "resolved_config_path": "configs/resolved_training_config.yaml",
+    "confirmed_fields": {
+      "trainer.resume_mode": "resume_path",
+      "trainer.total_training_steps": 70,
+      "trainer.save_freq": 10,
+      "trainer.test_freq": 10,
+      "reward_model.reward_manager": "e10_batch_audit",
+      "actor_rollout_ref.rollout.n": 8,
+      "algorithm.filter_groups.enable": true,
+      "algorithm.adv_estimator": "grpo"
+    }
+  },
+  "registration_smoke_test": {
+    "passed": true,
+    "reward_identity_confirmed_on_synthetic_data": true,
+    "audit_jsonl_fields_confirmed": true
+  },
+  "preflight_verdict": "PASS"
+}

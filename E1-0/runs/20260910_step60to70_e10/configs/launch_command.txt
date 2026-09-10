@@ -1,0 +1,18 @@
+# E1-0 launch sequence (executed in this exact order)
+
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate retriever
+# Wiki service health check (see wiki/wiki_health_check.txt) -- confirmed healthy, REUSED, not restarted.
+
+conda activate parallel-agent
+cd /data01/wyy/Graph-Agent-Planning
+source environment.sh
+# environment.sh sets WIKI_RAG_SERVER_URL to a LAN-facing hostname IP that the
+# wiki server (bound 127.0.0.1-only) does not answer on; the E1-0 launch
+# script re-overrides WIKI_RAG_SERVER_URL=http://127.0.0.1:8008/retrieve
+# internally (same precedent as gen_bs_supervisor.py:251), so this override
+# does not need to be (and is not) applied at this shell level.
+
+export E10_RUN_DIR=/data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10
+
+bash /data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/code/run_e10_step60to70.sh

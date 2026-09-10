@@ -1,0 +1,71 @@
+This file intentionally documents that NO original repository file was patched.
+
+E1-0 modifies ZERO original repository files. All E1-0 logic lives in new files
+created specifically for this experiment:
+
+  E1-0/runs/20260910_step60to70_e10/code/e10_scorer.py            (new)
+  E1-0/runs/20260910_step60to70_e10/code/e10_reward_manager.py    (new, audit)
+  E1-0/runs/20260910_step60to70_e10/code/e10_checkpoint_patch.py  (new, runtime monkeypatch)
+  E1-0/runs/20260910_step60to70_e10/code/e10_sglang_gpu_patch.py  (new, runtime monkeypatch)
+  E1-0/runs/20260910_step60to70_e10/code/e10_hang_diagnostics.py  (new, diagnostics)
+  E1-0/runs/20260910_step60to70_e10/code/e10_diag_patch.py        (new, diagnostics)
+  E1-0/runs/20260910_step60to70_e10/code/e10_state.py             (new)
+  E1-0/runs/20260910_step60to70_e10/code/e10_trainer_patch.py     (new)
+  E1-0/runs/20260910_step60to70_e10/code/e10_stall_watchdog.py    (new)
+  E1-0/runs/20260910_step60to70_e10/code/e10_selftest.py          (new, CPU-only test)
+  E1-0/runs/20260910_step60to70_e10/code/pythonpath_e10/sitecustomize.py (new)
+  E1-0/runs/20260910_step60to70_e10/code/run_e10_step60to70.sh    (new launcher; the
+      original Agent/train/mhqa_agent/rl/train_dapo_mhqa_agent_wiki.sh is NOT edited)
+  E1-0/runs/20260910_step60to70_e10/analysis/analyze_e10.py       (new)
+  E1-0/runs/20260910_step60to70_e10/analysis/check_training_integrity.py (new)
+
+Registration of the new "e10_batch_audit" reward manager and the new
+"compute_score_em_batch_e10" scorer is achieved entirely through:
+  1. A PYTHONPATH-prepended sitecustomize.py (auto-imported by the Python
+     interpreter at startup in every process that inherits this PYTHONPATH,
+     including Ray workers via OS-level env inheritance), which imports
+     e10_reward_manager.py and thereby runs its own `@register("e10_batch_audit")`
+     decorator -- a mechanism the original verl reward-manager registry
+     (verl/verl/workers/reward_manager/__init__.py + registry.py) already
+     exposes for exactly this purpose. No import or edit was added to that
+     original registry file.
+  2. Hydra CLI overrides passed on the command line
+     (reward_model.reward_manager=e10_batch_audit,
+     custom_reward_function.train_path=.../e10_scorer.py,
+     custom_reward_function.train_name=compute_score_em_batch_e10), which is
+     the exact mechanism train_dapo_mhqa_agent_wiki.sh already uses to select
+     reward_model.reward_manager=batch / custom_reward_function.train_name=
+     compute_score_em_batch in the original run -- E1-0 uses the identical
+     mechanism with different values, not a new code path.
+
+`git diff` against the original files is empty by construction (verified via
+code/original_files_manifest.txt: sha256 of every original file E1-0 depends on,
+captured before any E1-0 work and re-verified unchanged after the completed
+run -- environment/original_files_reverify_after_run.txt, 24/24 OK).
+
+Therefore patches/e10.patch is empty (0 original lines changed) and no diff
+artifact is meaningful beyond this explanation file.
+
+--------------------------------------------------------------------------------
+ATTEMPT-19 RUNTIME FIX APPLIED TO E1-0'S OWN FILE (not to any original file)
+--------------------------------------------------------------------------------
+`e10_sglang_gpu_patch.py` previously executed
+`monkey_patch_torch_reductions()` at MODULE IMPORT time. Because sitecustomize
+imports that module in every process (including the Ray TaskRunner driver),
+this applied sglang's CUDA-IPC reduction patch to the driver as well, which
+deadlocks fork-based `StatefulDataLoader` workers: the patched `reduce_tensor`
+maps a serialized tensor's device through `torch.cuda.get_device_properties()`,
+i.e. CUDA work inside a forked child, so the driver waited forever for its
+first validation batch and the 8 workers waited forever for an index. That was
+the real cause of the silent hangs in attempts 14/16/17/18 and this session's
+19a (driver stack: `stateful_dataloader._try_get_data`; worker stack:
+`torchdata...worker._worker_loop -> index_queue.get()`; SIGUSR1 stacks in
+logs/attempt19a_driver_and_dataloader_worker_SIGUSR1_stacks.txt).
+
+Fix: the call is now deferred to `_ensure_monkey_patched()`, invoked from
+`SGLangRollout._init_distributed_env`, which runs only inside the
+WorkerDict/FSDP actor that actually serializes weights over CUDA IPC. The
+receiving SGLang scheduler subprocesses already invoke the same function
+themselves (sglang/srt/model_executor/model_runner.py:1295). File changed:
+E1-0's own e10_sglang_gpu_patch.py. Full write-up:
+analysis/root_cause_dataloader_fork.md.

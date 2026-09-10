@@ -1,0 +1,607 @@
++ ulimit -n 65535
++++ dirname /data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/code/run_e10_step60to70.sh
+++ cd /data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/code
+++ pwd
++ SCRIPT_DIR=/data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/code
+++ cd /data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/code/../../../..
+++ pwd
++ REPO_ROOT=/data01/wyy/Graph-Agent-Planning
++ [[ -z http://10.29.128.7:8008/retrieve ]]
++ [[ -z EMPTY ]]
++ export WIKI_RAG_SERVER_URL=http://127.0.0.1:8008/retrieve
++ WIKI_RAG_SERVER_URL=http://127.0.0.1:8008/retrieve
++ [[ -n /home/nf5468m6/miniconda3/envs/parallel-agent ]]
++ [[ :: != *\:\/\h\o\m\e\/\n\f\5\4\6\8\m\6\/\m\i\n\i\c\o\n\d\a\3\/\e\n\v\s\/\p\a\r\a\l\l\e\l\-\a\g\e\n\t\/\l\i\b\:* ]]
++ export LD_LIBRARY_PATH=/home/nf5468m6/miniconda3/envs/parallel-agent/lib:
++ LD_LIBRARY_PATH=/home/nf5468m6/miniconda3/envs/parallel-agent/lib:
++ export CC=/usr/bin/gcc CXX=/usr/bin/g++ CUDAHOSTCXX=/usr/bin/g++
++ CC=/usr/bin/gcc
++ CXX=/usr/bin/g++
++ CUDAHOSTCXX=/usr/bin/g++
++ unset CFLAGS CXXFLAGS
++ export CUDA_VISIBLE_DEVICES=0,1,2,3
++ CUDA_VISIBLE_DEVICES=0,1,2,3
++ export NCCL_CUMEM_ENABLE=0
++ NCCL_CUMEM_ENABLE=0
++ export RAY_EXPERIMENTAL_NOSET_CUDA_VISIBLE_DEVICES=1
++ RAY_EXPERIMENTAL_NOSET_CUDA_VISIBLE_DEVICES=1
++ ACTOR_LR=1e-6
++ TRAIN_BS=32
++ PPO_MINI_BS=32
++ GEN_BS=160
++ EPOCHS=2
++ STEPS=70
++ SAVE_FREQ=10
++ TEST_FREQ=10
++ N=8
++ PPO_MICRO_BSZ_PER_GPU=2
++ LOG_PROB_MICRO_BSZ_PER_GPU=8
++ CLIP_RATIO_LOW=0.2
++ CLIP_RATIO_HIGH=0.28
++ max_prompt_length=2048
++ max_response_length=8192
++ actor_ppo_max_token_len=10240
++ infer_ppo_max_token_len=10240
++ N_GPUS_PER_NODE=4
++ GEN_TP=2
++ use_dynamic_bsz=True
++ offload=false
++ export WANDB_MODE=disabled
++ WANDB_MODE=disabled
++ export WANDB_DISABLED=true
++ WANDB_DISABLED=true
++ CURRENT_DIR=/data01/wyy/Graph-Agent-Planning
++ export NNODES=1
++ NNODES=1
++ export PROJECT_NAME=Graph-Agent-Planning
++ PROJECT_NAME=Graph-Agent-Planning
++ SAVE_MODEL_FOLDER=/data01/wyy/Graph-Agent-Planning/experiments
++ export EXPERIMENT_NAME=DAPO-GAP3B-MHQA-Agent-E10-step60to70-4gpu
++ EXPERIMENT_NAME=DAPO-GAP3B-MHQA-Agent-E10-step60to70-4gpu
++ export BASE_MODEL=/data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu
++ BASE_MODEL=/data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu
++ export VLLM_ATTENTION_BACKEND=XFORMERS
++ VLLM_ATTENTION_BACKEND=XFORMERS
++ TRAIN_DATASETS=/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet
++ VAL_NQ=/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet
++ WIKI_SEARCH=/data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml
++ LOG_DIR=/data01/wyy/Graph-Agent-Planning/verl/logs
++ LOG_FILE=/data01/wyy/Graph-Agent-Planning/verl/logs/DAPO-GAP3B-MHQA-Agent-E10-step60to70-4gpu.log
++ mkdir -p /data01/wyy/Graph-Agent-Planning/verl/logs
++ for required_path in "$BASE_MODEL" "$TRAIN_DATASETS" "$VAL_NQ" "$WIKI_SEARCH"
++ [[ ! -e /data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu ]]
++ for required_path in "$BASE_MODEL" "$TRAIN_DATASETS" "$VAL_NQ" "$WIKI_SEARCH"
++ [[ ! -e /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet ]]
++ for required_path in "$BASE_MODEL" "$TRAIN_DATASETS" "$VAL_NQ" "$WIKI_SEARCH"
++ [[ ! -e /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet ]]
++ for required_path in "$BASE_MODEL" "$TRAIN_DATASETS" "$VAL_NQ" "$WIKI_SEARCH"
++ [[ ! -e /data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml ]]
++ TRAIN_FILES_OVERRIDE='data.train_files=["/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet"]'
++ VAL_FILES_OVERRIDE='data.val_files=["/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet"]'
++ export WIKI_SERVER_AUTOSTART=0
++ WIKI_SERVER_AUTOSTART=0
++ E10_CODE_DIR=/data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/code
++ export E10_RUN_DIR
++ export E10_START_GLOBAL_STEP=60
++ E10_START_GLOBAL_STEP=60
++ export PYTHONPATH=/data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/code/pythonpath_e10:
++ PYTHONPATH=/data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/code/pythonpath_e10:
++ STEP60_CKPT=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60
++ [[ ! -d /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60 ]]
++ cd /data01/wyy/Graph-Agent-Planning/verl
++ tee /data01/wyy/Graph-Agent-Planning/verl/logs/DAPO-GAP3B-MHQA-Agent-E10-step60to70-4gpu.log
++ PYTHONUNBUFFERED=1
++ python3 -m verl.trainer.main_ppo ray_init.num_cpus=16 algorithm.adv_estimator=grpo algorithm.filter_groups.enable=true 'data.train_files=["/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet"]' 'data.val_files=["/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet"]' data.train_batch_size=32 data.gen_batch_size=160 data.val_batch_size=128 data.max_prompt_length=2048 data.max_response_length=8192 data.shuffle=true data.return_raw_chat=true data.filter_overlong_prompts=False actor_rollout_ref.model.path=/data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu actor_rollout_ref.model.enable_gradient_checkpointing=true actor_rollout_ref.model.use_remove_padding=true actor_rollout_ref.hybrid_engine=true actor_rollout_ref.actor.optim.lr=1e-6 actor_rollout_ref.actor.optim.lr_warmup_steps=3 actor_rollout_ref.actor.optim.weight_decay=0.1 actor_rollout_ref.actor.ppo_mini_batch_size=32 actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=2 actor_rollout_ref.actor.fsdp_config.param_offload=false actor_rollout_ref.actor.fsdp_config.optimizer_offload=false 'actor_rollout_ref.actor.checkpoint.save_contents=['\''model'\'', '\''optimizer'\'', '\''extra'\'']' actor_rollout_ref.actor.use_dynamic_bsz=True actor_rollout_ref.actor.ppo_max_token_len_per_gpu=10240 actor_rollout_ref.actor.use_kl_loss=false actor_rollout_ref.actor.kl_loss_coef=0.0 actor_rollout_ref.actor.kl_loss_type=low_var_kl actor_rollout_ref.actor.clip_ratio_low=0.2 actor_rollout_ref.actor.clip_ratio_high=0.28 actor_rollout_ref.actor.clip_ratio_c=10.0 actor_rollout_ref.rollout.max_model_len=10240 actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=8 actor_rollout_ref.rollout.tensor_model_parallel_size=2 actor_rollout_ref.rollout.name=sglang_async actor_rollout_ref.rollout.gpu_memory_utilization=0.5 actor_rollout_ref.rollout.log_prob_use_dynamic_bsz=True actor_rollout_ref.rollout.log_prob_max_token_len_per_gpu=10240 actor_rollout_ref.rollout.max_num_batched_tokens=10240 actor_rollout_ref.rollout.n=8 actor_rollout_ref.rollout.temperature=1.0 actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=8 actor_rollout_ref.ref.fsdp_config.param_offload=true actor_rollout_ref.ref.log_prob_max_token_len_per_gpu=10240 'trainer.logger=[console]' trainer.val_only=false trainer.val_before_train=true trainer.default_hdfs_dir=null trainer.n_gpus_per_node=4 trainer.nnodes=1 trainer.save_freq=10 trainer.test_freq=10 trainer.project_name=Graph-Agent-Planning trainer.experiment_name=DAPO-GAP3B-MHQA-Agent-E10-step60to70-4gpu trainer.total_epochs=2 trainer.total_training_steps=70 trainer.default_local_dir=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E10-step60to70-4gpu trainer.resume_mode=resume_path trainer.resume_from_path=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60 actor_rollout_ref.rollout.multi_turn.enable=true actor_rollout_ref.rollout.multi_turn.max_turns=8 +actor_rollout_ref.rollout.multi_turn.format=qwen actor_rollout_ref.rollout.multi_turn.use_xml_tool_parser=true actor_rollout_ref.rollout.multi_turn.tool_config_path=/data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml reward_model.reward_manager=e10_batch_audit custom_reward_function.train_path=/data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/code/e10_scorer.py custom_reward_function.train_name=compute_score_em_batch_e10 custom_reward_function.val_path=/data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/mhqa_eval.py custom_reward_function.val_name=compute_score_em_batch
+/data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+  warnings.warn("Few shot examples not found, skipping...")
+/data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+  warnings.warn("Few shot examples not found, skipping...")
+2026-09-10 15:45:42,252	INFO worker.py:1832 -- Started a local Ray instance. View the dashboard at [1m[32m127.0.0.1:8265 [39m[22m
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m bash: /home/nf5468m6/miniconda3/envs/parallel-agent/lib/libtinfo.so.6: no version information available (required by bash)
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...[32m [repeated 17x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")[32m [repeated 17x across cluster][0m
+[36m(TaskRunner pid=2244126)[0m TaskRunner hostname: r3l2, PID: 2244126
+[36m(TaskRunner pid=2244126)[0m {'AFM_reward_fn': {'context_max_response_length': 10240,
+[36m(TaskRunner pid=2244126)[0m                    'format_fn_type': 'no_penalty'},
+[36m(TaskRunner pid=2244126)[0m  'actor_rollout_ref': {'actor': {'checkpoint': {'load_contents': ['model',
+[36m(TaskRunner pid=2244126)[0m                                                                   'optimizer',
+[36m(TaskRunner pid=2244126)[0m                                                                   'extra'],
+[36m(TaskRunner pid=2244126)[0m                                                 'save_contents': ['model',
+[36m(TaskRunner pid=2244126)[0m                                                                   'optimizer',
+[36m(TaskRunner pid=2244126)[0m                                                                   'extra']},
+[36m(TaskRunner pid=2244126)[0m                                  'clip_ratio': 0.2,
+[36m(TaskRunner pid=2244126)[0m                                  'clip_ratio_c': 10.0,
+[36m(TaskRunner pid=2244126)[0m                                  'clip_ratio_high': 0.28,
+[36m(TaskRunner pid=2244126)[0m                                  'clip_ratio_low': 0.2,
+[36m(TaskRunner pid=2244126)[0m                                  'entropy_checkpointing': False,
+[36m(TaskRunner pid=2244126)[0m                                  'entropy_coeff': 0,
+[36m(TaskRunner pid=2244126)[0m                                  'entropy_from_logits_with_chunking': False,
+[36m(TaskRunner pid=2244126)[0m                                  'fsdp_config': {'forward_prefetch': False,
+[36m(TaskRunner pid=2244126)[0m                                                  'fsdp_size': -1,
+[36m(TaskRunner pid=2244126)[0m                                                  'offload_policy': False,
+[36m(TaskRunner pid=2244126)[0m                                                  'optimizer_offload': False,
+[36m(TaskRunner pid=2244126)[0m                                                  'param_offload': False,
+[36m(TaskRunner pid=2244126)[0m                                                  'reshard_after_forward': True,
+[36m(TaskRunner pid=2244126)[0m                                                  'timeout': 120,
+[36m(TaskRunner pid=2244126)[0m                                                  'wrap_policy': {'min_num_params': 0}},
+[36m(TaskRunner pid=2244126)[0m                                  'grad_clip': 1.0,
+[36m(TaskRunner pid=2244126)[0m                                  'kl_loss_coef': 0.0,
+[36m(TaskRunner pid=2244126)[0m                                  'kl_loss_type': 'low_var_kl',
+[36m(TaskRunner pid=2244126)[0m                                  'loss_agg_mode': 'token-mean',
+[36m(TaskRunner pid=2244126)[0m                                  'optim': {'lr': 1e-06,
+[36m(TaskRunner pid=2244126)[0m                                            'lr_warmup_steps': 3,
+[36m(TaskRunner pid=2244126)[0m                                            'lr_warmup_steps_ratio': 0.0,
+[36m(TaskRunner pid=2244126)[0m                                            'min_lr_ratio': 0.0,
+[36m(TaskRunner pid=2244126)[0m                                            'num_cycles': 0.5,
+[36m(TaskRunner pid=2244126)[0m                                            'total_training_steps': -1,
+[36m(TaskRunner pid=2244126)[0m                                            'warmup_style': 'constant',
+[36m(TaskRunner pid=2244126)[0m                                            'weight_decay': 0.1},
+[36m(TaskRunner pid=2244126)[0m                                  'ppo_epochs': 1,
+[36m(TaskRunner pid=2244126)[0m                                  'ppo_max_token_len_per_gpu': 10240,
+[36m(TaskRunner pid=2244126)[0m                                  'ppo_micro_batch_size': None,
+[36m(TaskRunner pid=2244126)[0m                                  'ppo_micro_batch_size_per_gpu': 2,
+[36m(TaskRunner pid=2244126)[0m                                  'ppo_mini_batch_size': 32,
+[36m(TaskRunner pid=2244126)[0m                                  'profiler': {'all_ranks': False,
+[36m(TaskRunner pid=2244126)[0m                                               'discrete': False,
+[36m(TaskRunner pid=2244126)[0m                                               'ranks': None},
+[36m(TaskRunner pid=2244126)[0m                                  'shuffle': False,
+[36m(TaskRunner pid=2244126)[0m                                  'strategy': 'fsdp',
+[36m(TaskRunner pid=2244126)[0m                                  'ulysses_sequence_parallel_size': 1,
+[36m(TaskRunner pid=2244126)[0m                                  'use_dynamic_bsz': True,
+[36m(TaskRunner pid=2244126)[0m                                  'use_kl_loss': False,
+[36m(TaskRunner pid=2244126)[0m                                  'use_torch_compile': True},
+[36m(TaskRunner pid=2244126)[0m                        'hybrid_engine': True,
+[36m(TaskRunner pid=2244126)[0m                        'model': {'enable_activation_offload': False,
+[36m(TaskRunner pid=2244126)[0m                                  'enable_gradient_checkpointing': True,
+[36m(TaskRunner pid=2244126)[0m                                  'external_lib': None,
+[36m(TaskRunner pid=2244126)[0m                                  'fused_kernel_options': {'impl_backend': 'torch'},
+[36m(TaskRunner pid=2244126)[0m                                  'lora_alpha': 16,
+[36m(TaskRunner pid=2244126)[0m                                  'lora_rank': 0,
+[36m(TaskRunner pid=2244126)[0m                                  'override_config': {},
+[36m(TaskRunner pid=2244126)[0m                                  'path': '/data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu',
+[36m(TaskRunner pid=2244126)[0m                                  'target_modules': 'all-linear',
+[36m(TaskRunner pid=2244126)[0m                                  'trust_remote_code': False,
+[36m(TaskRunner pid=2244126)[0m                                  'use_fused_kernels': False,
+[36m(TaskRunner pid=2244126)[0m                                  'use_liger': False,
+[36m(TaskRunner pid=2244126)[0m                                  'use_remove_padding': True,
+[36m(TaskRunner pid=2244126)[0m                                  'use_shm': False},
+[36m(TaskRunner pid=2244126)[0m                        'ref': {'entropy_checkpointing': False,
+[36m(TaskRunner pid=2244126)[0m                                'entropy_from_logits_with_chunking': False,
+[36m(TaskRunner pid=2244126)[0m                                'fsdp_config': {'forward_prefetch': False,
+[36m(TaskRunner pid=2244126)[0m                                                'param_offload': True,
+[36m(TaskRunner pid=2244126)[0m                                                'reshard_after_forward': True,
+[36m(TaskRunner pid=2244126)[0m                                                'wrap_policy': {'min_num_params': 0}},
+[36m(TaskRunner pid=2244126)[0m                                'log_prob_max_token_len_per_gpu': 10240,
+[36m(TaskRunner pid=2244126)[0m                                'log_prob_micro_batch_size': None,
+[36m(TaskRunner pid=2244126)[0m                                'log_prob_micro_batch_size_per_gpu': 8,
+[36m(TaskRunner pid=2244126)[0m                                'log_prob_use_dynamic_bsz': True,
+[36m(TaskRunner pid=2244126)[0m                                'profiler': {'all_ranks': False,
+[36m(TaskRunner pid=2244126)[0m                                             'discrete': False,
+[36m(TaskRunner pid=2244126)[0m                                             'ranks': None},
+[36m(TaskRunner pid=2244126)[0m                                'strategy': 'fsdp',
+[36m(TaskRunner pid=2244126)[0m                                'ulysses_sequence_parallel_size': 1,
+[36m(TaskRunner pid=2244126)[0m                                'use_torch_compile': True},
+[36m(TaskRunner pid=2244126)[0m                        'rollout': {'disable_log_stats': True,
+[36m(TaskRunner pid=2244126)[0m                                    'do_sample': True,
+[36m(TaskRunner pid=2244126)[0m                                    'dtype': 'bfloat16',
+[36m(TaskRunner pid=2244126)[0m                                    'enable_chunked_prefill': True,
+[36m(TaskRunner pid=2244126)[0m                                    'enforce_eager': True,
+[36m(TaskRunner pid=2244126)[0m                                    'engine_kwargs': {'sglang': {'attention_backend': None},
+[36m(TaskRunner pid=2244126)[0m                                                      'vllm': {'disable_mm_preprocessor_cache': False,
+[36m(TaskRunner pid=2244126)[0m                                                               'swap_space': None}},
+[36m(TaskRunner pid=2244126)[0m                                    'free_cache_engine': True,
+[36m(TaskRunner pid=2244126)[0m                                    'gpu_memory_utilization': 0.5,
+[36m(TaskRunner pid=2244126)[0m                                    'ignore_eos': False,
+[36m(TaskRunner pid=2244126)[0m                                    'layered_summon': False,
+[36m(TaskRunner pid=2244126)[0m                                    'load_format': 'dummy_dtensor',
+[36m(TaskRunner pid=2244126)[0m                                    'log_prob_max_token_len_per_gpu': 10240,
+[36m(TaskRunner pid=2244126)[0m                                    'log_prob_micro_batch_size': None,
+[36m(TaskRunner pid=2244126)[0m                                    'log_prob_micro_batch_size_per_gpu': 8,
+[36m(TaskRunner pid=2244126)[0m                                    'log_prob_use_dynamic_bsz': True,
+[36m(TaskRunner pid=2244126)[0m                                    'max_model_len': 10240,
+[36m(TaskRunner pid=2244126)[0m                                    'max_num_batched_tokens': 10240,
+[36m(TaskRunner pid=2244126)[0m                                    'max_num_seqs': 1024,
+[36m(TaskRunner pid=2244126)[0m                                    'mode': 'sync',
+[36m(TaskRunner pid=2244126)[0m                                    'multi_turn': {'completion_callback': None,
+[36m(TaskRunner pid=2244126)[0m                                                   'enable': True,
+[36m(TaskRunner pid=2244126)[0m                                                   'enable_tokenization_sanity_check': False,
+[36m(TaskRunner pid=2244126)[0m                                                   'format': 'qwen',
+[36m(TaskRunner pid=2244126)[0m                                                   'max_turns': 8,
+[36m(TaskRunner pid=2244126)[0m                                                   'tool_config_path': '/data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml',
+[36m(TaskRunner pid=2244126)[0m                                                   'use_inference_chat_template': False,
+[36m(TaskRunner pid=2244126)[0m                                                   'use_xml_tool_parser': True},
+[36m(TaskRunner pid=2244126)[0m                                    'n': 8,
+[36m(TaskRunner pid=2244126)[0m                                    'name': 'sglang_async',
+[36m(TaskRunner pid=2244126)[0m                                    'profiler': {'all_ranks': False,
+[36m(TaskRunner pid=2244126)[0m                                                 'discrete': False,
+[36m(TaskRunner pid=2244126)[0m                                                 'ranks': None},
+[36m(TaskRunner pid=2244126)[0m                                    'prompt_length': 2048,
+[36m(TaskRunner pid=2244126)[0m                                    'response_length': 8192,
+[36m(TaskRunner pid=2244126)[0m                                    'temperature': 1.0,
+[36m(TaskRunner pid=2244126)[0m                                    'tensor_model_parallel_size': 2,
+[36m(TaskRunner pid=2244126)[0m                                    'top_k': -1,
+[36m(TaskRunner pid=2244126)[0m                                    'top_p': 1,
+[36m(TaskRunner pid=2244126)[0m                                    'use_fire_sampling': False,
+[36m(TaskRunner pid=2244126)[0m                                    'val_kwargs': {'do_sample': False,
+[36m(TaskRunner pid=2244126)[0m                                                   'n': 1,
+[36m(TaskRunner pid=2244126)[0m                                                   'temperature': 0,
+[36m(TaskRunner pid=2244126)[0m                                                   'top_k': -1,
+[36m(TaskRunner pid=2244126)[0m                                                   'top_p': 1.0}}},
+[36m(TaskRunner pid=2244126)[0m  'algorithm': {'adv_estimator': 'grpo',
+[36m(TaskRunner pid=2244126)[0m                'filter_groups': {'enable': True,
+[36m(TaskRunner pid=2244126)[0m                                  'max_num_gen_batches': 0,
+[36m(TaskRunner pid=2244126)[0m                                  'metric': 'seq_final_reward'},
+[36m(TaskRunner pid=2244126)[0m                'gamma': 1.0,
+[36m(TaskRunner pid=2244126)[0m                'kl_ctrl': {'horizon': 10000,
+[36m(TaskRunner pid=2244126)[0m                            'kl_coef': 0.001,
+[36m(TaskRunner pid=2244126)[0m                            'target_kl': 0.1,
+[36m(TaskRunner pid=2244126)[0m                            'type': 'fixed'},
+[36m(TaskRunner pid=2244126)[0m                'kl_penalty': 'kl',
+[36m(TaskRunner pid=2244126)[0m                'lam': 1.0,
+[36m(TaskRunner pid=2244126)[0m                'norm_adv_by_std_in_grpo': True,
+[36m(TaskRunner pid=2244126)[0m                'pf_ppo': {'reweight_method': 'pow', 'weight_pow': 2.0},
+[36m(TaskRunner pid=2244126)[0m                'use_kl_in_reward': False,
+[36m(TaskRunner pid=2244126)[0m                'use_pf_ppo': False},
+[36m(TaskRunner pid=2244126)[0m  'critic': {'checkpoint': {'load_contents': ['model', 'optimizer', 'extra'],
+[36m(TaskRunner pid=2244126)[0m                            'save_contents': ['model', 'optimizer', 'extra']},
+[36m(TaskRunner pid=2244126)[0m             'cliprange_value': 0.5,
+[36m(TaskRunner pid=2244126)[0m             'forward_max_token_len_per_gpu': 32768,
+[36m(TaskRunner pid=2244126)[0m             'forward_micro_batch_size': None,
+[36m(TaskRunner pid=2244126)[0m             'forward_micro_batch_size_per_gpu': None,
+[36m(TaskRunner pid=2244126)[0m             'grad_clip': 1.0,
+[36m(TaskRunner pid=2244126)[0m             'loss_agg_mode': 'token-mean',
+[36m(TaskRunner pid=2244126)[0m             'model': {'enable_activation_offload': False,
+[36m(TaskRunner pid=2244126)[0m                       'enable_gradient_checkpointing': True,
+[36m(TaskRunner pid=2244126)[0m                       'external_lib': None,
+[36m(TaskRunner pid=2244126)[0m                       'fsdp_config': {'forward_prefetch': False,
+[36m(TaskRunner pid=2244126)[0m                                       'fsdp_size': -1,
+[36m(TaskRunner pid=2244126)[0m                                       'offload_policy': False,
+[36m(TaskRunner pid=2244126)[0m                                       'optimizer_offload': False,
+[36m(TaskRunner pid=2244126)[0m                                       'param_offload': False,
+[36m(TaskRunner pid=2244126)[0m                                       'reshard_after_forward': True,
+[36m(TaskRunner pid=2244126)[0m                                       'wrap_policy': {'min_num_params': 0}},
+[36m(TaskRunner pid=2244126)[0m                       'lora_alpha': 16,
+[36m(TaskRunner pid=2244126)[0m                       'lora_rank': 0,
+[36m(TaskRunner pid=2244126)[0m                       'override_config': {},
+[36m(TaskRunner pid=2244126)[0m                       'path': '~/models/deepseek-llm-7b-chat',
+[36m(TaskRunner pid=2244126)[0m                       'target_modules': 'all-linear',
+[36m(TaskRunner pid=2244126)[0m                       'tokenizer_path': '/data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu',
+[36m(TaskRunner pid=2244126)[0m                       'trust_remote_code': False,
+[36m(TaskRunner pid=2244126)[0m                       'use_remove_padding': False,
+[36m(TaskRunner pid=2244126)[0m                       'use_shm': False},
+[36m(TaskRunner pid=2244126)[0m             'optim': {'lr': 1e-05,
+[36m(TaskRunner pid=2244126)[0m                       'lr_warmup_steps_ratio': 0.0,
+[36m(TaskRunner pid=2244126)[0m                       'min_lr_ratio': None,
+[36m(TaskRunner pid=2244126)[0m                       'total_training_steps': -1,
+[36m(TaskRunner pid=2244126)[0m                       'warmup_style': 'constant',
+[36m(TaskRunner pid=2244126)[0m                       'weight_decay': 0.01},
+[36m(TaskRunner pid=2244126)[0m             'ppo_epochs': 1,
+[36m(TaskRunner pid=2244126)[0m             'ppo_max_token_len_per_gpu': 32768,
+[36m(TaskRunner pid=2244126)[0m             'ppo_micro_batch_size': None,
+[36m(TaskRunner pid=2244126)[0m             'ppo_micro_batch_size_per_gpu': None,
+[36m(TaskRunner pid=2244126)[0m             'ppo_mini_batch_size': 32,
+[36m(TaskRunner pid=2244126)[0m             'profiler': {'all_ranks': False, 'discrete': False, 'ranks': None},
+[36m(TaskRunner pid=2244126)[0m             'rollout_n': 8,
+[36m(TaskRunner pid=2244126)[0m             'shuffle': False,
+[36m(TaskRunner pid=2244126)[0m             'strategy': 'fsdp',
+[36m(TaskRunner pid=2244126)[0m             'ulysses_sequence_parallel_size': 1,
+[36m(TaskRunner pid=2244126)[0m             'use_dynamic_bsz': True},
+[36m(TaskRunner pid=2244126)[0m  'curriculum_learning': {'enable': False},
+[36m(TaskRunner pid=2244126)[0m  'custom_reward_function': {'train_name': 'compute_score_em_batch_e10',
+[36m(TaskRunner pid=2244126)[0m                             'train_path': '/data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/code/e10_scorer.py',
+[36m(TaskRunner pid=2244126)[0m                             'val_name': 'compute_score_em_batch',
+[36m(TaskRunner pid=2244126)[0m                             'val_path': '/data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/mhqa_eval.py'},
+[36m(TaskRunner pid=2244126)[0m  'data': {'custom_cls': {'name': None, 'path': None},
+[36m(TaskRunner pid=2244126)[0m           'filter_overlong_prompts': False,
+[36m(TaskRunner pid=2244126)[0m           'filter_overlong_prompts_workers': 1,
+[36m(TaskRunner pid=2244126)[0m           'gen_batch_size': 160,
+[36m(TaskRunner pid=2244126)[0m           'image_key': 'images',
+[36m(TaskRunner pid=2244126)[0m           'max_prompt_length': 2048,
+[36m(TaskRunner pid=2244126)[0m           'max_response_length': 8192,
+[36m(TaskRunner pid=2244126)[0m           'prompt_key': 'prompt',
+[36m(TaskRunner pid=2244126)[0m           'return_full_prompt': False,
+[36m(TaskRunner pid=2244126)[0m           'return_raw_chat': True,
+[36m(TaskRunner pid=2244126)[0m           'return_raw_input_ids': False,
+[36m(TaskRunner pid=2244126)[0m           'reward_fn_key': 'data_source',
+[36m(TaskRunner pid=2244126)[0m           'shuffle': True,
+[36m(TaskRunner pid=2244126)[0m           'tokenizer': None,
+[36m(TaskRunner pid=2244126)[0m           'train_batch_size': 32,
+[36m(TaskRunner pid=2244126)[0m           'train_files': ['/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet'],
+[36m(TaskRunner pid=2244126)[0m           'truncation': 'error',
+[36m(TaskRunner pid=2244126)[0m           'trust_remote_code': False,
+[36m(TaskRunner pid=2244126)[0m           'use_shm': False,
+[36m(TaskRunner pid=2244126)[0m           'val_batch_size': 128,
+[36m(TaskRunner pid=2244126)[0m           'val_files': ['/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet'],
+[36m(TaskRunner pid=2244126)[0m           'validation_shuffle': False,
+[36m(TaskRunner pid=2244126)[0m           'video_key': 'videos'},
+[36m(TaskRunner pid=2244126)[0m  'ray_init': {'num_cpus': 16, 'timeline_json_file': None},
+[36m(TaskRunner pid=2244126)[0m  'reward_model': {'enable': False,
+[36m(TaskRunner pid=2244126)[0m                   'forward_max_token_len_per_gpu': 32768,
+[36m(TaskRunner pid=2244126)[0m                   'launch_reward_fn_async': False,
+[36m(TaskRunner pid=2244126)[0m                   'max_length': None,
+[36m(TaskRunner pid=2244126)[0m                   'micro_batch_size': None,
+[36m(TaskRunner pid=2244126)[0m                   'micro_batch_size_per_gpu': None,
+[36m(TaskRunner pid=2244126)[0m                   'model': {'external_lib': None,
+[36m(TaskRunner pid=2244126)[0m                             'fsdp_config': {'forward_prefetch': False,
+[36m(TaskRunner pid=2244126)[0m                                             'fsdp_size': -1,
+[36m(TaskRunner pid=2244126)[0m                                             'param_offload': False,
+[36m(TaskRunner pid=2244126)[0m                                             'reshard_after_forward': True,
+[36m(TaskRunner pid=2244126)[0m                                             'wrap_policy': {'min_num_params': 0}},
+[36m(TaskRunner pid=2244126)[0m                             'input_tokenizer': '/data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu',
+[36m(TaskRunner pid=2244126)[0m                             'path': '~/models/FsfairX-LLaMA3-RM-v0.1',
+[36m(TaskRunner pid=2244126)[0m                             'trust_remote_code': False,
+[36m(TaskRunner pid=2244126)[0m                             'use_fused_kernels': False,
+[36m(TaskRunner pid=2244126)[0m                             'use_remove_padding': False,
+[36m(TaskRunner pid=2244126)[0m                             'use_shm': False},
+[36m(TaskRunner pid=2244126)[0m                   'profiler': {'all_ranks': False,
+[36m(TaskRunner pid=2244126)[0m                                'discrete': False,
+[36m(TaskRunner pid=2244126)[0m                                'ranks': None},
+[36m(TaskRunner pid=2244126)[0m                   'reward_manager': 'e10_batch_audit',
+[36m(TaskRunner pid=2244126)[0m                   'sandbox_fusion': {'max_concurrent': 64, 'url': None},
+[36m(TaskRunner pid=2244126)[0m                   'strategy': 'fsdp',
+[36m(TaskRunner pid=2244126)[0m                   'ulysses_sequence_parallel_size': 1,
+[36m(TaskRunner pid=2244126)[0m                   'use_dynamic_bsz': True},
+[36m(TaskRunner pid=2244126)[0m  'trainer': {'balance_batch': True,
+[36m(TaskRunner pid=2244126)[0m              'controller_nsight_options': {'cuda-graph-trace': 'graph',
+[36m(TaskRunner pid=2244126)[0m                                            'cuda-memory-usage': 'true',
+[36m(TaskRunner pid=2244126)[0m                                            'trace': 'cuda,nvtx,cublas,ucx'},
+[36m(TaskRunner pid=2244126)[0m              'critic_warmup': 0,
+[36m(TaskRunner pid=2244126)[0m              'default_hdfs_dir': None,
+[36m(TaskRunner pid=2244126)[0m              'default_local_dir': '/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E10-step60to70-4gpu',
+[36m(TaskRunner pid=2244126)[0m              'del_local_ckpt_after_load': False,
+[36m(TaskRunner pid=2244126)[0m              'device': 'cuda',
+[36m(TaskRunner pid=2244126)[0m              'experiment_name': 'DAPO-GAP3B-MHQA-Agent-E10-step60to70-4gpu',
+[36m(TaskRunner pid=2244126)[0m              'log_val_generations': 0,
+[36m(TaskRunner pid=2244126)[0m              'logger': ['console'],
+[36m(TaskRunner pid=2244126)[0m              'max_actor_ckpt_to_keep': None,
+[36m(TaskRunner pid=2244126)[0m              'max_critic_ckpt_to_keep': None,
+[36m(TaskRunner pid=2244126)[0m              'n_gpus_per_node': 4,
+[36m(TaskRunner pid=2244126)[0m              'nnodes': 1,
+[36m(TaskRunner pid=2244126)[0m              'profile_steps': None,
+[36m(TaskRunner pid=2244126)[0m              'project_name': 'Graph-Agent-Planning',
+[36m(TaskRunner pid=2244126)[0m              'ray_wait_register_center_timeout': 300,
+[36m(TaskRunner pid=2244126)[0m              'resume_from_path': '/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60',
+[36m(TaskRunner pid=2244126)[0m              'resume_mode': 'resume_path',
+[36m(TaskRunner pid=2244126)[0m              'rollout_data_dir': None,
+[36m(TaskRunner pid=2244126)[0m              'save_freq': 10,
+[36m(TaskRunner pid=2244126)[0m              'test_freq': 10,
+[36m(TaskRunner pid=2244126)[0m              'total_epochs': 2,
+[36m(TaskRunner pid=2244126)[0m              'total_training_steps': 70,
+[36m(TaskRunner pid=2244126)[0m              'val_before_train': True,
+[36m(TaskRunner pid=2244126)[0m              'val_only': False,
+[36m(TaskRunner pid=2244126)[0m              'validation_data_dir': None,
+[36m(TaskRunner pid=2244126)[0m              'worker_nsight_options': {'capture-range': 'cudaProfilerApi',
+[36m(TaskRunner pid=2244126)[0m                                        'capture-range-end': None,
+[36m(TaskRunner pid=2244126)[0m                                        'cuda-graph-trace': 'graph',
+[36m(TaskRunner pid=2244126)[0m                                        'cuda-memory-usage': 'true',
+[36m(TaskRunner pid=2244126)[0m                                        'kill': 'none',
+[36m(TaskRunner pid=2244126)[0m                                        'trace': 'cuda,nvtx,cublas,ucx'}}}
+[36m(TaskRunner pid=2244126)[0m using customized reward function 'compute_score_em_batch_e10' from '/data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/code/e10_scorer.py'
+[36m(TaskRunner pid=2244126)[0m using customized reward function 'compute_score_em_batch' from '/data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/mhqa_eval.py'
+[36m(TaskRunner pid=2244126)[0m Using dataset class: RLHFDataset
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...[32m [repeated 3x across cluster][0m
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")[32m [repeated 3x across cluster][0m
+[36m(TaskRunner pid=2244126)[0m dataset len: 169595
+[36m(TaskRunner pid=2244126)[0m Using dataset class: RLHFDataset
+[36m(TaskRunner pid=2244126)[0m dataset len: 3610
+[36m(TaskRunner pid=2244126)[0m WARNING: val_batch_size is deprecated. Validation datasets are sent to inference engines as a whole batch, which will schedule the memory themselves.
+[36m(TaskRunner pid=2244126)[0m [validate_config] All configuration checks passed successfully!
+[36m(TaskRunner pid=2244126)[0m Size of train dataloader: 1059, Size of val dataloader: 29
+[36m(TaskRunner pid=2244126)[0m Total training steps: 70
+[36m(TaskRunner pid=2244126)[0m colocated worker base class <class 'verl.single_controller.base.worker.Worker'>
+[36m(TaskRunner pid=2244126)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m bash: /home/nf5468m6/miniconda3/envs/parallel-agent/lib/libtinfo.so.6: no version information available (required by bash)
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[36m(TaskRunner pid=2244126)[0m WARNING:2026-09-10 15:46:37,774:Waiting for register center actor CsPleK_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m bash: /home/nf5468m6/miniconda3/envs/parallel-agent/lib/libtinfo.so.6: no version information available (required by bash)
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m bash: /home/nf5468m6/miniconda3/envs/parallel-agent/lib/libtinfo.so.6: no version information available (required by bash)
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[33m(raylet)[0m bash: /home/nf5468m6/miniconda3/envs/parallel-agent/lib/libtinfo.so.6: no version information available (required by bash)
+[36m(WorkerDict pid=2247667)[0m [W910 15:47:20.739467331 socket.cpp:204] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...[32m [repeated 2x across cluster][0m
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m [W910 15:47:30.766098626 socket.cpp:204] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[33m(raylet)[0m bash: /home/nf5468m6/miniconda3/envs/parallel-agent/lib/libtinfo.so.6: no version information available (required by bash)[32m [repeated 2x across cluster][0m
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...[32m [repeated 6x across cluster][0m
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")[32m [repeated 6x across cluster][0m
+[36m(WorkerDict pid=2249285)[0m [W910 15:47:37.004037738 socket.cpp:204] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...[32m [repeated 3x across cluster][0m
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m [W910 15:47:47.036792268 socket.cpp:204] [c10d] The hostname of the client socket cannot be retrieved. err=-3[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m [W910 15:47:57.078353107 socket.cpp:204] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[36m(WorkerDict pid=2247667)[0m [W910 15:48:07.105929610 socket.cpp:204] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[36m(WorkerDict pid=2247667)[0m Model config after override: Qwen2Config {
+[36m(WorkerDict pid=2247667)[0m   "architectures": [
+[36m(WorkerDict pid=2247667)[0m     "Qwen2ForCausalLM"
+[36m(WorkerDict pid=2247667)[0m   ],
+[36m(WorkerDict pid=2247667)[0m   "attention_dropout": 0.0,
+[36m(WorkerDict pid=2247667)[0m   "eos_token_id": 151645,
+[36m(WorkerDict pid=2247667)[0m   "hidden_act": "silu",
+[36m(WorkerDict pid=2247667)[0m   "hidden_size": 2048,
+[36m(WorkerDict pid=2247667)[0m   "initializer_range": 0.02,
+[36m(WorkerDict pid=2247667)[0m   "intermediate_size": 11008,
+[36m(WorkerDict pid=2247667)[0m   "max_position_embeddings": 32768,
+[36m(WorkerDict pid=2247667)[0m   "max_window_layers": 70,
+[36m(WorkerDict pid=2247667)[0m   "model_type": "qwen2",
+[36m(WorkerDict pid=2247667)[0m   "num_attention_heads": 16,
+[36m(WorkerDict pid=2247667)[0m   "num_hidden_layers": 36,
+[36m(WorkerDict pid=2247667)[0m   "num_key_value_heads": 2,
+[36m(WorkerDict pid=2247667)[0m   "pad_token_id": 151643,
+[36m(WorkerDict pid=2247667)[0m   "rms_norm_eps": 1e-06,
+[36m(WorkerDict pid=2247667)[0m   "rope_scaling": null,
+[36m(WorkerDict pid=2247667)[0m   "rope_theta": 1000000.0,
+[36m(WorkerDict pid=2247667)[0m   "sliding_window": 32768,
+[36m(WorkerDict pid=2247667)[0m   "tie_word_embeddings": true,
+[36m(WorkerDict pid=2247667)[0m   "torch_dtype": "bfloat16",
+[36m(WorkerDict pid=2247667)[0m   "transformers_version": "4.51.1",
+[36m(WorkerDict pid=2247667)[0m   "use_cache": false,
+[36m(WorkerDict pid=2247667)[0m   "use_sliding_window": false,
+[36m(WorkerDict pid=2247667)[0m   "vocab_size": 151936
+[36m(WorkerDict pid=2247667)[0m }
+[36m(WorkerDict pid=2247667)[0m 
+[36m(WorkerDict pid=2249283)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=2249283)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[36m(WorkerDict pid=2249283)[0m Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2249283)[0m Loading checkpoint shards:  50%|█████     | 1/2 [00:11<00:11, 11.77s/it]
+[36m(WorkerDict pid=2249285)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249285)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  6.58s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.36s/it]
+[36m(WorkerDict pid=2247667)[0m Monkey patch _flash_attention_forward in transformers.integrations.flash_attention
+[36m(WorkerDict pid=2247667)[0m Skipping monkey patch for Qwen2ForCausalLM as use_fused_kernels is False or fused_kernels_backend is torch
+[36m(WorkerDict pid=2247667)[0m Qwen2ForCausalLM contains 3.09B parameters
+[36m(WorkerDict pid=2247667)[0m wrap_policy: functools.partial(<function _or_policy at 0x7fbed495d120>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7fbed495d000>, transformer_layer_cls={<class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>})])
+[36m(WorkerDict pid=2247667)[0m NCCL version 2.21.5+cuda12.4
+[36m(WorkerDict pid=2247667)[0m Total steps: 70, num_warmup_steps: 3
+[36m(WorkerDict pid=2247667)[0m Actor use_remove_padding=True
+[36m(WorkerDict pid=2247667)[0m Actor use_fused_kernels=False
+[36m(WorkerDict pid=2249283)[0m Monkey patch _flash_attention_forward in transformers.integrations.flash_attention[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249283)[0m Skipping monkey patch for Qwen2ForCausalLM as use_fused_kernels is False or fused_kernels_backend is torch[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m updated new template
+[36m(WorkerDict pid=2247667)[0m {
+[36m(WorkerDict pid=2247667)[0m   "type": "function",
+[36m(WorkerDict pid=2247667)[0m   "function": {
+[36m(WorkerDict pid=2247667)[0m     "name": "wiki_search",
+[36m(WorkerDict pid=2247667)[0m     "description": "Searches the web for relevant information based on the given query.",
+[36m(WorkerDict pid=2247667)[0m     "parameters": {
+[36m(WorkerDict pid=2247667)[0m       "type": "object",
+[36m(WorkerDict pid=2247667)[0m       "properties": {
+[36m(WorkerDict pid=2247667)[0m         "query": {
+[36m(WorkerDict pid=2247667)[0m           "type": "string",
+[36m(WorkerDict pid=2247667)[0m           "description": "one query to be search"
+[36m(WorkerDict pid=2247667)[0m         }
+[36m(WorkerDict pid=2247667)[0m       },
+[36m(WorkerDict pid=2247667)[0m       "required": [
+[36m(WorkerDict pid=2247667)[0m         "query"
+[36m(WorkerDict pid=2247667)[0m       ]
+[36m(WorkerDict pid=2247667)[0m     }
+[36m(WorkerDict pid=2247667)[0m   }
+[36m(WorkerDict pid=2247667)[0m }
+[36m(WorkerDict pid=2249285)[0m use_xml_tool_parser open, add more stop words
+[36m(WorkerDict pid=2249285)[0m /home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=2249285)[0m   warnings.warn(
+[36m(WorkerDict pid=2249281)[0m Loading checkpoint shards:  50%|█████     | 1/2 [00:11<00:11, 11.91s/it][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249283)[0m Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  6.67s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.44s/it][32m [repeated 3x across cluster][0m
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[36m(WorkerDict pid=2249281)[0m /home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=2249281)[0m   warnings.warn(
+[33m(raylet)[0m bash: /home/nf5468m6/miniconda3/envs/parallel-agent/lib/libtinfo.so.6: no version information available (required by bash)
+[36m(WorkerDict pid=2249283)[0m NCCL version 2.21.5+cuda12.4
+[36m(WorkerDict pid=2249281)[0m updated new template[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m {[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m   "type": "function",[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m   "function": {[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m     "name": "wiki_search",[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m     "description": "Searches the web for relevant information based on the given query.",[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m     "parameters": {[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m       "type": "object",[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m       "properties": {[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m         "query": {[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m           "type": "string",[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m           "description": "one query to be search"[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m }[32m [repeated 12x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m       },[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m       "required": [[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m         "query"[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m       ][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m use_xml_tool_parser open, add more stop words
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...[32m [repeated 12x across cluster][0m
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")[32m [repeated 12x across cluster][0m
+[36m(WorkerDict pid=2249283)[0m 2026-09-10 15:48:53,451 - INFO - flashinfer.jit: Prebuilt kernels not found, using JIT backend
+[36m(WorkerDict pid=2249283)[0m 2026-09-10 15:48:53,451 - INFO - flashinfer.jit: Prebuilt kernels not found, using JIT backend
+[36m(WorkerDict pid=2249283)[0m   0%|          | 0/23 [00:00<?, ?it/s]Capturing batches (avail_mem=29.27 GB):   0%|          | 0/23 [00:00<?, ?it/s]
+[33m(raylet)[0m bash: /home/nf5468m6/miniconda3/envs/parallel-agent/lib/libtinfo.so.6: no version information available (required by bash)[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m 2026-09-10 15:48:55,449 - INFO - flashinfer.jit: Loading JIT ops: batch_prefill_with_kv_cache_dtype_q_bf16_dtype_kv_bf16_dtype_o_bf16_dtype_idx_i32_head_dim_qk_128_head_dim_vo_128_posenc_0_use_swa_False_use_logits_cap_False_f16qk_False
+[36m(WorkerDict pid=2247667)[0m 2026-09-10 15:48:55,449 - INFO - flashinfer.jit: Loading JIT ops: batch_prefill_with_kv_cache_dtype_q_bf16_dtype_kv_bf16_dtype_o_bf16_dtype_idx_i32_head_dim_qk_128_head_dim_vo_128_posenc_0_use_swa_False_use_logits_cap_False_f16qk_False
+[36m(WorkerDict pid=2249283)[0m 2026-09-10 15:48:55,514 - INFO - flashinfer.jit: Finished loading JIT ops: batch_prefill_with_kv_cache_dtype_q_bf16_dtype_kv_bf16_dtype_o_bf16_dtype_idx_i32_head_dim_qk_128_head_dim_vo_128_posenc_0_use_swa_False_use_logits_cap_False_f16qk_False
+[36m(WorkerDict pid=2247667)[0m Capturing batches (avail_mem=29.09 GB):   4%|▍         | 1/23 [00:03<01:10,  3.18s/it]Capturing batches (avail_mem=28.82 GB):   4%|▍         | 1/23 [00:03<01:10,  3.18s/it]
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...[32m [repeated 15x across cluster][0m
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")[32m [repeated 15x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m 2026-09-10 15:48:53,785 - INFO - flashinfer.jit: Prebuilt kernels not found, using JIT backend[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m   0%|          | 0/23 [00:00<?, ?it/s]Capturing batches (avail_mem=29.09 GB):   0%|          | 0/23 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2249283)[0m 2026-09-10 15:48:55,449 - INFO - flashinfer.jit: Loading JIT ops: batch_prefill_with_kv_cache_dtype_q_bf16_dtype_kv_bf16_dtype_o_bf16_dtype_idx_i32_head_dim_qk_128_head_dim_vo_128_posenc_0_use_swa_False_use_logits_cap_False_f16qk_False[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m 2026-09-10 15:48:55,676 - INFO - flashinfer.jit: Finished loading JIT ops: batch_prefill_with_kv_cache_dtype_q_bf16_dtype_kv_bf16_dtype_o_bf16_dtype_idx_i32_head_dim_qk_128_head_dim_vo_128_posenc_0_use_swa_False_use_logits_cap_False_f16qk_False[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m Capturing batches (avail_mem=28.44 GB):  26%|██▌       | 6/23 [00:08<00:16,  1.02it/s]Capturing batches (avail_mem=28.34 GB):  26%|██▌       | 6/23 [00:08<00:16,  1.02it/s][32m [repeated 11x across cluster][0m
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...[32m [repeated 5x across cluster][0m
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")[32m [repeated 5x across cluster][0m
+[36m(WorkerDict pid=2249283)[0m Capturing batches (avail_mem=28.04 GB):  70%|██████▉   | 16/23 [00:14<00:04,  1.61it/s]Capturing batches (avail_mem=28.01 GB):  70%|██████▉   | 16/23 [00:14<00:04,  1.61it/s][32m [repeated 19x across cluster][0m
+[33m(raylet)[0m bash: /home/nf5468m6/miniconda3/envs/parallel-agent/lib/libtinfo.so.6: no version information available (required by bash)
+[36m(WorkerDict pid=2247667)[0m Capturing batches (avail_mem=27.75 GB):  91%|█████████▏| 21/23 [00:16<00:01,  1.81it/s]Capturing batches (avail_mem=27.75 GB):  91%|█████████▏| 21/23 [00:16<00:01,  1.81it/s]
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")
+[36m(WorkerDict pid=2249283)[0m Capturing batches (avail_mem=27.96 GB):  87%|████████▋ | 20/23 [00:16<00:01,  1.67it/s]Capturing batches (avail_mem=27.93 GB):  87%|████████▋ | 20/23 [00:16<00:01,  1.67it/s][32m [repeated 9x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m /home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=2247667)[0m   warnings.warn(
+[36m(WorkerDict pid=2247667)[0m use_xml_tool_parser open, add more stop words
+[36m(WorkerDict pid=2247667)[0m NCCL version 2.21.5+cuda12.4
+[36m(TaskRunner pid=2244126)[0m Using LocalLogger is deprecated. The constructor API will change 
+[36m(TaskRunner pid=2244126)[0m Checkpoint tracker file does not exist: /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E10-step60to70-4gpu/latest_checkpointed_iteration.txt
+[36m(TaskRunner pid=2244126)[0m Load from checkpoint folder: /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60
+[36m(TaskRunner pid=2244126)[0m Setting global step to 60
+[36m(TaskRunner pid=2244126)[0m Resuming from /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60
+[36m(WorkerDict pid=2247667)[0m [E1-0 ckpt-diag][rank 0] load_checkpoint: entered (t=1789026553.6)
+[36m(WorkerDict pid=2247667)[0m [E1-0 ckpt-diag][rank 0] entered get_fsdp_state_ctx (t=1789026553.6)
+[36m(WorkerDict pid=2247667)[0m [E1-0 ckpt-diag][rank 0] torch.load(model) starting: /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_0.pt (t=1789026553.6)
+[36m(WorkerDict pid=2249283)[0m Capturing batches (avail_mem=27.90 GB): 100%|██████████| 23/23 [00:18<00:00,  1.77it/s]Capturing batches (avail_mem=27.90 GB): 100%|██████████| 23/23 [00:18<00:00,  1.26it/s][32m [repeated 5x across cluster][0m
+[33m(raylet)[0m /data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/livecodebench/lcb_runner/prompts/code_generation.py:164: UserWarning: Few shot examples not found, skipping...[32m [repeated 2x across cluster][0m
+[33m(raylet)[0m   warnings.warn("Few shot examples not found, skipping...")[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=2249283)[0m /home/nf5468m6/miniconda3/envs/parallel-agent/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=2249283)[0m   warnings.warn(
+[36m(WorkerDict pid=2247667)[0m [E1-0 ckpt-diag][rank 0] torch.load(model) done; calling model.load_state_dict() (t=1789026578.1)
+[36m(WorkerDict pid=2249283)[0m use_xml_tool_parser open, add more stop words
+[36m(WorkerDict pid=2249281)[0m [E1-0 ckpt-diag][rank 1] load_checkpoint: entered (t=1789026553.6)[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m [E1-0 ckpt-diag][rank 1] entered get_fsdp_state_ctx (t=1789026553.6)[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m [E1-0 ckpt-diag][rank 1] torch.load(model) starting: /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_1.pt (t=1789026553.6)[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m [E1-0 ckpt-diag][rank 0] model.load_state_dict() returned (t=1789026581.6)
+[36m(WorkerDict pid=2247667)[0m [E1-0 ckpt-diag][rank 0] torch.load(optim) starting: /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/optim_world_size_4_rank_0.pt (t=1789026581.6)
+[36m(WorkerDict pid=2249281)[0m [E1-0 ckpt-diag][rank 1] torch.load(optim) done; calling optimizer.load_state_dict() (t=1789026626.5)
+[36m(WorkerDict pid=2249281)[0m [E1-0 ckpt-diag][rank 1] torch.load(model) done; calling model.load_state_dict() (t=1789026578.4)[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m [E1-0 ckpt-diag][rank 1] model.load_state_dict() returned (t=1789026581.6)[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m [E1-0 ckpt-diag][rank 1] torch.load(optim) starting: /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/optim_world_size_4_rank_1.pt (t=1789026581.6)[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249285)[0m [E1-0 ckpt-diag][rank 3] optimizer.load_state_dict() returned (t=1789026628.5)
+[36m(WorkerDict pid=2249285)[0m [E1-0 ckpt-diag][rank 3] exited get_fsdp_state_ctx (t=1789026628.6)
+[36m(WorkerDict pid=2249285)[0m [E1-0 ckpt-diag][rank 3] about to enter final torch.distributed.barrier() (t=1789026628.6)
+[36m(WorkerDict pid=2247667)[0m [E1-0 ckpt-diag][rank 0] load_checkpoint: fully returned (t=1789026629.6)
+*** SIGTERM received at time=1789033381 on cpu 29 ***
+PC: @     0x7f0c9fd4c7d1  (unknown)  pthread_cond_timedwait@@GLIBC_2.3.2
+    @     0x7f0c9fd51420  (unknown)  (unknown)
+    @ ... and at least 1 more frames
+[2026-09-10 17:43:01,146 E 2238985 2238985] logging.cc:484: *** SIGTERM received at time=1789033381 on cpu 29 ***
+[2026-09-10 17:43:01,146 E 2238985 2238985] logging.cc:484: PC: @     0x7f0c9fd4c7d1  (unknown)  pthread_cond_timedwait@@GLIBC_2.3.2
+[2026-09-10 17:43:01,146 E 2238985 2238985] logging.cc:484:     @     0x7f0c9fd51420  (unknown)  (unknown)
+[2026-09-10 17:43:01,146 E 2238985 2238985] logging.cc:484:     @ ... and at least 1 more frames
+[33m(raylet)[0m A worker died or was killed while executing a task by an unexpected system error. To troubleshoot the problem, check the logs for the dead worker. RayTask ID: ffffffffffffffff20f46bdb47c5a84435b16d1201000000 Worker ID: 0eb02984ac29def512d3783daca39509ca0a712d526172cc67ade3f5 Node ID: a1d0c02262b979dda7cf49f71d23c8d44fa03649d51db46c1f9c870b Worker IP address: 10.29.128.7 Worker port: 38347 Worker PID: 2244126 Worker exit type: SYSTEM_ERROR Worker exit detail: Worker exits unexpectedly. Worker exits with an exit code 1. The process receives a SIGTERM.
+[36m(WorkerDict pid=2249285)[0m [E1-0 ckpt-diag][rank 3] torch.load(optim) done; calling optimizer.load_state_dict() (t=1789026626.7)[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m [E1-0 ckpt-diag][rank 0] optimizer.load_state_dict() returned (t=1789026629.6)[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m [E1-0 ckpt-diag][rank 0] exited get_fsdp_state_ctx (t=1789026629.6)[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2247667)[0m [E1-0 ckpt-diag][rank 0] about to enter final torch.distributed.barrier() (t=1789026629.6)[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=2249281)[0m [E1-0 ckpt-diag][rank 1] load_checkpoint: fully returned (t=1789026629.6)[32m [repeated 3x across cluster][0m
+[33m(raylet)[0m A worker died or was killed while executing a task by an unexpected system error. To troubleshoot the problem, check the logs for the dead worker. RayTask ID: ffffffffffffffffa3ffd54b29e024008b20a4ba01000000 Worker ID: 90e8ca3b74628436d18569b803497d75fe252a482ad8c4da15bc7395 Node ID: a1d0c02262b979dda7cf49f71d23c8d44fa03649d51db46c1f9c870b Worker IP address: 10.29.128.7 Worker port: 35881 Worker PID: 2252763 Worker exit type: SYSTEM_ERROR Worker exit detail: Worker exits unexpectedly by a signal. SystemExit is raised (sys.exit is called). Exit code: 1. The process receives a SIGTERM.
+[33m(raylet)[0m A worker died or was killed while executing a task by an unexpected system error. To troubleshoot the problem, check the logs for the dead worker. RayTask ID: ffffffffffffffff3e76f03648c0e423dab371a401000000 Worker ID: 3afc1a816110046dd782be502db5697a3ff98d525ea2adce7c23be72 Node ID: a1d0c02262b979dda7cf49f71d23c8d44fa03649d51db46c1f9c870b Worker IP address: 10.29.128.7 Worker port: 42265 Worker PID: 2252762 Worker exit type: SYSTEM_ERROR Worker exit detail: Worker exits unexpectedly by a signal. SystemExit is raised (sys.exit is called). Exit code: 1. The process receives a SIGTERM.

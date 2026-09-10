@@ -1,0 +1,26 @@
+# Original files E1-0 depends on (read-only, NEVER modified)
+Agent/train/mhqa_agent/rl/run_gen_bs_supervisor.sh | exists=true | size=1716 bytes | mtime=2026-09-03 00:32:59.340634703 +0800 | sha256=53b0a1a66a892d459c398d067313cc19b0732a32a0f1dcdbb636d2bbc723f73f
+Agent/train/mhqa_agent/rl/gen_bs_supervisor.py | exists=true | size=19946 bytes | mtime=2026-08-26 10:27:03.273443639 +0800 | sha256=9bd7924cf343ccead0143d196f7795fabe023411f06ce1020f132c9c898d6bee
+Agent/train/mhqa_agent/rl/train_dapo_mhqa_agent_wiki.sh | exists=true | size=11665 bytes | mtime=2026-08-26 10:26:54.581471870 +0800 | sha256=b5d5199acb40fe4087375bcb161d4dc0d3e3bd57926969ac50d0cf81c87982d3
+Agent/tool_servers/wiki_server/with_wiki_server.sh | exists=true | size=4844 bytes | mtime=2026-08-22 17:06:10.331449740 +0800 | sha256=0bd98b8fa5081b7622c2d944cc6680122a9584e20ccbd39a28530fd79aaa0a9d
+environment.sh | exists=true | size=2491 bytes | mtime=2026-07-02 21:08:38.539790206 +0800 | sha256=50adf9d3a6072c7c756dee133dbccf800041e6aae0a4bac35603684da58232d7
+verl/verl/workers/reward_manager/batch.py | exists=true | size=5337 bytes | mtime=2026-07-01 10:52:23.809979106 +0800 | sha256=d97743d1089546e711a1d38747bf80b87e40dc0a36d7869ca5499189396c0d4a
+verl/verl/workers/reward_manager/__init__.py | exists=true | size=1238 bytes | mtime=2026-07-01 10:52:23.809979106 +0800 | sha256=7088f7e82eb864fe4b015e7c095979190a84a28bcc7ad9d4d5f48425a9f48eac
+verl/verl/utils/reward_score/mhqa_train.py | exists=true | size=6008 bytes | mtime=2026-07-01 10:52:23.808979113 +0800 | sha256=489de015503b707d32c7ecb008586befcf6e5dc0129750ce46d7ed3ebaa91c33
+verl/verl/utils/reward_score/mhqa_eval.py | exists=true | size=6064 bytes | mtime=2026-07-01 10:52:23.808979113 +0800 | sha256=01caeda125325f75288d0f3575e863d04600909d3d890928675c2465a819084b
+verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py | exists=true | size=68648 bytes | mtime=2026-07-01 10:52:23.810979099 +0800 | sha256=9dbe6d70541854c7c77daed2f1dc6e99c334849cc4a7e56e4bae755190ab5da3
+verl/verl/workers/rollout/schemas.py | exists=true | size=14864 bytes | mtime=2026-07-01 10:52:23.810979099 +0800 | sha256=de231824fa1000b1b8516777d40f6a4e843465f4108ff7d95a63872248e9d645
+verl/verl/tools/xml_tool_parser.py | exists=true | size=7101 bytes | mtime=2026-08-22 01:26:53.735649496 +0800 | sha256=4d14899e6cd295e3ef3fa05e3ab2ad1a64397bfa06f8fc8095bdd66e84a99163
+verl/verl/tools/search_tool.py | exists=true | size=10045 bytes | mtime=2026-07-01 10:52:23.801979160 +0800 | sha256=b2620b28a7d058c0f4cdd1a3fb41c8f55530d4e8258896b8c9a6726c30dcfa59
+verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml | exists=true | size=502 bytes | mtime=2026-07-01 10:52:23.801979160 +0800 | sha256=9e7c6941955cb02f236eb82b39874395891041f373f549c24629117254f67253
+verl/verl/trainer/ppo/ray_trainer.py | exists=true | size=108763 bytes | mtime=2026-07-06 17:04:52.452980402 +0800 | sha256=29aecd3dcabfaa8aeb6891f3e36b642a0ab68f28ed4edc98866bda2caca4ccfc
+verl/verl/trainer/ppo/reward.py | exists=true | size=5994 bytes | mtime=2026-07-01 10:52:23.803979146 +0800 | sha256=0121d6609a9b6769496b979c02bbf795d9ee3a9b4eeec4b2dc5d4fb7675895e1
+verl/verl/trainer/ppo/core_algos.py | exists=true | size=28396 bytes | mtime=2026-07-01 10:52:23.802979153 +0800 | sha256=127ef53e92e89093aae42f216abf96d1acbde995a62f658e1ceaa894d9ed6a56
+verl/verl/trainer/config/ppo_trainer.yaml | exists=true | size=31553 bytes | mtime=2026-07-01 10:52:23.802979153 +0800 | sha256=c1950f606cb995da667d6daa15a7fb7d38d5fb1fe8e27154edb5836d097e2a45
+verl/verl/trainer/main_ppo.py | exists=true | size=11485 bytes | mtime=2026-07-01 10:52:23.802979153 +0800 | sha256=0bc46067c4c7bed8d87ad34c5d855fd277f00857f5eaa79e5213fc934f524612
+verl/verl/utils/checkpoint/fsdp_checkpoint_manager.py | exists=true | size=14388 bytes | mtime=2026-07-01 10:52:23.803979146 +0800 | sha256=b0d45b23ebf76174513e4b2fb47195c674b5013a93f7dc198d6930fae59e42ed
+verl/verl/utils/checkpoint/checkpoint_manager.py | exists=true | size=8176 bytes | mtime=2026-07-01 10:52:23.803979146 +0800 | sha256=622009c5f65f9dd382416610babb119752717fac086fdf6f28123fc1192e6835
+verl/verl/protocol.py | exists=true | size=35798 bytes | mtime=2026-07-01 10:52:23.798979180 +0800 | sha256=532142c86ee279a60b9f96b6631a5c52a4496754d84eeb3d7a1e93be76a281e6
+Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet | exists=true | size=61978764 bytes | mtime=2026-07-02 15:38:06.950881197 +0800 | sha256=4d75aecf3ffbc5b8990a78a4cc9267c75e1af386e57ef44e1a15994aad3f8a3e
+Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet | exists=true | size=1108051 bytes | mtime=2026-07-02 18:24:40.972352996 +0800 | sha256=8398dfb2b66149811db703912c2b6509538f77eb89afe05fb59283d8eaa87e43
+experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu | exists=true | size=(directory) | mtime=2026-09-04 16:41:50.475521207 +0800 | sha256=N/A-dir
