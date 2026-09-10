@@ -1,0 +1,276 @@
+{
+  "input_audit": "/data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/audit/rollouts_pid2552655.jsonl",
+  "lambda": 0.05,
+  "part2_active_groups": {
+    "total_rollouts": 147200,
+    "total_groups": 18400,
+    "rollouts_per_group_min": 8,
+    "rollouts_per_group_max": 8,
+    "groups_with_8_rollouts": 18400,
+    "active_groups": 95,
+    "active_ratio_pct": 0.5163,
+    "unique_uids": 18400,
+    "uid_multiplicity_mean": 8.0,
+    "uid_max_multiplicity": 8,
+    "correct_rollouts": 66816,
+    "correct_rate_pct": 45.3913,
+    "efficient_correct_rollouts": 377,
+    "inefficient_correct_rollouts": 354,
+    "middle_correct_rollouts": 2
+  },
+  "part3_cost_gap": {
+    "distribution": {
+      "1": 86,
+      "2": 7,
+      "3": 1,
+      "4": 1
+    },
+    "mean_gap": 1.1263,
+    "max_gap": 4
+  },
+  "part4_source_breakdown": [
+    {
+      "data_source": "hotpotqa",
+      "total_groups": 9858,
+      "active_groups": 65,
+      "active_ratio_pct": 0.6594,
+      "total_rollouts": 78864,
+      "correct_rollouts": 41149,
+      "rollout_correct_rate_pct": 52.1772,
+      "all_correct_groups": 5054,
+      "all_wrong_groups": 4623,
+      "mixed_groups": 181
+    },
+    {
+      "data_source": "nq",
+      "total_groups": 8542,
+      "active_groups": 30,
+      "active_ratio_pct": 0.3512,
+      "total_rollouts": 68336,
+      "correct_rollouts": 25667,
+      "rollout_correct_rate_pct": 37.56,
+      "all_correct_groups": 3130,
+      "all_wrong_groups": 5253,
+      "mixed_groups": 159
+    },
+    {
+      "data_source": "TOTAL",
+      "total_groups": 18400,
+      "active_groups": 95,
+      "active_ratio_pct": 0.5163,
+      "total_rollouts": 147200,
+      "correct_rollouts": 66816,
+      "rollout_correct_rate_pct": 45.3913,
+      "all_correct_groups": 8184,
+      "all_wrong_groups": 9876,
+      "mixed_groups": 340
+    }
+  ],
+  "part5_6_packing_verdict": {
+    "n_active_groups": 95,
+    "groups_with_rounds_reduced": 95,
+    "groups_with_queries_increased_in_inefficient": 91,
+    "groups_where_efficient_does_NOT_have_fewer_queries": 4,
+    "packing_suspect_groups": 4,
+    "packing_suspect_ratio_pct": 4.2105,
+    "groups_where_efficient_packs_more_queries_per_block": 46,
+    "efficient_parallel_factor_mean": 1.477,
+    "inefficient_parallel_factor_mean": 1.1969,
+    "efficient_queries_mean": 2.0398,
+    "inefficient_queries_mean": 2.9322,
+    "interpretation": "packing_suspect = efficient correct rollouts use strictly fewer rounds while their TOTAL query count does not decrease (the round reduction would then be pure query packing). High value => the round-count reward can be gamed by packing."
+  },
+  "part7_filter_replay": {
+    "lambda": 0.05,
+    "reward_formula": "R = A * (1 + lambda * E); E = (Cmax - C)/(Cmax - Cmin) for correct rollouts of an active group, else 0",
+    "filter_simulated": "verl ray_trainer.py:1780-1781 -> kept iff np.std(group_rewards) > 0 or group size == 1",
+    "total_groups": 18400,
+    "active_groups": 95,
+    "baseline_retained": 340,
+    "baseline_retained_ratio_pct": 1.8478,
+    "new_retained": 424,
+    "new_retained_ratio_pct": 2.3043,
+    "newly_added_groups": 84,
+    "newly_added_all_correct_groups": 84,
+    "newly_added_by_source": {
+      "hotpotqa": 57,
+      "nq": 27
+    },
+    "newly_added_by_correct_count": {
+      "8": 84
+    },
+    "efficiency_supervision_ratio": 0.224057,
+    "efficiency_supervision_ratio_pct": 22.4057,
+    "efficiency_supervision_definition": "share of groups retained under the new reward that actually carry a non-zero efficiency term (active groups); the rest supervise correctness only",
+    "baseline_to_new_retained_multiple": 1.2471,
+    "retained_groups_lost": 0,
+    "groups_retained_by_both": 340,
+    "efficiency_active_groups_retained": 95,
+    "generation_batch_replay": {
+      "note": "sequential accumulation of kept prompts until train_batch_size=32, per global step, generation batches consumed in call_index order; one audit call == one generation batch of 160 prompts",
+      "observed_calls_in_E1_0": 115,
+      "baseline_calls_needed_total": 115,
+      "new_calls_needed_total": 94,
+      "baseline_reproduces_observed_all_steps": true,
+      "baseline_per_step_match": {
+        "61": true,
+        "62": true,
+        "63": true,
+        "64": true,
+        "65": true,
+        "66": true,
+        "67": true,
+        "68": true,
+        "69": true,
+        "70": true
+      },
+      "call_reduction_pct": 18.2609,
+      "per_step": [
+        {
+          "global_step": 61,
+          "observed_calls_in_E1_0": 13,
+          "baseline_calls_needed": 13,
+          "baseline_prompts_collected": 33,
+          "new_reward_calls_needed": 10,
+          "new_reward_prompts_collected": 34,
+          "baseline_reproduces_observed": true
+        },
+        {
+          "global_step": 62,
+          "observed_calls_in_E1_0": 14,
+          "baseline_calls_needed": 14,
+          "baseline_prompts_collected": 35,
+          "new_reward_calls_needed": 11,
+          "new_reward_prompts_collected": 32,
+          "baseline_reproduces_observed": true
+        },
+        {
+          "global_step": 63,
+          "observed_calls_in_E1_0": 13,
+          "baseline_calls_needed": 13,
+          "baseline_prompts_collected": 35,
+          "new_reward_calls_needed": 9,
+          "new_reward_prompts_collected": 32,
+          "baseline_reproduces_observed": true
+        },
+        {
+          "global_step": 64,
+          "observed_calls_in_E1_0": 9,
+          "baseline_calls_needed": 9,
+          "baseline_prompts_collected": 34,
+          "new_reward_calls_needed": 7,
+          "new_reward_prompts_collected": 35,
+          "baseline_reproduces_observed": true
+        },
+        {
+          "global_step": 65,
+          "observed_calls_in_E1_0": 13,
+          "baseline_calls_needed": 13,
+          "baseline_prompts_collected": 33,
+          "new_reward_calls_needed": 11,
+          "new_reward_prompts_collected": 33,
+          "baseline_reproduces_observed": true
+        },
+        {
+          "global_step": 66,
+          "observed_calls_in_E1_0": 13,
+          "baseline_calls_needed": 13,
+          "baseline_prompts_collected": 34,
+          "new_reward_calls_needed": 11,
+          "new_reward_prompts_collected": 33,
+          "baseline_reproduces_observed": true
+        },
+        {
+          "global_step": 67,
+          "observed_calls_in_E1_0": 12,
+          "baseline_calls_needed": 12,
+          "baseline_prompts_collected": 36,
+          "new_reward_calls_needed": 10,
+          "new_reward_prompts_collected": 32,
+          "baseline_reproduces_observed": true
+        },
+        {
+          "global_step": 68,
+          "observed_calls_in_E1_0": 8,
+          "baseline_calls_needed": 8,
+          "baseline_prompts_collected": 33,
+          "new_reward_calls_needed": 7,
+          "new_reward_prompts_collected": 32,
+          "baseline_reproduces_observed": true
+        },
+        {
+          "global_step": 69,
+          "observed_calls_in_E1_0": 10,
+          "baseline_calls_needed": 10,
+          "baseline_prompts_collected": 33,
+          "new_reward_calls_needed": 9,
+          "new_reward_prompts_collected": 32,
+          "baseline_reproduces_observed": true
+        },
+        {
+          "global_step": 70,
+          "observed_calls_in_E1_0": 10,
+          "baseline_calls_needed": 10,
+          "baseline_prompts_collected": 34,
+          "new_reward_calls_needed": 9,
+          "new_reward_prompts_collected": 36,
+          "baseline_reproduces_observed": true
+        }
+      ]
+    },
+    "lambda_sensitivity": [
+      {
+        "lambda": 0.0,
+        "baseline_retained": 340,
+        "new_retained": 340,
+        "newly_added_groups": 0,
+        "retained_set_identical_to_0.05": false
+      },
+      {
+        "lambda": 0.01,
+        "baseline_retained": 340,
+        "new_retained": 424,
+        "newly_added_groups": 84,
+        "retained_set_identical_to_0.05": true
+      },
+      {
+        "lambda": 0.05,
+        "baseline_retained": 340,
+        "new_retained": 424,
+        "newly_added_groups": 84,
+        "retained_set_identical_to_0.05": true
+      },
+      {
+        "lambda": 0.1,
+        "baseline_retained": 340,
+        "new_retained": 424,
+        "newly_added_groups": 84,
+        "retained_set_identical_to_0.05": true
+      },
+      {
+        "lambda": 0.2,
+        "baseline_retained": 340,
+        "new_retained": 424,
+        "newly_added_groups": 84,
+        "retained_set_identical_to_0.05": true
+      },
+      {
+        "lambda": 1.0,
+        "baseline_retained": 340,
+        "new_retained": 424,
+        "newly_added_groups": 84,
+        "retained_set_identical_to_0.05": true
+      }
+    ]
+  },
+  "figure": {
+    "figure": "/data01/wyy/Graph-Agent-Planning/E1-0.5/reports/figures/cost_gap_distribution.png",
+    "ok": true,
+    "renderer": "/home/nf5468m6/miniconda3/envs/huatuo/bin/python3",
+    "attempted_interpreters": [
+      "/home/nf5468m6/miniconda3/envs/parallel-agent/bin/python3",
+      "/home/nf5468m6/miniconda3/envs/huatuo/bin/python3",
+      "/home/nf5468m6/miniconda3/envs/llama_factory/bin/python3"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+metric,description,efficient_mean,inefficient_mean,delta_eff_minus_ineff,efficient_median,inefficient_median,efficient_p90,inefficient_p90,n_efficient,n_inefficient
+logical_search_batches,rounds / logical XML search blocks,1.4881,2.4915,-1.0035,1.0,2.0,2.0,4.0,377,354
+search_queries,individual queries after the '|' split,2.0398,2.9322,-0.8924,2.0,3.0,3.0,4.0,377,354
+parallel_factor,queries per block,1.477,1.1969,0.2801,1.5,1.0,2.0,1.5,377,354
+queries_per_round,queries per round (alias of parallel_factor),1.477,1.1969,0.2801,1.5,1.0,2.0,1.5,377,354
+structured_conversation_turns,assistant turns,2.4881,3.4915,-1.0035,2.0,3.0,3.0,5.0,377,354
+response_token_length,response tokens,1343.1592,1828.7881,-485.629,1299.0,1770.0,2005.0,2562.0,377,354

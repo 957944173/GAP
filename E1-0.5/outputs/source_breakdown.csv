@@ -1,0 +1,4 @@
+data_source,total_groups,active_groups,active_ratio_pct,total_rollouts,correct_rollouts,rollout_correct_rate_pct,all_correct_groups,all_wrong_groups,mixed_groups
+hotpotqa,9858,65,0.6594,78864,41149,52.1772,5054,4623,181
+nq,8542,30,0.3512,68336,25667,37.56,3130,5253,159
+TOTAL,18400,95,0.5163,147200,66816,45.3913,8184,9876,340

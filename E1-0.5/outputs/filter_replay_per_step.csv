@@ -1,0 +1,11 @@
+global_step,observed_calls_in_E1_0,baseline_calls_needed,baseline_prompts_collected,new_reward_calls_needed,new_reward_prompts_collected,baseline_reproduces_observed
+61,13,13,33,10,34,True
+62,14,14,35,11,32,True
+63,13,13,35,9,32,True
+64,9,9,34,7,35,True
+65,13,13,33,11,33,True
+66,13,13,34,11,33,True
+67,12,12,36,10,32,True
+68,8,8,33,7,32,True
+69,10,10,33,9,32,True
+70,10,10,34,9,36,True

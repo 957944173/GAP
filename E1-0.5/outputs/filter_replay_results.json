@@ -1,0 +1,139 @@
+{
+  "lambda": 0.05,
+  "reward_formula": "R = A * (1 + lambda * E); E = (Cmax - C)/(Cmax - Cmin) for correct rollouts of an active group, else 0",
+  "filter_simulated": "verl ray_trainer.py:1780-1781 -> kept iff np.std(group_rewards) > 0 or group size == 1",
+  "total_groups": 18400,
+  "active_groups": 95,
+  "baseline_retained": 340,
+  "baseline_retained_ratio_pct": 1.8478,
+  "new_retained": 424,
+  "new_retained_ratio_pct": 2.3043,
+  "newly_added_groups": 84,
+  "newly_added_all_correct_groups": 84,
+  "newly_added_by_source": {
+    "hotpotqa": 57,
+    "nq": 27
+  },
+  "newly_added_by_correct_count": {
+    "8": 84
+  },
+  "efficiency_supervision_ratio": 0.224057,
+  "efficiency_supervision_ratio_pct": 22.4057,
+  "efficiency_supervision_definition": "share of groups retained under the new reward that actually carry a non-zero efficiency term (active groups); the rest supervise correctness only",
+  "baseline_to_new_retained_multiple": 1.2471,
+  "retained_groups_lost": 0,
+  "groups_retained_by_both": 340,
+  "efficiency_active_groups_retained": 95,
+  "generation_batch_replay": {
+    "note": "sequential accumulation of kept prompts until train_batch_size=32, per global step, generation batches consumed in call_index order; one audit call == one generation batch of 160 prompts",
+    "observed_calls_in_E1_0": 115,
+    "baseline_calls_needed_total": 115,
+    "new_calls_needed_total": 94,
+    "baseline_reproduces_observed_all_steps": true,
+    "baseline_per_step_match": {
+      "61": true,
+      "62": true,
+      "63": true,
+      "64": true,
+      "65": true,
+      "66": true,
+      "67": true,
+      "68": true,
+      "69": true,
+      "70": true
+    },
+    "call_reduction_pct": 18.2609,
+    "per_step": [
+      {
+        "global_step": 61,
+        "observed_calls_in_E1_0": 13,
+        "baseline_calls_needed": 13,
+        "baseline_prompts_collected": 33,
+        "new_reward_calls_needed": 10,
+        "new_reward_prompts_collected": 34,
+        "baseline_reproduces_observed": true
+      },
+      {
+        "global_step": 62,
+        "observed_calls_in_E1_0": 14,
+        "baseline_calls_needed": 14,
+        "baseline_prompts_collected": 35,
+        "new_reward_calls_needed": 11,
+        "new_reward_prompts_collected": 32,
+        "baseline_reproduces_observed": true
+      },
+      {
+        "global_step": 63,
+        "observed_calls_in_E1_0": 13,
+        "baseline_calls_needed": 13,
+        "baseline_prompts_collected": 35,
+        "new_reward_calls_needed": 9,
+        "new_reward_prompts_collected": 32,
+        "baseline_reproduces_observed": true
+      },
+      {
+        "global_step": 64,
+        "observed_calls_in_E1_0": 9,
+        "baseline_calls_needed": 9,
+        "baseline_prompts_collected": 34,
+        "new_reward_calls_needed": 7,
+        "new_reward_prompts_collected": 35,
+        "baseline_reproduces_observed": true
+      },
+      {
+        "global_step": 65,
+        "observed_calls_in_E1_0": 13,
+        "baseline_calls_needed": 13,
+        "baseline_prompts_collected": 33,
+        "new_reward_calls_needed": 11,
+        "new_reward_prompts_collected": 33,
+        "baseline_reproduces_observed": true
+      },
+      {
+        "global_step": 66,
+        "observed_calls_in_E1_0": 13,
+        "baseline_calls_needed": 13,
+        "baseline_prompts_collected": 34,
+        "new_reward_calls_needed": 11,
+        "new_reward_prompts_collected": 33,
+        "baseline_reproduces_observed": true
+      },
+      {
+        "global_step": 67,
+        "observed_calls_in_E1_0": 12,
+        "baseline_calls_needed": 12,
+        "baseline_prompts_collected": 36,
+        "new_reward_calls_needed": 10,
+        "new_reward_prompts_collected": 32,
+        "baseline_reproduces_observed": true
+      },
+      {
+        "global_step": 68,
+        "observed_calls_in_E1_0": 8,
+        "baseline_calls_needed": 8,
+        "baseline_prompts_collected": 33,
+        "new_reward_calls_needed": 7,
+        "new_reward_prompts_collected": 32,
+        "baseline_reproduces_observed": true
+      },
+      {
+        "global_step": 69,
+        "observed_calls_in_E1_0": 10,
+        "baseline_calls_needed": 10,
+        "baseline_prompts_collected": 33,
+        "new_reward_calls_needed": 9,
+        "new_reward_prompts_collected": 32,
+        "baseline_reproduces_observed": true
+      },
+      {
+        "global_step": 70,
+        "observed_calls_in_E1_0": 10,
+        "baseline_calls_needed": 10,
+        "baseline_prompts_collected": 34,
+        "new_reward_calls_needed": 9,
+        "new_reward_prompts_collected": 36,
+        "baseline_reproduces_observed": true
+      }
+    ]
+  }
+}

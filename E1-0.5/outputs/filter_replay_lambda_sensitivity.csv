@@ -1,0 +1,7 @@
+lambda,baseline_retained,new_retained,newly_added_groups,retained_set_identical_to_0.05
+0.0,340,340,0,False
+0.01,340,424,84,True
+0.05,340,424,84,True
+0.1,340,424,84,True
+0.2,340,424,84,True
+1.0,340,424,84,True
