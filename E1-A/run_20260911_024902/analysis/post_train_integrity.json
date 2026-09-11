@@ -1,0 +1,155 @@
+{
+  "experiment_dir": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu",
+  "checkpoint_dir": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70",
+  "log_file": "/data01/wyy/Graph-Agent-Planning/verl/logs/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu.log",
+  "checkpoint": {
+    "exists": true,
+    "actor_dir_exists": true,
+    "shards": {
+      "model_rank0": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank0": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank0": {
+        "exists": true,
+        "size": 14632
+      },
+      "model_rank1": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank1": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank1": {
+        "exists": true,
+        "size": 14696
+      },
+      "model_rank2": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank2": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank2": {
+        "exists": true,
+        "size": 14696
+      },
+      "model_rank3": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank3": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank3": {
+        "exists": true,
+        "size": 14760
+      }
+    },
+    "data_pt": true,
+    "tracker": "70",
+    "global_step_from_path": 70
+  },
+  "training_log": {
+    "exists": true,
+    "steps_seen": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+    ],
+    "steps_61_to_70_all_present": true,
+    "missing_steps_61_to_70": [],
+    "max_step": 70,
+    "start_step_line_present": true,
+    "resume_line_present": true,
+    "loaded_model_lines": 0,
+    "loaded_optimizer_lines": 0,
+    "loaded_lr_scheduler_lines": 0,
+    "loaded_rng_lines": 0,
+    "final_validation_metrics_present": true,
+    "metrics_parsed": 621,
+    "non_finite_metrics": {},
+    "error_pattern_counts_before_final_val": {
+      "cuda_oom": 0,
+      "nccl_error": 0,
+      "nccl_warn": 6,
+      "ray_worker_died": 0,
+      "nccl_unhandled": 0,
+      "wiki_connection": 0,
+      "wiki_http_error": 0,
+      "wiki_search_error": 0,
+      "wiki_tool_exec_failed": 0,
+      "wiki_tool_bad_params": 0,
+      "tool_error": 0,
+      "traceback": 0,
+      "cuda_error": 0
+    },
+    "error_pattern_counts_after_final_val_teardown": {
+      "cuda_oom": 0,
+      "nccl_error": 0,
+      "nccl_warn": 0,
+      "ray_worker_died": 1,
+      "nccl_unhandled": 0,
+      "wiki_connection": 0,
+      "wiki_http_error": 0,
+      "wiki_search_error": 0,
+      "wiki_tool_exec_failed": 0,
+      "wiki_tool_bad_params": 0,
+      "tool_error": 0,
+      "traceback": 0,
+      "cuda_error": 0
+    },
+    "log_size_bytes": 833134
+  },
+  "state_resume_evidence": {
+    "step60_extra_state": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/extra_state_world_size_4_rank_0.pt",
+      "keys": [
+        "lr_scheduler",
+        "rng"
+      ],
+      "lr_scheduler_last_epoch": 60,
+      "rng_present": true,
+      "rng_substates": [
+        "cpu",
+        "cuda",
+        "numpy",
+        "random"
+      ]
+    },
+    "step70_extra_state": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/extra_state_world_size_4_rank_0.pt",
+      "keys": [
+        "lr_scheduler",
+        "rng"
+      ],
+      "lr_scheduler_last_epoch": 70,
+      "rng_present": true,
+      "rng_substates": [
+        "cpu",
+        "cuda",
+        "numpy",
+        "random"
+      ]
+    }
+  },
+  "integrity_ok": true,
+  "state_resume_ok": true
+}

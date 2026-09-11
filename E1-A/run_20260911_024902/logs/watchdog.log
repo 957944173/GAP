@@ -1,0 +1,5 @@
+[2026-09-11 02:49:04] watchdog started; log=/data01/wyy/Graph-Agent-Planning/verl/logs/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu.log; baseline stackdumps=2
+[2026-09-11 02:49:04] pre_stall=480s post_stall=2700s interval=15s
+[2026-09-11 02:53:04] watchdog: armed (resume line seen)
+[2026-09-11 02:54:19] watchdog: first validation batch print seen -> post phase (long window)
+[2026-09-11 05:42:28] watchdog: training finished (final metrics/progress marker seen); exiting

@@ -1,0 +1,427 @@
+{
+  "baseline_label": "gap_step60_reference",
+  "e1a_label": "e1a_step70",
+  "per_benchmark": {
+    "nq": {
+      "em": {
+        "e1a": 0.378,
+        "baseline": 0.374,
+        "delta": 0.0040000000000000036
+      },
+      "response_tokens_mean": {
+        "e1a": 313.053,
+        "baseline": 314.276,
+        "delta": -1.2230000000000132
+      },
+      "assistant_turns_mean_all_messages": {
+        "e1a": 2.263,
+        "baseline": 2.261,
+        "delta": 0.0019999999999997797
+      },
+      "retrieval_rounds_mean": {
+        "e1a": 1.26398891966759,
+        "baseline": 1.2626038781163436,
+        "delta": 0.0013850415512464131
+      },
+      "search_queries_mean": {
+        "e1a": 1.9229916897506925,
+        "baseline": 1.9265927977839334,
+        "delta": -0.003601108033240985
+      },
+      "parallel_factor_mean": {
+        "e1a": 1.6301915974145893,
+        "baseline": 1.6300600184672198,
+        "delta": 0.00013157894736948172
+      },
+      "parallel_sample_rate": {
+        "e1a": 0.525207756232687,
+        "baseline": 0.5304709141274239,
+        "delta": -0.0052631578947368585
+      },
+      "multi_query_round_rate": {
+        "e1a": 0.525207756232687,
+        "baseline": 0.5304709141274239,
+        "delta": -0.0052631578947368585
+      },
+      "zero_search_rate": {
+        "e1a": 0.0002770083102493075,
+        "baseline": 0.000554016620498615,
+        "delta": -0.0002770083102493075
+      },
+      "no_answer_tag_rate": {
+        "e1a": 0.0013850415512465374,
+        "baseline": 0.002493074792243767,
+        "delta": -0.0011080332409972298
+      }
+    },
+    "triviaqa": {
+      "em": {
+        "e1a": 0.563,
+        "baseline": 0.563,
+        "delta": 0.0
+      },
+      "response_tokens_mean": {
+        "e1a": 302.567,
+        "baseline": 299.966,
+        "delta": 2.600999999999999
+      },
+      "assistant_turns_mean_all_messages": {
+        "e1a": 2.282,
+        "baseline": 2.279,
+        "delta": 0.0030000000000001137
+      },
+      "retrieval_rounds_mean": {
+        "e1a": 1.2837694483734088,
+        "baseline": 1.2810289957567185,
+        "delta": 0.0027404526166903143
+      },
+      "search_queries_mean": {
+        "e1a": 1.861916548797737,
+        "baseline": 1.8437057991513437,
+        "delta": 0.018210749646393243
+      },
+      "parallel_factor_mean": {
+        "e1a": 1.5420564760557696,
+        "baseline": 1.528918405233381,
+        "delta": 0.013138070822388492
+      },
+      "parallel_sample_rate": {
+        "e1a": 0.4656117397454031,
+        "baseline": 0.4518210749646393,
+        "delta": 0.013790664780763795
+      },
+      "multi_query_round_rate": {
+        "e1a": 0.4656117397454031,
+        "baseline": 0.4518210749646393,
+        "delta": 0.013790664780763795
+      },
+      "zero_search_rate": {
+        "e1a": 8.84016973125884e-05,
+        "baseline": 8.84016973125884e-05,
+        "delta": 0.0
+      },
+      "no_answer_tag_rate": {
+        "e1a": 0.0011492220650636492,
+        "baseline": 0.0018564356435643563,
+        "delta": -0.0007072135785007071
+      }
+    },
+    "popqa": {
+      "em": {
+        "e1a": 0.397,
+        "baseline": 0.401,
+        "delta": -0.0040000000000000036
+      },
+      "response_tokens_mean": {
+        "e1a": 312.779,
+        "baseline": 303.128,
+        "delta": 9.65100000000001
+      },
+      "assistant_turns_mean_all_messages": {
+        "e1a": 2.49,
+        "baseline": 2.483,
+        "delta": 0.007000000000000117
+      },
+      "retrieval_rounds_mean": {
+        "e1a": 1.500617597907433,
+        "baseline": 1.492915788708857,
+        "delta": 0.007701809198575882
+      },
+      "search_queries_mean": {
+        "e1a": 1.8912301097144517,
+        "baseline": 1.8788781515657924,
+        "delta": 0.012351958148659303
+      },
+      "parallel_factor_mean": {
+        "e1a": 1.3418843829037852,
+        "baseline": 1.3381339028381836,
+        "delta": 0.0037504800656016357
+      },
+      "parallel_sample_rate": {
+        "e1a": 0.31403037128533023,
+        "baseline": 0.3104701009954225,
+        "delta": 0.003560270289907741
+      },
+      "multi_query_round_rate": {
+        "e1a": 0.31403037128533023,
+        "baseline": 0.3104701009954225,
+        "delta": 0.003560270289907741
+      },
+      "zero_search_rate": {
+        "e1a": 0.0007992443507956114,
+        "baseline": 0.0006539271961055002,
+        "delta": 0.00014531715469011115
+      },
+      "no_answer_tag_rate": {
+        "e1a": 0.008937005013441838,
+        "baseline": 0.008646370704061615,
+        "delta": 0.0002906343093802225
+      }
+    },
+    "hotpotqa": {
+      "em": {
+        "e1a": 0.397,
+        "baseline": 0.397,
+        "delta": 0.0
+      },
+      "response_tokens_mean": {
+        "e1a": 321.592,
+        "baseline": 318.482,
+        "delta": 3.109999999999957
+      },
+      "assistant_turns_mean_all_messages": {
+        "e1a": 2.612,
+        "baseline": 2.601,
+        "delta": 0.01100000000000012
+      },
+      "retrieval_rounds_mean": {
+        "e1a": 1.6154781199351702,
+        "baseline": 1.6041329011345218,
+        "delta": 0.011345218800648427
+      },
+      "search_queries_mean": {
+        "e1a": 2.1210156672069154,
+        "baseline": 2.1166936790923825,
+        "delta": 0.004321988114532882
+      },
+      "parallel_factor_mean": {
+        "e1a": 1.4607851933317904,
+        "baseline": 1.463198946515398,
+        "delta": -0.002413753183607703
+      },
+      "parallel_sample_rate": {
+        "e1a": 0.4790653700702323,
+        "baseline": 0.47960561858454887,
+        "delta": -0.0005402485143165547
+      },
+      "multi_query_round_rate": {
+        "e1a": 0.4790653700702323,
+        "baseline": 0.47960561858454887,
+        "delta": -0.0005402485143165547
+      },
+      "zero_search_rate": {
+        "e1a": 0.0001350621285791464,
+        "baseline": 0.0001350621285791464,
+        "delta": 0.0
+      },
+      "no_answer_tag_rate": {
+        "e1a": 0.0028363047001620746,
+        "baseline": 0.0025661804430037816,
+        "delta": 0.000270124257158293
+      }
+    },
+    "2wikimultihopqa": {
+      "em": {
+        "e1a": 0.438,
+        "baseline": 0.447,
+        "delta": -0.009000000000000008
+      },
+      "response_tokens_mean": {
+        "e1a": 349.189,
+        "baseline": 346.332,
+        "delta": 2.8570000000000277
+      },
+      "assistant_turns_mean_all_messages": {
+        "e1a": 2.94,
+        "baseline": 2.925,
+        "delta": 0.015000000000000124
+      },
+      "retrieval_rounds_mean": {
+        "e1a": 1.9514153944020356,
+        "baseline": 1.9370229007633588,
+        "delta": 0.014392493638676784
+      },
+      "search_queries_mean": {
+        "e1a": 2.505168575063613,
+        "baseline": 2.494831424936387,
+        "delta": 0.010337150127226025
+      },
+      "parallel_factor_mean": {
+        "e1a": 1.4269363223979266,
+        "baseline": 1.4298932017145392,
+        "delta": -0.002956879316612593
+      },
+      "parallel_sample_rate": {
+        "e1a": 0.5336354961832062,
+        "baseline": 0.5377703562340967,
+        "delta": -0.0041348600508905875
+      },
+      "multi_query_round_rate": {
+        "e1a": 0.5336354961832062,
+        "baseline": 0.5377703562340967,
+        "delta": -0.0041348600508905875
+      },
+      "zero_search_rate": {
+        "e1a": 7.951653944020357e-05,
+        "baseline": 7.951653944020357e-05,
+        "delta": 0.0
+      },
+      "no_answer_tag_rate": {
+        "e1a": 0.00914440203562341,
+        "baseline": 0.009303435114503817,
+        "delta": -0.0001590330788804068
+      }
+    },
+    "musique": {
+      "em": {
+        "e1a": 0.168,
+        "baseline": 0.175,
+        "delta": -0.0069999999999999785
+      },
+      "response_tokens_mean": {
+        "e1a": 368.808,
+        "baseline": 366.962,
+        "delta": 1.8460000000000036
+      },
+      "assistant_turns_mean_all_messages": {
+        "e1a": 3.199,
+        "baseline": 3.179,
+        "delta": 0.020000000000000018
+      },
+      "retrieval_rounds_mean": {
+        "e1a": 2.212360016590626,
+        "baseline": 2.196598921609291,
+        "delta": 0.015761094981335155
+      },
+      "search_queries_mean": {
+        "e1a": 2.5761094981335546,
+        "baseline": 2.5549564496059727,
+        "delta": 0.02115304852758193
+      },
+      "parallel_factor_mean": {
+        "e1a": 1.2622207738342142,
+        "baseline": 1.2626883727360716,
+        "delta": -0.0004675989018574356
+      },
+      "parallel_sample_rate": {
+        "e1a": 0.3425964330153463,
+        "baseline": 0.3417669017005392,
+        "delta": 0.0008295313148071193
+      },
+      "multi_query_round_rate": {
+        "e1a": 0.3425964330153463,
+        "baseline": 0.3417669017005392,
+        "delta": 0.0008295313148071193
+      },
+      "zero_search_rate": {
+        "e1a": 0.0,
+        "baseline": 0.0,
+        "delta": 0.0
+      },
+      "no_answer_tag_rate": {
+        "e1a": 0.005806719203649938,
+        "baseline": 0.004977187888842804,
+        "delta": 0.000829531314807134
+      }
+    },
+    "bamboogle": {
+      "em": {
+        "e1a": 0.448,
+        "baseline": 0.448,
+        "delta": 0.0
+      },
+      "response_tokens_mean": {
+        "e1a": 287.248,
+        "baseline": 278.864,
+        "delta": 8.384000000000015
+      },
+      "assistant_turns_mean_all_messages": {
+        "e1a": 2.856,
+        "baseline": 2.808,
+        "delta": 0.04800000000000004
+      },
+      "retrieval_rounds_mean": {
+        "e1a": 1.856,
+        "baseline": 1.808,
+        "delta": 0.04800000000000004
+      },
+      "search_queries_mean": {
+        "e1a": 2.04,
+        "baseline": 1.968,
+        "delta": 0.07200000000000006
+      },
+      "parallel_factor_mean": {
+        "e1a": 1.1586666666666667,
+        "baseline": 1.148,
+        "delta": 0.010666666666666824
+      },
+      "parallel_sample_rate": {
+        "e1a": 0.184,
+        "baseline": 0.16,
+        "delta": 0.023999999999999994
+      },
+      "multi_query_round_rate": {
+        "e1a": 0.184,
+        "baseline": 0.16,
+        "delta": 0.023999999999999994
+      },
+      "zero_search_rate": {
+        "e1a": 0.0,
+        "baseline": 0.0,
+        "delta": 0.0
+      },
+      "no_answer_tag_rate": {
+        "e1a": 0.0,
+        "baseline": 0.0,
+        "delta": 0.0
+      }
+    }
+  },
+  "overall": {
+    "macro_em": {
+      "e1a": 0.39842857142857147,
+      "baseline": 0.4007142857142857,
+      "delta": -0.0022857142857142243
+    },
+    "micro_em": {
+      "e1a": 0.43174686041288257,
+      "baseline": 0.43508025233882147,
+      "delta": -0.0033333919259389
+    },
+    "n_samples": {
+      "e1a": 51201,
+      "baseline": 51201,
+      "delta": 0
+    },
+    "retrieval_rounds_mean": {
+      "e1a": 1.597742231597039,
+      "baseline": 1.5889338098865255,
+      "delta": 0.008808421710513548
+    },
+    "search_queries_mean": {
+      "e1a": 2.103630788461163,
+      "baseline": 2.0922052303665946,
+      "delta": 0.011425558094568355
+    },
+    "parallel_factor_mean": {
+      "e1a": 1.3166271422634037,
+      "baseline": 1.3167352959252658,
+      "delta": -0.00010815366186212039
+    },
+    "parallel_sample_rate": {
+      "e1a": 0.4412413820042577,
+      "baseline": 0.438604714751665,
+      "delta": 0.002636667252592706
+    },
+    "zero_search_rate": {
+      "e1a": 0.0002929630280658581,
+      "baseline": 0.00027343215952813424,
+      "delta": 1.9530868537723863e-05
+    },
+    "no_answer_tag_rate": {
+      "e1a": 0.005683482744477647,
+      "baseline": 0.005800667955703991,
+      "delta": -0.00011718521122634339
+    }
+  },
+  "em_improved_benchmarks": [
+    "nq"
+  ],
+  "em_regressed_benchmarks": [
+    "popqa",
+    "2wikimultihopqa",
+    "musique"
+  ],
+  "macro_em_e1a_recomputed": 0.39842857142857147,
+  "macro_em_baseline_recomputed": 0.40071428571428575
+}

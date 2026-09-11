@@ -1,0 +1,84 @@
+# E1-A issues log (problems found and how they were handled)
+
+## I1. Provided step70 eval template points at a non-existent checkpoint
+`Agent/evaluation/mhqa_agent/eval_mhqa_agent_rl_step_70_4gpu.sh` sets
+EVAL_BASE_MODEL_RELATIVE=experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_70/actor/merged_hf,
+but that experiment only contains global_step_{60,120,180,200} (it trained straight to 200;
+there was never a step70 in it).
+Handling: E1-A keeps the template's structure but overrides the model path:
+  * E1-A step70       -> experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/merged_hf
+  * baseline step70   -> experiments/DAPO-GAP3B-MHQA-Agent-E10-step60to70-4gpu/global_step_70/actor/merged_hf
+                        (E1-0 is exactly "GAP step60 -> step70 with the ORIGINAL reward", so it is
+                         the matched baseline required by E1-A_task.md section 2)
+Both are pre-merged with verl/scripts/model_merger.py before evaluation.
+
+## I2. The shared eval implementation hardcodes the RL checkpoint path
+`eval_mhqa_agent_4gpu_common.sh` (original GAP code, must not be modified) hardcodes
+`experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_${rl_step}/actor` when
+EVAL_MODEL_KIND=rl, and auto-merges from there.
+Handling: E1-A entrypoints set EVAL_MODEL_KIND=e1a (a non-"rl" kind, which skips that
+hardcoded branch and uses EVAL_BASE_MODEL_RELATIVE verbatim) and pre-merge the checkpoint
+themselves. The common script is reused **unmodified**, so the evaluation protocol
+(7 benchmarks, n=8, temperature 1.0, val_batch_size 512, max_model_len 12288) is identical
+to the GAP baseline evaluations.
+
+## I3. Two different notions of "search block" in the decoded response
+`SGLangRollout.__init__` replaces the tokenizer chat template
+(verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py:289) and renders every tool
+call as `<name>arguments</name>`; `XMLToolParser.parse_non_stream` splits one
+`<wiki_search>a|b|c</wiki_search>` block into 3 tool calls, so the re-rendered response
+contains one `<wiki_search>` block **per query** (measured on the E1-0 audit: response
+block count == search_queries for 99.79% of 147,200 rollouts, while logical blocks ==
+search rounds for 100%).
+Handling:
+  * training diagnostics use the EXACT structured cost: distinct (assistant turn,
+    block index) pairs recovered from `detailed_tool_metrics.tool_call_sequence[].call_id`
+    (`call_wiki_search_<block>_<query>`), i.e. the logical search rounds that the E1-A
+    reward is defined on;
+  * eval diagnostics use the repo's own text convention from
+    `Agent/evaluation/mhqa_agent/summarize_eval.py` (one assistant span between
+    `<observation>` blocks that issues >=1 search = one retrieval round), and additionally
+    report the query count (= rendered block count) and parallel factor.
+
+## I4. Runtime fixes required to train on this host (copied from E1-0, originals untouched)
+E1-0 root-caused a silent hang: calling sglang's `monkey_patch_torch_reductions()` at
+import time in the driver process deadlocks fork-based StatefulDataLoader workers
+(CUDA work in a forked child). E1-A reuses the validated fixes as copies:
+`e1a_sglang_gpu_patch.py` (deferred patch + GPU-visibility fix),
+`e1a_checkpoint_patch.py` (map_location="cpu"), `e1a_hang_diagnostics.py`,
+`e1a_stall_watchdog.py`, `e1a_diag_patch.py`, `e1a_state.py`, `e1a_trainer_patch.py`.
+No E1-0 file and no GAP original file is modified.
+
+## I5. matplotlib is not installed in parallel-agent
+Figures (if any) are rendered by shelling out to a conda env that has matplotlib
+(`huatuo`), recorded in the analysis output. Not needed for the mandatory deliverables.
+
+## I6. `acc` vs shaped reward
+The original `BatchRewardManager.__call__` writes the scorer's `score` into
+`data.batch["acc"]`. With a shaped scorer that would have made `acc` the shaped reward.
+E1-A's manager overwrites `data.batch["acc"]` with the original EM after the base call,
+so accuracy metrics never see the shaping (E1-A_task.md "batch.py 要求"). `batch.py`
+itself is not modified.
+
+## I7. Copied integrity script wrote outside the E1-A run directory (fixed)
+`E1-A/scripts/e1a_check_training_integrity.py` was derived from E1-0's script, which
+resolves its run directory from `E10_RUN_DIR`.  The E1-A copy was invoked with
+`E1A_RUN_DIR=...`, which the copied script did not read, so it fell back to
+`os.path.dirname(os.path.dirname(__file__))` and wrote
+`post_train_integrity.{md,json}` / `checkpoints_manifest/step70.md` into `E1-A/`
+instead of the timestamped run directory.
+Handling: patched the script to read `E1A_RUN_DIR` (falling back to `E1-A/latest_run.txt`),
+removed the stray `E1-A/analysis` and `E1-A/checkpoints_manifest` directories, and re-ran it
+so the artifacts land in `E1-A/run_<ts>/`.
+Verified afterwards that **E1-0's** `analysis/post_train_integrity.*` and
+`checkpoints_manifest/step70.md` still carry their original 2026-09-10 23:27 mtime and
+E1-0 content -- nothing in E1-0 was overwritten.
+
+## I8. Paired-comparison script double-counted the overall totals (fixed)
+The first version of `E1-A/scripts/e1a_paired_eval_compare.py` accumulated the
+overall totals from the *running per-benchmark aggregates* inside the per-prompt
+loop, which inflates them quadratically (it reported 258,161,005 "paired prompts"
+instead of 49,947).  The per-benchmark table was unaffected.
+Handling: accumulate the overall totals from the single-sample values; re-ran.
+Final paired numbers: 49,947 pairs, rounds 1.5999 (E1-A) vs 1.6332 (baseline),
+delta -0.0334 (-2.04%), sign test p=3.2e-25; EM 0.43280 vs 0.43362 (p=0.56).

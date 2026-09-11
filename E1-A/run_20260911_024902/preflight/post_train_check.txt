@@ -1,0 +1,35 @@
+E1-A post-training check 2026-09-11T05:42:31+08:00
+OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70
+/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70:
+total 16
+drwxrwxrwx+ 3 nf5468m6 nf5468m6 4096 Sep 11 05:42 .
+drwxrwxrwx+ 3 nf5468m6 nf5468m6 4096 Sep 11 05:42 ..
+drwxrwxrwx+ 2 nf5468m6 nf5468m6 4096 Sep 11 05:42 actor
+-rw-rw-rw-  1 nf5468m6 nf5468m6 1492 Sep 11 05:42 data.pt
+
+/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor:
+total 37395552
+drwxrwxrwx+ 2 nf5468m6 nf5468m6       4096 Sep 11 05:42 .
+drwxrwxrwx+ 3 nf5468m6 nf5468m6       4096 Sep 11 05:42 ..
+-rw-rw-rw-  1 nf5468m6 nf5468m6        605 Sep 11 05:42 added_tokens.json
+-rw-rw-rw-  1 nf5468m6 nf5468m6        725 Sep 11 05:42 config.json
+-rw-rw-rw-  1 nf5468m6 nf5468m6      14632 Sep 11 05:42 extra_state_world_size_4_rank_0.pt
+-rw-rw-rw-  1 nf5468m6 nf5468m6      14696 Sep 11 05:42 extra_state_world_size_4_rank_1.pt
+-rw-rw-rw-  1 nf5468m6 nf5468m6      14696 Sep 11 05:42 extra_state_world_size_4_rank_2.pt
+-rw-rw-rw-  1 nf5468m6 nf5468m6      14760 Sep 11 05:42 extra_state_world_size_4_rank_3.pt
+-rw-rw-rw-  1 nf5468m6 nf5468m6        243 Sep 11 05:42 generation_config.json
+-rw-rw-rw-  1 nf5468m6 nf5468m6    1671853 Sep 11 05:42 merges.txt
+-rw-rw-rw-  1 nf5468m6 nf5468m6 3397345082 Sep 11 05:41 model_world_size_4_rank_0.pt
+-rw-rw-rw-  1 nf5468m6 nf5468m6 3397345082 Sep 11 05:41 model_world_size_4_rank_1.pt
+-rw-rw-rw-  1 nf5468m6 nf5468m6 3397345082 Sep 11 05:41 model_world_size_4_rank_2.pt
+-rw-rw-rw-  1 nf5468m6 nf5468m6 3397345082 Sep 11 05:41 model_world_size_4_rank_3.pt
+-rw-rw-rw-  1 nf5468m6 nf5468m6 6171911046 Sep 11 05:42 optim_world_size_4_rank_0.pt
+-rw-rw-rw-  1 nf5468m6 nf5468m6 6171911046 Sep 11 05:42 optim_world_size_4_rank_1.pt
+-rw-rw-rw-  1 nf5468m6 nf5468m6 6171911046 Sep 11 05:42 optim_world_size_4_rank_2.pt
+-rw-rw-rw-  1 nf5468m6 nf5468m6 6171911046 Sep 11 05:42 optim_world_size_4_rank_3.pt
+-rw-rw-rw-  1 nf5468m6 nf5468m6        613 Sep 11 05:42 special_tokens_map.json
+-rw-rw-rw-  1 nf5468m6 nf5468m6       6912 Sep 11 05:42 tokenizer_config.json
+-rw-rw-rw-  1 nf5468m6 nf5468m6   11421896 Sep 11 05:42 tokenizer.json
+tracker: 70
+steps seen in log:
+step:60 - step:61 - step:62 - step:63 - step:64 - step:65 - step:66 - step:67 - step:68 - step:69 - step:70 - 

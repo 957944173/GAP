@@ -1,0 +1,146 @@
++ echo '[E1-A] run dir: /data01/wyy/Graph-Agent-Planning/E1-A/run_20260911_024902'
++ [[ -z http://10.29.128.7:8008/retrieve ]]
++ [[ -z EMPTY ]]
++ export WIKI_RAG_SERVER_URL=http://127.0.0.1:8008/retrieve
++ WIKI_RAG_SERVER_URL=http://127.0.0.1:8008/retrieve
++ [[ -n /home/nf5468m6/miniconda3/envs/parallel-agent ]]
++ [[ :: != *\:\/\h\o\m\e\/\n\f\5\4\6\8\m\6\/\m\i\n\i\c\o\n\d\a\3\/\e\n\v\s\/\p\a\r\a\l\l\e\l\-\a\g\e\n\t\/\l\i\b\:* ]]
++ export LD_LIBRARY_PATH=/home/nf5468m6/miniconda3/envs/parallel-agent/lib:
++ LD_LIBRARY_PATH=/home/nf5468m6/miniconda3/envs/parallel-agent/lib:
++ export CC=/usr/bin/gcc CXX=/usr/bin/g++ CUDAHOSTCXX=/usr/bin/g++
++ CC=/usr/bin/gcc
++ CXX=/usr/bin/g++
++ CUDAHOSTCXX=/usr/bin/g++
++ unset CFLAGS CXXFLAGS
++ export CUDA_VISIBLE_DEVICES=0,1,2,3
++ CUDA_VISIBLE_DEVICES=0,1,2,3
++ export NCCL_CUMEM_ENABLE=0
++ NCCL_CUMEM_ENABLE=0
++ export RAY_EXPERIMENTAL_NOSET_CUDA_VISIBLE_DEVICES=1
++ RAY_EXPERIMENTAL_NOSET_CUDA_VISIBLE_DEVICES=1
++ ACTOR_LR=1e-6
++ TRAIN_BS=32
++ PPO_MINI_BS=32
++ GEN_BS=160
++ EPOCHS=2
++ STEPS=70
++ SAVE_FREQ=10
++ TEST_FREQ=10
++ N=8
++ PPO_MICRO_BSZ_PER_GPU=2
++ LOG_PROB_MICRO_BSZ_PER_GPU=8
++ CLIP_RATIO_LOW=0.2
++ CLIP_RATIO_HIGH=0.28
++ max_prompt_length=2048
++ max_response_length=8192
++ actor_ppo_max_token_len=10240
++ infer_ppo_max_token_len=10240
++ N_GPUS_PER_NODE=4
++ GEN_TP=2
++ use_dynamic_bsz=True
++ offload=false
++ export WANDB_MODE=disabled
++ WANDB_MODE=disabled
++ export WANDB_DISABLED=true
++ WANDB_DISABLED=true
++ CURRENT_DIR=/data01/wyy/Graph-Agent-Planning
++ export NNODES=1
++ NNODES=1
++ export PROJECT_NAME=Graph-Agent-Planning
++ PROJECT_NAME=Graph-Agent-Planning
++ SAVE_MODEL_FOLDER=/data01/wyy/Graph-Agent-Planning/experiments
++ export EXPERIMENT_NAME=DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu
++ EXPERIMENT_NAME=DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu
++ export BASE_MODEL=/data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu
++ BASE_MODEL=/data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu
++ export VLLM_ATTENTION_BACKEND=XFORMERS
++ VLLM_ATTENTION_BACKEND=XFORMERS
++ TRAIN_DATASETS=/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet
++ VAL_NQ=/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet
++ WIKI_SEARCH=/data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml
++ LOG_DIR=/data01/wyy/Graph-Agent-Planning/verl/logs
++ LOG_FILE=/data01/wyy/Graph-Agent-Planning/verl/logs/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu.log
++ mkdir -p /data01/wyy/Graph-Agent-Planning/verl/logs
++ STEP60_CKPT=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60
++ E1A_SCORER=/data01/wyy/Graph-Agent-Planning/E1-A/code/e1a_scorer.py
++ PREFLIGHT_OK=1
++ tee /data01/wyy/Graph-Agent-Planning/E1-A/run_20260911_024902/preflight/preflight_train.txt
+++ date -Is
++ echo 'E1-A preflight 2026-09-11T02:49:02+08:00'
++ echo repo_root=/data01/wyy/Graph-Agent-Planning
++ echo run_dir=/data01/wyy/Graph-Agent-Planning/E1-A/run_20260911_024902
++ echo experiment_name=DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu
++ echo default_local_dir=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu
++ for p in "$STEP60_CKPT" "$TRAIN_DATASETS" "$VAL_NQ" "$WIKI_SEARCH" "$BASE_MODEL" "$E1A_SCORER" "${E1A_CODE}/e1a_reward_manager.py" "${E1A_CODE}/pythonpath_e1a/sitecustomize.py"
++ [[ -e /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60 ]]
++ echo 'OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60'
++ for p in "$STEP60_CKPT" "$TRAIN_DATASETS" "$VAL_NQ" "$WIKI_SEARCH" "$BASE_MODEL" "$E1A_SCORER" "${E1A_CODE}/e1a_reward_manager.py" "${E1A_CODE}/pythonpath_e1a/sitecustomize.py"
++ [[ -e /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet ]]
++ echo 'OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet'
++ for p in "$STEP60_CKPT" "$TRAIN_DATASETS" "$VAL_NQ" "$WIKI_SEARCH" "$BASE_MODEL" "$E1A_SCORER" "${E1A_CODE}/e1a_reward_manager.py" "${E1A_CODE}/pythonpath_e1a/sitecustomize.py"
++ [[ -e /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet ]]
++ echo 'OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet'
++ for p in "$STEP60_CKPT" "$TRAIN_DATASETS" "$VAL_NQ" "$WIKI_SEARCH" "$BASE_MODEL" "$E1A_SCORER" "${E1A_CODE}/e1a_reward_manager.py" "${E1A_CODE}/pythonpath_e1a/sitecustomize.py"
++ [[ -e /data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml ]]
++ echo 'OK      /data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml'
++ for p in "$STEP60_CKPT" "$TRAIN_DATASETS" "$VAL_NQ" "$WIKI_SEARCH" "$BASE_MODEL" "$E1A_SCORER" "${E1A_CODE}/e1a_reward_manager.py" "${E1A_CODE}/pythonpath_e1a/sitecustomize.py"
++ [[ -e /data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu ]]
++ echo 'OK      /data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu'
++ for p in "$STEP60_CKPT" "$TRAIN_DATASETS" "$VAL_NQ" "$WIKI_SEARCH" "$BASE_MODEL" "$E1A_SCORER" "${E1A_CODE}/e1a_reward_manager.py" "${E1A_CODE}/pythonpath_e1a/sitecustomize.py"
++ [[ -e /data01/wyy/Graph-Agent-Planning/E1-A/code/e1a_scorer.py ]]
++ echo 'OK      /data01/wyy/Graph-Agent-Planning/E1-A/code/e1a_scorer.py'
++ for p in "$STEP60_CKPT" "$TRAIN_DATASETS" "$VAL_NQ" "$WIKI_SEARCH" "$BASE_MODEL" "$E1A_SCORER" "${E1A_CODE}/e1a_reward_manager.py" "${E1A_CODE}/pythonpath_e1a/sitecustomize.py"
++ [[ -e /data01/wyy/Graph-Agent-Planning/E1-A/code/e1a_reward_manager.py ]]
++ echo 'OK      /data01/wyy/Graph-Agent-Planning/E1-A/code/e1a_reward_manager.py'
++ for p in "$STEP60_CKPT" "$TRAIN_DATASETS" "$VAL_NQ" "$WIKI_SEARCH" "$BASE_MODEL" "$E1A_SCORER" "${E1A_CODE}/e1a_reward_manager.py" "${E1A_CODE}/pythonpath_e1a/sitecustomize.py"
++ [[ -e /data01/wyy/Graph-Agent-Planning/E1-A/code/pythonpath_e1a/sitecustomize.py ]]
++ echo 'OK      /data01/wyy/Graph-Agent-Planning/E1-A/code/pythonpath_e1a/sitecustomize.py'
++ for f in "$STEP60_CKPT/actor/model_world_size_4_rank_0.pt" "$STEP60_CKPT/actor/optim_world_size_4_rank_0.pt" "$STEP60_CKPT/data.pt"
++ [[ -s /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_0.pt ]]
++ echo 'OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_0.pt'
++ for f in "$STEP60_CKPT/actor/model_world_size_4_rank_0.pt" "$STEP60_CKPT/actor/optim_world_size_4_rank_0.pt" "$STEP60_CKPT/data.pt"
++ [[ -s /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/optim_world_size_4_rank_0.pt ]]
++ echo 'OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/optim_world_size_4_rank_0.pt'
++ for f in "$STEP60_CKPT/actor/model_world_size_4_rank_0.pt" "$STEP60_CKPT/actor/optim_world_size_4_rank_0.pt" "$STEP60_CKPT/data.pt"
++ [[ -s /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/data.pt ]]
++ echo 'OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/data.pt'
++ echo wiki_url_effective=http://127.0.0.1:8008/retrieve
++ [[ 1 != \1 ]]
++ [[ -e /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu ]]
++ cat
++ cat
++ python3 - /data01/wyy/Graph-Agent-Planning/E1-A/code /data01/wyy/Graph-Agent-Planning/E1-A/run_20260911_024902/preflight/code_manifest.txt
++ export E1A_START_GLOBAL_STEP=60
++ E1A_START_GLOBAL_STEP=60
++ export E1A_LAMBDA=0.05
++ E1A_LAMBDA=0.05
++ export PYTHONPATH=/data01/wyy/Graph-Agent-Planning/E1-A/code/pythonpath_e1a:
++ PYTHONPATH=/data01/wyy/Graph-Agent-Planning/E1-A/code/pythonpath_e1a:
++ WATCHDOG_PID=2888778
++ trap 'kill -TERM ${WATCHDOG_PID} 2>/dev/null || true' EXIT
++ echo '[E1-A] stall watchdog pid=2888778'
++ cd /data01/wyy/Graph-Agent-Planning/verl
++ python3 /data01/wyy/Graph-Agent-Planning/E1-A/code/e1a_stall_watchdog.py --log /data01/wyy/Graph-Agent-Planning/verl/logs/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu.log --run-dir /data01/wyy/Graph-Agent-Planning/E1-A/run_20260911_024902
++ tee /data01/wyy/Graph-Agent-Planning/verl/logs/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu.log
++ PYTHONUNBUFFERED=1
++ python3 -m verl.trainer.main_ppo ray_init.num_cpus=16 algorithm.adv_estimator=grpo algorithm.filter_groups.enable=true 'data.train_files=[/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet]' 'data.val_files=[/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet]' data.train_batch_size=32 data.gen_batch_size=160 data.val_batch_size=128 data.max_prompt_length=2048 data.max_response_length=8192 data.shuffle=true data.return_raw_chat=true data.filter_overlong_prompts=False actor_rollout_ref.model.path=/data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu actor_rollout_ref.model.enable_gradient_checkpointing=true actor_rollout_ref.model.use_remove_padding=true actor_rollout_ref.hybrid_engine=true actor_rollout_ref.actor.optim.lr=1e-6 actor_rollout_ref.actor.optim.lr_warmup_steps=3 actor_rollout_ref.actor.optim.weight_decay=0.1 actor_rollout_ref.actor.ppo_mini_batch_size=32 actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=2 actor_rollout_ref.actor.fsdp_config.param_offload=false actor_rollout_ref.actor.fsdp_config.optimizer_offload=false 'actor_rollout_ref.actor.checkpoint.save_contents=['\''model'\'', '\''optimizer'\'', '\''extra'\'']' actor_rollout_ref.actor.use_dynamic_bsz=True actor_rollout_ref.actor.ppo_max_token_len_per_gpu=10240 actor_rollout_ref.actor.use_kl_loss=false actor_rollout_ref.actor.kl_loss_coef=0.0 actor_rollout_ref.actor.kl_loss_type=low_var_kl actor_rollout_ref.actor.clip_ratio_low=0.2 actor_rollout_ref.actor.clip_ratio_high=0.28 actor_rollout_ref.actor.clip_ratio_c=10.0 actor_rollout_ref.rollout.max_model_len=10240 actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=8 actor_rollout_ref.rollout.tensor_model_parallel_size=2 actor_rollout_ref.rollout.name=sglang_async actor_rollout_ref.rollout.gpu_memory_utilization=0.5 actor_rollout_ref.rollout.log_prob_use_dynamic_bsz=True actor_rollout_ref.rollout.log_prob_max_token_len_per_gpu=10240 actor_rollout_ref.rollout.max_num_batched_tokens=10240 actor_rollout_ref.rollout.n=8 actor_rollout_ref.rollout.temperature=1.0 actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=8 actor_rollout_ref.ref.fsdp_config.param_offload=true actor_rollout_ref.ref.log_prob_max_token_len_per_gpu=10240 'trainer.logger=[console]' trainer.val_only=false trainer.val_before_train=true trainer.default_hdfs_dir=null trainer.n_gpus_per_node=4 trainer.nnodes=1 trainer.save_freq=10 trainer.test_freq=10 trainer.project_name=Graph-Agent-Planning trainer.experiment_name=DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu trainer.total_epochs=2 trainer.total_training_steps=70 trainer.default_local_dir=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu trainer.resume_mode=resume_path trainer.resume_from_path=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60 actor_rollout_ref.rollout.multi_turn.enable=true actor_rollout_ref.rollout.multi_turn.max_turns=8 +actor_rollout_ref.rollout.multi_turn.format=qwen actor_rollout_ref.rollout.multi_turn.use_xml_tool_parser=true actor_rollout_ref.rollout.multi_turn.tool_config_path=/data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml reward_model.reward_manager=e1a_batch_shaped custom_reward_function.train_path=/data01/wyy/Graph-Agent-Planning/E1-A/code/e1a_scorer.py custom_reward_function.train_name=compute_score_em_efficiency_batch custom_reward_function.val_path=/data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/mhqa_eval.py custom_reward_function.val_name=compute_score_em_batch
++ TRAIN_RC=0
++ echo '[E1-A] python main_ppo exit code: 0'
++ CKPT70=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70
++ tee /data01/wyy/Graph-Agent-Planning/E1-A/run_20260911_024902/preflight/post_train_check.txt
+++ date -Is
++ echo 'E1-A post-training check 2026-09-11T05:42:31+08:00'
++ [[ -d /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70 ]]
++ echo 'OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70'
++ ls -la /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70 /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor
++ head -30
+++ cat /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/latest_checkpointed_iteration.txt
++ echo 'tracker: 70'
++ echo 'steps seen in log:'
++ grep -oE 'step:[0-9]+ -' /data01/wyy/Graph-Agent-Planning/verl/logs/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu.log
++ sort -u -t: -k2 -n
++ tr '\n' ' '
++ echo
++ exit 0
++ kill -TERM 2888778
++ true

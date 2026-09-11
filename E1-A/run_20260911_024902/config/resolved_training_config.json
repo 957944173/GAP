@@ -1,0 +1,393 @@
+{
+  "AFM_reward_fn": {
+    "context_max_response_length": 10240,
+    "format_fn_type": "no_penalty"
+  },
+  "actor_rollout_ref": {
+    "actor": {
+      "checkpoint": {
+        "load_contents": [
+          "model",
+          "optimizer",
+          "extra"
+        ],
+        "save_contents": [
+          "model",
+          "optimizer",
+          "extra"
+        ]
+      },
+      "clip_ratio": 0.2,
+      "clip_ratio_c": 10.0,
+      "clip_ratio_high": 0.28,
+      "clip_ratio_low": 0.2,
+      "entropy_checkpointing": false,
+      "entropy_coeff": 0,
+      "entropy_from_logits_with_chunking": false,
+      "fsdp_config": {
+        "forward_prefetch": false,
+        "fsdp_size": -1,
+        "offload_policy": false,
+        "optimizer_offload": false,
+        "param_offload": false,
+        "reshard_after_forward": true,
+        "timeout": 120,
+        "wrap_policy": {
+          "min_num_params": 0
+        }
+      },
+      "grad_clip": 1.0,
+      "kl_loss_coef": 0.0,
+      "kl_loss_type": "low_var_kl",
+      "loss_agg_mode": "token-mean",
+      "optim": {
+        "lr": 1e-06,
+        "lr_warmup_steps": 3,
+        "lr_warmup_steps_ratio": 0.0,
+        "min_lr_ratio": 0.0,
+        "num_cycles": 0.5,
+        "total_training_steps": -1,
+        "warmup_style": "constant",
+        "weight_decay": 0.1
+      },
+      "ppo_epochs": 1,
+      "ppo_max_token_len_per_gpu": 10240,
+      "ppo_micro_batch_size": null,
+      "ppo_micro_batch_size_per_gpu": 2,
+      "ppo_mini_batch_size": 32,
+      "profiler": {
+        "all_ranks": false,
+        "discrete": false,
+        "ranks": null
+      },
+      "shuffle": false,
+      "strategy": "fsdp",
+      "ulysses_sequence_parallel_size": 1,
+      "use_dynamic_bsz": true,
+      "use_kl_loss": false,
+      "use_torch_compile": true
+    },
+    "hybrid_engine": true,
+    "model": {
+      "enable_activation_offload": false,
+      "enable_gradient_checkpointing": true,
+      "external_lib": null,
+      "fused_kernel_options": {
+        "impl_backend": "torch"
+      },
+      "lora_alpha": 16,
+      "lora_rank": 0,
+      "override_config": {},
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu",
+      "target_modules": "all-linear",
+      "trust_remote_code": false,
+      "use_fused_kernels": false,
+      "use_liger": false,
+      "use_remove_padding": true,
+      "use_shm": false
+    },
+    "ref": {
+      "entropy_checkpointing": false,
+      "entropy_from_logits_with_chunking": false,
+      "fsdp_config": {
+        "forward_prefetch": false,
+        "param_offload": true,
+        "reshard_after_forward": true,
+        "wrap_policy": {
+          "min_num_params": 0
+        }
+      },
+      "log_prob_max_token_len_per_gpu": 10240,
+      "log_prob_micro_batch_size": null,
+      "log_prob_micro_batch_size_per_gpu": 8,
+      "log_prob_use_dynamic_bsz": true,
+      "profiler": {
+        "all_ranks": false,
+        "discrete": false,
+        "ranks": null
+      },
+      "strategy": "fsdp",
+      "ulysses_sequence_parallel_size": 1,
+      "use_torch_compile": true
+    },
+    "rollout": {
+      "disable_log_stats": true,
+      "do_sample": true,
+      "dtype": "bfloat16",
+      "enable_chunked_prefill": true,
+      "enforce_eager": true,
+      "engine_kwargs": {
+        "sglang": {
+          "attention_backend": null
+        },
+        "vllm": {
+          "disable_mm_preprocessor_cache": false,
+          "swap_space": null
+        }
+      },
+      "free_cache_engine": true,
+      "gpu_memory_utilization": 0.5,
+      "ignore_eos": false,
+      "layered_summon": false,
+      "load_format": "dummy_dtensor",
+      "log_prob_max_token_len_per_gpu": 10240,
+      "log_prob_micro_batch_size": null,
+      "log_prob_micro_batch_size_per_gpu": 8,
+      "log_prob_use_dynamic_bsz": true,
+      "max_model_len": 10240,
+      "max_num_batched_tokens": 10240,
+      "max_num_seqs": 1024,
+      "mode": "sync",
+      "multi_turn": {
+        "completion_callback": null,
+        "enable": true,
+        "enable_tokenization_sanity_check": false,
+        "format": "qwen",
+        "max_turns": 8,
+        "tool_config_path": "/data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml",
+        "use_inference_chat_template": false,
+        "use_xml_tool_parser": true
+      },
+      "n": 8,
+      "name": "sglang_async",
+      "profiler": {
+        "all_ranks": false,
+        "discrete": false,
+        "ranks": null
+      },
+      "prompt_length": 2048,
+      "response_length": 8192,
+      "temperature": 1.0,
+      "tensor_model_parallel_size": 2,
+      "top_k": -1,
+      "top_p": 1,
+      "use_fire_sampling": false,
+      "val_kwargs": {
+        "do_sample": false,
+        "n": 1,
+        "temperature": 0,
+        "top_k": -1,
+        "top_p": 1.0
+      }
+    }
+  },
+  "algorithm": {
+    "adv_estimator": "grpo",
+    "filter_groups": {
+      "enable": true,
+      "max_num_gen_batches": 0,
+      "metric": "seq_final_reward"
+    },
+    "gamma": 1.0,
+    "kl_ctrl": {
+      "horizon": 10000,
+      "kl_coef": 0.001,
+      "target_kl": 0.1,
+      "type": "fixed"
+    },
+    "kl_penalty": "kl",
+    "lam": 1.0,
+    "norm_adv_by_std_in_grpo": true,
+    "pf_ppo": {
+      "reweight_method": "pow",
+      "weight_pow": 2.0
+    },
+    "use_kl_in_reward": false,
+    "use_pf_ppo": false
+  },
+  "critic": {
+    "checkpoint": {
+      "load_contents": [
+        "model",
+        "optimizer",
+        "extra"
+      ],
+      "save_contents": [
+        "model",
+        "optimizer",
+        "extra"
+      ]
+    },
+    "cliprange_value": 0.5,
+    "forward_max_token_len_per_gpu": 32768,
+    "forward_micro_batch_size": null,
+    "forward_micro_batch_size_per_gpu": null,
+    "grad_clip": 1.0,
+    "loss_agg_mode": "token-mean",
+    "model": {
+      "enable_activation_offload": false,
+      "enable_gradient_checkpointing": true,
+      "external_lib": null,
+      "fsdp_config": {
+        "forward_prefetch": false,
+        "fsdp_size": -1,
+        "offload_policy": false,
+        "optimizer_offload": false,
+        "param_offload": false,
+        "reshard_after_forward": true,
+        "wrap_policy": {
+          "min_num_params": 0
+        }
+      },
+      "lora_alpha": 16,
+      "lora_rank": 0,
+      "override_config": {},
+      "path": "~/models/deepseek-llm-7b-chat",
+      "target_modules": "all-linear",
+      "tokenizer_path": "/data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu",
+      "trust_remote_code": false,
+      "use_remove_padding": false,
+      "use_shm": false
+    },
+    "optim": {
+      "lr": 1e-05,
+      "lr_warmup_steps_ratio": 0.0,
+      "min_lr_ratio": null,
+      "total_training_steps": -1,
+      "warmup_style": "constant",
+      "weight_decay": 0.01
+    },
+    "ppo_epochs": 1,
+    "ppo_max_token_len_per_gpu": 32768,
+    "ppo_micro_batch_size": null,
+    "ppo_micro_batch_size_per_gpu": null,
+    "ppo_mini_batch_size": 32,
+    "profiler": {
+      "all_ranks": false,
+      "discrete": false,
+      "ranks": null
+    },
+    "rollout_n": 8,
+    "shuffle": false,
+    "strategy": "fsdp",
+    "ulysses_sequence_parallel_size": 1,
+    "use_dynamic_bsz": true
+  },
+  "curriculum_learning": {
+    "enable": false
+  },
+  "custom_reward_function": {
+    "train_name": "compute_score_em_efficiency_batch",
+    "train_path": "/data01/wyy/Graph-Agent-Planning/E1-A/code/e1a_scorer.py",
+    "val_name": "compute_score_em_batch",
+    "val_path": "/data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/mhqa_eval.py"
+  },
+  "data": {
+    "custom_cls": {
+      "name": null,
+      "path": null
+    },
+    "filter_overlong_prompts": false,
+    "filter_overlong_prompts_workers": 1,
+    "gen_batch_size": 160,
+    "image_key": "images",
+    "max_prompt_length": 2048,
+    "max_response_length": 8192,
+    "prompt_key": "prompt",
+    "return_full_prompt": false,
+    "return_raw_chat": true,
+    "return_raw_input_ids": false,
+    "reward_fn_key": "data_source",
+    "shuffle": true,
+    "tokenizer": null,
+    "train_batch_size": 32,
+    "train_files": [
+      "/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet"
+    ],
+    "truncation": "error",
+    "trust_remote_code": false,
+    "use_shm": false,
+    "val_batch_size": 128,
+    "val_files": [
+      "/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet"
+    ],
+    "validation_shuffle": false,
+    "video_key": "videos"
+  },
+  "ray_init": {
+    "num_cpus": 16,
+    "timeline_json_file": null
+  },
+  "reward_model": {
+    "enable": false,
+    "forward_max_token_len_per_gpu": 32768,
+    "launch_reward_fn_async": false,
+    "max_length": null,
+    "micro_batch_size": null,
+    "micro_batch_size_per_gpu": null,
+    "model": {
+      "external_lib": null,
+      "fsdp_config": {
+        "forward_prefetch": false,
+        "fsdp_size": -1,
+        "param_offload": false,
+        "reshard_after_forward": true,
+        "wrap_policy": {
+          "min_num_params": 0
+        }
+      },
+      "input_tokenizer": "/data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu",
+      "path": "~/models/FsfairX-LLaMA3-RM-v0.1",
+      "trust_remote_code": false,
+      "use_fused_kernels": false,
+      "use_remove_padding": false,
+      "use_shm": false
+    },
+    "profiler": {
+      "all_ranks": false,
+      "discrete": false,
+      "ranks": null
+    },
+    "reward_manager": "e1a_batch_shaped",
+    "sandbox_fusion": {
+      "max_concurrent": 64,
+      "url": null
+    },
+    "strategy": "fsdp",
+    "ulysses_sequence_parallel_size": 1,
+    "use_dynamic_bsz": true
+  },
+  "trainer": {
+    "balance_batch": true,
+    "controller_nsight_options": {
+      "cuda-graph-trace": "graph",
+      "cuda-memory-usage": "true",
+      "trace": "cuda,nvtx,cublas,ucx"
+    },
+    "critic_warmup": 0,
+    "default_hdfs_dir": null,
+    "default_local_dir": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu",
+    "del_local_ckpt_after_load": false,
+    "device": "cuda",
+    "experiment_name": "DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu",
+    "log_val_generations": 0,
+    "logger": [
+      "console"
+    ],
+    "max_actor_ckpt_to_keep": null,
+    "max_critic_ckpt_to_keep": null,
+    "n_gpus_per_node": 4,
+    "nnodes": 1,
+    "profile_steps": null,
+    "project_name": "Graph-Agent-Planning",
+    "ray_wait_register_center_timeout": 300,
+    "resume_from_path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60",
+    "resume_mode": "resume_path",
+    "rollout_data_dir": null,
+    "save_freq": 10,
+    "test_freq": 10,
+    "total_epochs": 2,
+    "total_training_steps": 70,
+    "val_before_train": true,
+    "val_only": false,
+    "validation_data_dir": null,
+    "worker_nsight_options": {
+      "capture-range": "cudaProfilerApi",
+      "capture-range-end": null,
+      "cuda-graph-trace": "graph",
+      "cuda-memory-usage": "true",
+      "kill": "none",
+      "trace": "cuda,nvtx,cublas,ucx"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+E1-A original-file integrity re-verification AFTER training + E1-A eval
+time: 2026-09-11 07:29:10 +0800
+OK       Agent/train/mhqa_agent/rl/run_gen_bs_supervisor.sh
+OK       Agent/train/mhqa_agent/rl/train_dapo_mhqa_agent_wiki.sh
+OK       Agent/train/mhqa_agent/rl/gen_bs_supervisor.py
+OK       Agent/evaluation/mhqa_agent/eval_mhqa_agent_rl_step_70_4gpu.sh
+OK       Agent/evaluation/mhqa_agent/eval_mhqa_agent_4gpu_common.sh
+OK       Agent/evaluation/mhqa_agent/summarize_eval.py
+OK       verl/verl/workers/reward_manager/batch.py
+OK       verl/verl/workers/reward_manager/__init__.py
+OK       verl/verl/utils/reward_score/mhqa_train.py
+OK       verl/verl/utils/reward_score/mhqa_eval.py
+OK       verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py
+OK       verl/verl/workers/rollout/schemas.py
+OK       verl/verl/trainer/ppo/ray_trainer.py
+OK       verl/verl/trainer/ppo/reward.py
+OK       verl/verl/trainer/ppo/core_algos.py
+OK       verl/verl/utils/checkpoint/fsdp_checkpoint_manager.py
+OK       environment.sh
+OK       E1-0/runs/20260910_step60to70_e10/code/e10_reward_manager.py
+OK       E1-0/runs/20260910_step60to70_e10/code/e10_sglang_gpu_patch.py
+
+checked=19 mismatches=0
+RESULT: ALL ORIGINAL FILES UNCHANGED
