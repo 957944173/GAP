@@ -1,0 +1,18 @@
+E1-B analyzer dry-run verification 2026-09-11T12:34:13+08:00
+Ran every post-training analyzer against the already-complete E1-A run (real data) to
+de-risk the unattended post-training pipeline before it is needed:
+
+1) e1b_checkpoint_stats.py --run-dir E1-A/run_20260911_024902 --out /tmp/e1b_ckstats_test
+   -> OK (per-checkpoint window/cumulative table produced)
+2) e1b_analyze_training.py --run-dir E1-A/run_20260911_024902 --out /tmp/e1b_analysis_test
+   -> OK (18,400 groups, em_rate 0.4539, rounds 1.4407, queries 1.9898, pf 1.5091,
+          retention baseline 340 / active-E 95 -- matches the published E1-A numbers)
+3) e1b_paired_eval_compare.py (E1-A step70 vs E1-0 step70 dumps)
+   -> OK (reproduces exactly: rounds -0.0334, 5,947 decreased / 4,868 increased,
+          sign-test p=3.21e-25; EM -0.0008 with p=0.562)
+
+Additionally, per-step training-side safety for E1-B steps 71-74:
+  EM 0.4444-0.4653 (E1-A steps 61-70: 0.4413-0.4675; E1-0: 0.4354-0.4803) -> no accuracy drop
+  mean logical_search_batches 1.405-1.435 (E1-A 1.386-1.457) -> slightly lower
+  mean queries 1.969-1.990 (E1-A 1.960-2.004) -> flat
+  zero_search_correct = 0, metadata_invalid = 0, no safety alerts

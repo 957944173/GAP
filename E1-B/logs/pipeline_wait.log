@@ -1,0 +1,33 @@
+2026-09-11T23:53:18+08:00 pipeline waiter started
+2026-09-11T23:53:18+08:00 progress: eval_steps_done=0
+0 newest_log=eval_step120.log age=11s
+2026-09-12T00:13:19+08:00 progress: eval_steps_done=0
+0 newest_log=eval_step120.log age=5s
+2026-09-12T00:33:20+08:00 progress: eval_steps_done=0
+0 newest_log=eval_step120.log age=1s
+2026-09-12T00:53:21+08:00 progress: eval_steps_done=0
+0 newest_log=eval_step120.log age=7s
+2026-09-12T01:13:22+08:00 progress: eval_steps_done=0
+0 newest_log=eval_step120.log age=37s
+2026-09-12T01:33:23+08:00 progress: eval_steps_done=1 newest_log=eval_step80.log age=4s
+2026-09-12T01:53:24+08:00 progress: eval_steps_done=1 newest_log=eval_step80.log age=4s
+2026-09-12T02:13:25+08:00 progress: eval_steps_done=1 newest_log=eval_step80.log age=4s
+2026-09-12T02:33:26+08:00 progress: eval_steps_done=1 newest_log=eval_step80.log age=11s
+2026-09-12T02:53:27+08:00 progress: eval_steps_done=1 newest_log=eval_step80.log age=0s
+2026-09-12T03:13:28+08:00 progress: eval_steps_done=1 newest_log=eval_step80.log age=1s
+2026-09-12T03:33:29+08:00 progress: eval_steps_done=2 newest_log=eval_step90.log age=2s
+2026-09-12T03:53:30+08:00 progress: eval_steps_done=2 newest_log=eval_step90.log age=3s
+2026-09-12T04:13:31+08:00 progress: eval_steps_done=2 newest_log=eval_step90.log age=14s
+2026-09-12T04:33:33+08:00 progress: eval_steps_done=2 newest_log=eval_step90.log age=5s
+2026-09-12T04:53:34+08:00 progress: eval_steps_done=2 newest_log=eval_step90.log age=1s
+2026-09-12T05:13:35+08:00 progress: eval_steps_done=3 newest_log=eval_step100.log age=8s
+2026-09-12T05:33:36+08:00 progress: eval_steps_done=3 newest_log=eval_step100.log age=9s
+2026-09-12T05:53:37+08:00 progress: eval_steps_done=3 newest_log=eval_step100.log age=5s
+2026-09-12T06:13:38+08:00 progress: eval_steps_done=3 newest_log=eval_step100.log age=4s
+2026-09-12T06:33:39+08:00 progress: eval_steps_done=3 newest_log=eval_step100.log age=1s
+2026-09-12T06:53:40+08:00 progress: eval_steps_done=4 newest_log=eval_step110.log age=5s
+2026-09-12T07:13:41+08:00 progress: eval_steps_done=4 newest_log=eval_step110.log age=3s
+2026-09-12T07:33:42+08:00 progress: eval_steps_done=4 newest_log=eval_step110.log age=1s
+2026-09-12T07:53:43+08:00 progress: eval_steps_done=4 newest_log=eval_step110.log age=4s
+2026-09-12T08:13:44+08:00 progress: eval_steps_done=4 newest_log=eval_step110.log age=5s
+2026-09-12T08:19:45+08:00 PIPELINE_FINISHED STATUS=DONE run_dir=/data01/wyy/Graph-Agent-Planning/E1-B/run_20260911_113432

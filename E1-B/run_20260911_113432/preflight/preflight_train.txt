@@ -1,0 +1,19 @@
+E1-B preflight 2026-09-11T11:34:32+08:00
+repo_root=/data01/wyy/Graph-Agent-Planning
+run_dir=/data01/wyy/Graph-Agent-Planning/E1-B/run_20260911_113432
+experiment_name=DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu
+default_local_dir=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70
+OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet
+OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet
+OK      /data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml
+OK      /data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu
+OK      /data01/wyy/Graph-Agent-Planning/E1-B/code_changes/e1b_scorer.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-B/code_changes/e1b_reward_manager.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-B/code_changes/e1b_cost.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-B/code_changes/pythonpath_e1b/sitecustomize.py
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/model_world_size_4_rank_0.pt
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/optim_world_size_4_rank_0.pt
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/extra_state_world_size_4_rank_0.pt
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/data.pt
+wiki_url_effective=http://127.0.0.1:8008/retrieve

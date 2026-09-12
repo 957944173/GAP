@@ -1,0 +1,753 @@
+{
+  "experiment": "DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu",
+  "experiment_dir": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu",
+  "tracker": "120",
+  "checkpoints": {
+    "70": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_70",
+      "exists": false,
+      "shards": {},
+      "data_pt": null
+    },
+    "80": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_80",
+      "exists": true,
+      "shards": {
+        "model_rank0": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank0": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank0": {
+          "exists": true,
+          "size": 14632
+        },
+        "model_rank1": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank1": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank1": {
+          "exists": true,
+          "size": 14696
+        },
+        "model_rank2": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank2": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank2": {
+          "exists": true,
+          "size": 14696
+        },
+        "model_rank3": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank3": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank3": {
+          "exists": true,
+          "size": 14760
+        }
+      },
+      "data_pt": {
+        "exists": true,
+        "size": 1492,
+        "sha256": "b7f5e1d4a8b2083f53d0c16947d361b7fa80e72da36d195dd3fdde2cc319043a"
+      },
+      "merged_hf": true,
+      "stats": {
+        "checkpoint": "global_step_80",
+        "step": 80,
+        "window_10step": {
+          "steps": [
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80
+          ],
+          "n_rollouts": 128000,
+          "n_groups": 16000,
+          "mean_reward": 0.4584313802083336,
+          "mean_em": 0.458328125,
+          "mean_efficiency_bonus": 0.002065104166666667,
+          "efficiency_nonzero_rate": 0.0020703125,
+          "active_efficiency_groups": 73,
+          "retained_groups_shaped": 337,
+          "retained_groups_baseline_em": 273,
+          "newly_added_by_shaping": 64,
+          "mean_search_batches": 1.4214375,
+          "mean_queries": 1.97265625,
+          "parallel_factor": 1.5144499127649058,
+          "mean_conversation_turns": 2.4214375,
+          "mean_response_tokens": 1274.490828125,
+          "zero_search_rate": 0.000375,
+          "zero_search_correct_count": 0,
+          "metadata_invalid": 0
+        },
+        "cumulative": {
+          "steps": [
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80
+          ],
+          "n_rollouts": 128000,
+          "n_groups": 16000,
+          "mean_reward": 0.4584313802083336,
+          "mean_em": 0.458328125,
+          "mean_efficiency_bonus": 0.002065104166666667,
+          "efficiency_nonzero_rate": 0.0020703125,
+          "active_efficiency_groups": 73,
+          "retained_groups_shaped": 337,
+          "retained_groups_baseline_em": 273,
+          "newly_added_by_shaping": 64,
+          "mean_search_batches": 1.4214375,
+          "mean_queries": 1.97265625,
+          "parallel_factor": 1.5144499127649058,
+          "mean_conversation_turns": 2.4214375,
+          "mean_response_tokens": 1274.490828125,
+          "zero_search_rate": 0.000375,
+          "zero_search_correct_count": 0,
+          "metadata_invalid": 0
+        }
+      }
+    },
+    "90": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_90",
+      "exists": true,
+      "shards": {
+        "model_rank0": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank0": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank0": {
+          "exists": true,
+          "size": 14632
+        },
+        "model_rank1": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank1": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank1": {
+          "exists": true,
+          "size": 14696
+        },
+        "model_rank2": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank2": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank2": {
+          "exists": true,
+          "size": 14696
+        },
+        "model_rank3": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank3": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank3": {
+          "exists": true,
+          "size": 14760
+        }
+      },
+      "data_pt": {
+        "exists": true,
+        "size": 1492,
+        "sha256": "eb6a113145d10d984c530217404623e83fe1a1a16a505dbbfb2c578683a2b211"
+      },
+      "merged_hf": true,
+      "stats": {
+        "checkpoint": "global_step_90",
+        "step": 90,
+        "window_10step": {
+          "steps": [
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90
+          ],
+          "n_rollouts": 124160,
+          "n_groups": 15520,
+          "mean_reward": 0.4535993878865981,
+          "mean_em": 0.4534954896907217,
+          "mean_efficiency_bonus": 0.002077963917525773,
+          "efficiency_nonzero_rate": 0.002077963917525773,
+          "active_efficiency_groups": 63,
+          "retained_groups_shaped": 336,
+          "retained_groups_baseline_em": 275,
+          "newly_added_by_shaping": 61,
+          "mean_search_batches": 1.3952480670103093,
+          "mean_queries": 1.96796875,
+          "parallel_factor": 1.537072155837461,
+          "mean_conversation_turns": 2.3951192010309277,
+          "mean_response_tokens": 1268.799275128866,
+          "zero_search_rate": 0.0001288659793814433,
+          "zero_search_correct_count": 0,
+          "metadata_invalid": 0
+        },
+        "cumulative": {
+          "steps": [
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90
+          ],
+          "n_rollouts": 252160,
+          "n_groups": 31520,
+          "mean_reward": 0.45605217586717445,
+          "mean_em": 0.4559486040609137,
+          "mean_efficiency_bonus": 0.002071436125211506,
+          "efficiency_nonzero_rate": 0.0020740799492385787,
+          "active_efficiency_groups": 136,
+          "retained_groups_shaped": 673,
+          "retained_groups_baseline_em": 548,
+          "newly_added_by_shaping": 125,
+          "mean_search_batches": 1.408542195431472,
+          "mean_queries": 1.9703481916243655,
+          "parallel_factor": 1.5255901757758195,
+          "mean_conversation_turns": 2.4084787436548223,
+          "mean_response_tokens": 1271.6883883248731,
+          "zero_search_rate": 0.0002538071065989848,
+          "zero_search_correct_count": 0,
+          "metadata_invalid": 0
+        }
+      }
+    },
+    "100": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_100",
+      "exists": true,
+      "shards": {
+        "model_rank0": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank0": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank0": {
+          "exists": true,
+          "size": 14632
+        },
+        "model_rank1": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank1": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank1": {
+          "exists": true,
+          "size": 14696
+        },
+        "model_rank2": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank2": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank2": {
+          "exists": true,
+          "size": 14696
+        },
+        "model_rank3": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank3": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank3": {
+          "exists": true,
+          "size": 14760
+        }
+      },
+      "data_pt": {
+        "exists": true,
+        "size": 1492,
+        "sha256": "3c88daef01c6a11dbf9c155e5200692d47f6a131c77d63303ff4bae9d141e7ec"
+      },
+      "merged_hf": true,
+      "stats": {
+        "checkpoint": "global_step_100",
+        "step": 100,
+        "window_10step": {
+          "steps": [
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100
+          ],
+          "n_rollouts": 124160,
+          "n_groups": 15520,
+          "mean_reward": 0.45695795747422707,
+          "mean_em": 0.4568460051546392,
+          "mean_efficiency_bonus": 0.002239046391752577,
+          "efficiency_nonzero_rate": 0.002239046391752577,
+          "active_efficiency_groups": 69,
+          "retained_groups_shaped": 341,
+          "retained_groups_baseline_em": 275,
+          "newly_added_by_shaping": 66,
+          "mean_search_batches": 1.3330299613402061,
+          "mean_queries": 1.9256201675257731,
+          "parallel_factor": 1.5624045723922466,
+          "mean_conversation_turns": 2.3329655283505155,
+          "mean_response_tokens": 1248.1319346005155,
+          "zero_search_rate": 0.0002577319587628866,
+          "zero_search_correct_count": 0,
+          "metadata_invalid": 0
+        },
+        "cumulative": {
+          "steps": [
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100
+          ],
+          "n_rollouts": 376320,
+          "n_groups": 47040,
+          "mean_reward": 0.4563510221797055,
+          "mean_em": 0.45624468537414964,
+          "mean_efficiency_bonus": 0.0021267361111111114,
+          "efficiency_nonzero_rate": 0.0021285076530612244,
+          "active_efficiency_groups": 205,
+          "retained_groups_shaped": 1014,
+          "retained_groups_baseline_em": 823,
+          "newly_added_by_shaping": 191,
+          "mean_search_batches": 1.3836282950680272,
+          "mean_queries": 1.9555909863945578,
+          "parallel_factor": 1.5377363903267354,
+          "mean_conversation_turns": 2.3835645195578232,
+          "mean_response_tokens": 1263.9163610756802,
+          "zero_search_rate": 0.00025510204081632655,
+          "zero_search_correct_count": 0,
+          "metadata_invalid": 0
+        }
+      }
+    },
+    "110": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_110",
+      "exists": true,
+      "shards": {
+        "model_rank0": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank0": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank0": {
+          "exists": true,
+          "size": 14632
+        },
+        "model_rank1": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank1": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank1": {
+          "exists": true,
+          "size": 14696
+        },
+        "model_rank2": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank2": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank2": {
+          "exists": true,
+          "size": 14696
+        },
+        "model_rank3": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank3": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank3": {
+          "exists": true,
+          "size": 14760
+        }
+      },
+      "data_pt": {
+        "exists": true,
+        "size": 1492,
+        "sha256": "569df93e6bcd3ee40c4102c80bf37eb0f1b460f712c7e7fddee32cf12932da6c"
+      },
+      "merged_hf": true,
+      "stats": {
+        "checkpoint": "global_step_110",
+        "step": 110,
+        "window_10step": {
+          "steps": [
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110
+          ],
+          "n_rollouts": 130560,
+          "n_groups": 16320,
+          "mean_reward": 0.4570168887867649,
+          "mean_em": 0.4569393382352941,
+          "mean_efficiency_bonus": 0.0015510110294117646,
+          "efficiency_nonzero_rate": 0.0015625,
+          "active_efficiency_groups": 49,
+          "retained_groups_shaped": 333,
+          "retained_groups_baseline_em": 285,
+          "newly_added_by_shaping": 48,
+          "mean_search_batches": 1.2759574142156862,
+          "mean_queries": 1.8857996323529411,
+          "parallel_factor": 1.5889428267936667,
+          "mean_conversation_turns": 2.275957414215686,
+          "mean_response_tokens": 1227.6614583333333,
+          "zero_search_rate": 0.00012254901960784314,
+          "zero_search_correct_count": 0,
+          "metadata_invalid": 0
+        },
+        "cumulative": {
+          "steps": [
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110
+          ],
+          "n_rollouts": 506880,
+          "n_groups": 63360,
+          "mean_reward": 0.4565225332754632,
+          "mean_em": 0.4564236111111111,
+          "mean_efficiency_bonus": 0.0019784432870370372,
+          "efficiency_nonzero_rate": 0.001982717803030303,
+          "active_efficiency_groups": 254,
+          "retained_groups_shaped": 1347,
+          "retained_groups_baseline_em": 1108,
+          "newly_added_by_shaping": 239,
+          "mean_search_batches": 1.3558948863636364,
+          "mean_queries": 1.9376144255050505,
+          "parallel_factor": 1.5509272252692317,
+          "mean_conversation_turns": 2.355847537878788,
+          "mean_response_tokens": 1254.5779770359848,
+          "zero_search_rate": 0.00022095959595959597,
+          "zero_search_correct_count": 0,
+          "metadata_invalid": 0
+        }
+      }
+    },
+    "120": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_120",
+      "exists": true,
+      "shards": {
+        "model_rank0": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank0": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank0": {
+          "exists": true,
+          "size": 14632
+        },
+        "model_rank1": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank1": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank1": {
+          "exists": true,
+          "size": 14696
+        },
+        "model_rank2": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank2": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank2": {
+          "exists": true,
+          "size": 14696
+        },
+        "model_rank3": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank3": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank3": {
+          "exists": true,
+          "size": 14760
+        }
+      },
+      "data_pt": {
+        "exists": true,
+        "size": 1492,
+        "sha256": "2afc69dfa0ced1208ff258603db8d2737c93829edde0d8c9e19cd566e4d1b150"
+      },
+      "merged_hf": true,
+      "stats": {
+        "checkpoint": "global_step_120",
+        "step": 120,
+        "window_10step": {
+          "steps": [
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120
+          ],
+          "n_rollouts": 134400,
+          "n_groups": 16800,
+          "mean_reward": 0.4596164434523812,
+          "mean_em": 0.45955357142857145,
+          "mean_efficiency_bonus": 0.0012574404761904762,
+          "efficiency_nonzero_rate": 0.0012574404761904762,
+          "active_efficiency_groups": 37,
+          "retained_groups_shaped": 338,
+          "retained_groups_baseline_em": 304,
+          "newly_added_by_shaping": 34,
+          "mean_search_batches": 1.2334002976190477,
+          "mean_queries": 1.8439955357142856,
+          "parallel_factor": 1.5969610922551705,
+          "mean_conversation_turns": 2.2334002976190477,
+          "mean_response_tokens": 1206.5610044642858,
+          "zero_search_rate": 0.00035714285714285714,
+          "zero_search_correct_count": 0,
+          "metadata_invalid": 0
+        },
+        "cumulative": {
+          "steps": [
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120
+          ],
+          "n_rollouts": 641280,
+          "n_groups": 80160,
+          "mean_reward": 0.45717095756403886,
+          "mean_em": 0.45707959081836325,
+          "mean_efficiency_bonus": 0.0018273349135063208,
+          "efficiency_nonzero_rate": 0.0018307135728542914,
+          "active_efficiency_groups": 291,
+          "retained_groups_shaped": 1685,
+          "retained_groups_baseline_em": 1412,
+          "newly_added_by_shaping": 273,
+          "mean_search_batches": 1.3302223677644711,
+          "mean_queries": 1.9179937000998004,
+          "parallel_factor": 1.5605740029353392,
+          "mean_conversation_turns": 2.3301849426147703,
+          "mean_response_tokens": 1244.5145396706587,
+          "zero_search_rate": 0.000249500998003992,
+          "zero_search_correct_count": 0,
+          "metadata_invalid": 0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "e1b_efficiency_hist": {
+    "0.0": 223516,
+    "0.67": 2,
+    "1.0": 482
+  },
+  "e1b_efficiency_mean": 0.0021577380952380954,
+  "e1b_efficiency_nonzero_rate": 0.0021607142857142858,
+  "e1b_efficiency_active_groups": 125
+}

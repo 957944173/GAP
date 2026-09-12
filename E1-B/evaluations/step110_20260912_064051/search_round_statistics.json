@@ -1,0 +1,108 @@
+{
+  "per_benchmark": {
+    "nq": {
+      "retrieval_rounds_mean": 1.0933518005540166,
+      "retrieval_rounds_hist": {
+        "0": 2,
+        "1": 3292,
+        "2": 297,
+        "3": 17,
+        "4": 1,
+        "6": 1
+      },
+      "zero_search_rate": 0.000554016620498615,
+      "n": 3610
+    },
+    "triviaqa": {
+      "retrieval_rounds_mean": 1.1158062234794908,
+      "retrieval_rounds_hist": {
+        "0": 5,
+        "1": 10063,
+        "2": 1182,
+        "3": 57,
+        "4": 4,
+        "8": 1
+      },
+      "zero_search_rate": 0.000442008486562942,
+      "n": 11312
+    },
+    "popqa": {
+      "retrieval_rounds_mean": 1.218484342076582,
+      "retrieval_rounds_hist": {
+        "0": 6,
+        "1": 11099,
+        "2": 2353,
+        "3": 281,
+        "4": 15,
+        "5": 2,
+        "6": 2,
+        "8": 5
+      },
+      "zero_search_rate": 0.0004359514640703335,
+      "n": 13763
+    },
+    "hotpotqa": {
+      "retrieval_rounds_mean": 1.4101836844948676,
+      "retrieval_rounds_hist": {
+        "0": 1,
+        "1": 4549,
+        "2": 2684,
+        "3": 157,
+        "4": 12,
+        "5": 1
+      },
+      "zero_search_rate": 0.0001350621285791464,
+      "n": 7404
+    },
+    "2wikimultihopqa": {
+      "retrieval_rounds_mean": 1.5838899491094147,
+      "retrieval_rounds_hist": {
+        "1": 5878,
+        "2": 6126,
+        "3": 519,
+        "4": 43,
+        "5": 5,
+        "6": 2,
+        "7": 1,
+        "8": 2
+      },
+      "zero_search_rate": 0.0,
+      "n": 12576
+    },
+    "musique": {
+      "retrieval_rounds_mean": 1.8871837411862298,
+      "retrieval_rounds_hist": {
+        "1": 696,
+        "2": 1362,
+        "3": 302,
+        "4": 44,
+        "5": 2,
+        "6": 1,
+        "8": 4
+      },
+      "zero_search_rate": 0.0,
+      "n": 2411
+    },
+    "bamboogle": {
+      "retrieval_rounds_mean": 1.664,
+      "retrieval_rounds_hist": {
+        "1": 43,
+        "2": 81,
+        "3": 1
+      },
+      "zero_search_rate": 0.0,
+      "n": 125
+    }
+  },
+  "overall": {
+    "n_samples": 51201,
+    "macro_em": 0.40171428571428575,
+    "micro_em": 0.435433897775434,
+    "retrieval_rounds_mean": 1.3370246674869632,
+    "search_queries_mean": 1.9019941016777016,
+    "parallel_factor_mean": 1.4225572257037264,
+    "parallel_sample_rate": 0.49313489970899005,
+    "zero_search_rate": 0.00027343215952813424,
+    "no_answer_tag_rate": 0.001093728638112537
+  }
+}

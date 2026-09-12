@@ -1,0 +1,195 @@
+{
+  "experiment_dir": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu",
+  "checkpoint_dir": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_120",
+  "log_file": "/data01/wyy/Graph-Agent-Planning/verl/logs/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu.log",
+  "checkpoint": {
+    "exists": true,
+    "actor_dir_exists": true,
+    "shards": {
+      "model_rank0": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank0": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank0": {
+        "exists": true,
+        "size": 14632
+      },
+      "model_rank1": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank1": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank1": {
+        "exists": true,
+        "size": 14696
+      },
+      "model_rank2": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank2": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank2": {
+        "exists": true,
+        "size": 14696
+      },
+      "model_rank3": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank3": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank3": {
+        "exists": true,
+        "size": 14760
+      }
+    },
+    "data_pt": true,
+    "tracker": "120",
+    "global_step_from_path": 120
+  },
+  "training_log": {
+    "exists": true,
+    "steps_seen": [
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "steps_71_to_120_all_present": true,
+    "missing_steps_71_to_120": [],
+    "max_step": 120,
+    "start_step_line_present": true,
+    "resume_line_present": true,
+    "loaded_model_lines": 0,
+    "loaded_optimizer_lines": 0,
+    "loaded_lr_scheduler_lines": 0,
+    "loaded_rng_lines": 0,
+    "final_validation_metrics_present": true,
+    "metrics_parsed": 3085,
+    "non_finite_metrics": {},
+    "error_pattern_counts_before_final_val": {
+      "cuda_oom": 0,
+      "nccl_error": 0,
+      "nccl_warn": 6,
+      "ray_worker_died": 0,
+      "nccl_unhandled": 0,
+      "wiki_connection": 0,
+      "wiki_http_error": 0,
+      "wiki_search_error": 0,
+      "wiki_tool_exec_failed": 0,
+      "wiki_tool_bad_params": 0,
+      "tool_error": 0,
+      "traceback": 0,
+      "cuda_error": 0
+    },
+    "error_pattern_counts_after_final_val_teardown": {
+      "cuda_oom": 0,
+      "nccl_error": 0,
+      "nccl_warn": 0,
+      "ray_worker_died": 0,
+      "nccl_unhandled": 0,
+      "wiki_connection": 0,
+      "wiki_http_error": 0,
+      "wiki_search_error": 0,
+      "wiki_tool_exec_failed": 0,
+      "wiki_tool_bad_params": 0,
+      "tool_error": 0,
+      "traceback": 0,
+      "cuda_error": 0
+    },
+    "log_size_bytes": 3506899
+  },
+  "state_resume_evidence": {
+    "step70_extra_state": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/extra_state_world_size_4_rank_0.pt",
+      "keys": [
+        "lr_scheduler",
+        "rng"
+      ],
+      "lr_scheduler_last_epoch": 70,
+      "rng_present": true,
+      "rng_substates": [
+        "cpu",
+        "cuda",
+        "numpy",
+        "random"
+      ]
+    },
+    "step120_extra_state": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_120/actor/extra_state_world_size_4_rank_0.pt",
+      "keys": [
+        "lr_scheduler",
+        "rng"
+      ],
+      "lr_scheduler_last_epoch": 120,
+      "rng_present": true,
+      "rng_substates": [
+        "cpu",
+        "cuda",
+        "numpy",
+        "random"
+      ]
+    }
+  },
+  "integrity_ok": true,
+  "state_resume_ok": true
+}

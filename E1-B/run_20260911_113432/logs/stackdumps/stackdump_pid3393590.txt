@@ -1,0 +1,2 @@
+=== E1-0 hang-diagnostics stack watcher started, pid=3393590 ===
+=== process exiting, stack watcher stopping ===

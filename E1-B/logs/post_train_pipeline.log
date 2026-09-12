@@ -1,0 +1,515 @@
+2026-09-11T12:12:53+08:00 pipeline started (run dir /data01/wyy/Graph-Agent-Planning/E1-B/run_20260911_113432)
+2026-09-11T23:50:40+08:00 training process gone
+2026-09-11T23:50:40+08:00 checkpoint 80 OK (36G)
+2026-09-11T23:50:40+08:00 checkpoint 90 OK (36G)
+2026-09-11T23:50:40+08:00 checkpoint 100 OK (36G)
+2026-09-11T23:50:40+08:00 checkpoint 110 OK (36G)
+2026-09-11T23:50:40+08:00 checkpoint 120 OK (36G)
+2026-09-11T23:50:40+08:00 tracker=120
+2026-09-11T23:50:40+08:00 steps seen: 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 
+extracted 275 config lines -> /data01/wyy/Graph-Agent-Planning/E1-B/run_20260911_113432/config/resolved_config.txt
+wrote JSON config -> /data01/wyy/Graph-Agent-Planning/E1-B/run_20260911_113432/config/resolved_config.json
+{
+  "out_dir": "/data01/wyy/Graph-Agent-Planning/E1-B/checkpoints",
+  "steps_observed": [
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "checkpoints": [
+    "global_step_80",
+    "global_step_90",
+    "global_step_100",
+    "global_step_110",
+    "global_step_120"
+  ]
+}
+step  80 cumulative: reward=0.4584 em=0.4583 E=0.0021 activeE=73 retained=337 rounds=1.4214 queries=1.9727 pf=1.5144
+step  90 cumulative: reward=0.4561 em=0.4559 E=0.0021 activeE=136 retained=673 rounds=1.4085 queries=1.9703 pf=1.5256
+step 100 cumulative: reward=0.4564 em=0.4562 E=0.0021 activeE=205 retained=1014 rounds=1.3836 queries=1.9556 pf=1.5377
+step 110 cumulative: reward=0.4565 em=0.4564 E=0.0020 activeE=254 retained=1347 rounds=1.3559 queries=1.9376 pf=1.5509
+step 120 cumulative: reward=0.4572 em=0.4571 E=0.0018 activeE=291 retained=1685 rounds=1.3302 queries=1.9180 pf=1.5606
+{
+  "e1a": {
+    "n_rollouts": 641280,
+    "n_groups": 80160,
+    "n_calls": 501,
+    "steps": [
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "em_rate": 0.45707959081836325,
+    "reward_mean": 0.4571709575640386,
+    "efficiency_mean": 0.0018273349135063206,
+    "efficiency_nonzero_rate": 0.0018307135728542914,
+    "rounds_mean": 1.3302223677644711,
+    "queries_mean": 1.9179937000998004,
+    "parallel_factor_mean": 1.560184638164148,
+    "turns_mean": 2.3301849426147703,
+    "tokens_mean": 1244.5145396706587,
+    "zero_search_rate": 0.000249500998003992,
+    "filter_retention_baseline": 1412,
+    "filter_retention_shaped": 1685,
+    "filter_newly_added": 273,
+    "efficiency_active_groups": 291,
+    "efficiency_supervision_ratio": 0.17270029673590503
+  },
+  "baseline": {
+    "n_rollouts": 147200,
+    "n_groups": 18400,
+    "em_rate": 0.4539130434782609,
+    "rounds_mean": 1.440733695652174,
+    "queries_mean": 1.9897622282608696,
+    "parallel_factor_mean": 1.509113208462733,
+    "turns_mean": 2.4405910326086957,
+    "tokens_mean": 1277.7553192934784,
+    "zero_search_rate": 0.00016304347826086958,
+    "filter_retention_baseline": 340,
+    "efficiency_active_groups": 95
+  }
+}
+{
+  "e1a": {
+    "n_rollouts": 641280,
+    "n_groups": 80160,
+    "n_calls": 501,
+    "steps": [
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "em_rate": 0.45707959081836325,
+    "reward_mean": 0.4571709575640386,
+    "efficiency_mean": 0.0018273349135063206,
+    "efficiency_nonzero_rate": 0.0018307135728542914,
+    "rounds_mean": 1.3302223677644711,
+    "queries_mean": 1.9179937000998004,
+    "parallel_factor_mean": 1.560184638164148,
+    "turns_mean": 2.3301849426147703,
+    "tokens_mean": 1244.5145396706587,
+    "zero_search_rate": 0.000249500998003992,
+    "filter_retention_baseline": 1412,
+    "filter_retention_shaped": 1685,
+    "filter_newly_added": 273,
+    "efficiency_active_groups": 291,
+    "efficiency_supervision_ratio": 0.17270029673590503
+  },
+  "baseline": {
+    "n_rollouts": 139520,
+    "n_groups": 17440,
+    "em_rate": 0.45277379587155964,
+    "rounds_mean": 1.4328841743119265,
+    "queries_mean": 1.9837801032110092,
+    "parallel_factor_mean": 1.512802260812582,
+    "turns_mean": 2.4327766628440366,
+    "tokens_mean": 1275.676268635321,
+    "zero_search_rate": 0.00017201834862385322,
+    "filter_retention_baseline": 294,
+    "efficiency_active_groups": 58
+  }
+}
+# E1-B post-training integrity check
+
+- experiment dir: `/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu`
+- checkpoint dir: `/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_120`
+- training log: `/data01/wyy/Graph-Agent-Planning/verl/logs/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu.log` (3.3MB)
+
+## Checkpoint
+
+- exists: True
+- global step (from dir name): 120
+- tracker value: 120
+- data.pt present: True
+- model_rank0: 3.2GB
+- optimizer_rank0: 5.7GB
+- extra_state_rank0: 14.3KB
+- model_rank1: 3.2GB
+- optimizer_rank1: 5.7GB
+- extra_state_rank1: 14.4KB
+- model_rank2: 3.2GB
+- optimizer_rank2: 5.7GB
+- extra_state_rank2: 14.4KB
+- model_rank3: 3.2GB
+- optimizer_rank3: 5.7GB
+- extra_state_rank3: 14.4KB
+
+## Training log
+
+- steps seen: [70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120]
+- all of step71..step120 present: True (missing: [])
+- 'Setting global step to 70': True
+- (the upstream 'Loaded model/optimizer/lr_scheduler from ...' INFO lines are not emitted to stdout in this run; state residency is proven directly below instead)
+- metrics parsed: 3085, non-finite: {}
+- final validation metrics present: True
+
+## Optimizer / lr_scheduler / RNG full-state resume evidence
+
+- step70_extra_state: {'path': '/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/extra_state_world_size_4_rank_0.pt', 'keys': ['lr_scheduler', 'rng'], 'lr_scheduler_last_epoch': 70, 'rng_present': True, 'rng_substates': ['cpu', 'cuda', 'numpy', 'random']}
+- step120_extra_state: {'path': '/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_120/actor/extra_state_world_size_4_rank_0.pt', 'keys': ['lr_scheduler', 'rng'], 'lr_scheduler_last_epoch': 120, 'rng_present': True, 'rng_substates': ['cpu', 'cuda', 'numpy', 'random']}
+- state_resume_ok: True
+
+### Error-pattern scan BEFORE the final-validation marker (real training window)
+
+- cuda_oom: 0
+- nccl_error: 0
+- nccl_warn: 6
+- ray_worker_died: 0
+- nccl_unhandled: 0
+- wiki_connection: 0
+- wiki_http_error: 0
+- wiki_search_error: 0
+- wiki_tool_exec_failed: 0
+- wiki_tool_bad_params: 0
+- tool_error: 0
+- traceback: 0
+- cuda_error: 0
+
+### Error-pattern scan AFTER the final-validation marker (expected teardown)
+
+- cuda_oom: 0
+- nccl_error: 0
+- nccl_warn: 0
+- ray_worker_died: 0
+- nccl_unhandled: 0
+- wiki_connection: 0
+- wiki_http_error: 0
+- wiki_search_error: 0
+- wiki_tool_exec_failed: 0
+- wiki_tool_bad_params: 0
+- tool_error: 0
+- traceback: 0
+- cuda_error: 0
+
+## VERDICT: PASS
+
+OK: 22 original files unchanged (sha256 identical)
+--- E1-0 / E1-A mtimes (must predate this experiment)
+2026-09-11 00:15:37.461943377 +0800  /data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/FINAL_REPORT.md
+2026-09-11 09:57:16.067924840 +0800  /data01/wyy/Graph-Agent-Planning/E1-A/FINAL_REPORT.md
+2026-09-11T23:51:34+08:00 disk free: 201 GB
+2026-09-11T23:51:34+08:00 starting evaluations (120 first, then 80/90/100/110)
+===== E1-B evaluation orchestrator 2026-09-11T23:51:34+08:00 steps: 120 80 90 100 110 =====
+--- evaluating step 120
+OK   step 120
+--- evaluating step 80
+OK   step 80
+--- evaluating step 90
+OK   step 90
+--- evaluating step 100
+OK   step 100
+--- evaluating step 110
+OK   step 110
+--- collecting artifacts
+{
+  "out": "/data01/wyy/Graph-Agent-Planning/E1-B/evaluations",
+  "runs": [
+    "e10_step70_reference",
+    "e1a_step70_reference",
+    "gap_step120_reference",
+    "gap_step180_reference",
+    "gap_step60_reference",
+    "step100_20260912_045732",
+    "step110_20260912_064051",
+    "step120_20260911_235134",
+    "step80_20260912_012841",
+    "step90_20260912_031549"
+  ]
+}
+        e10_step70_reference  macroEM=0.4006  rounds=1.6295580164449912  queries=2.12802484326478  pf=1.3058908132078864
+        e1a_step70_reference  macroEM=0.3984  rounds=1.597742231597039  queries=2.103630788461163  pf=1.3166271422634037
+       gap_step120_reference  macroEM=0.4110  rounds=1.853733325520986  queries=2.34331360715611  pf=1.2641050224942842
+       gap_step180_reference  macroEM=0.4167  rounds=1.9362512450928693  queries=2.436495380949591  pf=1.2583570376646696
+        gap_step60_reference  macroEM=0.4007  rounds=1.5889338098865255  queries=2.0922052303665946  pf=1.3167352959252658
+     step100_20260912_045732  macroEM=0.4013  rounds=1.408820140231636  queries=1.9542196441475752  pf=1.3871321031982589
+     step110_20260912_064051  macroEM=0.4017  rounds=1.3370246674869632  queries=1.9019941016777016  pf=1.4225572257037264
+     step120_20260911_235134  macroEM=0.3947  rounds=1.2949747075252436  queries=1.8748266635417277  pf=1.4477708735521235
+      step80_20260912_012841  macroEM=0.3979  rounds=1.5666490888849827  queries=2.088845920978106  pf=1.3333208666816267
+      step90_20260912_031549  macroEM=0.4091  rounds=1.5013183336262963  queries=2.0373625515126657  pf=1.357049005450832
+--- multi-way comparison
+{
+  "out": "/data01/wyy/Graph-Agent-Planning/E1-B/evaluations/comparison",
+  "runs": [
+    "e10_step70_reference",
+    "e1a_step70_reference",
+    "gap_step120_reference",
+    "gap_step180_reference",
+    "gap_step60_reference",
+    "step100_20260912_045732",
+    "step110_20260912_064051",
+    "step120_20260911_235134",
+    "step80_20260912_012841",
+    "step90_20260912_031549"
+  ],
+  "roles": {
+    "gap_step120": "gap_step120_reference",
+    "gap_step60": "gap_step60_reference",
+    "gap_step180": "gap_step180_reference",
+    "e1a_step70": "e1a_step70_reference",
+    "e10_step70": "e10_step70_reference",
+    "e1b_steps": {
+      "80": "step80_20260912_012841",
+      "90": "step90_20260912_031549",
+      "100": "step100_20260912_045732",
+      "110": "step110_20260912_064051",
+      "120": "step120_20260911_235134"
+    }
+  }
+}
+E1-B step120 vs GAP step120: macroEM delta -0.0163 rounds delta -0.5588 (-30.14%)
+E1-B step120 vs E1-A step70: macroEM delta -0.0037 rounds delta -0.3028 (-18.95%)
+===== E1-B evaluation orchestrator DONE 2026-09-12T08:18:47+08:00 =====
+{
+  "out": "/data01/wyy/Graph-Agent-Planning/E1-B/evaluations",
+  "runs": [
+    "e10_step70_reference",
+    "e1a_step70_reference",
+    "gap_step120_reference",
+    "gap_step180_reference",
+    "gap_step60_reference",
+    "step100_20260912_045732",
+    "step110_20260912_064051",
+    "step120_20260911_235134",
+    "step80_20260912_012841",
+    "step90_20260912_031549"
+  ]
+}
+        e10_step70_reference  macroEM=0.4006  rounds=1.6295580164449912  queries=2.12802484326478  pf=1.3058908132078864
+        e1a_step70_reference  macroEM=0.3984  rounds=1.597742231597039  queries=2.103630788461163  pf=1.3166271422634037
+       gap_step120_reference  macroEM=0.4110  rounds=1.853733325520986  queries=2.34331360715611  pf=1.2641050224942842
+       gap_step180_reference  macroEM=0.4167  rounds=1.9362512450928693  queries=2.436495380949591  pf=1.2583570376646696
+        gap_step60_reference  macroEM=0.4007  rounds=1.5889338098865255  queries=2.0922052303665946  pf=1.3167352959252658
+     step100_20260912_045732  macroEM=0.4013  rounds=1.408820140231636  queries=1.9542196441475752  pf=1.3871321031982589
+     step110_20260912_064051  macroEM=0.4017  rounds=1.3370246674869632  queries=1.9019941016777016  pf=1.4225572257037264
+     step120_20260911_235134  macroEM=0.3947  rounds=1.2949747075252436  queries=1.8748266635417277  pf=1.4477708735521235
+      step80_20260912_012841  macroEM=0.3979  rounds=1.5666490888849827  queries=2.088845920978106  pf=1.3333208666816267
+      step90_20260912_031549  macroEM=0.4091  rounds=1.5013183336262963  queries=2.0373625515126657  pf=1.357049005450832
+{
+  "out": "/data01/wyy/Graph-Agent-Planning/E1-B/evaluations/comparison",
+  "runs": [
+    "e10_step70_reference",
+    "e1a_step70_reference",
+    "gap_step120_reference",
+    "gap_step180_reference",
+    "gap_step60_reference",
+    "step100_20260912_045732",
+    "step110_20260912_064051",
+    "step120_20260911_235134",
+    "step80_20260912_012841",
+    "step90_20260912_031549"
+  ],
+  "roles": {
+    "gap_step120": "gap_step120_reference",
+    "gap_step60": "gap_step60_reference",
+    "gap_step180": "gap_step180_reference",
+    "e1a_step70": "e1a_step70_reference",
+    "e10_step70": "e10_step70_reference",
+    "e1b_steps": {
+      "80": "step80_20260912_012841",
+      "90": "step90_20260912_031549",
+      "100": "step100_20260912_045732",
+      "110": "step110_20260912_064051",
+      "120": "step120_20260911_235134"
+    }
+  }
+}
+E1-B step120 vs GAP step120: macroEM delta -0.0163 rounds delta -0.5588 (-30.14%)
+E1-B step120 vs E1-A step70: macroEM delta -0.0037 rounds delta -0.3028 (-18.95%)
+# Paired per-prompt comparison (E1-B vs matched baseline)
+
+- paired prompts: **49,947**
+
+| metric | E1-B | baseline | delta |
+|---|---|---|---|
+| search rounds | 1.2972 | 1.8568 | -0.5596 (-30.14%) |
+| search queries | 1.8793 | 2.3473 | -0.4680 |
+| response chars | 5088.7 | 6091.2 | -1002.5 |
+| EM | 0.4332 | 0.4450 | -0.0118 |
+
+- rounds **decreased** on 17,986 prompts (36.01%), **increased** on 1,037 (2.08%), unchanged on 30,924
+- sign test on round changes: p = 0
+- EM up on 3,229 / down on 3,819 prompts (sign test p = 2.1e-12)
+
+## per benchmark
+
+| benchmark | n | rounds E1-B | rounds base | Δrounds | decreased | increased | ΔEM |
+|---|---|---|---|---|---|---|---|
+| 2wikimultihopqa | 12,576 | 1.533 | 2.330 | -0.797 | 46.5% | 1.9% | -0.0055 |
+| bamboogle | 125 | 1.680 | 1.960 | -0.280 | 28.8% | 5.6% | -0.0400 |
+| hotpotqa | 7,404 | 1.374 | 1.835 | -0.461 | 34.0% | 2.2% | -0.0208 |
+| musique | 2,411 | 1.807 | 2.627 | -0.820 | 51.1% | 3.5% | -0.0145 |
+| nq | 3,610 | 1.063 | 1.473 | -0.410 | 28.0% | 1.2% | -0.0080 |
+| popqa | 12,509 | 1.172 | 1.720 | -0.549 | 34.7% | 2.7% | -0.0098 |
+| triviaqa | 11,312 | 1.086 | 1.454 | -0.367 | 26.5% | 1.4% | -0.0156 |
+# Paired per-prompt comparison (E1-B vs matched baseline)
+
+- paired prompts: **49,947**
+
+| metric | E1-B | baseline | delta |
+|---|---|---|---|
+| search rounds | 1.2972 | 1.5999 | -0.3026 (-18.92%) |
+| search queries | 1.8793 | 2.1085 | -0.2293 |
+| response chars | 5088.7 | 5526.5 | -437.7 |
+| EM | 0.4332 | 0.4328 | +0.0004 |
+
+- rounds **decreased** on 11,902 prompts (23.83%), **increased** on 2,105 (4.21%), unchanged on 35,940
+- sign test on round changes: p = 0
+- EM up on 3,498 / down on 3,480 prompts (sign test p = 0.829)
+
+## per benchmark
+
+| benchmark | n | rounds E1-B | rounds base | Δrounds | decreased | increased | ΔEM |
+|---|---|---|---|---|---|---|---|
+| 2wikimultihopqa | 12,576 | 1.533 | 1.951 | -0.419 | 29.3% | 5.1% | +0.0018 |
+| bamboogle | 125 | 1.680 | 1.856 | -0.176 | 27.2% | 11.2% | -0.0240 |
+| hotpotqa | 7,404 | 1.374 | 1.615 | -0.241 | 22.9% | 4.6% | -0.0073 |
+| musique | 2,411 | 1.807 | 2.212 | -0.406 | 35.2% | 8.8% | -0.0046 |
+| nq | 3,610 | 1.063 | 1.264 | -0.201 | 17.8% | 2.2% | +0.0030 |
+| popqa | 12,509 | 1.172 | 1.499 | -0.328 | 24.1% | 4.4% | +0.0055 |
+| triviaqa | 11,312 | 1.086 | 1.284 | -0.198 | 17.5% | 2.4% | -0.0015 |
+OK: 22 original files unchanged (sha256 identical)
+--- E1-0 / E1-A mtimes (must predate this experiment)
+2026-09-11 00:15:37.461943377 +0800  /data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/FINAL_REPORT.md
+2026-09-11 09:57:16.067924840 +0800  /data01/wyy/Graph-Agent-Planning/E1-A/FINAL_REPORT.md
+2026-09-12T08:19:09+08:00 PIPELINE_DONE

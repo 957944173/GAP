@@ -1,0 +1,147 @@
+===== E1-B preflight 2026-09-11T11:32:36+08:00 =====
+--- [1/4] E1-A step70 checkpoint
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/model_world_size_4_rank_0.pt (3.2G)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/model_world_size_4_rank_1.pt (3.2G)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/model_world_size_4_rank_2.pt (3.2G)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/model_world_size_4_rank_3.pt (3.2G)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/optim_world_size_4_rank_0.pt (5.8G)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/extra_state_world_size_4_rank_0.pt (16K)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/data.pt (4.0K)
+e1a_step70_tracker=70
+--- [2/4] output-directory guards (never overwrite)
+OK_ABSENT_OR_EMPTY /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu
+run dirs present: 0 (a NEW run_<ts> is always created)
+OK_ABSENT_OR_EMPTY /data01/wyy/Graph-Agent-Planning/E1-B/evaluations
+OK_ABSENT_OR_EMPTY /data01/wyy/Graph-Agent-Planning/E1-B/checkpoints
+--- [3/4] retriever wiki service
+LISTEN    0         2048             127.0.0.1:8008             0.0.0.0:*        users:(("pt_main_thread",pid=2230350,fd=120))                                  
+2230350 python3 /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/wiki_rag_server.py --index_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/e5_Flat.index --corpus_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/wiki-18.jsonl --topk 3 --retriever_name e5 --retriever_model /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../models/e5-base-v2 --faiss_gpu --host 127.0.0.1 --port 8008
+wiki service HEALTHY at http://127.0.0.1:8008/retrieve -> REUSING (no duplicate server started, none stopped)
+real-query probe (truncated): {"result":[[{"id":"11115958","contents":"France\nregions (five of which are situated overseas) span a combined area of and a total population of 67.3 million (). France, a sovereign state, is a unitary semi-presidential republic with its capital in Paris, the country's largest city and main cultural
+--- [4/4] conda env + environment.sh
+WIKI_RAG_SERVER_URL from environment.sh: http://10.29.128.7:8008/retrieve
+conda env: parallel-agent (/home/nf5468m6/miniconda3/envs/parallel-agent)
+functional probe OK: http://127.0.0.1:8008/retrieve
+--- input / code checks
+OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet
+OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet
+OK      /data01/wyy/Graph-Agent-Planning/E1-B/code_changes/e1b_scorer.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-B/code_changes/e1b_reward_manager.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-B/code_changes/pythonpath_e1b/sitecustomize.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-B/scripts/run_e1b_train.sh
+--- original GAP file integrity (sha256; must stay unchanged for the whole run)
+# E1-B preflight original-file manifest (sha256)
+53b0a1a66a892d459c398d067313cc19b0732a32a0f1dcdbb636d2bbc723f73f  Agent/train/mhqa_agent/rl/run_gen_bs_supervisor.sh
+b5d5199acb40fe4087375bcb161d4dc0d3e3bd57926969ac50d0cf81c87982d3  Agent/train/mhqa_agent/rl/train_dapo_mhqa_agent_wiki.sh
+9bd7924cf343ccead0143d196f7795fabe023411f06ce1020f132c9c898d6bee  Agent/train/mhqa_agent/rl/gen_bs_supervisor.py
+a68837f57c449c17fe5f61e2771534d78c0ae299291e9d9b87b5300f8c227b9d  Agent/evaluation/mhqa_agent/eval_mhqa_agent_rl_step_70_4gpu.sh
+846273934b71888ef41ea1fb8d41182f63a80ce50853825067200851150d1634  Agent/evaluation/mhqa_agent/eval_mhqa_agent_4gpu_common.sh
+267e83456ee40e8093048d6f7ae782c940f10ecc8c9b3ead92a349740744aa7c  Agent/evaluation/mhqa_agent/summarize_eval.py
+d97743d1089546e711a1d38747bf80b87e40dc0a36d7869ca5499189396c0d4a  verl/verl/workers/reward_manager/batch.py
+7088f7e82eb864fe4b015e7c095979190a84a28bcc7ad9d4d5f48425a9f48eac  verl/verl/workers/reward_manager/__init__.py
+489de015503b707d32c7ecb008586befcf6e5dc0129750ce46d7ed3ebaa91c33  verl/verl/utils/reward_score/mhqa_train.py
+01caeda125325f75288d0f3575e863d04600909d3d890928675c2465a819084b  verl/verl/utils/reward_score/mhqa_eval.py
+9dbe6d70541854c7c77daed2f1dc6e99c334849cc4a7e56e4bae755190ab5da3  verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py
+de231824fa1000b1b8516777d40f6a4e843465f4108ff7d95a63872248e9d645  verl/verl/workers/rollout/schemas.py
+29aecd3dcabfaa8aeb6891f3e36b642a0ab68f28ed4edc98866bda2caca4ccfc  verl/verl/trainer/ppo/ray_trainer.py
+0121d6609a9b6769496b979c02bbf795d9ee3a9b4eeec4b2dc5d4fb7675895e1  verl/verl/trainer/ppo/reward.py
+127ef53e92e89093aae42f216abf96d1acbde995a62f658e1ceaa894d9ed6a56  verl/verl/trainer/ppo/core_algos.py
+b0d45b23ebf76174513e4b2fb47195c674b5013a93f7dc198d6930fae59e42ed  verl/verl/utils/checkpoint/fsdp_checkpoint_manager.py
+50adf9d3a6072c7c756dee133dbccf800041e6aae0a4bac35603684da58232d7  environment.sh
+c425d2827f94394f87076d3c946cd4b7ebcca1016896c9131fe1430251cf391c  E1-0/runs/20260910_step60to70_e10/code/e10_reward_manager.py
+1d78b368eaf6de5d692c6274db5e58a74a5d3513f67c05d5ce8e3f123336a56f  E1-0/runs/20260910_step60to70_e10/code/e10_sglang_gpu_patch.py
+90cd57b6fd2c7bea764c0bc46382daa409ec9d3ae12ec982146cc7483f297032  E1-A/code/e1a_scorer.py
+a5171a96cdde4b67d9f468fcc76fdcc8a41caeb8bdad67bff3b07caf798384b2  E1-A/code/e1a_reward_manager.py
+39122543677a2b6078bbb154296884679702c26bbd7c4dbdc0f244ba520f82fd  E1-A/code/e1a_cost.py
+--- host state
+index, name, memory.used [MiB], memory.total [MiB], utilization.gpu [%]
+0, NVIDIA A800 80GB PCIe, 10171 MiB, 81920 MiB, 0 %
+1, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+2, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+3, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 10 %
+/dev/sdc        1.8T  1.2T  458G  73% /data01
+torch import OK (parallel-agent)
+STATUS=OK
+WIKI_REUSED=true
+WIKI_STARTED=false
+WIKI_URL=http://127.0.0.1:8008/retrieve
+WIKI_PIDS=2230350
+E1A_STEP70_CKPT=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70
+E1A_STEP70_ACTOR_BYTES=45103143456
+PARALLEL_AGENT_ENV=parallel-agent
+TIMESTAMP=2026-09-11T11:32:39+08:00
+===== E1-B preflight DONE (STATUS=OK) =====
+===== E1-B preflight 2026-09-11T11:34:06+08:00 =====
+--- [1/4] E1-A step70 checkpoint
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/model_world_size_4_rank_0.pt (3.2G)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/model_world_size_4_rank_1.pt (3.2G)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/model_world_size_4_rank_2.pt (3.2G)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/model_world_size_4_rank_3.pt (3.2G)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/optim_world_size_4_rank_0.pt (5.8G)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/actor/extra_state_world_size_4_rank_0.pt (16K)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70/data.pt (4.0K)
+e1a_step70_tracker=70
+--- [2/4] output-directory guards (never overwrite)
+OK_ABSENT_OR_EMPTY /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu
+run dirs present: 0 (a NEW run_<ts> is always created)
+OK_ABSENT_OR_EMPTY /data01/wyy/Graph-Agent-Planning/E1-B/evaluations
+OK_ABSENT_OR_EMPTY /data01/wyy/Graph-Agent-Planning/E1-B/checkpoints
+--- [3/4] retriever wiki service
+LISTEN    0         2048             127.0.0.1:8008             0.0.0.0:*        users:(("pt_main_thread",pid=2230350,fd=120))                                  
+2230350 python3 /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/wiki_rag_server.py --index_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/e5_Flat.index --corpus_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/wiki-18.jsonl --topk 3 --retriever_name e5 --retriever_model /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../models/e5-base-v2 --faiss_gpu --host 127.0.0.1 --port 8008
+wiki service HEALTHY at http://127.0.0.1:8008/retrieve -> REUSING (no duplicate server started, none stopped)
+real-query probe (truncated): {"result":[[{"id":"11115958","contents":"France\nregions (five of which are situated overseas) span a combined area of and a total population of 67.3 million (). France, a sovereign state, is a unitary semi-presidential republic with its capital in Paris, the country's largest city and main cultural
+--- [4/4] conda env + environment.sh
+WIKI_RAG_SERVER_URL from environment.sh: http://10.29.128.7:8008/retrieve
+conda env: parallel-agent (/home/nf5468m6/miniconda3/envs/parallel-agent)
+functional probe OK: http://127.0.0.1:8008/retrieve
+--- input / code checks
+OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet
+OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet
+OK      /data01/wyy/Graph-Agent-Planning/E1-B/code_changes/e1b_scorer.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-B/code_changes/e1b_reward_manager.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-B/code_changes/pythonpath_e1b/sitecustomize.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-B/scripts/run_e1b_train.sh
+--- original GAP file integrity (sha256; must stay unchanged for the whole run)
+# E1-B preflight original-file manifest (sha256)
+53b0a1a66a892d459c398d067313cc19b0732a32a0f1dcdbb636d2bbc723f73f  Agent/train/mhqa_agent/rl/run_gen_bs_supervisor.sh
+b5d5199acb40fe4087375bcb161d4dc0d3e3bd57926969ac50d0cf81c87982d3  Agent/train/mhqa_agent/rl/train_dapo_mhqa_agent_wiki.sh
+9bd7924cf343ccead0143d196f7795fabe023411f06ce1020f132c9c898d6bee  Agent/train/mhqa_agent/rl/gen_bs_supervisor.py
+a68837f57c449c17fe5f61e2771534d78c0ae299291e9d9b87b5300f8c227b9d  Agent/evaluation/mhqa_agent/eval_mhqa_agent_rl_step_70_4gpu.sh
+846273934b71888ef41ea1fb8d41182f63a80ce50853825067200851150d1634  Agent/evaluation/mhqa_agent/eval_mhqa_agent_4gpu_common.sh
+267e83456ee40e8093048d6f7ae782c940f10ecc8c9b3ead92a349740744aa7c  Agent/evaluation/mhqa_agent/summarize_eval.py
+d97743d1089546e711a1d38747bf80b87e40dc0a36d7869ca5499189396c0d4a  verl/verl/workers/reward_manager/batch.py
+7088f7e82eb864fe4b015e7c095979190a84a28bcc7ad9d4d5f48425a9f48eac  verl/verl/workers/reward_manager/__init__.py
+489de015503b707d32c7ecb008586befcf6e5dc0129750ce46d7ed3ebaa91c33  verl/verl/utils/reward_score/mhqa_train.py
+01caeda125325f75288d0f3575e863d04600909d3d890928675c2465a819084b  verl/verl/utils/reward_score/mhqa_eval.py
+9dbe6d70541854c7c77daed2f1dc6e99c334849cc4a7e56e4bae755190ab5da3  verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py
+de231824fa1000b1b8516777d40f6a4e843465f4108ff7d95a63872248e9d645  verl/verl/workers/rollout/schemas.py
+29aecd3dcabfaa8aeb6891f3e36b642a0ab68f28ed4edc98866bda2caca4ccfc  verl/verl/trainer/ppo/ray_trainer.py
+0121d6609a9b6769496b979c02bbf795d9ee3a9b4eeec4b2dc5d4fb7675895e1  verl/verl/trainer/ppo/reward.py
+127ef53e92e89093aae42f216abf96d1acbde995a62f658e1ceaa894d9ed6a56  verl/verl/trainer/ppo/core_algos.py
+b0d45b23ebf76174513e4b2fb47195c674b5013a93f7dc198d6930fae59e42ed  verl/verl/utils/checkpoint/fsdp_checkpoint_manager.py
+50adf9d3a6072c7c756dee133dbccf800041e6aae0a4bac35603684da58232d7  environment.sh
+c425d2827f94394f87076d3c946cd4b7ebcca1016896c9131fe1430251cf391c  E1-0/runs/20260910_step60to70_e10/code/e10_reward_manager.py
+1d78b368eaf6de5d692c6274db5e58a74a5d3513f67c05d5ce8e3f123336a56f  E1-0/runs/20260910_step60to70_e10/code/e10_sglang_gpu_patch.py
+90cd57b6fd2c7bea764c0bc46382daa409ec9d3ae12ec982146cc7483f297032  E1-A/code/e1a_scorer.py
+a5171a96cdde4b67d9f468fcc76fdcc8a41caeb8bdad67bff3b07caf798384b2  E1-A/code/e1a_reward_manager.py
+39122543677a2b6078bbb154296884679702c26bbd7c4dbdc0f244ba520f82fd  E1-A/code/e1a_cost.py
+--- host state
+index, name, memory.used [MiB], memory.total [MiB], utilization.gpu [%]
+0, NVIDIA A800 80GB PCIe, 10171 MiB, 81920 MiB, 0 %
+1, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+2, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+3, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+/dev/sdc        1.8T  1.2T  457G  73% /data01
+torch import OK (parallel-agent)
+STATUS=OK
+WIKI_REUSED=true
+WIKI_STARTED=false
+WIKI_URL=http://127.0.0.1:8008/retrieve
+WIKI_PIDS=2230350
+E1A_STEP70_CKPT=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1A-step60to70-4gpu/global_step_70
+E1A_STEP70_ACTOR_BYTES=45103143456
+PARALLEL_AGENT_ENV=parallel-agent
+TIMESTAMP=2026-09-11T11:34:09+08:00
+wiki record appended to /data01/wyy/Graph-Agent-Planning/E1-B/logs/wiki_service.log
+===== E1-B preflight DONE (STATUS=OK) =====

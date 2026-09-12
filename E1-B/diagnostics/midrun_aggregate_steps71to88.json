@@ -1,0 +1,14 @@
+{
+  "rollouts": 222720,
+  "groups": 27840,
+  "em": 0.4567214439655172,
+  "cost_mean": 1.4130971623563218,
+  "queries_mean": 1.973639547413793,
+  "parallel_factor_mean": 1.523857227121231,
+  "zero_search": 64,
+  "zero_search_correct": 0,
+  "metadata_invalid": 0,
+  "packing_active_groups": 124,
+  "packing_suspect_groups": 10,
+  "packing_suspect_ratio": 0.08064516129032258
+}

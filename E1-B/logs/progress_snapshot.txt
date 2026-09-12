@@ -1,0 +1,8 @@
+E1-B progress snapshot 2026-09-11T15:38:25+08:00
+run_dir=/data01/wyy/Graph-Agent-Planning/E1-B/run_20260911_113432
+last_step=step:87 - 
+steps_done=18
+checkpoints=experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_80 
+tracker=80
+alerts=13
+disk_free=370G

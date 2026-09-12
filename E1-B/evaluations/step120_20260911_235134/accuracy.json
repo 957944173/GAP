@@ -1,0 +1,66 @@
+{
+  "label": "e1b_step120",
+  "per_benchmark": {
+    "nq": {
+      "em": 0.381,
+      "em_from_log": 0.381,
+      "em_from_dump": 0.3814404432132964,
+      "n": 3610,
+      "n_parquet": 3610
+    },
+    "triviaqa": {
+      "em": 0.562,
+      "em_from_log": 0.562,
+      "em_from_dump": 0.5617043847241867,
+      "n": 11312,
+      "n_parquet": 11312
+    },
+    "popqa": {
+      "em": 0.403,
+      "em_from_log": 0.403,
+      "em_from_dump": 0.37804257792632423,
+      "n": 13763,
+      "n_parquet": 13763
+    },
+    "hotpotqa": {
+      "em": 0.39,
+      "em_from_log": 0.39,
+      "em_from_dump": 0.39005942733657484,
+      "n": 7404,
+      "n_parquet": 7404
+    },
+    "2wikimultihopqa": {
+      "em": 0.44,
+      "em_from_log": 0.44,
+      "em_from_dump": 0.4397264631043257,
+      "n": 12576,
+      "n_parquet": 12576
+    },
+    "musique": {
+      "em": 0.163,
+      "em_from_log": 0.163,
+      "em_from_dump": 0.16341766901700538,
+      "n": 2411,
+      "n_parquet": 2411
+    },
+    "bamboogle": {
+      "em": 0.424,
+      "em_from_log": 0.424,
+      "em_from_dump": 0.424,
+      "n": 125,
+      "n_parquet": 125
+    }
+  },
+  "n_by_benchmark": {
+    "2wikimultihopqa": 12576,
+    "bamboogle": 125,
+    "popqa": 13763,
+    "triviaqa": 11312,
+    "hotpotqa": 7404,
+    "musique": 2411,
+    "nq": 3610
+  },
+  "macro_em_over_benchmarks": 0.3947142857142857,
+  "micro_em_over_samples": 0.4325352239214078,
+  "total_samples": 51201
+}

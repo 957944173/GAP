@@ -1,0 +1,109 @@
+# E1-B issues and fixes
+
+Running log of every problem found while executing E1-B, and the minimal fix applied.
+E1-B_task.md section 7 requires problems to be recorded and fixed minimally, without
+widening the experimental variable.
+
+## I1 — reward must be a reuse of E1-A, not a rewrite
+
+* **Requirement** (E1-B_task.md §4): "优先复用 E1-A reward 实现。不要重新设计 reward。仅确认
+  `compute_score_em_efficiency_batch` 正常工作。"
+* **Action**: `E1-A/code/*.py` was copied verbatim into `E1-B/code_changes/` with an
+  identifier-only rename (`e1a_`→`e1b_`, `E1A_`→`E1B_`, `[E1-A`→`[E1-B`); the reward math
+  was not touched. `reward_model.reward_manager=e1b_batch_shaped` is the same class as
+  E1-A's, registered under a new name so both experiments can coexist.
+* **Verification**: `E1-B/scripts/e1b_cross_check_vs_e1a.py`
+  * re-applies the same rename to every E1-A source file and byte-compares with the E1-B
+    copy → all 12 files identical;
+  * replays both scorers' group math on the 18,400 real uid groups / 147,200 real rollouts
+    of the E1-0 audit (real costs) → **0 mismatches**.
+  * report: `E1-B/diagnostics/reward_equivalence_check.json`.
+
+## I2 — `sitecustomize` warning in the passive monitor/watchdog processes
+
+* **Symptom**: `ModuleNotFoundError: No module named 'verl.workers'` printed once by the
+  watchdog and the safety monitor, because both inherit the training `PYTHONPATH`
+  (which contains the sitecustomize shim) but run outside `verl/`.
+* **Impact**: none. CPython treats an exception inside `sitecustomize` as non-fatal
+  (prints `Error in sitecustomize; ...` and continues); both helper processes ran normally
+  (monitor cycles observed, watchdog armed).
+* **Fix for future runs**: launch passive helpers with `PYTHONPATH=` cleared (the training
+  process keeps the shim). The current run was left untouched — restarting a 15-hour
+  training run to silence a cosmetic warning would itself be a larger deviation.
+
+## I3 — waiter script exited immediately with `SUSPECTED_STALL`
+
+* **Symptom**: the first `E1-B/scripts/e1b_wait_for_training.sh` (background job) exited
+  with code 2 right after start, without writing a progress line.
+* **Root cause**: the stall check tracked "log size changed" in a shell variable while the
+  progress branch reused stale state; the first iteration could evaluate the stall
+  predicate before the size baseline was established.
+* **Fix**: rewritten to compare `stdout.log` **mtime** against the current time on every
+  iteration (no cross-iteration state), verified with a 20 s foreground run, then
+  relaunched. No effect on training.
+
+## I4 — output-directory layout
+
+* **Requirement** (E1-B_task.md §2): fixed directory structure with a fresh `run_xxx`
+  sub-directory and no overwriting of previous results.
+* **Action**: the eight required top-level directories exist
+  (`code_changes/ scripts/ configs/ checkpoints/ logs/ evaluations/ diagnostics/`) and the
+  run-scoped artifacts live in a brand-new `E1-B/run_<timestamp>/`
+  (`stdout.log`, `stderr.log`, `diagnostics/`, `preflight/`, `config/`, `analysis/`,
+  `checkpoints_manifest/`). Every launcher refuses to write into an existing directory;
+  a second run would create `run_<ts2>`.
+
+## I5 — evaluation of intermediate checkpoints costs ~1.3 h each
+
+* **Symptom**: 6 full 7-benchmark evaluations (step 80/90/100/110/120 + references) at
+  ~51,201 samples each do not fit alongside training on the same 4 GPUs.
+* **Fix**: evaluations run strictly after training, in the order `120, 80, 90, 100, 110`
+  so the mandatory step120 result exists first; each step writes to its own
+  `evaluations/step<N>_<ts>/` and a failure of one step does not abort the rest
+  (`scripts/e1b_eval_all_steps.sh`).
+
+## I6 — per-step safety alerts are noisy; the run-level aggregate is the criterion
+
+* **Symptom**: `logs/safety_alerts.log` raised
+  `TRAIN_EM_DROP step 73: 0.4170 vs 0.4437 (< -1pp)` and
+  `PACKING_SUSPECT_RATIO=0.125/0.167 > 0.10 at step 73/75`.
+* **Root cause (both false positives)**:
+  * the monitor aggregates the append-only diagnostics jsonl *while a step is still
+    being written* (a step's ~7-13 reward calls arrive over several minutes), so a
+    mid-step EM average uses only the first calls of the step.  The finalized step-73 EM
+    is 0.4444, not 0.4170;
+  * query-packing is computed per step, where only 5-12 groups are "active"
+    (>= 2 correct, cost-varying), so a single suspect group gives 1/6 = 16.7 %.
+* **Correct interpretation** (matching the E1-A convention): the meaningful packing
+  statistic is the **run-level aggregate** over active groups.  Aggregated over steps
+  71-76 the E1-B run has **44 active groups, 2 packing-suspect = 4.55 %**, i.e. inside
+  the E1-A (3.45 %) / E1-0 (4.21 %) range.
+* **Action**: alerts are treated as *investigation triggers*, not verdicts; the report's
+  safety section uses the finalized per-step table plus the run-level aggregate.  The
+  monitor is intentionally record-only, so no training-side change was made (that would
+  itself have widened the experimental variable).
+
+## I7 — packing-suspect ratio rises above the E1-A reference level (watch item, analysed)
+
+* **Symptom**: the run-level packing-suspect ratio (active ≥2-correct, cost-varying groups in
+  which the fewest-round correct rollout does **not** use fewer queries) reaches 8.0 % over
+  steps 71-88, vs 4.2 % (E1-0) and 3.4 % (E1-A); the steps 81-88 window alone is 11.8 %,
+  crossing the E1-A "stop" reference of 10 %. The per-step monitor raised 11 alerts, all of
+  them on 1 suspect group out of 3-11 active groups (see I6).
+* **Investigation** (`E1-B/diagnostics/midrun_safety_steps71to88.md`): the aggregate over the
+  same 125 active groups shows the fewest-round correct rollouts use **fewer** queries
+  (1.896 vs 2.959) and ~590 fewer tokens, and the run-level `search_queries_mean` falls
+  (1.9731 vs the E1-0 1.9898). So the depth reduction is not query re-bundling; the suspect
+  ratio is a small-count tail statistic.
+* **Action**: recorded as a **watch item** carried into the final report; no training-side
+  change (a change would widen the experimental variable). The decisive test is the
+  step120 evaluation on 51,201 samples: a rise in `search_queries_mean` together with a fall
+  in `retrieval_rounds_mean` would be the real packing signature and would be reported as such.
+
+### I7 update (steps 91–98) — the packing concern is further weakened
+
+Windowed training-side trend: rounds 1.4231 (71–80) → 1.3956 (81–90) → **1.3445 (91–98)**
+while EM stays 0.4582 → 0.4533 → **0.4614** and **queries also fall**
+1.9763 → 1.9681 → **1.9390**.  A genuine query-packing failure would show rounds falling with
+queries *rising*; here both fall and accuracy is preserved.  Detail:
+`E1-B/diagnostics/midrun_trend_update_steps91to98.md`.

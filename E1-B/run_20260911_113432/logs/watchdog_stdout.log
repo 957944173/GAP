@@ -1,0 +1,7 @@
+E1-B sitecustomize: failed to import e1b_reward_manager: No module named 'verl.workers'
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ModuleNotFoundError: No module named 'verl.workers'
+[2026-09-11 11:34:34] watchdog started; log=/data01/wyy/Graph-Agent-Planning/verl/logs/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu.log; baseline stackdumps=3
+[2026-09-11 11:34:34] pre_stall=480s post_stall=2700s interval=15s
+[2026-09-11 11:38:34] watchdog: armed (resume line seen)
+[2026-09-11 11:39:49] watchdog: first validation batch print seen -> post phase (long window)

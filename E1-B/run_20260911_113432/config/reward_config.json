@@ -1,0 +1,18 @@
+{
+  "experiment": "E1-B",
+  "reward_name": "success-conditioned group-relative efficiency reward",
+  "train_reward_manager": "e1b_batch_shaped",
+  "train_scorer": "compute_score_em_efficiency_batch",
+  "train_scorer_path": "/data01/wyy/Graph-Agent-Planning/E1-B/code_changes/e1b_scorer.py",
+  "train_scorer_source": "verbatim copy of E1-A/code/e1a_scorer.py (identifier-only rename); equivalence proof: E1-B/diagnostics/reward_equivalence_check.json",
+  "val_reward_manager": "e1b_batch_shaped (is_valid instance -> delegates to original verify)",
+  "val_scorer": "/data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/mhqa_eval.py:compute_score_em_batch (UNCHANGED)",
+  "formula": "R_i = A_i * (1 + lambda * E_i)",
+  "lambda": 0.05,
+  "A_i": "EM correctness, computed by the ORIGINAL compute_score_em (mhqa_train.py, unmodified)",
+  "cost": "logical_search_batches (distinct (assistant turn, parser block) pairs in detailed_tool_metrics.tool_call_sequence)",
+  "E_i": "(Cmax - C_i)/(Cmax - Cmin) for correct rollouts of a uid group with >=2 correct rollouts and correct-cost variation, else 0",
+  "wrong_rollout_reward": 0.0,
+  "acc_metric": "data.batch['acc'] is overwritten with the ORIGINAL EM after the base manager writes the shaped reward",
+  "group_key": "uid (n=8 rollouts per group, computed before filter_groups slices the batch)"
+}

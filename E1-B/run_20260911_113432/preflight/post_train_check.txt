@@ -1,0 +1,11 @@
+E1-B post-training check 2026-09-11T23:50:04+08:00
+tracker: 120
+OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_80  actor_bytes=38292967072  data_pt=yes
+OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_90  actor_bytes=38292967072  data_pt=yes
+OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_100  actor_bytes=38292967072  data_pt=yes
+OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_110  actor_bytes=38292967072  data_pt=yes
+OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_120  actor_bytes=38292967072  data_pt=yes
+steps seen in log:
+step:70 - step:71 - step:72 - step:73 - step:74 - step:75 - step:76 - step:77 - step:78 - step:79 - step:80 - step:81 - step:82 - step:83 - step:84 - step:85 - step:86 - step:87 - step:88 - step:89 - step:90 - step:91 - step:92 - step:93 - step:94 - step:95 - step:96 - step:97 - step:98 - step:99 - step:100 - step:101 - step:102 - step:103 - step:104 - step:105 - step:106 - step:107 - step:108 - step:109 - step:110 - step:111 - step:112 - step:113 - step:114 - step:115 - step:116 - step:117 - step:118 - step:119 - step:120 - 
+errors in log (OOM/NCCL/traceback):
+0
