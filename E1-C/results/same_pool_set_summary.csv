@@ -1,0 +1,4 @@
+pool,pool_label,total_candidate_groups,S_GAP,S_E1,intersection,GAP_only,E1_only,union,jaccard,containment_inter_over_GAP,containment_inter_over_E1,relation
+E1_0,"E1-0 (steps 61-70, ORIGINAL correctness reward, actual filter = GAP)",18400,340,424,340,0,84,424,0.8018867924528302,1.0,0.8018867924528302,GAP_STRICT_SUBSET_OF_E1
+E1_A,"E1-A (steps 61-70, E1 shaped reward λ=0.05, actual filter = E1)",17440,294,349,294,0,55,349,0.8424068767908309,1.0,0.8424068767908309,GAP_STRICT_SUBSET_OF_E1
+E1_B,"E1-B (steps 71-120, E1 shaped reward λ=0.05, actual filter = E1)",80160,1412,1685,1412,0,273,1685,0.8379821958456973,1.0,0.8379821958456973,GAP_STRICT_SUBSET_OF_E1

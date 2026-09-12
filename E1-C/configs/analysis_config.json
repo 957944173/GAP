@@ -1,0 +1,47 @@
+{
+  "experiment": "E1-C",
+  "kind": "offline diagnosis / controlled counterfactual replay (no training)",
+  "target_train_batch_size": 32,
+  "target_source": "/data01/wyy/Graph-Agent-Planning/E1-B/run_20260911_113432/config/resolved_config.json",
+  "lambda_main": 0.05,
+  "lambdas": [
+    0.0,
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "pools": {
+    "E1_0": {
+      "label": "E1-0 (steps 61-70, ORIGINAL correctness reward, actual filter = GAP)",
+      "candidate_groups": "18400",
+      "S_GAP": "340",
+      "S_E1": "424",
+      "relation": "GAP_STRICT_SUBSET_OF_E1"
+    },
+    "E1_A": {
+      "label": "E1-A (steps 61-70, E1 shaped reward \u03bb=0.05, actual filter = E1)",
+      "candidate_groups": "17440",
+      "S_GAP": "294",
+      "S_E1": "349",
+      "relation": "GAP_STRICT_SUBSET_OF_E1"
+    },
+    "E1_B": {
+      "label": "E1-B (steps 71-120, E1 shaped reward \u03bb=0.05, actual filter = E1)",
+      "candidate_groups": "80160",
+      "S_GAP": "1412",
+      "S_E1": "1685",
+      "relation": "GAP_STRICT_SUBSET_OF_E1"
+    }
+  },
+  "filter_rule": "kept iff np.std(group_rewards) > 0 or group size == 1 (ray_trainer.py:1780-1781)",
+  "filter_metric": "seq_final_reward (token_level_rewards.sum(-1))",
+  "optimizer_batch_truncation": "batch[: train_batch_size * n] after accumulating until num_prompt_in_batch >= train_batch_size (ray_trainer.py:1860-1871)",
+  "advantage": "compute_grpo_outcome_advantage, norm_adv_by_std_in_grpo=True, epsilon=1e-6, std ddof=1",
+  "random_seed": null,
+  "notes": [
+    "E1-C performs no training and starts no server; all rollouts are reused.",
+    "The E1_0 pool is the uncensored counterfactual; E1_A/E1_B pools are right-censored for the GAP arm."
+  ]
+}

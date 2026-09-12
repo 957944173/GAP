@@ -1,0 +1,3 @@
+data_source,n_groups,all_correct,mean_group_success_rate,mean_cost_gap
+hotpotqa,189,189,1.0,1.052910052910053
+nq,84,84,1.0,1.1666666666666667

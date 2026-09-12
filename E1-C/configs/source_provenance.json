@@ -1,0 +1,122 @@
+[
+  {
+    "label": "E1-0 rollout audit",
+    "path": "E1-0/runs/20260910_step60to70_e10/audit/rollouts_pid2552655.jsonl",
+    "bytes": 251494447,
+    "sha256": "e3bd8de3749bc08d2b0c96f8454ffe4c70cde1173548573fb05761300a30e3b5"
+  },
+  {
+    "label": "E1-0 group audit",
+    "path": "E1-0/runs/20260910_step60to70_e10/audit/groups_pid2552655.jsonl",
+    "bytes": null,
+    "sha256": null
+  },
+  {
+    "label": "E1-0 call audit",
+    "path": "E1-0/runs/20260910_step60to70_e10/audit/calls_pid2552655.jsonl",
+    "bytes": 42458,
+    "sha256": "fb80045d5b2cc9aa3acf7b36ff6e1e764a1b0484dcfa364356cc87923c1cc413"
+  },
+  {
+    "label": "E1-A rollout diagnostics",
+    "path": "E1-A/run_20260911_024902/diagnostics/rollouts_pid2893768.jsonl",
+    "bytes": 75403219,
+    "sha256": "caf34ddf233622f5856618c649ae4fad32b4202968c130939655ef5154df169e"
+  },
+  {
+    "label": "E1-A group diagnostics",
+    "path": "E1-A/run_20260911_024902/diagnostics/groups_pid2893768.jsonl",
+    "bytes": 8413414,
+    "sha256": "404a5a50afe2892812a77794f5c653b36f6521318d4fbf48ddabd48912599f99"
+  },
+  {
+    "label": "E1-A call diagnostics",
+    "path": "E1-A/run_20260911_024902/diagnostics/calls_pid2893768.jsonl",
+    "bytes": 47882,
+    "sha256": "830b5c2b985b4b15e7b6dc6830ec255d71d859962fdb7421d13019f49ffff8ed"
+  },
+  {
+    "label": "E1-B rollout diagnostics",
+    "path": "E1-B/run_20260911_113432/diagnostics/rollouts_pid3388475.jsonl",
+    "bytes": 347351636,
+    "sha256": "a8a2f443d55a82044a3e97ea672fcfb17c2b1960c7da274f2840eb363813b66f"
+  },
+  {
+    "label": "E1-B group diagnostics",
+    "path": "E1-B/run_20260911_113432/diagnostics/groups_pid3388475.jsonl",
+    "bytes": 38768714,
+    "sha256": "67f6b6dd483021ff309de6435a6fd19be967059a33c86753e9f1bb4bf6c33672"
+  },
+  {
+    "label": "E1-B call diagnostics",
+    "path": "E1-B/run_20260911_113432/diagnostics/calls_pid3388475.jsonl",
+    "bytes": 220641,
+    "sha256": "75c64b8da5322a7ab6d651d83747817395008192a4a449a637a02ca5c345630b"
+  },
+  {
+    "label": "E1-B resolved config",
+    "path": "E1-B/run_20260911_113432/config/resolved_config.json",
+    "bytes": 11033,
+    "sha256": "3c9e7de53cbe980a5d31ed3795b7e505b682b1afd08d06b0b880a7895c401b24"
+  },
+  {
+    "label": "E1-B training console",
+    "path": "verl/logs/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu.log",
+    "bytes": 3506899,
+    "sha256": "3ceca2531a69d0c93a53907e7e95bfb004880a1defe9783a469eec2e4177d7c0"
+  },
+  {
+    "label": "original GAP supervisor log",
+    "path": "verl/logs/gen_bs_supervisor_run/supervisor.log",
+    "bytes": 22039,
+    "sha256": "efb162db7303bd0f41a95411b1a54b4acb1cb0abd4c59285decd4fe4c1946751"
+  },
+  {
+    "label": "original GAP console run3",
+    "path": "verl/logs/gen_bs_supervisor_run/train_console.run3.log",
+    "bytes": 9487259,
+    "sha256": "3e01092d412a30b62fcffeae447457567268319c9def855e5d2debb984ebff3e"
+  },
+  {
+    "label": "original GAP console run4",
+    "path": "verl/logs/gen_bs_supervisor_run/train_console.run4.log",
+    "bytes": 526513,
+    "sha256": "d0fb92f9abfc87eef80bc5f65390494deb8821758caf483cc7224d4699ce1261"
+  },
+  {
+    "label": "E1-0.5 filter replay result",
+    "path": "E1-0.5/outputs/filter_replay_results.json",
+    "bytes": 4611,
+    "sha256": "a3caf87def299235cfc471a988a71b5b72c3cb2b87d029583bbff79755dfd79f"
+  },
+  {
+    "label": "E1-A code scorer",
+    "path": "E1-A/code/e1a_scorer.py",
+    "bytes": 5447,
+    "sha256": "90cd57b6fd2c7bea764c0bc46382daa409ec9d3ae12ec982146cc7483f297032"
+  },
+  {
+    "label": "E1-B code scorer",
+    "path": "E1-B/code_changes/e1b_scorer.py",
+    "bytes": 5447,
+    "sha256": "5f09aa7867cd6cf6f217f5584dab4925b75bbd5de3d9b29aeccc023149308cab"
+  },
+  {
+    "label": "trainer source",
+    "path": "verl/verl/trainer/ppo/ray_trainer.py",
+    "bytes": 108763,
+    "sha256": "29aecd3dcabfaa8aeb6891f3e36b642a0ab68f28ed4edc98866bda2caca4ccfc"
+  },
+  {
+    "label": "core_algos source",
+    "path": "verl/verl/trainer/ppo/core_algos.py",
+    "bytes": 28396,
+    "sha256": "127ef53e92e89093aae42f216abf96d1acbde995a62f658e1ceaa894d9ed6a56"
+  },
+  {
+    "label": "E1-0 group audit",
+    "path": "E1-0/runs/20260910_step60to70_e10/audit/groups.jsonl",
+    "bytes": 22720574,
+    "sha256": "c24d254dfc7068e0631d5ca17b49ae8b2bc423e2a004ac4af4c54511aa7bf8a3"
+  }
+]

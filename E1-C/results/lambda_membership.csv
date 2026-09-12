@@ -1,0 +1,7 @@
+lambda,n_retained,overlap_with_lambda0,jaccard_with_lambda0,new_vs_lambda0,removed_vs_lambda0,overlap_with_lambda0.05,jaccard_with_lambda0.05,membership_identical_to_lambda0,membership_identical_to_lambda0.05
+0.0,1412,1412,1.0,0,0,1412,0.8379821958456973,True,False
+0.01,1685,1412,0.8379821958456973,273,0,1685,1.0,False,True
+0.025,1685,1412,0.8379821958456973,273,0,1685,1.0,False,True
+0.05,1685,1412,0.8379821958456973,273,0,1685,1.0,False,True
+0.1,1685,1412,0.8379821958456973,273,0,1685,1.0,False,True
+0.2,1685,1412,0.8379821958456973,273,0,1685,1.0,False,True

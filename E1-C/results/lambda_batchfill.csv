@@ -1,0 +1,7 @@
+lambda,calls_needed_total,selected_total,overlap_with_lambda0_selected,jaccard_with_lambda0_selected,selected_identical_to_lambda0,overlap_with_lambda0.05_selected,selected_identical_to_lambda0.05
+0.0,501,1409,1409,1.0,True,1338,False
+0.01,501,1600,1338,0.800718132854578,False,1600,True
+0.025,501,1600,1338,0.800718132854578,False,1600,True
+0.05,501,1600,1338,0.800718132854578,False,1600,True
+0.1,501,1600,1338,0.800718132854578,False,1600,True
+0.2,501,1600,1338,0.800718132854578,False,1600,True

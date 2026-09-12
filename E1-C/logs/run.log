@@ -1,0 +1,87 @@
+[e1c] === E1-C run 2026-09-12T20:31:22.321648 ===
+[e1c] target optimizer batch size (data.train_batch_size) = 32 [source: /data01/wyy/Graph-Agent-Planning/E1-B/run_20260911_113432/config/resolved_config.json]
+[e1c] pool E1_0: 18,400 groups, size histogram={8: 18400}
+[e1c] pool E1_A: 17,440 groups, size histogram={8: 17440}
+[e1c] pool E1_B: 80,160 groups, size histogram={8: 80160}
+[e1c] --- Analysis A: same-pool retained-set relationship
+[e1c]   [E1_0] |S_GAP|=340 |S_E1|=424 inter=340 gap_only=0 e1_only=84 jaccard=0.8019 -> GAP_STRICT_SUBSET_OF_E1
+[e1c]   [E1_A] |S_GAP|=294 |S_E1|=349 inter=294 gap_only=0 e1_only=55 jaccard=0.8424 -> GAP_STRICT_SUBSET_OF_E1
+[e1c]   [E1_B] |S_GAP|=1412 |S_E1|=1685 inter=1412 gap_only=0 e1_only=273 jaccard=0.8380 -> GAP_STRICT_SUBSET_OF_E1
+[e1c] --- Analysis B: group types of E1-only / GAP-only
+[e1c] --- Analysis C: sequential fixed-size batch-fill replay
+[e1c] === E1-C run 2026-09-12T20:36:59.209704 ===
+[e1c] target optimizer batch size (data.train_batch_size) = 32 [source: /data01/wyy/Graph-Agent-Planning/E1-B/run_20260911_113432/config/resolved_config.json]
+[e1c] pool E1_0: 18,400 groups, size histogram={8: 18400}
+[e1c] pool E1_A: 17,440 groups, size histogram={8: 17440}
+[e1c] pool E1_B: 80,160 groups, size histogram={8: 80160}
+[e1c] --- Analysis A: same-pool retained-set relationship
+[e1c]   [E1_0] |S_GAP|=340 |S_E1|=424 inter=340 gap_only=0 e1_only=84 jaccard=0.8019 -> GAP_STRICT_SUBSET_OF_E1
+[e1c]   [E1_A] |S_GAP|=294 |S_E1|=349 inter=294 gap_only=0 e1_only=55 jaccard=0.8424 -> GAP_STRICT_SUBSET_OF_E1
+[e1c]   [E1_B] |S_GAP|=1412 |S_E1|=1685 inter=1412 gap_only=0 e1_only=273 jaccard=0.8380 -> GAP_STRICT_SUBSET_OF_E1
+[e1c] --- Analysis B: group types of E1-only / GAP-only
+[e1c] --- Analysis C: sequential fixed-size batch-fill replay
+[e1c]   [E1_0] GAP calls=115 E1 calls=94 (18.3% fewer) | selected GAP=320 E1=320 inter=258 gap_only=62 e1_only=62 -> PARTIAL_OVERLAP
+[e1c]   [E1_A] GAP calls=109 E1 calls=109 (0.0% fewer) | selected GAP=292 E1=320 inter=268 gap_only=24 e1_only=52 -> PARTIAL_OVERLAP
+[e1c]   [E1_B] GAP calls=501 E1 calls=501 (0.0% fewer) | selected GAP=1409 E1=1600 inter=1338 gap_only=71 e1_only=262 -> PARTIAL_OVERLAP
+[e1c] --- Analysis D: difficulty of E1-added vs GAP-displaced groups
+[e1c] --- Analysis E: lambda sweep (membership / batch-fill / advantage)
+[e1c] --- Analysis F: actual GAP vs E1-B training-run composition
+[e1c] --- Analysis G: hypothesis verdicts
+[e1c]   H1: SUPPORTED | |S_E1|-|S_GAP| = 273 E1-only groups out of 80160 candidates (GAP_STRICT_SUBSET_OF_E1)
+[e1c]   H2: SUPPORTED | E1-only all-correct rate = 1.0 (n=273); active-efficiency groups among E1-only = 273
+[e1c]   H3: SUPPORTED | same-pool sequential batch-fill: GAP needs 501 generation batches, E1 needs 501 (0.0% fewer); 71 GAP-selected and 262 E1-selected groups differ (Jaccard 0.8007)
+[e1c]   H4: SUPPORTED | mean group success rate E1-added 1.0000 vs GAP-displaced 0.4665 (p=7.39e-73); all-correct rate 1.0000 vs 0.0000
+[e1c]   H5: SUPPORTED | retained membership identical across all positive λ = True; |S_λ| = 0.0:1412, 0.01:1685, 0.025:1685, 0.05:1685, 0.1:1685, 0.2:1685; advantage magnitudes: λ=0.0: mean|adv|=0.7745, λ=0.01: mean|adv|=0.7
+[e1c]   H6: SUPPORTED BY ASSOCIATION | 262 of 1600 groups in the E1 optimizer batch are E1-only on the same pool and E1 needs 0.0% fewer generation batches; the E1-B step120 evaluation is micro EM -1.16 pp vs GAP step120 (paired p=2.1e-12)
+[e1c]   sanity baseline_retained_E1_0_pool: 340
+[e1c]   sanity E1_0.5_reported_baseline_retained: 340
+[e1c]   sanity matches_E1_0.5: True
+[e1c]   sanity lambda0_equals_EM_all_groups: True
+[e1c]   sanity lambda0_mismatch_groups: 0
+[e1c]   sanity group_size_histogram: {'E1_0': {8: 18400}, 'E1_A': {8: 17440}, 'E1_B': {8: 80160}}
+[e1c]   sanity all_groups_n8: True
+[e1c]   sanity rollout_and_group_counts: {'E1_0': {'rollouts': 147200, 'groups': 18400, 'rollouts_in_groups': 147200}, 'E1_A': {'rollouts': 139520, 'groups': 17440, 'rollouts_in_groups': 139520}, 'E1_B': {'rollouts': 641280, 'groups': 80160, 'rollouts_in_groups': 641280}}
+[e1c]   sanity E1_replay_matches_observed_E1B_gen_batches: {'steps_compared': 50, 'n_mismatch': 0, 'all_match': True}
+[e1c]   sanity GAP_replay_matches_observed_E1_0_gen_batches: {'steps_compared': 10, 'n_mismatch': 0, 'all_match': True}
+[e1c]   sanity E1_replay_matches_observed_E1A_gen_batches: {'steps_compared': 10, 'n_mismatch': 0, 'all_match': True}
+[e1c]   sanity replay_calls_needed_by_pool: {'E1_0_GAP': 115, 'E1_0_observed': 115, 'E1_A_E1': 109, 'E1_A_observed': 109, 'E1_B_E1': 501, 'E1_B_observed': 501}
+[e1c]   sanity summary_csv_consistent: {'S_GAP': True, 'S_E1': True, 'E1_only': True, 'difficulty_rows': True, 'lambda_rows': True}
+[e1c] summary -> /data01/wyy/Graph-Agent-Planning/E1-C/results/summary.json
+[e1c] === E1-C run 2026-09-12T20:45:02.037573 ===
+[e1c] target optimizer batch size (data.train_batch_size) = 32 [source: /data01/wyy/Graph-Agent-Planning/E1-B/run_20260911_113432/config/resolved_config.json]
+[e1c] pool E1_0: 18,400 groups, size histogram={8: 18400}
+[e1c] pool E1_A: 17,440 groups, size histogram={8: 17440}
+[e1c] pool E1_B: 80,160 groups, size histogram={8: 80160}
+[e1c] --- Analysis A: same-pool retained-set relationship
+[e1c]   [E1_0] |S_GAP|=340 |S_E1|=424 inter=340 gap_only=0 e1_only=84 jaccard=0.8019 -> GAP_STRICT_SUBSET_OF_E1
+[e1c]   [E1_A] |S_GAP|=294 |S_E1|=349 inter=294 gap_only=0 e1_only=55 jaccard=0.8424 -> GAP_STRICT_SUBSET_OF_E1
+[e1c]   [E1_B] |S_GAP|=1412 |S_E1|=1685 inter=1412 gap_only=0 e1_only=273 jaccard=0.8380 -> GAP_STRICT_SUBSET_OF_E1
+[e1c] --- Analysis B: group types of E1-only / GAP-only
+[e1c] --- Analysis C: sequential fixed-size batch-fill replay
+[e1c]   [E1_0] GAP calls=115 E1 calls=94 (18.3% fewer) | selected GAP=320 E1=320 inter=258 gap_only=62 e1_only=62 -> PARTIAL_OVERLAP
+[e1c]   [E1_A] GAP calls=109 E1 calls=109 (0.0% fewer) | selected GAP=292 E1=320 inter=268 gap_only=24 e1_only=52 -> PARTIAL_OVERLAP
+[e1c]   [E1_B] GAP calls=501 E1 calls=501 (0.0% fewer) | selected GAP=1409 E1=1600 inter=1338 gap_only=71 e1_only=262 -> PARTIAL_OVERLAP
+[e1c] --- Analysis D: difficulty of E1-added vs GAP-displaced groups
+[e1c] --- Analysis E: lambda sweep (membership / batch-fill / advantage)
+[e1c] --- Analysis F: actual GAP vs E1-B training-run composition
+[e1c] --- Analysis G: hypothesis verdicts
+[e1c]   H1: SUPPORTED | |S_E1|-|S_GAP| = 273 E1-only groups out of 80160 candidates (GAP_STRICT_SUBSET_OF_E1)
+[e1c]   H2: SUPPORTED | E1-only all-correct rate = 1.0 (n=273); active-efficiency groups among E1-only = 273
+[e1c]   H3: SUPPORTED | on the E1-B pool the E1 filter fills all 1600 optimizer slots while the counterfactual GAP filter is right-censored in 46/50 steps (only 1409 slots filled) - on the same stream E1 retains 1.136x more 
+[e1c]   H4: SUPPORTED | mean group success rate E1-added 1.0000 vs GAP-displaced 0.4665 (p=7.39e-73); all-correct rate 1.0000 vs 0.0000
+[e1c]   H5: SUPPORTED | retained membership identical across all positive λ = True; |S_λ| = 0.0:1412, 0.01:1685, 0.025:1685, 0.05:1685, 0.1:1685, 0.2:1685; advantage magnitudes: λ=0.0: mean|adv|=0.7745, λ=0.01: mean|adv|=0.7
+[e1c]   H6: SUPPORTED BY ASSOCIATION | 262 of 1600 groups in the E1 optimizer batch are E1-only on the same pool (E1 retains 1.136x more groups per generation batch); the E1-B step120 evaluation is micro EM -1.16 pp vs GAP step120 (paired 
+[e1c]   sanity baseline_retained_E1_0_pool: 340
+[e1c]   sanity E1_0.5_reported_baseline_retained: 340
+[e1c]   sanity matches_E1_0.5: True
+[e1c]   sanity lambda0_equals_EM_all_groups: True
+[e1c]   sanity lambda0_mismatch_groups: 0
+[e1c]   sanity group_size_histogram: {'E1_0': {8: 18400}, 'E1_A': {8: 17440}, 'E1_B': {8: 80160}}
+[e1c]   sanity all_groups_n8: True
+[e1c]   sanity rollout_and_group_counts: {'E1_0': {'rollouts': 147200, 'groups': 18400, 'rollouts_in_groups': 147200}, 'E1_A': {'rollouts': 139520, 'groups': 17440, 'rollouts_in_groups': 139520}, 'E1_B': {'rollouts': 641280, 'groups': 80160, 'rollouts_in_groups': 641280}}
+[e1c]   sanity E1_replay_matches_observed_E1B_gen_batches: {'steps_compared': 50, 'n_mismatch': 0, 'all_match': True}
+[e1c]   sanity GAP_replay_matches_observed_E1_0_gen_batches: {'steps_compared': 10, 'n_mismatch': 0, 'all_match': True}
+[e1c]   sanity E1_replay_matches_observed_E1A_gen_batches: {'steps_compared': 10, 'n_mismatch': 0, 'all_match': True}
+[e1c]   sanity replay_calls_needed_by_pool: {'E1_0_GAP': 115, 'E1_0_observed': 115, 'E1_A_E1': 109, 'E1_A_observed': 109, 'E1_B_E1': 501, 'E1_B_observed': 501}
+[e1c]   sanity summary_csv_consistent: {'S_GAP': True, 'S_E1': True, 'E1_only': True, 'difficulty_rows': True, 'lambda_rows': True}
+[e1c] summary -> /data01/wyy/Graph-Agent-Planning/E1-C/results/summary.json

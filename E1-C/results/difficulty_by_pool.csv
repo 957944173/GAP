@@ -1,0 +1,4 @@
+pool,n_E1_added,n_GAP_displaced,E1_added_correct_count_mean,GAP_displaced_correct_count_mean,E1_added_success_rate_mean,GAP_displaced_success_rate_mean,E1_added_all_correct_rate,GAP_displaced_mixed_rate,E1_added_cost_mean,GAP_displaced_cost_mean
+E1_0,62,62,8.0,4.145161290322581,1.0,0.5181451612903226,1.0,1.0,1.8004032258064515,1.5181451612903225
+E1_A,52,24,8.0,3.375,1.0,0.421875,1.0,1.0,1.9471153846153846,1.859375
+E1_B,262,71,8.0,3.732394366197183,1.0,0.4665492957746479,1.0,1.0,1.8206106870229009,1.6566901408450705
