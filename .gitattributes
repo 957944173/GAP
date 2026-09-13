@@ -1,2 +1,5 @@
 E1-0/runs/20260910_step60to70_e10/audit/rollouts_pid2552655.jsonl filter=lfs diff=lfs merge=lfs -text
 E1-B/run_20260911_113432/diagnostics/rollouts_pid3388475.jsonl filter=lfs diff=lfs merge=lfs -text
+E1-D/runs/D1_20260912_235330/diagnostics/rollouts_pid1022500.jsonl filter=lfs diff=lfs merge=lfs -text
+E1-D/runs/D1_20260912_235330/diagnostics/groups_pid1022500.jsonl filter=lfs diff=lfs merge=lfs -text
+E1-D/runs/D2_20260913_041846/diagnostics/rollouts_pid1249393.jsonl filter=lfs diff=lfs merge=lfs -text

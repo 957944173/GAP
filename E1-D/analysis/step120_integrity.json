@@ -1,0 +1,191 @@
+{
+  "phase": "D2",
+  "experiment_dir": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu",
+  "checkpoint_dir": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu/global_step_120",
+  "train_log": "/data01/wyy/Graph-Agent-Planning/E1-D/logs/train_D2_20260913_041846.log",
+  "run_dir": "/data01/wyy/Graph-Agent-Planning/E1-D/runs/D2_20260913_041846",
+  "expected_start_step": 70,
+  "expected_end_step": 120,
+  "checkpoint": {
+    "exists": true,
+    "shards": {
+      "model_rank0": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank0": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank0": {
+        "exists": true,
+        "size": 14632
+      },
+      "model_rank1": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank1": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank1": {
+        "exists": true,
+        "size": 14696
+      },
+      "model_rank2": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank2": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank2": {
+        "exists": true,
+        "size": 14696
+      },
+      "model_rank3": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank3": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank3": {
+        "exists": true,
+        "size": 14760
+      }
+    },
+    "data_pt": true,
+    "tracker": "120"
+  },
+  "training_log": {
+    "exists": true,
+    "steps_seen": [
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "missing_steps": [],
+    "all_steps_present": true,
+    "resume_line_present": true,
+    "metrics_parsed": 6164,
+    "non_finite_metrics": {},
+    "error_pattern_counts_before_final_val": {
+      "cuda_oom": 0,
+      "nccl_error": 0,
+      "nccl_warn": 12,
+      "ray_worker_died": 0,
+      "wiki_search_error": 0,
+      "wiki_tool_exec_failed": 0,
+      "traceback": 0,
+      "cuda_error": 0
+    }
+  },
+  "state_resume_evidence": {
+    "resume_source": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu/global_step_70/actor/extra_state_world_size_4_rank_0.pt",
+      "keys": [
+        "lr_scheduler",
+        "rng"
+      ],
+      "lr_scheduler_last_epoch": 70,
+      "expected_last_epoch": 70,
+      "rng_present": true,
+      "rng_substates": [
+        "cpu",
+        "cuda",
+        "numpy",
+        "random"
+      ]
+    },
+    "end": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu/global_step_120/actor/extra_state_world_size_4_rank_0.pt",
+      "keys": [
+        "lr_scheduler",
+        "rng"
+      ],
+      "lr_scheduler_last_epoch": 120,
+      "expected_last_epoch": 120,
+      "rng_present": true,
+      "rng_substates": [
+        "cpu",
+        "cuda",
+        "numpy",
+        "random"
+      ]
+    }
+  },
+  "state_resume_ok": true,
+  "filter_decoupling": {
+    "available": true,
+    "candidate_groups": 83680,
+    "actual_retained": 1679,
+    "em_metric_keep_equals_actual_keep_mismatches": 0,
+    "filter_decoupling_confirmed": true,
+    "counterfactual_shaped_retained": 2113,
+    "would_be_revived_by_shaped_filter": 434,
+    "retained_all_correct": 0,
+    "retained_mixed": 1679,
+    "retained_all_wrong": 0,
+    "efficiency_active_excluded_by_em_filter": 434,
+    "efficiency_active_retained_actual": 86,
+    "efficiency_active_retained_shaped_filter": 520,
+    "mixed_efficiency_active_retained": 86,
+    "efficiency_supervision_density_actual": 0.05122096486003574,
+    "generation_batches": 523
+  },
+  "tracker_reached_end_step": true,
+  "note_tracker": "tracker is experiment-wide; a D1 re-check after D2 shows 120 - the requirement is tracker >= END_STEP and a complete global_step_END_STEP",
+  "integrity_ok": true
+}

@@ -1,0 +1,5 @@
+[2026-09-13 04:18:48] watchdog started; log=/data01/wyy/Graph-Agent-Planning/E1-D/logs/train_D2_20260913_041846.log; baseline stackdumps=3
+[2026-09-13 04:18:48] pre_stall=480s post_stall=2700s interval=15s
+[2026-09-13 04:22:33] watchdog: armed (resume line seen)
+[2026-09-13 04:23:33] watchdog: first validation batch print seen -> post phase (long window)
+[2026-09-13 16:58:24] watchdog: training finished (final metrics/progress marker seen); exiting

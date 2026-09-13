@@ -1,0 +1,170 @@
+# E1-D preflight offline selftest (E1-D_task.md §9)
+
+**ALL TESTS: PASS**
+
+## TEST1_reward_equivalence_with_E1B: PASS
+
+```json
+{
+  "total_rollouts_checked": 788480,
+  "total_mismatches": 0,
+  "per_pool": {
+    "E1_0": {
+      "rollouts_checked": 147200,
+      "mismatches": 0,
+      "non_finite": 0,
+      "groups": 18400
+    },
+    "E1_B": {
+      "rollouts_checked": 641280,
+      "mismatches": 0,
+      "non_finite": 0,
+      "groups": 80160
+    }
+  },
+  "method": "both scorers called on the same real rollouts with compute_score_em stubbed by the recorded EM, so only the group/efficiency math is compared"
+}
+```
+
+## TEST2_lambda: PASS
+
+```json
+{
+  "e1b_default_lambda": 0.05,
+  "e1d_default_lambda": 0.05,
+  "e1d_env_lambda_default": 0.05,
+  "expected": 0.05
+}
+```
+
+## TEST3_filter_baseline_equivalence: PASS
+
+```json
+{
+  "per_pool": {
+    "E1_0": {
+      "candidate_groups": 18400,
+      "all_correct": 8184,
+      "mixed": 340,
+      "all_wrong": 9876,
+      "S_em_metric": 340,
+      "S_shaped_metric": 424,
+      "e1_only_shaped": 84,
+      "gap_only": 0,
+      "all_correct_efficiency_variable": 84,
+      "of_those_revived_by_shaped_filter": 84,
+      "of_those_revived_by_em_filter": 0,
+      "reference_E1C_S_GAP": 340,
+      "reference_E1C_S_E1": 424,
+      "reference_E1C_E1_only": 84,
+      "matches_E1C_S_GAP": true,
+      "matches_E1C_S_E1": true
+    },
+    "E1_B": {
+      "candidate_groups": 80160,
+      "all_correct": 35927,
+      "mixed": 1412,
+      "all_wrong": 42821,
+      "S_em_metric": 1412,
+      "S_shaped_metric": 1685,
+      "e1_only_shaped": 273,
+      "gap_only": 0,
+      "all_correct_efficiency_variable": 273,
+      "of_those_revived_by_shaped_filter": 273,
+      "of_those_revived_by_em_filter": 0,
+      "reference_E1C_S_GAP": 1412,
+      "reference_E1C_S_E1": 1685,
+      "reference_E1C_E1_only": 273,
+      "matches_E1C_S_GAP": true,
+      "matches_E1C_S_E1": true
+    }
+  },
+  "note": "filter metric `em` keeps iff std(EM)>0; the GAP baseline reward IS EM, so the retained set must be identical - it reproduces E1-C's S_GAP exactly on both pools"
+}
+```
+
+## TEST4_no_all_correct_revival: PASS
+
+```json
+{
+  "per_pool": {
+    "E1_0": {
+      "all_correct_efficiency_variable": 84,
+      "revived_by_em_filter": 0,
+      "revived_by_shaped_filter": 84
+    },
+    "E1_B": {
+      "all_correct_efficiency_variable": 273,
+      "revived_by_em_filter": 0,
+      "revived_by_shaped_filter": 273
+    }
+  }
+}
+```
+
+## TEST5_mixed_group_shaping_preserved: PASS
+
+```json
+{
+  "mixed_groups_checked": 29,
+  "with_distinct_shaped_reward_among_correct": 29,
+  "with_distinct_grpo_advantage_between_efficient_and_inefficient": 29,
+  "example": {
+    "pool": "E1_0",
+    "group": "2:89152",
+    "efficient_correct_advantage_mean": 0.8006709259639614,
+    "inefficient_correct_advantage_mean": 0.7050684273413987,
+    "shaped_rewards": [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.05,
+      1.0,
+      1.0,
+      0.0
+    ]
+  },
+  "note": "filter channel closed (EM std==0 all-correct groups are dropped) while the objective channel stays open inside retained mixed groups"
+}
+```
+
+## TEST6_validation_unchanged: PASS
+
+```json
+{
+  "details": {
+    "manager_val_delegates_to_super": true,
+    "manager_has_is_train_flag": true,
+    "val_scorer_is_original_mhqa_eval": true,
+    "filter_metric_is_em": true
+  }
+}
+```
+
+## TEST7_advantage_finite: PASS
+
+```json
+{
+  "detail": {
+    "n": 256,
+    "n_groups": 32,
+    "nan": 0,
+    "inf": 0,
+    "max_abs": 2.474866734172715,
+    "mean_abs": 0.8165366835706922,
+    "note": "advantage on the EM-filter-selected optimizer batch of step 71 (shaped reward)"
+  }
+}
+```
+
+## TEST7_no_nan_inf: PASS
+
+```json
+{
+  "non_finite_per_pool": {
+    "E1_0": 0,
+    "E1_B": 0
+  }
+}
+```

@@ -1,0 +1,11 @@
+E1-D:D2 post-training check 2026-09-13T16:58:29+08:00
+tracker: 120
+resume line: 2
+OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu/global_step_70 actor_bytes=45103143440 data_pt=yes
+OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu/global_step_80 actor_bytes=38292967072 data_pt=yes
+OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu/global_step_90 actor_bytes=38292967072 data_pt=yes
+OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu/global_step_100 actor_bytes=38292967072 data_pt=yes
+OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu/global_step_110 actor_bytes=38292967072 data_pt=yes
+OK   /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu/global_step_120 actor_bytes=38292967072 data_pt=yes
+steps seen: 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 
+errors (OOM/NCCL/Traceback): 0

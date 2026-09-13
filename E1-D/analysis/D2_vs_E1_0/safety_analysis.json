@@ -1,0 +1,87 @@
+{
+  "query_packing": {
+    "e1d": {
+      "label": "E1-D",
+      "active_groups": 520,
+      "efficient_correct_rollouts": 2004,
+      "inefficient_correct_rollouts": 1864,
+      "efficient_rounds_mean": 1.5638722554890219,
+      "inefficient_rounds_mean": 2.6362660944206007,
+      "efficient_queries_mean": 2.117764471057884,
+      "inefficient_queries_mean": 3.189914163090129,
+      "efficient_parallel_factor_mean": 1.3541799617102743,
+      "inefficient_parallel_factor_mean": 1.2100122100122102,
+      "efficient_tokens_mean": 1390.625748502994,
+      "inefficient_tokens_mean": 2009.408261802575,
+      "efficient_turns_mean": 2.563872255489022,
+      "inefficient_turns_mean": 3.6362660944206007,
+      "packing_suspect_groups": 22,
+      "packing_suspect_ratio": 0.04230769230769231
+    },
+    "baseline": {
+      "label": "baseline E1-0",
+      "active_groups": 95,
+      "efficient_correct_rollouts": 377,
+      "inefficient_correct_rollouts": 354,
+      "efficient_rounds_mean": 1.4880636604774535,
+      "inefficient_rounds_mean": 2.4915254237288136,
+      "efficient_queries_mean": 2.0397877984084882,
+      "inefficient_queries_mean": 2.9322033898305087,
+      "efficient_parallel_factor_mean": 1.3707664884135473,
+      "inefficient_parallel_factor_mean": 1.1768707482993197,
+      "efficient_tokens_mean": 1343.159151193634,
+      "inefficient_tokens_mean": 1828.7881355932204,
+      "efficient_turns_mean": 2.4880636604774535,
+      "inefficient_turns_mean": 3.4915254237288136,
+      "packing_suspect_groups": 4,
+      "packing_suspect_ratio": 0.042105263157894736
+    },
+    "definition": "packing_suspect = within an active (>=2 correct, cost-varying) group the efficient correct rollouts use fewer rounds but NOT fewer total queries"
+  },
+  "zero_search": {
+    "e1d_zero_search_rate": 0.00021510516252390058,
+    "baseline_zero_search_rate": 0.00016304347826086958,
+    "e1d_zero_search_correct_rate": 0.0
+  },
+  "malformed": {
+    "e1d_metadata_invalid_rate": 0.0,
+    "complete_reason_top": [
+      [
+        "generate stop word/id but no tool detect. {'type': 'stop', 'matched': '</answer>",
+        666978
+      ],
+      [
+        "current_turns(8) > max_turns(8)",
+        2144
+      ],
+      [
+        "response overlong in this turn. {'type': 'length', 'length': 8192}",
+        217
+      ],
+      [
+        "input_ids (len 11700) is over long. {'type': 'stop', 'matched': '</wiki_search>'",
+        8
+      ],
+      [
+        "input_ids (len 11706) is over long. {'type': 'stop', 'matched': '</wiki_search>'",
+        8
+      ]
+    ]
+  },
+  "reward_distribution": {
+    "e1d_reward_hist": {
+      "0.0": 359259,
+      "1.0": 308140,
+      "1.017": 2,
+      "1.025": 23,
+      "1.033": 4,
+      "1.038": 2,
+      "1.04": 6,
+      "1.05": 2004
+    },
+    "e1d_em_rate": 0.46334398900573615,
+    "e1d_reward_nonzero_rate": 0.46334398900573615,
+    "note": "reward = A*(1+0.05*E); E=0 => reward == EM (0 or 1); active correct rollouts get 1.05/1.0333/... depending on cost",
+    "baseline_em_rate": 0.4539130434782609
+  }
+}

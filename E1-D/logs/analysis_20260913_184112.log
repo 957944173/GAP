@@ -1,0 +1,624 @@
+=== E1-D analysis 20260913_184112 ===
+--- D1 run: /data01/wyy/Graph-Agent-Planning/E1-D/runs/D1_20260912_235330
+{
+  "out_dir": "/data01/wyy/Graph-Agent-Planning/E1-D/diagnostics/checkpoint_stats_D1",
+  "steps_observed": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70
+  ],
+  "checkpoints": [
+    "global_step_80",
+    "global_step_90",
+    "global_step_100",
+    "global_step_110",
+    "global_step_120"
+  ]
+}
+{
+  "e1d": {
+    "n_rollouts": 151040,
+    "n_groups": 18880,
+    "n_calls": 118,
+    "steps": [
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+    ],
+    "em_rate": 0.45713718220338984,
+    "reward_mean": 0.45723693502825186,
+    "efficiency_mean": 0.0019950564971751416,
+    "efficiency_nonzero_rate": 0.001999470338983051,
+    "rounds_mean": 1.4456965042372882,
+    "queries_mean": 1.9843551377118644,
+    "parallel_factor_mean": 1.5020608069764216,
+    "turns_mean": 2.445590572033898,
+    "tokens_mean": 1274.7555283368645,
+    "zero_search_rate": 5.296610169491525e-05,
+    "filter_retention_baseline": 331,
+    "filter_retention_shaped": 400,
+    "filter_newly_added": 69,
+    "efficiency_active_groups": 77,
+    "efficiency_supervision_ratio": 0.1925
+  },
+  "baseline": {
+    "n_rollouts": 147200,
+    "n_groups": 18400,
+    "em_rate": 0.4539130434782609,
+    "rounds_mean": 1.440733695652174,
+    "queries_mean": 1.9897622282608696,
+    "parallel_factor_mean": 1.5091132084627592,
+    "turns_mean": 2.4405910326086957,
+    "tokens_mean": 1277.7553192934784,
+    "zero_search_rate": 0.00016304347826086958,
+    "filter_retention_baseline": 340,
+    "efficiency_active_groups": 95
+  }
+}
+{
+  "e1d": {
+    "n_rollouts": 151040,
+    "n_groups": 18880,
+    "n_calls": 118,
+    "steps": [
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+    ],
+    "em_rate": 0.45713718220338984,
+    "reward_mean": 0.45723693502825186,
+    "efficiency_mean": 0.0019950564971751416,
+    "efficiency_nonzero_rate": 0.001999470338983051,
+    "rounds_mean": 1.4456965042372882,
+    "queries_mean": 1.9843551377118644,
+    "parallel_factor_mean": 1.5020608069764216,
+    "turns_mean": 2.445590572033898,
+    "tokens_mean": 1274.7555283368645,
+    "zero_search_rate": 5.296610169491525e-05,
+    "filter_retention_baseline": 331,
+    "filter_retention_shaped": 400,
+    "filter_newly_added": 69,
+    "efficiency_active_groups": 77,
+    "efficiency_supervision_ratio": 0.1925
+  },
+  "baseline": {
+    "n_rollouts": 641280,
+    "n_groups": 80160,
+    "em_rate": 0.45707959081836325,
+    "rounds_mean": 1.3302223677644711,
+    "queries_mean": 1.9179937000998004,
+    "parallel_factor_mean": 1.560184638164159,
+    "turns_mean": 2.3301849426147703,
+    "tokens_mean": 1244.5145396706587,
+    "zero_search_rate": 0.000249500998003992,
+    "filter_retention_baseline": 1412,
+    "efficiency_active_groups": 291
+  }
+}
+# E1-D D1 integrity check (step60 -> step70)
+
+- experiment dir: `/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu`
+- checkpoint: `/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu/global_step_70`
+- tracker: 120 (expected 70)
+- data.pt present: True
+- steps 60..70 all present: True (missing: [])
+- 'Setting global step to 60': True
+- metrics parsed: 1241, non-finite: {}
+- full-state resume (lr_scheduler/RNG): True
+
+## error scan before the final-validation marker
+
+- cuda_oom: 0
+- nccl_error: 0
+- nccl_warn: 12
+- ray_worker_died: 0
+- wiki_search_error: 0
+- wiki_tool_exec_failed: 0
+- traceback: 0
+- cuda_error: 0
+
+## filter decoupling (E1-D_task.md §11 / §19 Q2)
+
+```json
+{
+  "available": true,
+  "candidate_groups": 18880,
+  "actual_retained": 331,
+  "em_metric_keep_equals_actual_keep_mismatches": 0,
+  "filter_decoupling_confirmed": true,
+  "counterfactual_shaped_retained": 400,
+  "would_be_revived_by_shaped_filter": 69,
+  "retained_all_correct": 0,
+  "retained_mixed": 331,
+  "retained_all_wrong": 0,
+  "efficiency_active_excluded_by_em_filter": 69,
+  "efficiency_active_retained_actual": 8,
+  "efficiency_active_retained_shaped_filter": 77,
+  "mixed_efficiency_active_retained": 8,
+  "efficiency_supervision_density_actual": 0.02416918429003021,
+  "generation_batches": 118
+}
+```
+
+**VERDICT: CHECK FAILED**
+
+WARN integrity D1
+--- D2 run: /data01/wyy/Graph-Agent-Planning/E1-D/runs/D2_20260913_041846
+{
+  "out_dir": "/data01/wyy/Graph-Agent-Planning/E1-D/diagnostics/checkpoint_stats_D2",
+  "steps_observed": [
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "checkpoints": [
+    "global_step_80",
+    "global_step_90",
+    "global_step_100",
+    "global_step_110",
+    "global_step_120"
+  ]
+}
+step  80 cumulative: reward=0.4605 em=0.4603 E=0.0028 activeE=92 retained=406 rounds=1.4647 queries=2.0024 pf=1.4954
+step  90 cumulative: reward=0.4596 em=0.4595 E=0.0026 activeE=186 retained=827 rounds=1.4830 queries=2.0224 pf=1.4945
+step 100 cumulative: reward=0.4616 em=0.4614 E=0.0027 activeE=287 retained=1251 rounds=1.4910 queries=2.0347 pf=1.4965
+step 110 cumulative: reward=0.4619 em=0.4618 E=0.0029 activeE=397 retained=1668 rounds=1.4990 queries=2.0426 pf=1.4947
+step 120 cumulative: reward=0.4635 em=0.4633 E=0.0030 activeE=520 retained=2113 rounds=1.5009 queries=2.0439 pf=1.4933
+{
+  "e1d": {
+    "n_rollouts": 669440,
+    "n_groups": 83680,
+    "n_calls": 523,
+    "steps": [
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "em_rate": 0.46334398900573615,
+    "reward_mean": 0.4634952447816881,
+    "efficiency_mean": 0.0030251155194391337,
+    "efficiency_nonzero_rate": 0.0030488169216061184,
+    "rounds_mean": 1.5008604206500955,
+    "queries_mean": 2.043912822657744,
+    "parallel_factor_mean": 1.4930096334962548,
+    "turns_mean": 2.5007887189292544,
+    "tokens_mean": 1311.821253585086,
+    "zero_search_rate": 0.00021510516252390058,
+    "filter_retention_baseline": 1679,
+    "filter_retention_shaped": 2113,
+    "filter_newly_added": 434,
+    "efficiency_active_groups": 520,
+    "efficiency_supervision_ratio": 0.24609559867486985
+  },
+  "baseline": {
+    "n_rollouts": 147200,
+    "n_groups": 18400,
+    "em_rate": 0.4539130434782609,
+    "rounds_mean": 1.440733695652174,
+    "queries_mean": 1.9897622282608696,
+    "parallel_factor_mean": 1.5091132084627592,
+    "turns_mean": 2.4405910326086957,
+    "tokens_mean": 1277.7553192934784,
+    "zero_search_rate": 0.00016304347826086958,
+    "filter_retention_baseline": 340,
+    "efficiency_active_groups": 95
+  }
+}
+{
+  "e1d": {
+    "n_rollouts": 669440,
+    "n_groups": 83680,
+    "n_calls": 523,
+    "steps": [
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "em_rate": 0.46334398900573615,
+    "reward_mean": 0.4634952447816881,
+    "efficiency_mean": 0.0030251155194391337,
+    "efficiency_nonzero_rate": 0.0030488169216061184,
+    "rounds_mean": 1.5008604206500955,
+    "queries_mean": 2.043912822657744,
+    "parallel_factor_mean": 1.4930096334962548,
+    "turns_mean": 2.5007887189292544,
+    "tokens_mean": 1311.821253585086,
+    "zero_search_rate": 0.00021510516252390058,
+    "filter_retention_baseline": 1679,
+    "filter_retention_shaped": 2113,
+    "filter_newly_added": 434,
+    "efficiency_active_groups": 520,
+    "efficiency_supervision_ratio": 0.24609559867486985
+  },
+  "baseline": {
+    "n_rollouts": 641280,
+    "n_groups": 80160,
+    "em_rate": 0.45707959081836325,
+    "rounds_mean": 1.3302223677644711,
+    "queries_mean": 1.9179937000998004,
+    "parallel_factor_mean": 1.560184638164159,
+    "turns_mean": 2.3301849426147703,
+    "tokens_mean": 1244.5145396706587,
+    "zero_search_rate": 0.000249500998003992,
+    "filter_retention_baseline": 1412,
+    "efficiency_active_groups": 291
+  }
+}
+# E1-D D2 integrity check (step70 -> step120)
+
+- experiment dir: `/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu`
+- checkpoint: `/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1D-step60to120-4gpu/global_step_120`
+- tracker: 120 (expected 120)
+- data.pt present: True
+- steps 70..120 all present: True (missing: [])
+- 'Setting global step to 70': True
+- metrics parsed: 6164, non-finite: {}
+- full-state resume (lr_scheduler/RNG): True
+
+## error scan before the final-validation marker
+
+- cuda_oom: 0
+- nccl_error: 0
+- nccl_warn: 12
+- ray_worker_died: 0
+- wiki_search_error: 0
+- wiki_tool_exec_failed: 0
+- traceback: 0
+- cuda_error: 0
+
+## filter decoupling (E1-D_task.md §11 / §19 Q2)
+
+```json
+{
+  "available": true,
+  "candidate_groups": 83680,
+  "actual_retained": 1679,
+  "em_metric_keep_equals_actual_keep_mismatches": 0,
+  "filter_decoupling_confirmed": true,
+  "counterfactual_shaped_retained": 2113,
+  "would_be_revived_by_shaped_filter": 434,
+  "retained_all_correct": 0,
+  "retained_mixed": 1679,
+  "retained_all_wrong": 0,
+  "efficiency_active_excluded_by_em_filter": 434,
+  "efficiency_active_retained_actual": 86,
+  "efficiency_active_retained_shaped_filter": 520,
+  "mixed_efficiency_active_retained": 86,
+  "efficiency_supervision_density_actual": 0.05122096486003574,
+  "generation_batches": 523
+}
+```
+
+**VERDICT: PASS**
+
+linked step120_20260913_165834 -> /data01/wyy/Graph-Agent-Planning/E1-D/eval_results/step120_20260913_165834
+linked step70_20260913_024024 -> /data01/wyy/Graph-Agent-Planning/E1-D/eval_results/step70_20260913_024024
+linked gap_step60_reference_evaluations -> /data01/wyy/Graph-Agent-Planning/E1-B/evaluations/gap_step60_reference
+linked gap_step120_reference_evaluations -> /data01/wyy/Graph-Agent-Planning/E1-B/evaluations/gap_step120_reference
+linked gap_step180_reference_evaluations -> /data01/wyy/Graph-Agent-Planning/E1-B/evaluations/gap_step180_reference
+linked e10_step70_reference_evaluations -> /data01/wyy/Graph-Agent-Planning/E1-B/evaluations/e10_step70_reference
+linked e1a_step70_reference_evaluations -> /data01/wyy/Graph-Agent-Planning/E1-B/evaluations/e1a_step70_reference
+linked step120_20260911_235134 -> /data01/wyy/Graph-Agent-Planning/E1-B/evaluations/step120_20260911_235134
+{
+  "out": "/data01/wyy/Graph-Agent-Planning/E1-D/analysis",
+  "runs": [
+    "e10_step70_reference_evaluations",
+    "e1a_step70_reference_evaluations",
+    "gap_step120_reference_evaluations",
+    "gap_step180_reference_evaluations",
+    "gap_step60_reference_evaluations",
+    "step120_20260911_235134",
+    "step120_20260913_165834",
+    "step70_20260913_024024"
+  ]
+}
+e10_step70_reference_evaluations  macroEM=0.4006  rounds=1.6295580164449912  queries=2.12802484326478  pf=1.3058908132078864
+e1a_step70_reference_evaluations  macroEM=0.3984  rounds=1.597742231597039  queries=2.103630788461163  pf=1.3166271422634037
+gap_step120_reference_evaluations  macroEM=0.4110  rounds=1.853733325520986  queries=2.34331360715611  pf=1.2641050224942842
+gap_step180_reference_evaluations  macroEM=0.4167  rounds=1.9362512450928693  queries=2.436495380949591  pf=1.2583570376646696
+gap_step60_reference_evaluations  macroEM=0.4007  rounds=1.5889338098865255  queries=2.0922052303665946  pf=1.3167352959252658
+     step120_20260911_235134  macroEM=0.3947  rounds=1.2949747075252436  queries=1.8748266635417277  pf=1.4477708735521235
+     step120_20260913_165834  macroEM=0.4059  rounds=1.723364778031679  queries=2.2314603230405656  pf=1.294827625286158
+      step70_20260913_024024  macroEM=0.3976  rounds=1.6236987558836742  queries=2.1274389172086483  pf=1.3102423768569196
+{
+  "out": "/data01/wyy/Graph-Agent-Planning/E1-D/analysis/comparison_20260913_184112",
+  "runs": [
+    "e10_step70_reference_evaluations",
+    "e1a_step70_reference_evaluations",
+    "gap_step120_reference_evaluations",
+    "gap_step180_reference_evaluations",
+    "gap_step60_reference_evaluations",
+    "step120_20260911_235134",
+    "step120_20260913_165834",
+    "step70_20260913_024024"
+  ],
+  "roles": {
+    "gap_step120": "gap_step120_reference_evaluations",
+    "gap_step60": "gap_step60_reference_evaluations",
+    "gap_step180": "gap_step180_reference_evaluations",
+    "e1a_step70": "e1a_step70_reference_evaluations",
+    "e10_step70": "e10_step70_reference_evaluations",
+    "e1d_steps": {
+      "70": "step70_20260913_024024",
+      "120": "step120_20260913_165834"
+    }
+  }
+}
+E1-D step120 vs GAP step120: macroEM delta -0.0051 rounds delta -0.1304 (-7.03%)
+E1-D step120 vs E1-A step70: macroEM delta 0.0074 rounds delta 0.1256 (7.86%)
+# Paired per-prompt comparison (E1-D vs matched baseline)
+
+- paired prompts: **49,947**
+
+| metric | E1-D | baseline | delta |
+|---|---|---|---|
+| search rounds | 1.6256 | 1.5912 | +0.0344 (+2.16%) |
+| search queries | 2.1320 | 2.0970 | +0.0350 |
+| response chars | 5570.0 | 5484.5 | +85.5 |
+| EM | 0.4340 | 0.4358 | -0.0019 |
+
+- rounds **decreased** on 4,861 prompts (9.73%), **increased** on 5,830 (11.67%), unchanged on 39,256
+- sign test on round changes: p = 7.14e-21
+- EM up on 2,463 / down on 2,557 prompts (sign test p = 0.185)
+
+## per benchmark
+
+| benchmark | n | rounds E1-D | rounds base | Δrounds | decreased | increased | ΔEM |
+|---|---|---|---|---|---|---|---|
+| 2wikimultihopqa | 12,576 | 1.990 | 1.937 | +0.053 | 11.0% | 14.0% | -0.0076 |
+| bamboogle | 125 | 1.864 | 1.808 | +0.056 | 5.6% | 9.6% | -0.0080 |
+| hotpotqa | 7,404 | 1.634 | 1.604 | +0.030 | 8.3% | 10.2% | +0.0018 |
+| musique | 2,411 | 2.236 | 2.197 | +0.039 | 15.3% | 16.9% | -0.0120 |
+| nq | 3,610 | 1.287 | 1.263 | +0.024 | 7.6% | 9.2% | +0.0017 |
+| popqa | 12,509 | 1.525 | 1.492 | +0.033 | 11.1% | 12.9% | -0.0021 |
+| triviaqa | 11,312 | 1.301 | 1.281 | +0.020 | 7.3% | 8.4% | +0.0034 |
+# Paired per-prompt comparison (E1-D vs matched baseline)
+
+- paired prompts: **49,947**
+
+| metric | E1-D | baseline | delta |
+|---|---|---|---|
+| search rounds | 1.6256 | 1.5999 | +0.0257 (+1.61%) |
+| search queries | 2.1320 | 2.1085 | +0.0234 |
+| response chars | 5570.0 | 5526.5 | +43.5 |
+| EM | 0.4340 | 0.4328 | +0.0012 |
+
+- rounds **decreased** on 4,883 prompts (9.78%), **increased** on 5,624 (11.26%), unchanged on 39,440
+- sign test on round changes: p = 4.87e-13
+- EM up on 2,555 / down on 2,497 prompts (sign test p = 0.414)
+
+## per benchmark
+
+| benchmark | n | rounds E1-D | rounds base | Δrounds | decreased | increased | ΔEM |
+|---|---|---|---|---|---|---|---|
+| 2wikimultihopqa | 12,576 | 1.990 | 1.951 | +0.038 | 10.7% | 13.0% | +0.0011 |
+| bamboogle | 125 | 1.864 | 1.856 | +0.008 | 7.2% | 8.0% | -0.0080 |
+| hotpotqa | 7,404 | 1.634 | 1.615 | +0.019 | 8.7% | 10.0% | +0.0016 |
+| musique | 2,411 | 2.236 | 2.212 | +0.023 | 16.3% | 16.5% | -0.0050 |
+| nq | 3,610 | 1.287 | 1.264 | +0.023 | 7.2% | 8.8% | -0.0028 |
+| popqa | 12,509 | 1.525 | 1.499 | +0.026 | 11.0% | 12.3% | +0.0012 |
+| triviaqa | 11,312 | 1.301 | 1.284 | +0.018 | 7.5% | 8.7% | +0.0035 |
+# Paired per-prompt comparison (E1-D vs matched baseline)
+
+- paired prompts: **49,947**
+
+| metric | E1-D | baseline | delta |
+|---|---|---|---|
+| search rounds | 1.7270 | 1.8568 | -0.1298 (-6.99%) |
+| search queries | 2.2382 | 2.3473 | -0.1090 |
+| response chars | 5863.9 | 6091.2 | -227.3 |
+| EM | 0.4392 | 0.4450 | -0.0057 |
+
+- rounds **decreased** on 9,781 prompts (19.58%), **increased** on 5,718 (11.45%), unchanged on 34,448
+- sign test on round changes: p = 1.27e-233
+- EM up on 2,949 / down on 3,235 prompts (sign test p = 0.000276)
+
+## per benchmark
+
+| benchmark | n | rounds E1-D | rounds base | Δrounds | decreased | increased | ΔEM |
+|---|---|---|---|---|---|---|---|
+| 2wikimultihopqa | 12,576 | 2.155 | 2.330 | -0.175 | 23.5% | 13.5% | -0.0046 |
+| bamboogle | 125 | 2.064 | 1.960 | +0.104 | 9.6% | 15.2% | -0.0080 |
+| hotpotqa | 7,404 | 1.749 | 1.835 | -0.087 | 16.6% | 10.2% | -0.0076 |
+| musique | 2,411 | 2.428 | 2.627 | -0.199 | 28.1% | 16.5% | -0.0012 |
+| nq | 3,610 | 1.340 | 1.473 | -0.133 | 17.5% | 8.9% | -0.0019 |
+| popqa | 12,509 | 1.585 | 1.720 | -0.135 | 20.5% | 12.3% | -0.0049 |
+| triviaqa | 11,312 | 1.364 | 1.454 | -0.089 | 15.2% | 8.7% | -0.0088 |
+# Paired per-prompt comparison (E1-D vs matched baseline)
+
+- paired prompts: **49,947**
+
+| metric | E1-D | baseline | delta |
+|---|---|---|---|
+| search rounds | 1.7270 | 1.2972 | +0.4298 (+33.13%) |
+| search queries | 2.2382 | 1.8793 | +0.3590 |
+| response chars | 5863.9 | 5088.7 | +775.2 |
+| EM | 0.4392 | 0.4332 | +0.0061 |
+
+- rounds **decreased** on 1,345 prompts (2.69%), **increased** on 15,141 (30.31%), unchanged on 33,461
+- sign test on round changes: p = 0
+- EM up on 3,601 / down on 3,297 prompts (sign test p = 0.000252)
+
+## per benchmark
+
+| benchmark | n | rounds E1-D | rounds base | Δrounds | decreased | increased | ΔEM |
+|---|---|---|---|---|---|---|---|
+| 2wikimultihopqa | 12,576 | 2.155 | 1.533 | +0.622 | 2.6% | 39.6% | +0.0009 |
+| bamboogle | 125 | 2.064 | 1.680 | +0.384 | 5.6% | 34.4% | +0.0320 |
+| hotpotqa | 7,404 | 1.749 | 1.374 | +0.375 | 2.7% | 29.8% | +0.0132 |
+| musique | 2,411 | 2.428 | 1.807 | +0.622 | 5.1% | 44.0% | +0.0133 |
+| nq | 3,610 | 1.340 | 1.063 | +0.277 | 1.7% | 21.7% | +0.0061 |
+| popqa | 12,509 | 1.585 | 1.172 | +0.414 | 3.3% | 28.7% | +0.0049 |
+| triviaqa | 11,312 | 1.364 | 1.086 | +0.278 | 1.9% | 21.9% | +0.0067 |
+Traceback (most recent call last):
+  File "/data01/wyy/Graph-Agent-Planning/E1-D/scripts/e1d_build_summary.py", line 205, in <module>
+    raise SystemExit(main())
+  File "/data01/wyy/Graph-Agent-Planning/E1-D/scripts/e1d_build_summary.py", line 150, in main
+    "paired": pair_block("e1d70_vs_gap60")},
+  File "/data01/wyy/Graph-Agent-Planning/E1-D/scripts/e1d_build_summary.py", line 122, in pair_block
+    "rounds_baseline": o["rounds_baseline_mean"], "rounds_e1d": o["rounds_e1b_mean"],
+KeyError: 'rounds_e1b_mean'
+WARN build_summary
+=== E1-D analysis done -> /data01/wyy/Graph-Agent-Planning/E1-D/analysis ===

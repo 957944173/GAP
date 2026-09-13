@@ -1,0 +1,11 @@
+{
+  "e1d_baseline_kept_groups": 1679,
+  "e1d_shaped_kept_groups": 2113,
+  "e1d_newly_added_groups": 434,
+  "e1d_efficiency_active_groups": 520,
+  "e1d_efficiency_supervision_ratio": 0.24609559867486985,
+  "baseline_kept_groups_recomputed": 340,
+  "baseline_active_groups_recomputed": 95,
+  "expected_newly_added_from_baseline": 95,
+  "note": "retention simulated exactly like ray_trainer.py:1780-1781 (kept iff np.std(group reward) > 0 or |group| == 1) on the full pre-filter batch"
+}

@@ -1,0 +1,123 @@
+{
+  "manifest": "post",
+  "files": [
+    {
+      "path": "Agent/train/mhqa_agent/rl/run_gen_bs_supervisor.sh",
+      "bytes": 1716,
+      "sha256": "53b0a1a66a892d459c398d067313cc19b0732a32a0f1dcdbb636d2bbc723f73f"
+    },
+    {
+      "path": "Agent/train/mhqa_agent/rl/train_dapo_mhqa_agent_wiki.sh",
+      "bytes": 11665,
+      "sha256": "b5d5199acb40fe4087375bcb161d4dc0d3e3bd57926969ac50d0cf81c87982d3"
+    },
+    {
+      "path": "Agent/train/mhqa_agent/rl/gen_bs_supervisor.py",
+      "bytes": 19946,
+      "sha256": "9bd7924cf343ccead0143d196f7795fabe023411f06ce1020f132c9c898d6bee"
+    },
+    {
+      "path": "Agent/evaluation/mhqa_agent/eval_mhqa_agent_4gpu_common.sh",
+      "bytes": 12385,
+      "sha256": "846273934b71888ef41ea1fb8d41182f63a80ce50853825067200851150d1634"
+    },
+    {
+      "path": "Agent/evaluation/mhqa_agent/summarize_eval.py",
+      "bytes": 14854,
+      "sha256": "267e83456ee40e8093048d6f7ae782c940f10ecc8c9b3ead92a349740744aa7c"
+    },
+    {
+      "path": "verl/verl/workers/reward_manager/batch.py",
+      "bytes": 5337,
+      "sha256": "d97743d1089546e711a1d38747bf80b87e40dc0a36d7869ca5499189396c0d4a"
+    },
+    {
+      "path": "verl/verl/workers/reward_manager/__init__.py",
+      "bytes": 1238,
+      "sha256": "7088f7e82eb864fe4b015e7c095979190a84a28bcc7ad9d4d5f48425a9f48eac"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/mhqa_train.py",
+      "bytes": 6008,
+      "sha256": "489de015503b707d32c7ecb008586befcf6e5dc0129750ce46d7ed3ebaa91c33"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/mhqa_eval.py",
+      "bytes": 6064,
+      "sha256": "01caeda125325f75288d0f3575e863d04600909d3d890928675c2465a819084b"
+    },
+    {
+      "path": "verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py",
+      "bytes": 68648,
+      "sha256": "9dbe6d70541854c7c77daed2f1dc6e99c334849cc4a7e56e4bae755190ab5da3"
+    },
+    {
+      "path": "verl/verl/workers/rollout/schemas.py",
+      "bytes": 14864,
+      "sha256": "de231824fa1000b1b8516777d40f6a4e843465f4108ff7d95a63872248e9d645"
+    },
+    {
+      "path": "verl/verl/trainer/ppo/ray_trainer.py",
+      "bytes": 108763,
+      "sha256": "29aecd3dcabfaa8aeb6891f3e36b642a0ab68f28ed4edc98866bda2caca4ccfc"
+    },
+    {
+      "path": "verl/verl/trainer/ppo/reward.py",
+      "bytes": 5994,
+      "sha256": "0121d6609a9b6769496b979c02bbf795d9ee3a9b4eeec4b2dc5d4fb7675895e1"
+    },
+    {
+      "path": "verl/verl/trainer/ppo/core_algos.py",
+      "bytes": 28396,
+      "sha256": "127ef53e92e89093aae42f216abf96d1acbde995a62f658e1ceaa894d9ed6a56"
+    },
+    {
+      "path": "verl/verl/utils/checkpoint/fsdp_checkpoint_manager.py",
+      "bytes": 14388,
+      "sha256": "b0d45b23ebf76174513e4b2fb47195c674b5013a93f7dc198d6930fae59e42ed"
+    },
+    {
+      "path": "environment.sh",
+      "bytes": 2491,
+      "sha256": "50adf9d3a6072c7c756dee133dbccf800041e6aae0a4bac35603684da58232d7"
+    },
+    {
+      "path": "E1-0/runs/20260910_step60to70_e10/code/e10_reward_manager.py",
+      "bytes": 30100,
+      "sha256": "c425d2827f94394f87076d3c946cd4b7ebcca1016896c9131fe1430251cf391c"
+    },
+    {
+      "path": "E1-A/code/e1a_scorer.py",
+      "bytes": 5447,
+      "sha256": "90cd57b6fd2c7bea764c0bc46382daa409ec9d3ae12ec982146cc7483f297032"
+    },
+    {
+      "path": "E1-A/code/e1a_reward_manager.py",
+      "bytes": 14097,
+      "sha256": "a5171a96cdde4b67d9f468fcc76fdcc8a41caeb8bdad67bff3b07caf798384b2"
+    },
+    {
+      "path": "E1-B/code_changes/e1b_scorer.py",
+      "bytes": 5447,
+      "sha256": "5f09aa7867cd6cf6f217f5584dab4925b75bbd5de3d9b29aeccc023149308cab"
+    },
+    {
+      "path": "E1-B/code_changes/e1b_reward_manager.py",
+      "bytes": 14097,
+      "sha256": "421df70264ffbd16fe8335b830efdf40e897a16313dd71b7938ea5fc7fbe8e95"
+    },
+    {
+      "path": "E1-C/FINAL_REPORT.md",
+      "bytes": 32476,
+      "sha256": "e5c427ed27a77e4a050de4851b9582abec397a8ae96f79a543a16f2812364f8e"
+    },
+    {
+      "path": "E1-C/code/e1c_common.py",
+      "bytes": 16356,
+      "sha256": "0764c9e1d96d15d93679e65f8128cd40342ffa293c0f446c2ec84e21fbebf504"
+    }
+  ],
+  "changed_vs_pre": [],
+  "still_missing": [],
+  "note": "changed_vs_pre lists sha256 mismatches only; still_missing are paths that were already absent in the pre manifest"
+}

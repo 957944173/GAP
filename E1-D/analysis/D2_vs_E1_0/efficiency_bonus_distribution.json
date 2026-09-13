@@ -1,0 +1,14 @@
+{
+  "e1d_efficiency_hist": {
+    "0.0": 667399,
+    "0.33": 2,
+    "0.5": 23,
+    "0.67": 4,
+    "0.75": 2,
+    "0.8": 6,
+    "1.0": 2004
+  },
+  "e1d_efficiency_mean": 0.0030251155194391337,
+  "e1d_efficiency_nonzero_rate": 0.0030488169216061184,
+  "e1d_efficiency_active_groups": 520
+}

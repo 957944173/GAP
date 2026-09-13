@@ -1,0 +1,7 @@
++ echo '## git status --short'
+## git status --short
++ git -C /data01/wyy/Graph-Agent-Planning status --short
++ head -40
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
++ true

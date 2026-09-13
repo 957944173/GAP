@@ -1,0 +1,155 @@
+{
+  "experiment": "E1-D",
+  "source_files": {
+    "e1b_reward_code_copied": [
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/E1-B/code_changes/e1b_scorer.py",
+        "bytes": 5447,
+        "mtime": 1789096810.8672566,
+        "sha256": "5f09aa7867cd6cf6f217f5584dab4925b75bbd5de3d9b29aeccc023149308cab"
+      },
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/E1-B/code_changes/e1b_reward_manager.py",
+        "bytes": 14097,
+        "mtime": 1789096810.8672566,
+        "sha256": "421df70264ffbd16fe8335b830efdf40e897a16313dd71b7938ea5fc7fbe8e95"
+      },
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/E1-B/code_changes/e1b_cost.py",
+        "bytes": 5274,
+        "mtime": 1789096810.8632567,
+        "sha256": "1d795704c0ed16bc35868854003e45a1bbb7171be1ed332ce173a00bf20c72ba"
+      },
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/E1-B/code_changes/pythonpath_e1b/sitecustomize.py",
+        "bytes": 2376,
+        "mtime": 1789096833.5872219,
+        "sha256": "b5375439474525442d4decc67d0946b28194c30167892bceb76412b69fa13595"
+      }
+    ],
+    "e1a_code": [
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/E1-A/code/e1a_scorer.py",
+        "bytes": 5447,
+        "mtime": 1789065969.0350063,
+        "sha256": "90cd57b6fd2c7bea764c0bc46382daa409ec9d3ae12ec982146cc7483f297032"
+      },
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/E1-A/code/e1a_reward_manager.py",
+        "bytes": 14097,
+        "mtime": 1789065985.463038,
+        "sha256": "a5171a96cdde4b67d9f468fcc76fdcc8a41caeb8bdad67bff3b07caf798384b2"
+      }
+    ],
+    "original_batch_manager": [
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/verl/verl/workers/reward_manager/batch.py",
+        "bytes": 5337,
+        "mtime": 1782874343.8099792,
+        "sha256": "d97743d1089546e711a1d38747bf80b87e40dc0a36d7869ca5499189396c0d4a"
+      }
+    ],
+    "trainer": [
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/ppo/ray_trainer.py",
+        "bytes": 108763,
+        "mtime": 1783328692.4529805,
+        "sha256": "29aecd3dcabfaa8aeb6891f3e36b642a0ab68f28ed4edc98866bda2caca4ccfc"
+      }
+    ],
+    "advantage": [
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/ppo/core_algos.py",
+        "bytes": 28396,
+        "mtime": 1782874343.8029792,
+        "sha256": "127ef53e92e89093aae42f216abf96d1acbde995a62f658e1ceaa894d9ed6a56"
+      }
+    ],
+    "reward_plumbing": [
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/verl/verl/trainer/ppo/reward.py",
+        "bytes": 5994,
+        "mtime": 1782874343.8039792,
+        "sha256": "0121d6609a9b6769496b979c02bbf795d9ee3a9b4eeec4b2dc5d4fb7675895e1"
+      }
+    ],
+    "rl_launcher_chain": [
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/Agent/train/mhqa_agent/rl/train_dapo_mhqa_agent_wiki.sh",
+        "bytes": 11665,
+        "mtime": 1787711214.581472,
+        "sha256": "b5d5199acb40fe4087375bcb161d4dc0d3e3bd57926969ac50d0cf81c87982d3"
+      },
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/Agent/train/mhqa_agent/rl/run_gen_bs_supervisor.sh",
+        "bytes": 1716,
+        "mtime": 1788366779.3406346,
+        "sha256": "53b0a1a66a892d459c398d067313cc19b0732a32a0f1dcdbb636d2bbc723f73f"
+      }
+    ],
+    "evaluation_launcher": [
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/Agent/evaluation/mhqa_agent/eval_mhqa_agent_4gpu_common.sh",
+        "bytes": 12385,
+        "mtime": 1787689710.9865487,
+        "sha256": "846273934b71888ef41ea1fb8d41182f63a80ce50853825067200851150d1634"
+      },
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/Agent/evaluation/mhqa_agent/summarize_eval.py",
+        "bytes": 14854,
+        "mtime": 1787689710.9865487,
+        "sha256": "267e83456ee40e8093048d6f7ae782c940f10ecc8c9b3ead92a349740744aa7c"
+      }
+    ],
+    "environment": [
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/environment.sh",
+        "bytes": 2491,
+        "mtime": 1782997718.5397902,
+        "sha256": "50adf9d3a6072c7c756dee133dbccf800041e6aae0a4bac35603684da58232d7"
+      }
+    ],
+    "rl_dataset": [
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet",
+        "bytes": 61978764,
+        "mtime": 1782977886.9508812,
+        "sha256": "4d75aecf3ffbc5b8990a78a4cc9267c75e1af386e57ef44e1a15994aad3f8a3e"
+      }
+    ],
+    "tool_config": [
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml",
+        "bytes": 502,
+        "mtime": 1782874343.801979,
+        "sha256": "9e7c6941955cb02f236eb82b39874395891041f373f549c24629117254f67253"
+      }
+    ],
+    "start_checkpoint": [
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/data.pt",
+        "bytes": 1492,
+        "mtime": 1787516076.753681,
+        "sha256": "02e63b9a5b786b8c13ff0e1a20c683ac18315cf685ea2eef472b71d033b29961"
+      },
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_0.pt",
+        "bytes": 3397345082,
+        "mtime": 1787516027.2493598,
+        "sha256": "21629d5dce5e398135ca7c2ad8a458d04489a5ef72a767bc6af03c3613956779"
+      },
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/optim_world_size_4_rank_0.pt",
+        "bytes": 6171911046,
+        "mtime": 1787516076.4376788,
+        "sha256": "96a430aa769489dc089328515184d299439bd295368de1d162bb939dab715825"
+      },
+      {
+        "absolute_path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/extra_state_world_size_4_rank_0.pt",
+        "bytes": 14632,
+        "mtime": 1787516076.441679,
+        "sha256": "db38c7532c70433b9c977ad9067737c578f43622490b94629ead471b637a3e06"
+      }
+    ]
+  }
+}

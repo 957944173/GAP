@@ -1,0 +1,14 @@
+{
+  "all_pass": true,
+  "tests": {
+    "TEST2_lambda": true,
+    "TEST1_reward_equivalence_with_E1B": true,
+    "TEST7_no_nan_inf": true,
+    "TEST3_filter_baseline_equivalence": true,
+    "TEST4_no_all_correct_revival": true,
+    "TEST5_mixed_group_shaping_preserved": true,
+    "TEST6_validation_unchanged": true,
+    "TEST7_advantage_finite": true
+  }
+}
+wrote /data01/wyy/Graph-Agent-Planning/E1-D/analysis/preflight_selftest.md and /data01/wyy/Graph-Agent-Planning/E1-D/analysis/preflight_selftest.json

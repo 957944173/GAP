@@ -1,0 +1,16 @@
+{
+  "experiment": "E1-D",
+  "phase": "D1",
+  "reward_name": "success-conditioned group-relative efficiency reward (identical to E1-B)",
+  "train_reward_manager": "e1d_batch_shaped",
+  "train_scorer": "compute_score_em_efficiency_batch",
+  "train_scorer_path": "/data01/wyy/Graph-Agent-Planning/E1-D/code/e1d_scorer.py",
+  "formula": "R_i = A_i * (1 + 0.05 * E_i); wrong rollout -> 0",
+  "lambda": 0.05,
+  "cost": "logical_search_batches",
+  "filter_metric": "em",
+  "filter_metric_note": "algorithm.filter_groups.metric=em -> std over the ORIGINAL EM published in reward_extra_info; this is the ONLY change vs E1-B",
+  "token_level_rewards": "shaped reward (feeds GRPO advantage)",
+  "acc_metric": "data.batch['acc'] restored to original EM",
+  "val_scorer": "/data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/mhqa_eval.py:compute_score_em_batch (UNCHANGED)"
+}

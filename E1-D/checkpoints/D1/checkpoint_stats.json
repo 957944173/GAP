@@ -1,0 +1,47 @@
+{
+  "run_dir": "/data01/wyy/Graph-Agent-Planning/E1-D/runs/D1_20260912_235330",
+  "steps_observed": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70
+  ],
+  "checkpoints": [
+    {
+      "checkpoint": "global_step_80",
+      "step": 80,
+      "window_10step": null,
+      "cumulative": null
+    },
+    {
+      "checkpoint": "global_step_90",
+      "step": 90,
+      "window_10step": null,
+      "cumulative": null
+    },
+    {
+      "checkpoint": "global_step_100",
+      "step": 100,
+      "window_10step": null,
+      "cumulative": null
+    },
+    {
+      "checkpoint": "global_step_110",
+      "step": 110,
+      "window_10step": null,
+      "cumulative": null
+    },
+    {
+      "checkpoint": "global_step_120",
+      "step": 120,
+      "window_10step": null,
+      "cumulative": null
+    }
+  ]
+}
