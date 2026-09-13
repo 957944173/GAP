@@ -1,0 +1,62 @@
+[
+  {
+    "label": "E1-D D2 candidate stream (rollouts)",
+    "path": "E1-D/runs/D2_20260913_041846/diagnostics/rollouts_pid1249393.jsonl",
+    "bytes": 361966409,
+    "sha256": "90528cb98af497aaaed7364b0b1a9b2caf269f43cf22d0c859c0a3406325adb4"
+  },
+  {
+    "label": "E1-D D2 generation-batch records",
+    "path": "E1-D/runs/D2_20260913_041846/diagnostics/calls_pid1249393.jsonl",
+    "bytes": 423611,
+    "sha256": "fd7ac0f88b86896f907f71a45fa668840f6ebf31dd618d8265695c5735a84818"
+  },
+  {
+    "label": "E1-D D2 group records (cross-check)",
+    "path": "E1-D/runs/D2_20260913_041846/diagnostics/groups_pid1249393.jsonl",
+    "bytes": 57869462,
+    "sha256": "86f534a67493bcdab75147cedda506d4e4f8f4cdb964d1428240634fcc9a07e3"
+  },
+  {
+    "label": "E1-D D2 resolved config (target B)",
+    "path": "E1-D/configs/resolved_step70_to120.json",
+    "bytes": 11012,
+    "sha256": "730cb32c1dd01947c43a723506405abc3a9065f76ede900c24590e54df60baa2"
+  },
+  {
+    "label": "E1-C summary (unrestricted comparison)",
+    "path": "E1-C/results/summary.json",
+    "bytes": 24468,
+    "sha256": "a6d266db530a454168972257c5139bdaa6070d171bb15f013a40b3c65fada433"
+  },
+  {
+    "label": "E1-D summary (baseline cross-check)",
+    "path": "E1-D/analysis/summary.json",
+    "bytes": 11417,
+    "sha256": "6fa4fcff036b0587aa6e327156dabafb5009bf18c06f767ba63fa7597fd78bdd"
+  },
+  {
+    "label": "E1-C common code copied",
+    "path": "E1-C/code/e1c_common.py",
+    "bytes": 16356,
+    "sha256": "0764c9e1d96d15d93679e65f8128cd40342ffa293c0f446c2ec84e21fbebf504"
+  },
+  {
+    "label": "E1-C replay code copied",
+    "path": "E1-C/code/e1c_run_all.py",
+    "bytes": 40612,
+    "sha256": "5d938aa967c2a3280ea45c91dde1830b50728ebb961c9138901dc1f40ec0c5f8"
+  },
+  {
+    "label": "trainer filter source",
+    "path": "verl/verl/trainer/ppo/ray_trainer.py",
+    "bytes": 108763,
+    "sha256": "29aecd3dcabfaa8aeb6891f3e36b642a0ab68f28ed4edc98866bda2caca4ccfc"
+  },
+  {
+    "label": "GRPO advantage source",
+    "path": "verl/verl/trainer/ppo/core_algos.py",
+    "bytes": 28396,
+    "sha256": "127ef53e92e89093aae42f216abf96d1acbde995a62f658e1ceaa894d9ed6a56"
+  }
+]

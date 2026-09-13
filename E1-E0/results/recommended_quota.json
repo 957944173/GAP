@@ -1,0 +1,36 @@
+{
+  "recommended_q": 2,
+  "lambda": 0.05,
+  "target_optimizer_batch_size": 32,
+  "full_quota_rate_by_q": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 0.94
+  },
+  "actual_replacement_rate_by_q": {
+    "0": 0.0,
+    "1": 0.03125,
+    "2": 0.0625,
+    "3": 0.09375,
+    "4": 0.123125
+  },
+  "mean_efficiency_groups_per_step_by_q": {
+    "0": 0.0,
+    "1": 1.0,
+    "2": 2.0,
+    "3": 3.0,
+    "4": 3.94
+  },
+  "reason": [
+    "q=2: full-quota rate 1.000, replacement fraction 0.0625, difficulty-bias p=0.9433229549979293, source-bias p=0.920460092616408"
+  ],
+  "mixture_rule": {
+    "mixed_group_reward": "R_i = A_i (original EM only)",
+    "efficiency_group_reward": "R_i = 1 + 0.05 * E_i",
+    "generation_stopping": "only mixed-correctness groups count toward data.train_batch_size",
+    "selection": "stream order only (no difficulty/reward/source/random selection)",
+    "replaced_mixed_groups": "the last m mixed groups of the q=0 batch"
+  }
+}

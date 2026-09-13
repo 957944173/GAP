@@ -1,0 +1,36 @@
+{
+  "experiment": "E1-E0",
+  "kind": "offline quota replay / batch-composition diagnosis (no training)",
+  "candidate_stream": {
+    "source": "/data01/wyy/Graph-Agent-Planning/E1-D/runs/D2_20260913_041846/diagnostics/rollouts_pid1249393.jsonl",
+    "rollouts": 669440,
+    "groups": 83680,
+    "generation_batches": 523,
+    "optimizer_steps": 50
+  },
+  "target_optimizer_batch_size": 32,
+  "target_source": "/data01/wyy/Graph-Agent-Planning/E1-D/configs/resolved_step70_to120.json",
+  "quotas": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "lambda": 0.05,
+  "definitions": {
+    "mixed_correctness_group": "1 <= k <= 7 correct rollouts out of 8",
+    "efficiency_group": "k == 8 AND max(logical_search_batches) > min(logical_search_batches) over the correct rollouts",
+    "cost": "logical_search_batches (unchanged from E1-A/E1-B/E1-C/E1-D)",
+    "stopping_rule": "consume generation batches in stream order, count ONLY mixed groups, stop at data.train_batch_size",
+    "efficiency_cache": "all-correct efficiency-variable groups seen inside the same stopping prefix, in stream order",
+    "batch_construction": "mixed[:B-m] + efficiency_cache[:m], m = min(q, |cache|)",
+    "replaced_mixed_groups": "the last m mixed groups of the q=0 batch",
+    "selection": "stream order only (no difficulty/reward/source/random selection)"
+  },
+  "reward_semantics_for_E1_E": {
+    "mixed_group": "R_i = A_i (original EM only, no shaping)",
+    "efficiency_group": "R_i = 1 + lambda * E_i with lambda = 0.05, E_i = (Cmax - C_i)/(Cmax - Cmin)"
+  },
+  "recommended_q": 2
+}

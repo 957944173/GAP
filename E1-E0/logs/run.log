@@ -1,0 +1,42 @@
+[e1e] === E1-E0 run 2026-09-14T00:40:37.279271 ===
+[e1e] target optimizer batch B = 32 (data.train_batch_size, source /data01/wyy/Graph-Agent-Planning/E1-D/configs/resolved_step70_to120.json); gen_batch_size=160, n=8, filter_groups.metric=em
+[e1e] candidate stream: 669,440 rollouts, 83,680 groups, 523 generation batches, 50 optimizer steps
+[e1e] group classes: mixed=1679 all-correct=37926 all-wrong=44075 efficiency-variable(k=8,cost-varying)=434
+[e1e] replay: 50 optimizer steps, 523 generation batches consumed (q=0)
+[e1e] === E1-E0 run 2026-09-14T00:43:58.471934 ===
+[e1e] target optimizer batch B = 32 (data.train_batch_size, source /data01/wyy/Graph-Agent-Planning/E1-D/configs/resolved_step70_to120.json); gen_batch_size=160, n=8, filter_groups.metric=em
+[e1e] candidate stream: 669,440 rollouts, 83,680 groups, 523 generation batches, 50 optimizer steps
+[e1e] group classes: mixed=1679 all-correct=37926 all-wrong=44075 efficiency-variable(k=8,cost-varying)=434
+[e1e] replay: 50 optimizer steps, 523 generation batches consumed (q=0)
+[e1e] === E1-E0 run 2026-09-14T00:48:23.055890 ===
+[e1e] target optimizer batch B = 32 (data.train_batch_size, source /data01/wyy/Graph-Agent-Planning/E1-D/configs/resolved_step70_to120.json); gen_batch_size=160, n=8, filter_groups.metric=em
+[e1e] candidate stream: 669,440 rollouts, 83,680 groups, 523 generation batches, 50 optimizer steps
+[e1e] group classes: mixed=1679 all-correct=37926 all-wrong=44075 efficiency-variable(k=8,cost-varying)=434
+[e1e] replay: 50 optimizer steps, 523 generation batches consumed (q=0)
+[e1e] --- availability ---
+[e1e]   q=0: full_quota_rate=1.0 replacement_rate=0.0 mean_inserted=0.0 total_inserted=0
+[e1e]   q=1: full_quota_rate=1.0 replacement_rate=0.03125 mean_inserted=1.0 total_inserted=50
+[e1e]   q=2: full_quota_rate=1.0 replacement_rate=0.0625 mean_inserted=2.0 total_inserted=100
+[e1e]   q=3: full_quota_rate=1.0 replacement_rate=0.09375 mean_inserted=3.0 total_inserted=150
+[e1e]   q=4: full_quota_rate=0.94 replacement_rate=0.123125 mean_inserted=3.94 total_inserted=197
+[e1e] --- sanity ---
+[e1e]   all_groups_n8: True
+[e1e]   group_size_histogram: {8: 83680}
+[e1e]   q0_equals_baseline_replay: True
+[e1e]   generation_stopping_invariant_across_q: True
+[e1e]   optimizer_batch_size_all_q_equal: True
+[e1e]   actual_inserted_le_q: True
+[e1e]   inserted_groups_all_k8_and_efficiency_variable: True
+[e1e]   mixed_groups_all_1le_k_le_7: True
+[e1e]   batches_with_duplicate_group_id: 0
+[e1e]   batches_with_duplicate_uid: 0
+[e1e]   malformed_records_dropped: 0
+[e1e]   rollout_row_accounting: {'rollouts': 669440, 'in_groups': 669440}
+[e1e]   total_replacement_monotone_in_q: True
+[e1e]   total_replacement_by_q: {0: 0, 1: 50, 2: 100, 3: 150, 4: 197}
+[e1e]   E1_D_D2_observed_generation_batches: 523
+[e1e]   q0_replay_generation_batches: 523
+[e1e]   q0_replay_matches_observed: True
+[e1e] --- recommended q = 2 ---
+[e1e]   q=2: full-quota rate 1.000, replacement fraction 0.0625, difficulty-bias p=0.9433229549979293, source-bias p=0.920460092616408
+[e1e] summary -> /data01/wyy/Graph-Agent-Planning/E1-E0/results/summary.json

@@ -1,0 +1,11 @@
+quantity,value
+definition,"m = min(32, cached efficiency groups of that step) - i.e. admit every cached efficiency group, the E1-B-style unrestricted admission"
+efficiency_groups_cached_total,403
+mixed_groups_available_total,1600
+efficiency_groups_inserted_total,403
+optimizer_groups_total,1600
+efficiency_group_fraction,0.251875
+replacement_fraction,0.251875
+mean_per_step,8.06
+cache_mean_per_step,8.06
+note,"E1-B's own run (different policy) had 291 efficiency-active groups retained over 50 steps = 5.82/step = 18.2 % of a 32-group batch (E1-C on the E1-B pool). The two pools are different policies, so the comparison is indicative only."

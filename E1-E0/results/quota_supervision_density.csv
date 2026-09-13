@@ -1,0 +1,6 @@
+q,total_optimizer_groups,actual_efficiency_groups,actual_efficiency_group_fraction,theoretical_upper_bound_fraction,supervision_multiple_vs_q0
+0,1600,0,0.0,0.0,
+1,1600,50,0.03125,0.03125,
+2,1600,100,0.0625,0.0625,
+3,1600,150,0.09375,0.09375,
+4,1600,197,0.123125,0.125,

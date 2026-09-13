@@ -1,0 +1,5 @@
+q,trajectories_checked,groups_checked,reward_nan,reward_inf,advantage_nan,advantage_inf,advantage_nan_or_inf,efficiency_group_std_gt0_rate,efficiency_ranking_correct_rate,advantage_mean_abs,advantage_max_abs,mixed_reward_equals_EM,efficiency_reward_formula
+1,12800,50,0,0,0,0,0,1.0,1.0,0.7723302990704394,2.474866734172715,True,1 + 0.05 * E
+2,12800,100,0,0,0,0,0,1.0,1.0,0.772482022055485,2.474866734172715,True,1 + 0.05 * E
+3,12800,150,0,0,0,0,0,1.0,1.0,0.7739902901293446,2.474866734172715,True,1 + 0.05 * E
+4,12800,197,0,0,0,0,0,1.0,1.0,0.7758265993036639,2.474866734172715,True,1 + 0.05 * E
