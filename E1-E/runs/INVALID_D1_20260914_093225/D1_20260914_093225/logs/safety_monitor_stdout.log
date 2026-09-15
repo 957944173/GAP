@@ -1,0 +1,31 @@
+E1-E sitecustomize: failed to import e1e_reward_manager: No module named 'verl.protocol'
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ModuleNotFoundError: No module named 'verl.protocol'
+[monitor] cycle=1 step=None steps_agg=0 alerts=0
+[monitor] cycle=2 step=None steps_agg=0 alerts=0
+[monitor] cycle=3 step=None steps_agg=0 alerts=0
+[monitor] cycle=4 step=None steps_agg=0 alerts=0
+[monitor] cycle=5 step=None steps_agg=1 alerts=0
+[monitor] cycle=6 step=None steps_agg=1 alerts=0
+[monitor] cycle=7 step=61 steps_agg=2 alerts=0
+[monitor] cycle=8 step=61 steps_agg=2 alerts=1
+[monitor] cycle=9 step=61 steps_agg=2 alerts=1
+[monitor] cycle=10 step=62 steps_agg=3 alerts=1
+[monitor] cycle=11 step=62 steps_agg=3 alerts=1
+[monitor] cycle=12 step=62 steps_agg=3 alerts=1
+[monitor] cycle=13 step=63 steps_agg=4 alerts=1
+[monitor] cycle=14 step=63 steps_agg=4 alerts=1
+[monitor] cycle=15 step=64 steps_agg=5 alerts=1
+[monitor] cycle=16 step=64 steps_agg=5 alerts=1
+[monitor] cycle=17 step=64 steps_agg=5 alerts=1
+[monitor] cycle=18 step=64 steps_agg=5 alerts=1
+[monitor] cycle=19 step=65 steps_agg=5 alerts=0
+[monitor] cycle=20 step=65 steps_agg=6 alerts=2
+[monitor] cycle=21 step=65 steps_agg=6 alerts=0
+[monitor] cycle=22 step=65 steps_agg=6 alerts=0
+[monitor] cycle=23 step=66 steps_agg=7 alerts=1
+[monitor] cycle=24 step=66 steps_agg=7 alerts=1
+[monitor] cycle=25 step=67 steps_agg=8 alerts=1
+[monitor] cycle=26 step=67 steps_agg=8 alerts=1
+[monitor] cycle=27 step=67 steps_agg=8 alerts=1
+[monitor] cycle=28 step=68 steps_agg=9 alerts=1

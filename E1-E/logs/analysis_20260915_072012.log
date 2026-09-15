@@ -1,0 +1,1474 @@
+=== E1-E analysis 20260915_072012 ===
+extracted 550 config lines -> /data01/wyy/Graph-Agent-Planning/E1-E/configs/resolved_D1.json
+extracted 551 config lines -> /data01/wyy/Graph-Agent-Planning/E1-E/configs/resolved_D2.json
+{
+  "70": {
+    "exists": false,
+    "merged_hf": null,
+    "has_stats": false
+  },
+  "80": {
+    "exists": false,
+    "merged_hf": null,
+    "has_stats": false
+  },
+  "90": {
+    "exists": false,
+    "merged_hf": null,
+    "has_stats": false
+  },
+  "100": {
+    "exists": false,
+    "merged_hf": null,
+    "has_stats": false
+  },
+  "110": {
+    "exists": false,
+    "merged_hf": null,
+    "has_stats": false
+  },
+  "120": {
+    "exists": true,
+    "merged_hf": true,
+    "has_stats": false
+  }
+}
+--- D1 run: /data01/wyy/Graph-Agent-Planning/E1-E/runs/D1_20260914_115858
+{
+  "out_dir": "/data01/wyy/Graph-Agent-Planning/E1-E/diagnostics/checkpoint_stats_D1",
+  "steps_observed": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70
+  ],
+  "checkpoints": [
+    "global_step_80",
+    "global_step_90",
+    "global_step_100",
+    "global_step_110",
+    "global_step_120"
+  ]
+}
+{
+  "e1d": {
+    "n_rollouts": 8960,
+    "n_groups": 1119,
+    "n_calls": 10,
+    "steps": [
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+    ],
+    "em_rate": 0.4734375,
+    "reward_mean": 0.47391183035714335,
+    "efficiency_mean": 0.009486607142857142,
+    "efficiency_nonzero_rate": 0.009709821428571429,
+    "rounds_mean": 1.5487723214285714,
+    "queries_mean": 2.1261160714285716,
+    "parallel_factor_mean": 1.5047759885204137,
+    "turns_mean": 2.5482142857142858,
+    "tokens_mean": 1349.3299107142857,
+    "zero_search_rate": 0.0,
+    "filter_retention_baseline": 300,
+    "filter_retention_shaped": null,
+    "filter_newly_added": null,
+    "efficiency_active_groups": 20,
+    "efficiency_supervision_ratio": 0.0625
+  },
+  "baseline": {
+    "n_rollouts": 147200,
+    "n_groups": 18400,
+    "em_rate": 0.4539130434782609,
+    "rounds_mean": 1.440733695652174,
+    "queries_mean": 1.9897622282608696,
+    "parallel_factor_mean": 1.5091132084627592,
+    "turns_mean": 2.4405910326086957,
+    "tokens_mean": 1277.7553192934784,
+    "zero_search_rate": 0.00016304347826086958,
+    "filter_retention_baseline": 340,
+    "efficiency_active_groups": 95
+  }
+}
+{
+  "e1d": {
+    "n_rollouts": 8960,
+    "n_groups": 1119,
+    "n_calls": 10,
+    "steps": [
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+    ],
+    "em_rate": 0.4734375,
+    "reward_mean": 0.47391183035714335,
+    "efficiency_mean": 0.009486607142857142,
+    "efficiency_nonzero_rate": 0.009709821428571429,
+    "rounds_mean": 1.5487723214285714,
+    "queries_mean": 2.1261160714285716,
+    "parallel_factor_mean": 1.5047759885204137,
+    "turns_mean": 2.5482142857142858,
+    "tokens_mean": 1349.3299107142857,
+    "zero_search_rate": 0.0,
+    "filter_retention_baseline": 300,
+    "filter_retention_shaped": null,
+    "filter_newly_added": null,
+    "efficiency_active_groups": 20,
+    "efficiency_supervision_ratio": 0.0625
+  },
+  "baseline": {
+    "n_rollouts": 641280,
+    "n_groups": 80160,
+    "em_rate": 0.45707959081836325,
+    "rounds_mean": 1.3302223677644711,
+    "queries_mean": 1.9179937000998004,
+    "parallel_factor_mean": 1.560184638164159,
+    "turns_mean": 2.3301849426147703,
+    "tokens_mean": 1244.5145396706587,
+    "zero_search_rate": 0.000249500998003992,
+    "filter_retention_baseline": 1412,
+    "efficiency_active_groups": 291
+  }
+}
+# E1-E D1 integrity check (step60 -> step70)
+
+- experiment dir: `/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu`
+- checkpoint: `/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu/global_step_70`
+- tracker: 120 (expected 70)
+- data.pt present: True
+- steps 60..70 all present: True (missing: [])
+- 'Setting global step to 60': True
+- metrics parsed: 1240, non-finite: {}
+- full-state resume (lr_scheduler/RNG): True
+
+## error scan before the final-validation marker
+
+- cuda_oom: 0
+- nccl_error: 0
+- nccl_warn: 12
+- ray_worker_died: 0
+- wiki_search_error: 0
+- wiki_tool_exec_failed: 0
+- traceback: 0
+- cuda_error: 0
+
+## runtime quota semantics (E1-E_task.md section 11/12)
+
+```json
+{
+  "available": true,
+  "n_step_records": 10,
+  "n_generation_calls": 121,
+  "n_group_records": 320,
+  "n_rollout_records": 8960,
+  "quota_error_lines": 0,
+  "quota_error_examples": [],
+  "steps_covered": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70
+  ],
+  "steps_missing": [],
+  "all_steps_recorded": true,
+  "steps_with_wrong_batch_size": [],
+  "batch_size_definition": "step-level groups = mixed_kept_cum + quota_actual (must be 32); `stopping_call_rollouts` is only that call's materialised rollouts",
+  "calls_with_quota_actual_gt_2": 0,
+  "calls_with_wrong_quota_target": 0,
+  "steps_without_exactly_one_stopping_call": [],
+  "calls_where_stopping_disagrees_with_mixed_count": 0,
+  "non_stopping_calls_with_insertions": 0,
+  "quota_formula_holds_all_steps": true,
+  "quota_formula_violations": [],
+  "steps_short_of_design_quota": [],
+  "n_steps_short_of_design_quota": 0,
+  "efficiency_groups": 20,
+  "mixed_groups": 300,
+  "efficiency_groups_with_k_not_8": 0,
+  "efficiency_groups_without_cost_variation": 0,
+  "efficiency_groups_reward_out_of_1_1.05": 0,
+  "efficiency_groups_em_mean_not_1": 0,
+  "mixed_groups_reward_out_of_0_1": 0,
+  "mixed_groups_reward_mean_not_equal_em": 0,
+  "rollouts_mixed_reward_not_equal_em": 0,
+  "rollouts_wrong_with_nonzero_reward": 0,
+  "rollouts_efficiency_reward_or_em_wrong": 0,
+  "rollouts_published_metric_inconsistent": 0,
+  "rollouts_reward_tensor_mismatch": 0,
+  "wrong_rollouts": 1182,
+  "zero_search_rollouts": 0,
+  "zero_search_share": 0.0,
+  "malformed_metadata_rollouts": 0,
+  "malformed_metadata_share": 0.0,
+  "rollouts_skipped_neutralised_metric": 6400,
+  "rollouts_checked_for_metric_consistency": 2560,
+  "advantage_nan_total": 0,
+  "advantage_inf_total": 0,
+  "advantage_nan_total_manager_field": 0,
+  "advantage_nan_total_recomputed": 0,
+  "advantage_inf_total_recomputed": 0,
+  "advantage_recomputed_per_step": {
+    "61": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": 5.204170427930421e-18,
+      "std": 0.9372424642932687,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "62": {
+      "n": 1536,
+      "groups": 192,
+      "nan": 0,
+      "inf": 0,
+      "mean": -2.8912057932946786e-18,
+      "std": 0.3820038102751492,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "63": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": -6.765421556309548e-17,
+      "std": 0.9372417363323738,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "64": {
+      "n": 1536,
+      "groups": 191,
+      "nan": 0,
+      "inf": 0,
+      "mean": 1.3877787807814457e-17,
+      "std": 0.3945861195366121,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "65": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": 1.1796119636642288e-16,
+      "std": 0.9372423253232471,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "66": {
+      "n": 1536,
+      "groups": 192,
+      "nan": 0,
+      "inf": 0,
+      "mean": -4.669297356170906e-17,
+      "std": 0.38200373605179877,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "67": {
+      "n": 1536,
+      "groups": 192,
+      "nan": 0,
+      "inf": 0,
+      "mean": 2.6020852139652106e-17,
+      "std": 0.38792608365169307,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "68": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": 1.1102230246251565e-16,
+      "std": 0.9372422653238279,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "69": {
+      "n": 1536,
+      "groups": 192,
+      "nan": 0,
+      "inf": 0,
+      "mean": -4.85722573273506e-17,
+      "std": 0.38200349923690646,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "70": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": -1.717376241217039e-16,
+      "std": 0.9372417545745501,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    }
+  },
+  "manager_calls_served": 121,
+  "manager_calls_recorded": 121,
+  "unrecorded_calls": [],
+  "n_unrecorded_calls": 0,
+  "oversized_returned_batches": [],
+  "n_oversized_returned_batches": 0,
+  "kept_nothing_calls": 5,
+  "all_manager_calls_recorded": true,
+  "steps_with_generation_batch_gaps": {},
+  "calls_returning_unexpected_rollout_counts": [],
+  "n_calls_returning_unexpected_rollout_counts": 0,
+  "derived_inserted_ids_per_step": {
+    "61": [
+      "61:158926",
+      "61:38894"
+    ],
+    "62": [
+      "62:87334",
+      "62:81395"
+    ],
+    "63": [
+      "63:151066",
+      "63:44677"
+    ],
+    "64": [
+      "64:1502",
+      "64:142018"
+    ],
+    "65": [
+      "65:111687",
+      "65:162331"
+    ],
+    "66": [
+      "66:102841",
+      "66:116730"
+    ],
+    "67": [
+      "67:122020",
+      "67:135360"
+    ],
+    "68": [
+      "68:93312",
+      "68:165073"
+    ],
+    "69": [
+      "69:118891",
+      "69:145928"
+    ],
+    "70": [
+      "70:93945",
+      "70:11671"
+    ]
+  },
+  "steps_with_inconsistent_inserted_ids": [],
+  "id_list_note": "inserted ids are re-derived from quota_groups records of the stopping call; the D1 manager field repeated one id due to a leaked loop variable (fixed for D2)",
+  "quota_fill_rate": 1.0,
+  "steps_full_quota": 10,
+  "steps_used": 10,
+  "total_inserted_efficiency_groups": 20,
+  "inserted_ids_distinct_every_step": true,
+  "total_mixed_dropped": 31,
+  "total_displaced_mixed_groups": 30,
+  "total_eff_shortfall": 0,
+  "steps_needing_injection": 10,
+  "total_generation_batches": 121,
+  "mean_generation_batches_per_step": 12.1,
+  "quota_semantics_ok": true
+}
+```
+
+## trainer log vs manager diagnostics
+
+```json
+{
+  "available": true,
+  "steps_cross_checked": 10,
+  "score_max_mismatches": 0,
+  "examples": [],
+  "log_score_max_consistent_with_quota": true
+}
+```
+
+### per optimizer step
+
+| step | gen batches | quota | mixed seen | eff seen | cache | shortfall | inserted | displaced | batch |
+|---|---|---|---|---|---|---|---|---|---|
+| 61 | 12 | 2 | 33 | 7 | 2 | 0 | 2 | 3 | 32 |
+| 62 | 11 | 2 | 33 | 2 | 2 | 0 | 2 | 3 | 32 |
+| 63 | 10 | 2 | 32 | 3 | 2 | 0 | 2 | 2 | 32 |
+| 64 | 12 | 2 | 33 | 10 | 2 | 0 | 2 | 3 | 32 |
+| 65 | 12 | 2 | 33 | 12 | 2 | 0 | 2 | 3 | 32 |
+| 66 | 14 | 2 | 33 | 11 | 2 | 0 | 2 | 2 | 32 |
+| 67 | 14 | 2 | 34 | 5 | 2 | 0 | 2 | 4 | 32 |
+| 68 | 9 | 2 | 33 | 5 | 2 | 0 | 2 | 3 | 32 |
+| 69 | 14 | 2 | 32 | 9 | 2 | 0 | 2 | 2 | 32 |
+| 70 | 13 | 2 | 35 | 11 | 2 | 0 | 2 | 5 | 32 |
+
+**VERDICT: PASS**
+
+--- D2 run: /data01/wyy/Graph-Agent-Planning/E1-E/runs/D2_20260914_165545
+{
+  "out_dir": "/data01/wyy/Graph-Agent-Planning/E1-E/diagnostics/checkpoint_stats_D2",
+  "steps_observed": [
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "checkpoints": [
+    "global_step_80",
+    "global_step_90",
+    "global_step_100",
+    "global_step_110",
+    "global_step_120"
+  ]
+}
+step  80 cumulative: reward=0.4793 em=0.4790 E=0.0069 activeE=0 retained=0 rounds=1.5000 queries=2.0682 pf=1.5124
+step  90 cumulative: reward=0.4854 em=0.4849 E=0.0106 activeE=0 retained=0 rounds=1.5557 queries=2.1308 pf=1.5063
+step 100 cumulative: reward=0.4822 em=0.4817 E=0.0108 activeE=0 retained=0 rounds=1.5423 queries=2.1207 pf=1.5132
+step 110 cumulative: reward=0.4826 em=0.4821 E=0.0101 activeE=0 retained=0 rounds=1.5321 queries=2.1122 pf=1.5167
+step 120 cumulative: reward=0.4879 em=0.4873 E=0.0106 activeE=0 retained=0 rounds=1.5235 queries=2.1039 pf=1.5180
+{
+  "e1d": {
+    "n_rollouts": 43520,
+    "n_groups": 5438,
+    "n_calls": 50,
+    "steps": [
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "em_rate": 0.48733915441176473,
+    "reward_mean": 0.4878693704044076,
+    "efficiency_mean": 0.010604319852941177,
+    "efficiency_nonzero_rate": 0.010730698529411765,
+    "rounds_mean": 1.5234604779411764,
+    "queries_mean": 2.1039292279411765,
+    "parallel_factor_mean": 1.5180428812149922,
+    "turns_mean": 2.5234604779411764,
+    "tokens_mean": 1351.2785386029411,
+    "zero_search_rate": 0.0,
+    "filter_retention_baseline": 1503,
+    "filter_retention_shaped": null,
+    "filter_newly_added": null,
+    "efficiency_active_groups": 97,
+    "efficiency_supervision_ratio": 0.060625
+  },
+  "baseline": {
+    "n_rollouts": 147200,
+    "n_groups": 18400,
+    "em_rate": 0.4539130434782609,
+    "rounds_mean": 1.440733695652174,
+    "queries_mean": 1.9897622282608696,
+    "parallel_factor_mean": 1.5091132084627592,
+    "turns_mean": 2.4405910326086957,
+    "tokens_mean": 1277.7553192934784,
+    "zero_search_rate": 0.00016304347826086958,
+    "filter_retention_baseline": 340,
+    "efficiency_active_groups": 95
+  }
+}
+{
+  "e1d": {
+    "n_rollouts": 43520,
+    "n_groups": 5438,
+    "n_calls": 50,
+    "steps": [
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "em_rate": 0.48733915441176473,
+    "reward_mean": 0.4878693704044076,
+    "efficiency_mean": 0.010604319852941177,
+    "efficiency_nonzero_rate": 0.010730698529411765,
+    "rounds_mean": 1.5234604779411764,
+    "queries_mean": 2.1039292279411765,
+    "parallel_factor_mean": 1.5180428812149922,
+    "turns_mean": 2.5234604779411764,
+    "tokens_mean": 1351.2785386029411,
+    "zero_search_rate": 0.0,
+    "filter_retention_baseline": 1503,
+    "filter_retention_shaped": null,
+    "filter_newly_added": null,
+    "efficiency_active_groups": 97,
+    "efficiency_supervision_ratio": 0.060625
+  },
+  "baseline": {
+    "n_rollouts": 641280,
+    "n_groups": 80160,
+    "em_rate": 0.45707959081836325,
+    "rounds_mean": 1.3302223677644711,
+    "queries_mean": 1.9179937000998004,
+    "parallel_factor_mean": 1.560184638164159,
+    "turns_mean": 2.3301849426147703,
+    "tokens_mean": 1244.5145396706587,
+    "zero_search_rate": 0.000249500998003992,
+    "filter_retention_baseline": 1412,
+    "efficiency_active_groups": 291
+  }
+}
+# E1-E D2 integrity check (step70 -> step120)
+
+- experiment dir: `/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu`
+- checkpoint: `/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu/global_step_120`
+- tracker: 120 (expected 120)
+- data.pt present: True
+- steps 70..120 all present: True (missing: [])
+- 'Setting global step to 70': True
+- metrics parsed: 6165, non-finite: {}
+- full-state resume (lr_scheduler/RNG): True
+
+## error scan before the final-validation marker
+
+- cuda_oom: 0
+- nccl_error: 0
+- nccl_warn: 12
+- ray_worker_died: 0
+- wiki_search_error: 0
+- wiki_tool_exec_failed: 0
+- traceback: 0
+- cuda_error: 0
+
+## runtime quota semantics (E1-E_task.md section 11/12)
+
+```json
+{
+  "available": true,
+  "n_step_records": 50,
+  "n_generation_calls": 536,
+  "n_group_records": 1600,
+  "n_rollout_records": 43520,
+  "quota_error_lines": 0,
+  "quota_error_examples": [],
+  "steps_covered": [
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "steps_missing": [],
+  "all_steps_recorded": true,
+  "steps_with_wrong_batch_size": [],
+  "batch_size_definition": "step-level groups = mixed_kept_cum + quota_actual (must be 32); `stopping_call_rollouts` is only that call's materialised rollouts",
+  "calls_with_quota_actual_gt_2": 0,
+  "calls_with_wrong_quota_target": 0,
+  "steps_without_exactly_one_stopping_call": [],
+  "calls_where_stopping_disagrees_with_mixed_count": 0,
+  "non_stopping_calls_with_insertions": 0,
+  "quota_formula_holds_all_steps": true,
+  "quota_formula_violations": [],
+  "steps_short_of_design_quota": [
+    {
+      "step": 72,
+      "quota_actual": 1,
+      "design_m": 2,
+      "efficiency_cache_size": 2,
+      "recorded_eff_shortfall": 1,
+      "mixed_kept_cum": 31
+    }
+  ],
+  "n_steps_short_of_design_quota": 1,
+  "efficiency_groups": 97,
+  "mixed_groups": 1503,
+  "efficiency_groups_with_k_not_8": 0,
+  "efficiency_groups_without_cost_variation": 0,
+  "efficiency_groups_reward_out_of_1_1.05": 0,
+  "efficiency_groups_em_mean_not_1": 0,
+  "mixed_groups_reward_out_of_0_1": 0,
+  "mixed_groups_reward_mean_not_equal_em": 0,
+  "rollouts_mixed_reward_not_equal_em": 0,
+  "rollouts_wrong_with_nonzero_reward": 0,
+  "rollouts_efficiency_reward_or_em_wrong": 0,
+  "rollouts_published_metric_inconsistent": 0,
+  "rollouts_reward_tensor_mismatch": 0,
+  "wrong_rollouts": 5938,
+  "zero_search_rollouts": 0,
+  "zero_search_share": 0.0,
+  "malformed_metadata_rollouts": 0,
+  "malformed_metadata_share": 0.0,
+  "rollouts_skipped_neutralised_metric": 30720,
+  "rollouts_checked_for_metric_consistency": 12800,
+  "advantage_nan_total": 0,
+  "advantage_inf_total": 0,
+  "advantage_nan_total_manager_field": 0,
+  "advantage_nan_total_recomputed": 0,
+  "advantage_inf_total_recomputed": 0,
+  "advantage_recomputed_per_step": {
+    "71": {
+      "n": 2816,
+      "groups": 352,
+      "nan": 0,
+      "inf": 0,
+      "mean": -3.591666105942889e-17,
+      "std": 0.28646022608255656,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "72": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": -1.5439038936193583e-16,
+      "std": 0.9372428970060299,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "73": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": 2.5500435096859064e-16,
+      "std": 0.9372424867519535,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "74": {
+      "n": 2816,
+      "groups": 352,
+      "nan": 0,
+      "inf": 0,
+      "mean": 1.6006766619240537e-17,
+      "std": 0.2864605297990731,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "75": {
+      "n": 1536,
+      "groups": 192,
+      "nan": 0,
+      "inf": 0,
+      "mean": -3.715199444383662e-17,
+      "std": 0.3820037159113843,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "76": {
+      "n": 1536,
+      "groups": 192,
+      "nan": 0,
+      "inf": 0,
+      "mean": 1.879283765641541e-17,
+      "std": 0.38200365887363263,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "77": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": -1.8041124150158794e-16,
+      "std": 0.9372417149650933,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "78": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": -1.1709383462843448e-16,
+      "std": 0.9372421246198999,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "79": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": 1.4224732503009818e-16,
+      "std": 0.93724194183337,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "80": {
+      "n": 1536,
+      "groups": 192,
+      "nan": 0,
+      "inf": 0,
+      "mean": -6.924437874940755e-17,
+      "std": 0.39950792325025847,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "81": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": 9.367506770274758e-17,
+      "std": 0.9372418529579237,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "82": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": 9.020562075079397e-17,
+      "std": 0.9372418534268592,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "83": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": 3.7470027081099033e-16,
+      "std": 0.93724193924657,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "84": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": -2.220446049250313e-16,
+      "std": 0.937241780887684,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "85": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": 5.551115123125783e-17,
+      "std": 0.937242377744278,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "86": {
+      "n": 256,
+      "groups": 32,
+      "nan": 0,
+      "inf": 0,
+      "mean": -2.0469737016526324e-16,
+      "std": 0.9372417818018238,
+      "min": -2.474866734172715,
+      "max": 2.474866734172715
+    },
+    "87":
+```
+
+## trainer log vs manager diagnostics
+
+```json
+{
+  "available": true,
+  "steps_cross_checked": 50,
+  "score_max_mismatches": 0,
+  "examples": [],
+  "log_score_max_consistent_with_quota": true
+}
+```
+
+### per optimizer step
+
+| step | gen batches | quota | mixed seen | eff seen | cache | shortfall | inserted | displaced | batch |
+|---|---|---|---|---|---|---|---|---|---|
+| 71 | 15 | 2 | 35 | 14 | 2 | 0 | 2 | 4 | 32 |
+| 72 | 9 | 1 | 33 | 3 | 2 | 1 | 1 | 2 | 32 |
+| 73 | 9 | 2 | 35 | 7 | 2 | 0 | 2 | 5 | 32 |
+| 74 | 13 | 2 | 32 | 4 | 2 | 0 | 2 | 1 | 32 |
+| 75 | 10 | 2 | 32 | 4 | 2 | 0 | 2 | 2 | 32 |
+| 76 | 11 | 2 | 32 | 11 | 2 | 0 | 2 | 2 | 32 |
+| 77 | 10 | 2 | 35 | 6 | 2 | 0 | 2 | 5 | 32 |
+| 78 | 10 | 2 | 36 | 6 | 2 | 0 | 2 | 6 | 32 |
+| 79 | 10 | 2 | 34 | 12 | 2 | 0 | 2 | 4 | 32 |
+| 80 | 10 | 2 | 37 | 4 | 2 | 0 | 2 | 6 | 32 |
+| 81 | 11 | 2 | 32 | 10 | 2 | 0 | 2 | 2 | 32 |
+| 82 | 13 | 2 | 35 | 8 | 2 | 0 | 2 | 4 | 32 |
+| 83 | 13 | 2 | 34 | 8 | 2 | 0 | 2 | 3 | 32 |
+| 84 | 10 | 2 | 38 | 6 | 2 | 0 | 2 | 7 | 32 |
+| 85 | 9 | 2 | 34 | 10 | 2 | 0 | 2 | 3 | 32 |
+| 86 | 10 | 2 | 32 | 6 | 2 | 0 | 2 | 2 | 32 |
+| 87 | 13 | 2 | 36 | 14 | 2 | 0 | 2 | 5 | 32 |
+| 88 | 8 | 2 | 35 | 6 | 2 | 0 | 2 | 4 | 32 |
+| 89 | 10 | 2 | 32 | 11 | 2 | 0 | 2 | 1 | 32 |
+| 90 | 12 | 2 | 34 | 6 | 2 | 0 | 2 | 4 | 32 |
+| 91 | 12 | 2 | 35 | 10 | 2 | 0 | 2 | 4 | 32 |
+| 92 | 14 | 2 | 37 | 11 | 2 | 0 | 2 | 7 | 32 |
+| 93 | 12 | 2 | 35 | 13 | 2 | 0 | 2 | 4 | 32 |
+| 94 | 11 | 2 | 32 | 8 | 2 | 0 | 2 | 1 | 32 |
+| 95 | 15 | 2 | 33 | 9 | 2 | 0 | 2 | 3 | 32 |
+| 96 | 14 | 2 | 33 | 9 | 2 | 0 | 2 | 3 | 32 |
+| 97 | 8 | 2 | 33 | 9 | 2 | 0 | 2 | 3 | 32 |
+| 98 | 12 | 2 | 32 | 9 | 2 | 0 | 2 | 1 | 32 |
+| 99 | 10 | 2 | 34 | 9 | 2 | 0 | 2 | 3 | 32 |
+| 100 | 11 | 2 | 35 | 9 | 2 | 0 | 2 | 4 | 32 |
+| 101 | 8 | 2 | 33 | 8 | 2 | 0 | 2 | 3 | 32 |
+| 102 | 12 | 2 | 36 | 4 | 2 | 0 | 2 | 5 | 32 |
+| 103 | 10 | 2 | 32 | 9 | 2 | 0 | 2 | 2 | 32 |
+| 104 | 14 | 2 | 33 | 13 | 2 | 0 | 2 | 2 | 32 |
+| 105 | 8 | 2 | 32 | 2 | 2 | 0 | 2 | 2 | 32 |
+| 106 | 10 | 2 | 33 | 6 | 2 | 0 | 2 | 2 | 32 |
+| 107 | 13 | 2 | 34 | 10 | 2 | 0 | 2 | 3 | 32 |
+| 108 | 8 | 2 | 33 | 4 | 2 | 0 | 2 | 3 | 32 |
+| 109 | 10 | 2 | 35 | 5 | 2 | 0 | 2 | 4 | 32 |
+| 110 | 8 | 1 | 33 | 1 | 1 | 0 | 1 | 2 | 32 |
+| 111 | 10 | 2 | 33 | 7 | 2 | 0 | 2 | 3 | 32 |
+| 112 | 10 | 2 | 34 | 10 | 2 | 0 | 2 | 3 | 32 |
+| 113 | 9 | 2 | 34 | 5 | 2 | 0 | 2 | 4 | 32 |
+| 114 | 13 | 2 | 33 | 10 | 2 | 0 | 2 | 3 | 32 |
+| 115 | 9 | 2 | 33 | 3 | 2 | 0 | 2 | 3 | 32 |
+| 116 | 12 | 2 | 33 | 13 | 2 | 0 | 2 | 3 | 32 |
+| 117 | 10 | 2 | 32 | 7 | 2 | 0 | 2 | 2 | 32 |
+| 118 | 9 | 2 | 33 | 9 | 2 | 0 | 2 | 3 | 32 |
+| 119 | 8 | 1 | 32 | 1 | 1 | 0 | 1 | 1 | 32 |
+| 120 | 10 | 2 | 33 | 11 | 2 | 0 | 2 | 3 | 32 |
+
+**VERDICT: PASS**
+
+linked step120_20260915_053854 -> /data01/wyy/Graph-Agent-Planning/E1-E/eval_results/step120_20260915_053854
+linked step70_20260914_151446 -> /data01/wyy/Graph-Agent-Planning/E1-E/eval_results/step70_20260914_151446
+linked gap_step60_reference -> /data01/wyy/Graph-Agent-Planning/E1-B/evaluations/gap_step60_reference
+linked gap_step120_reference -> /data01/wyy/Graph-Agent-Planning/E1-B/evaluations/gap_step120_reference
+linked gap_step180_reference -> /data01/wyy/Graph-Agent-Planning/E1-B/evaluations/gap_step180_reference
+linked e10_step70_reference -> /data01/wyy/Graph-Agent-Planning/E1-B/evaluations/e10_step70_reference
+linked e1a_step70_reference -> /data01/wyy/Graph-Agent-Planning/E1-B/evaluations/e1a_step70_reference
+linked e1b_step120_reference -> /data01/wyy/Graph-Agent-Planning/E1-B/evaluations/step120_20260911_235134
+linked e1d_step70_reference -> /data01/wyy/Graph-Agent-Planning/E1-D/eval_results/step70_20260913_024024
+linked e1d_step120_reference -> /data01/wyy/Graph-Agent-Planning/E1-D/eval_results/step120_20260913_165834
+{
+  "out": "/data01/wyy/Graph-Agent-Planning/E1-E/analysis",
+  "runs": [
+    "e10_step70_reference",
+    "e1a_step70_reference",
+    "e1b_step120_reference",
+    "e1d_step120_reference",
+    "e1d_step70_reference",
+    "gap_step120_reference",
+    "gap_step180_reference",
+    "gap_step60_reference",
+    "step120_20260915_053854",
+    "step70_20260914_151446"
+  ]
+}
+        e10_step70_reference  macroEM=0.4006  rounds=1.6295580164449912  queries=2.12802484326478  pf=1.3058908132078864
+        e1a_step70_reference  macroEM=0.3984  rounds=1.597742231597039  queries=2.103630788461163  pf=1.3166271422634037
+       e1b_step120_reference  macroEM=0.3947  rounds=1.2949747075252436  queries=1.8748266635417277  pf=1.4477708735521235
+       e1d_step120_reference  macroEM=0.4059  rounds=1.723364778031679  queries=2.2314603230405656  pf=1.294827625286158
+        e1d_step70_reference  macroEM=0.3976  rounds=1.6236987558836742  queries=2.1274389172086483  pf=1.3102423768569196
+       gap_step120_reference  macroEM=0.4110  rounds=1.853733325520986  queries=2.34331360715611  pf=1.2641050224942842
+       gap_step180_reference  macroEM=0.4167  rounds=1.9362512450928693  queries=2.436495380949591  pf=1.2583570376646696
+        gap_step60_reference  macroEM=0.4007  rounds=1.5889338098865255  queries=2.0922052303665946  pf=1.3167352959252658
+     step120_20260915_053854  macroEM=0.4049  rounds=1.5202828069764263  queries=2.0194332141950353  pf=1.3283273381294964
+      step70_20260914_151446  macroEM=0.3966  rounds=1.6159450010741978  queries=2.11515400089842  pf=1.308926974304431
+{
+  "out": "/data01/wyy/Graph-Agent-Planning/E1-E/analysis/comparison_20260915_072012",
+  "runs": [
+    "e10_step70_reference",
+    "e1a_step70_reference",
+    "e1b_step120_reference",
+    "e1d_step120_reference",
+    "e1d_step70_reference",
+    "gap_step120_reference",
+    "gap_step180_reference",
+    "gap_step60_reference",
+    "step120_20260915_053854",
+    "step70_20260914_151446"
+  ],
+  "roles": {
+    "gap_step120": "gap_step120_reference",
+    "gap_step60": "gap_step60_reference",
+    "gap_step180": "gap_step180_reference",
+    "e1a_step70": "e1a_step70_reference",
+    "e10_step70": "e10_step70_reference",
+    "e1b_step120": "e1b_step120_reference",
+    "e1d_step70": "e1d_step70_reference",
+    "e1d_step120": "e1d_step120_reference",
+    "e1e_steps": {
+      "70": "step70_20260914_151446",
+      "120": "step120_20260915_053854"
+    }
+  }
+}
+E1-E step120 vs GAP step120: macroEM delta -0.0061 rounds delta -0.3335 (-17.99%)
+E1-E step120 vs E1-A step70: macroEM delta 0.0064 rounds delta -0.0775 (-4.85%)
+{
+  "four_way_step120": [
+    {
+      "role": "gap_step120",
+      "run": "gap_step120_reference",
+      "micro_em": 0.44417013339583206,
+      "macro_em": 0.411,
+      "rounds": 1.853733325520986,
+      "queries": 2.34331360715611,
+      "tokens": 343.9520564832718,
+      "zero_search": 0.00033202476514130583
+    },
+    {
+      "role": "e1b_step120",
+      "run": "e1b_step120_reference",
+      "micro_em": 0.4325352239214078,
+      "macro_em": 0.3947142857142857,
+      "rounds": 1.2949747075252436,
+      "queries": 1.8748266635417277,
+      "tokens": 312.95263600320305,
+      "zero_search": 0.00039061737075447747
+    },
+    {
+      "role": "e1d_step120",
+      "run": "e1d_step120_reference",
+      "micro_em": 0.4385612585691686,
+      "macro_em": 0.4058571428571428,
+      "rounds": 1.723364778031679,
+      "queries": 2.2314603230405656,
+      "tokens": 337.079598582059,
+      "zero_search": 0.0002148395539149626
+    },
+    {
+      "role": "e1e_step120",
+      "run": "step120_20260915_053854",
+      "micro_em": 0.4394752250932598,
+      "macro_em": 0.4048571428571428,
+      "rounds": 1.5202828069764263,
+      "queries": 2.0194332141950353,
+      "tokens": 322.35144649518566,
+      "zero_search": 0.00039061737075447747
+    }
+  ]
+}
+# Paired per-prompt comparison (E1-E vs matched baseline)
+
+- paired prompts: **49,947**
+
+| metric | E1-E | baseline | delta |
+|---|---|---|---|
+| search rounds | 1.6186 | 1.5912 | +0.0273 (+1.72%) |
+| search queries | 2.1211 | 2.0970 | +0.0242 |
+| response chars | 5550.0 | 5484.5 | +65.5 |
+| EM | 0.4348 | 0.4358 | -0.0010 |
+
+- rounds **decreased** on 4,891 prompts (9.79%), **increased** on 5,870 (11.75%), unchanged on 39,186
+- sign test on round changes: p = 3.82e-21
+- EM up on 2,531 / down on 2,582 prompts (sign test p = 0.476)
+
+## per benchmark
+
+| benchmark | n | rounds E1-E | rounds base | Δrounds | decreased | increased | ΔEM |
+|---|---|---|---|---|---|---|---|
+| 2wikimultihopqa | 12,576 | 1.980 | 1.937 | +0.043 | 11.4% | 14.0% | -0.0045 |
+| bamboogle | 125 | 1.880 | 1.808 | +0.072 | 7.2% | 9.6% | -0.0240 |
+| hotpotqa | 7,404 | 1.640 | 1.604 | +0.036 | 8.0% | 11.0% | +0.0011 |
+| musique | 2,411 | 2.238 | 2.197 | +0.041 | 14.8% | 17.3% | -0.0050 |
+| nq | 3,610 | 1.282 | 1.263 | +0.019 | 7.6% | 8.7% | +0.0042 |
+| popqa | 12,509 | 1.513 | 1.492 | +0.021 | 11.2% | 13.0% | -0.0016 |
+| triviaqa | 11,312 | 1.292 | 1.281 | +0.011 | 7.4% | 8.1% | +0.0015 |
+# Paired per-prompt comparison (E1-E vs matched baseline)
+
+- paired prompts: **49,947**
+
+| metric | E1-E | baseline | delta |
+|---|---|---|---|
+| search rounds | 1.6186 | 1.5999 | +0.0187 (+1.17%) |
+| search queries | 2.1211 | 2.1085 | +0.0126 |
+| response chars | 5550.0 | 5526.5 | +23.5 |
+| EM | 0.4348 | 0.4328 | +0.0020 |
+
+- rounds **decreased** on 4,907 prompts (9.82%), **increased** on 5,646 (11.30%), unchanged on 39,394
+- sign test on round changes: p = 6.3e-13
+- EM up on 2,567 / down on 2,466 prompts (sign test p = 0.155)
+
+## per benchmark
+
+| benchmark | n | rounds E1-E | rounds base | Δrounds | decreased | increased | ΔEM |
+|---|---|---|---|---|---|---|---|
+| 2wikimultihopqa | 12,576 | 1.980 | 1.951 | +0.028 | 10.9% | 12.8% | +0.0042 |
+| bamboogle | 125 | 1.880 | 1.856 | +0.024 | 8.8% | 10.4% | -0.0240 |
+| hotpotqa | 7,404 | 1.640 | 1.615 | +0.025 | 8.4% | 10.7% | +0.0009 |
+| musique | 2,411 | 2.238 | 2.212 | +0.025 | 15.1% | 17.4% | +0.0021 |
+| nq | 3,610 | 1.282 | 1.264 | +0.018 | 7.7% | 8.7% | -0.0003 |
+| popqa | 12,509 | 1.513 | 1.499 | +0.014 | 11.3% | 12.6% | +0.0017 |
+| triviaqa | 11,312 | 1.292 | 1.284 | +0.008 | 7.5% | 8.2% | +0.0017 |
+# Paired per-prompt comparison (E1-E vs matched baseline)
+
+- paired prompts: **49,947**
+
+| metric | E1-E | baseline | delta |
+|---|---|---|---|
+| search rounds | 1.5223 | 1.8568 | -0.3345 (-18.01%) |
+| search queries | 2.0246 | 2.3473 | -0.3226 |
+| response chars | 5405.6 | 6091.2 | -685.6 |
+| EM | 0.4401 | 0.4450 | -0.0048 |
+
+- rounds **decreased** on 13,269 prompts (26.57%), **increased** on 2,980 (5.97%), unchanged on 33,698
+- sign test on round changes: p = 0
+- EM up on 2,974 / down on 3,215 prompts (sign test p = 0.00219)
+
+## per benchmark
+
+| benchmark | n | rounds E1-E | rounds base | Δrounds | decreased | increased | ΔEM |
+|---|---|---|---|---|---|---|---|
+| 2wikimultihopqa | 12,576 | 1.836 | 2.330 | -0.494 | 34.3% | 6.1% | +0.0029 |
+| bamboogle | 125 | 1.864 | 1.960 | -0.096 | 15.2% | 5.6% | -0.0080 |
+| hotpotqa | 7,404 | 1.581 | 1.835 | -0.255 | 23.4% | 5.7% | -0.0097 |
+| musique | 2,411 | 2.153 | 2.627 | -0.474 | 36.8% | 9.0% | -0.0112 |
+| nq | 3,610 | 1.206 | 1.473 | -0.266 | 22.0% | 4.2% | -0.0033 |
+| popqa | 12,509 | 1.395 | 1.720 | -0.326 | 26.2% | 7.0% | -0.0030 |
+| triviaqa | 11,312 | 1.239 | 1.454 | -0.214 | 19.8% | 4.7% | -0.0113 |
+# Paired per-prompt comparison (E1-E vs matched baseline)
+
+- paired prompts: **49,947**
+
+| metric | E1-E | baseline | delta |
+|---|---|---|---|
+| search rounds | 1.5223 | 1.2972 | +0.2251 (+17.35%) |
+| search queries | 2.0246 | 1.8793 | +0.1454 |
+| response chars | 5405.6 | 5088.7 | +316.8 |
+| EM | 0.4401 | 0.4332 | +0.0070 |
+
+- rounds **decreased** on 1,867 prompts (3.74%), **increased** on 10,684 (21.39%), unchanged on 37,396
+- sign test on round changes: p = 0
+- EM up on 3,411 / down on 3,062 prompts (sign test p = 1.44e-05)
+
+## per benchmark
+
+| benchmark | n | rounds E1-E | rounds base | Δrounds | decreased | increased | ΔEM |
+|---|---|---|---|---|---|---|---|
+| 2wikimultihopqa | 12,576 | 1.836 | 1.533 | +0.303 | 4.1% | 26.9% | +0.0084 |
+| bamboogle | 125 | 1.864 | 1.680 | +0.184 | 6.4% | 22.4% | +0.0320 |
+| hotpotqa | 7,404 | 1.581 | 1.374 | +0.207 | 3.6% | 21.4% | +0.0111 |
+| musique | 2,411 | 2.153 | 1.807 | +0.346 | 6.5% | 33.4% | +0.0033 |
+| nq | 3,610 | 1.206 | 1.063 | +0.143 | 2.2% | 14.1% | +0.0047 |
+| popqa | 12,509 | 1.395 | 1.172 | +0.223 | 4.6% | 21.2% | +0.0067 |
+| triviaqa | 11,312 | 1.239 | 1.086 | +0.153 | 2.3% | 15.2% | +0.0042 |
+# Paired per-prompt comparison (E1-E vs matched baseline)
+
+- paired prompts: **49,947**
+
+| metric | E1-E | baseline | delta |
+|---|---|---|---|
+| search rounds | 1.5223 | 1.7270 | -0.2047 (-11.85%) |
+| search queries | 2.0246 | 2.2382 | -0.2136 |
+| response chars | 5405.6 | 5863.9 | -458.3 |
+| EM | 0.4401 | 0.4392 | +0.0009 |
+
+- rounds **decreased** on 10,285 prompts (20.59%), **increased** on 3,913 (7.83%), unchanged on 35,749
+- sign test on round changes: p = 0
+- EM up on 3,127 / down on 3,082 prompts (sign test p = 0.568)
+
+## per benchmark
+
+| benchmark | n | rounds E1-E | rounds base | Δrounds | decreased | increased | ΔEM |
+|---|---|---|---|---|---|---|---|
+| 2wikimultihopqa | 12,576 | 1.836 | 2.155 | -0.319 | 26.8% | 7.8% | +0.0076 |
+| bamboogle | 125 | 1.864 | 2.064 | -0.200 | 19.2% | 4.8% | +0.0000 |
+| hotpotqa | 7,404 | 1.581 | 1.749 | -0.168 | 18.5% | 7.1% | -0.0022 |
+| musique | 2,411 | 2.153 | 2.428 | -0.275 | 29.0% | 12.1% | -0.0100 |
+| nq | 3,610 | 1.206 | 1.340 | -0.134 | 15.5% | 6.5% | -0.0014 |
+| popqa | 12,509 | 1.395 | 1.585 | -0.191 | 20.4% | 9.5% | +0.0018 |
+| triviaqa | 11,312 | 1.239 | 1.364 | -0.125 | 15.0% | 6.1% | -0.0025 |
+# Paired per-prompt comparison (E1-E vs matched baseline)
+
+- paired prompts: **49,947**
+
+| metric | E1-E | baseline | delta |
+|---|---|---|---|
+| search rounds | 1.5223 | 1.6186 | -0.0962 (-5.94%) |
+| search queries | 2.0246 | 2.1211 | -0.0965 |
+| response chars | 5405.6 | 5550.0 | -144.4 |
+| EM | 0.4401 | 0.4348 | +0.0053 |
+
+- rounds **decreased** on 7,746 prompts (15.51%), **increased** on 5,318 (10.65%), unchanged on 36,883
+- sign test on round changes: p = 3.85e-100
+- EM up on 3,299 / down on 3,033 prompts (sign test p = 0.000829)
+
+## per benchmark
+
+| benchmark | n | rounds E1-E | rounds base | Δrounds | decreased | increased | ΔEM |
+|---|---|---|---|---|---|---|---|
+| 2wikimultihopqa | 12,576 | 1.836 | 1.980 | -0.144 | 18.6% | 12.6% | +0.0060 |
+| bamboogle | 125 | 1.864 | 1.880 | -0.016 | 14.4% | 12.8% | +0.0320 |
+| hotpotqa | 7,404 | 1.581 | 1.640 | -0.059 | 13.3% | 9.7% | +0.0028 |
+| musique | 2,411 | 2.153 | 2.238 | -0.085 | 21.2% | 17.8% | -0.0033 |
+| nq | 3,610 | 1.206 | 1.282 | -0.076 | 12.6% | 7.4% | +0.0080 |
+| popqa | 12,509 | 1.395 | 1.513 | -0.119 | 17.2% | 11.4% | +0.0106 |
+| triviaqa | 11,312 | 1.239 | 1.292 | -0.053 | 11.3% | 7.8% | +0.0011 |
+# E1-E0 frozen prediction vs E1-E online observation
+
+phases: D1, D2; optimizer steps observed: 60 (61..120); rollouts: 52,480; group records: 1,920
+
+| quantity | E1-E0 prediction (q=2) | E1-E online observation | verdict |
+|---|---|---|---|
+| full_quota_rate | 1.000000 | 0.950000 | match |
+| actual_replacement_rate | 0.062500 | 0.060937 | match |
+| mean_efficiency_groups_inserted_per_step | 2.000000 | 1.950000 | match |
+| mean_generation_batches_per_step | 10.460000 | 10.950000 | match |
+| mean_efficiency_groups_seen_per_step | 8.060000 | 7.750000 | match |
+| mean_k_over_8_of_optimizer_batch | 0.533672 | 0.536458 | match |
+| mean_search_rounds | 1.942344 | 1.665116 | match |
+| mean_search_queries | 2.588516 | 2.276464 | match |
+| mean_response_tokens | 1642.230859 | 1455.900260 | match |
+| mean_inserted_cost_gap | - | 1.000000 | - |
+| zero_search_rate | - | 0.000000 | - |
+| malformed_rate | - | 0.000000 | - |
+| total_eff_shortfall | 0.000000 | 1.000000 | delta +1.0000 |
+
+## agreement flags
+
+- full_quota_rate: False
+- replacement_rate_matches: True
+- efficiency_groups_seen_positive_every_step: True
+- rounds_and_queries_scale: True
+
+## honest caveats
+
+- E1-E0's prediction table covers E1-D's candidate stream for optimizer steps 71-120; when the observed steps fall outside that range (D1: 61-70) the predicted Generation-batch statistics are NOT comparable and the row is informational only.
+- E1-E online generates its own candidate stream: its step70 policy differs from E1-D's step70 policy, so the per-step group membership/deviation from E1-E0's CSV is expected and is NOT a runtime mismatch (the runtime equivalence itself was proven offline: E1-E/analysis/preflight_selftest.json, q=0 and q=2 exact on 50/50 steps of the E1-D stream).
+- D1 (steps 61-70) has no E1-E0 prediction at all: E1-E0's stream only covers steps 71-120.
+- E1-E0's candidate pool has an artificially high all-correct share (37,926 of 83,680 groups) because it was harvested from a shaped run; the online mixed-group share therefore differs, which changes the number of generation batches per step.
+
+## per-step observation
+
+| step | gen batches | cand groups | eff seen | quota | mixed | eff | rounds | queries | tokens | micro EM | inserted cost gap | shortfall |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 61 | 12 | 160 | 7 | 2 | 30 | 2 | 1.723 | 2.238 | 1463.5 | 0.5586 | - | 0 |
+| 62 | 11 | 160 | 2 | 2 | 30 | 2 | 1.613 | 2.163 | 1359.7 | 0.4557 | - | 0 |
+wrote /data01/wyy/Graph-Agent-Planning/E1-E/analysis/prediction_vs_observation.md
+{
+  "experiment_status": "COMPLETE",
+  "design": {
+    "quota_q": 2,
+    "lambda": 0.05,
+    "filter_metric": "e1e_quota_metric",
+    "reward_mixed_group": "R_i = A_i (original EM, no shaping)",
+    "reward_efficiency_group": "R_i = 1 + 0.05 * E_i (quota-selected all-correct k=8)",
+    "reward_other_groups": "dropped by the filter (reward 0, never trained on)",
+    "stopping_rule": "only mixed groups (1<=k<=7) advance the stopping counter; efficiency groups are cached in stream order and injected at the stopping batch as mixed[:32-m] + cache[:m], m = min(2, |cache|)",
+    "cost": "logical_search_batches"
+  },
+  "checkpoints": {
+    "start": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60",
+    "step70": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu/global_step_70",
+    "step120": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu/global_step_120"
+  },
+  "comparisons": {
+    "e1e120_vs_gap120": {
+      "baseline": "gap120",
+      "test": "e1e120",
+      "delta_macro_em": -0.006142857142857172,
+      "delta_micro_em": -0.004694908302572243,
+      "delta_rounds": -0.33345051854455976,
+      "delta_rounds_pct": -17.98805221624014,
+      "delta_queries": -0.32388039296107474,
+      "delta_queries_pct": -13.821470245040832,
+      "delta_parallel_factor": 0.06422231563521219,
+      "delta_zero_search": 5.859260561317164e-05,
+      "paired": {
+        "paired_prompts": 49947,
+        "rounds_baseline": 1.8568082167097122,
+        "rounds_e1e": 1.5223336736941158,
+        "rounds_delta": -0.33447454301559654,
+        "rounds_delta_pct": -18.013413555886224,
+        "rounds_decreased_prompts": 13269,
+        "rounds_increased_prompts": 2980,
+        "rounds_unchanged_prompts": 33698,
+        "sign_test_p_rounds": 0.0,
+        "queries_baseline": 2.3472681041904417,
+        "queries_e1e": 2.02462610366989,
+        "queries_delta": -0.3226420005205518,
+        "em_baseline": 0.4449716699701684,
+        "em_e1e": 0.4401465553486696,
+        "em_delta": -0.004825114621498788,
+        "em_up_prompts": 2974,
+        "em_down_prompts": 3215,
+        "sign_test_p_em": 0.0021882137402865313
+      }
+    },
+    "e1e120_vs_e1b120": {
+      "baseline": "e1b120",
+      "test": "e1e120",
+      "delta_macro_em": 0.01014285714285712,
+      "delta_micro_em": 0.006940001171852006,
+      "delta_rounds": 0.2253080994511827,
+      "delta_rounds_pct": 17.398648648648656,
+      "delta_queries": 0.14460655065330763,
+      "delta_queries_pct": 7.7130624108007915,
+      "delta_parallel_factor": -0.11944353542262709,
+      "delta_zero_search": 0.0,
+      "paired": {
+        "paired_prompts": 49947,
+        "rounds_baseline": 1.2972350691733237,
+        "rounds_e1e": 1.5223336736941158,
+        "rounds_delta": 0.22509860452079203,
+        "rounds_delta_pct": 17.352183106199746,
+        "rounds_decreased_prompts": 1867,
+        "rounds_increased_prompts": 10684,
+        "rounds_unchanged_prompts": 37396,
+        "sign_test_p_rounds": 0.0,
+        "queries_baseline": 1.879272028350051,
+        "queries_e1e": 2.02462610366989,
+        "queries_delta": 0.14535407531983902,
+        "em_baseline": 0.43315914869761946,
+        "em_e1e": 0.4401465553486696,
+        "em_delta": 0.006987406651050113,
+        "em_up_prompts": 3411,
+        "em_down_prompts": 3062,
+        "sign_test_p_em": 1.4389576015173212e-05
+      }
+    },
+    "e1e120_vs_e1d120": {
+      "baseline": "e1d120",
+      "test": "e1e120",
+      "delta_macro_em": -0.0010000000000000009,
+      "delta_micro_em": 0.0009139665240912032,
+      "delta_rounds": -0.20308197105525272,
+      "delta_rounds_pct": -11.784038622815562,
+      "delta_queries": -0.21202710884553033,
+      "delta_queries_pct": -9.501719867312017,
+      "delta_parallel_factor": 0.033499712843338525,
+      "delta_zero_search": 0.00017577781683951487,
+      "paired": {
+        "paired_prompts": 49947,
+        "rounds_baseline": 1.7270106312691453,
+        "rounds_e1e": 1.5223336736941158,
+        "rounds_delta": -0.20467695757502954,
+        "rounds_delta_pct": -11.851516943159556,
+        "rounds_decreased_prompts": 10285,
+        "rounds_increased_prompts": 3913,
+        "rounds_unchanged_prompts": 35749,
+        "sign_test_p_rounds": 0.0,
+        "queries_baseline": 2.238232526478067,
+        "queries_e1e": 2.02462610366989,
+        "queries_delta": -0.21360642280817665,
+        "em_baseline": 0.4392456003363565,
+        "em_e1e": 0.4401465553486696,
+        "em_delta": 0.0009009550123130519,
+        "em_up_prompts": 3127,
+        "em_down_prompts": 3082,
+        "sign_test_p_em": 0.5679411964969813
+      }
+    },
+    "e1e120_vs_e1e70": {
+      "baseline": "e1e70",
+      "test": "e1e120",
+      "delta_macro_em": 0.008285714285714174,
+      "delta_micro_em": 0.005586219019159733,
+      "delta_rounds": -0.09566219409777155,
+      "delta_rounds_pct": -5.919891706350167,
+      "delta_queries": -0.095720786
+wrote /data01/wyy/Graph-Agent-Planning/E1-E/analysis/summary.json
+=== E1-E analysis done -> /data01/wyy/Graph-Agent-Planning/E1-E/analysis ===

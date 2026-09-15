@@ -1,0 +1,12 @@
+{
+  "e1e_reward_hist": {
+    "0.0": 4718,
+    "1.0": 4155,
+    "1.025": 4,
+    "1.05": 83
+  },
+  "e1e_em_rate": 0.4734375,
+  "e1e_reward_nonzero_rate": 0.4734375,
+  "note": "reward = A*(1+0.05*E); E=0 => reward == EM (0 or 1); active correct rollouts get 1.05/1.0333/... depending on cost",
+  "baseline_em_rate": 0.4539130434782609
+}

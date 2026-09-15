@@ -1,0 +1,7 @@
+E1-E sitecustomize: failed to import e1e_reward_manager: No module named 'verl.protocol'
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ModuleNotFoundError: No module named 'verl.protocol'
+[2026-09-14 09:32:27] watchdog started; log=/data01/wyy/Graph-Agent-Planning/E1-E/logs/train_D1_20260914_093225.log; baseline stackdumps=3
+[2026-09-14 09:32:27] pre_stall=480s post_stall=2700s interval=15s
+[2026-09-14 09:36:27] watchdog: armed (resume line seen)
+[2026-09-14 09:37:42] watchdog: first validation batch print seen -> post phase (long window)

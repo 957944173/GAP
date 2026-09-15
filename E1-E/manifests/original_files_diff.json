@@ -1,0 +1,31 @@
+{
+  "changed_files": [],
+  "missing_files": [
+    "verl/verl/workers/rollout/sglang_rollout.py"
+  ],
+  "original_files_unchanged": true,
+  "extra_checks": {
+    "verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py": {
+      "path": "verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py",
+      "exists": true,
+      "sha256": "9dbe6d70541854c7c77daed2f1dc6e99c334849cc4a7e56e4bae755190ab5da3",
+      "size": 68648,
+      "e1_0_sha256": "9dbe6d70541854c7c77daed2f1dc6e99c334849cc4a7e56e4bae755190ab5da3",
+      "matches_e1_0": true
+    },
+    "verl/verl/workers/rollout/async_server.py": {
+      "path": "verl/verl/workers/rollout/async_server.py",
+      "exists": true,
+      "sha256": "ed494db51937b74e66cc07109b001ea64ca1e4ccd4cde01796ca8368136b5066",
+      "size": 9162
+    },
+    "verl/verl/workers/rollout/schemas.py": {
+      "path": "verl/verl/workers/rollout/schemas.py",
+      "exists": true,
+      "sha256": "de231824fa1000b1b8516777d40f6a4e843465f4108ff7d95a63872248e9d645",
+      "size": 14864,
+      "e1_0_sha256": "de231824fa1000b1b8516777d40f6a4e843465f4108ff7d95a63872248e9d645",
+      "matches_e1_0": true
+    }
+  }
+}

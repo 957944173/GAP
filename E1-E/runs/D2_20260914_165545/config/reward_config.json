@@ -1,0 +1,20 @@
+{
+  "experiment": "E1-E",
+  "phase": "D2",
+  "reward_name": "solved-group gated/capped efficiency reward (E1-E: no mixed-group shaping)",
+  "train_reward_manager": "e1e_quota_gated",
+  "train_scorer": "compute_score_em_efficiency_batch",
+  "train_scorer_path": "/data01/wyy/Graph-Agent-Planning/E1-E/code/e1e_scorer.py",
+  "formula": "mixed group (1<=k<=7): R_i = A_i; selected k=8 efficiency group: R_i = 1 + 0.05*E_i; wrong rollout -> 0",
+  "lambda": 0.05,
+  "cost": "logical_search_batches",
+  "filter_metric": "e1e_quota_metric",
+  "filter_metric_note": "algorithm.filter_groups.metric=e1e_quota_metric -> mixed groups publish EM, cached all-correct efficiency groups publish 1+0.05E; only groups materialised in the quota batch have std>0",
+  "quota": "2",
+  "batch_target": "32",
+  "reward_mixed": "R_i = A_i (original EM, no shaping)",
+  "reward_efficiency_group": "R_i = 1 + 0.05 * E_i",
+  "token_level_rewards": "shaped reward (feeds GRPO advantage)",
+  "acc_metric": "data.batch['acc'] restored to original EM",
+  "val_scorer": "/data01/wyy/Graph-Agent-Planning/verl/verl/utils/reward_score/mhqa_eval.py:compute_score_em_batch (UNCHANGED)"
+}

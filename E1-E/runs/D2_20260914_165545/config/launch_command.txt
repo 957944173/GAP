@@ -1,0 +1,3 @@
+export E1E_PHASE=D2
+export E1E_RUN_DIR=/data01/wyy/Graph-Agent-Planning/E1-E/runs/D2_20260914_165545
+bash /data01/wyy/Graph-Agent-Planning/E1-E/scripts/run_e1e_train.sh

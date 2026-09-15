@@ -1,0 +1,36 @@
+{
+  "steps": 60,
+  "inserted_efficiency_groups": 117,
+  "inserted_with_recorded_source": 2,
+  "inserted_injected_source_not_recorded": 115,
+  "kept_mixed_groups": 1803,
+  "efficiency_groups_seen_total": 465,
+  "efficiency_groups_seen_but_not_inserted": 348,
+  "actual_replacement_rate": 0.0609375,
+  "source_mix_recorded_for_inserted": {
+    "hotpotqa": 1,
+    "nq": 1
+  },
+  "source_mix_kept_mixed": {
+    "hotpotqa": 1009,
+    "nq": 794
+  },
+  "every_inserted_group_is_all_correct": true,
+  "inserted_cost_gap_mean": 1.1367521367521367,
+  "inserted_cost_gap_min": 1.0,
+  "n_inserted_with_cost_variation": 117,
+  "n_inserted_without_recorded_cost_variation": 0,
+  "examples_without_recorded_variation": [],
+  "stopping_call_position_mean": 10.95,
+  "selection_rule": "stream order: the planner inserts cache[:m], where the cache holds the first q efficiency groups seen in the step; verified offline against E1-E0 on 50/50 steps (section-11 selftest PART A) and against the empty-keep case (PART D)",
+  "cannot_check_online": [
+    "data source of cached/injected efficiency groups: rows are written from a synthetic group dict with source=None and rollouts_pid has no source column, so the offline inserted-vs-displaced source test (E1-E0 p = 0.920) cannot be reproduced online",
+    "difficulty (k/8) of the displaced mixed groups: they are dropped before any record is written"
+  ],
+  "available_bias_evidence": [
+    "selection is pure stream order on a shuffled dataset and the planner only ever takes cache[:m]; it never ranks groups by source, difficulty or reward",
+    "every inserted group is k = 8 (all-correct) and cost-varying by construction, so the mechanism cannot prefer easy or hard *mixed* groups",
+    "E1-E0's offline test on E1-D's stream found no difficulty bias (p = 0.943) and no source bias (p = 0.920); the online run's own stream differs, so this remains a transferred (not re-measured) result"
+  ],
+  "all_inserted_groups_have_cost_variation": true
+}

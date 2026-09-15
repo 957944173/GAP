@@ -1,0 +1,98 @@
+{
+  "experiment": "DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu",
+  "experiment_dir": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu",
+  "tracker": "120",
+  "checkpoints": {
+    "70": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_70",
+      "exists": false,
+      "shards": {},
+      "data_pt": null
+    },
+    "80": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_80",
+      "exists": false,
+      "shards": {},
+      "data_pt": null
+    },
+    "90": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_90",
+      "exists": false,
+      "shards": {},
+      "data_pt": null
+    },
+    "100": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_100",
+      "exists": false,
+      "shards": {},
+      "data_pt": null
+    },
+    "110": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_110",
+      "exists": false,
+      "shards": {},
+      "data_pt": null
+    },
+    "120": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1B-step70to120-4gpu/global_step_120",
+      "exists": true,
+      "shards": {
+        "model_rank0": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank0": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank0": {
+          "exists": true,
+          "size": 14632
+        },
+        "model_rank1": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank1": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank1": {
+          "exists": true,
+          "size": 14696
+        },
+        "model_rank2": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank2": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank2": {
+          "exists": true,
+          "size": 14696
+        },
+        "model_rank3": {
+          "exists": true,
+          "size": 3397345082
+        },
+        "optimizer_rank3": {
+          "exists": true,
+          "size": 6171911046
+        },
+        "extra_state_rank3": {
+          "exists": true,
+          "size": 14760
+        }
+      },
+      "data_pt": {
+        "exists": true,
+        "size": 1492,
+        "sha256": "2afc69dfa0ced1208ff258603db8d2737c93829edde0d8c9e19cd566e4d1b150"
+      },
+      "merged_hf": true,
+      "stats": null
+    }
+  }
+}

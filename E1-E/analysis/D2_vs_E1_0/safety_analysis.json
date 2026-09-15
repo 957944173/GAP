@@ -1,0 +1,69 @@
+{
+  "query_packing": {
+    "e1d": {
+      "label": "E1-E",
+      "active_groups": 158,
+      "efficient_correct_rollouts": 584,
+      "inefficient_correct_rollouts": 565,
+      "efficient_rounds_mean": 1.5256849315068493,
+      "inefficient_rounds_mean": 2.6495575221238936,
+      "efficient_queries_mean": 2.087328767123288,
+      "inefficient_queries_mean": 3.067256637168142,
+      "efficient_parallel_factor_mean": 1.368125701459035,
+      "inefficient_parallel_factor_mean": 1.1576486305945226,
+      "efficient_tokens_mean": 1354.0770547945206,
+      "inefficient_tokens_mean": 1942.4053097345134,
+      "efficient_turns_mean": 2.5256849315068495,
+      "inefficient_turns_mean": 3.6495575221238936,
+      "packing_suspect_groups": 11,
+      "packing_suspect_ratio": 0.06962025316455696
+    },
+    "baseline": {
+      "label": "baseline E1-0",
+      "active_groups": 95,
+      "efficient_correct_rollouts": 377,
+      "inefficient_correct_rollouts": 354,
+      "efficient_rounds_mean": 1.4880636604774535,
+      "inefficient_rounds_mean": 2.4915254237288136,
+      "efficient_queries_mean": 2.0397877984084882,
+      "inefficient_queries_mean": 2.9322033898305087,
+      "efficient_parallel_factor_mean": 1.3707664884135473,
+      "inefficient_parallel_factor_mean": 1.1768707482993197,
+      "efficient_tokens_mean": 1343.159151193634,
+      "inefficient_tokens_mean": 1828.7881355932204,
+      "efficient_turns_mean": 2.4880636604774535,
+      "inefficient_turns_mean": 3.4915254237288136,
+      "packing_suspect_groups": 4,
+      "packing_suspect_ratio": 0.042105263157894736
+    },
+    "definition": "packing_suspect = within an active (>=2 correct, cost-varying) group the efficient correct rollouts use fewer rounds but NOT fewer total queries"
+  },
+  "zero_search": {
+    "e1e_zero_search_rate": 0.0,
+    "baseline_zero_search_rate": 0.00016304347826086958,
+    "e1e_zero_search_correct_rate": 0.0
+  },
+  "malformed": {
+    "e1e_metadata_invalid_rate": 0.0,
+    "complete_reason_top": [
+      [
+        "None",
+        43520
+      ]
+    ]
+  },
+  "reward_distribution": {
+    "e1e_reward_hist": {
+      "0.0": 22311,
+      "1.0": 20742,
+      "1.017": 1,
+      "1.025": 9,
+      "1.033": 1,
+      "1.05": 456
+    },
+    "e1e_em_rate": 0.48733915441176473,
+    "e1e_reward_nonzero_rate": 0.48733915441176473,
+    "note": "reward = A*(1+0.05*E); E=0 => reward == EM (0 or 1); active correct rollouts get 1.05/1.0333/... depending on cost",
+    "baseline_em_rate": 0.4539130434782609
+  }
+}

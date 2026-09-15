@@ -1,0 +1,4 @@
+[2026-09-14 16:55:47] watchdog started; log=/data01/wyy/Graph-Agent-Planning/E1-E/logs/train_D2_20260914_165545.log; baseline stackdumps=3
+[2026-09-14 16:55:47] pre_stall=480s post_stall=2700s interval=15s
+[2026-09-14 16:59:32] watchdog: armed (resume line seen)
+[2026-09-14 17:00:47] watchdog: first validation batch print seen -> post phase (long window)

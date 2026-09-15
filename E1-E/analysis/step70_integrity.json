@@ -1,0 +1,704 @@
+{
+  "phase": "D1",
+  "experiment_dir": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu",
+  "checkpoint_dir": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu/global_step_70",
+  "train_log": "/data01/wyy/Graph-Agent-Planning/E1-E/logs/train_D1_20260914_115858.log",
+  "run_dir": "/data01/wyy/Graph-Agent-Planning/E1-E/runs/D1_20260914_115858",
+  "expected_start_step": 60,
+  "expected_end_step": 70,
+  "checkpoint": {
+    "exists": true,
+    "shards": {
+      "model_rank0": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank0": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank0": {
+        "exists": true,
+        "size": 14632
+      },
+      "model_rank1": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank1": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank1": {
+        "exists": true,
+        "size": 14696
+      },
+      "model_rank2": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank2": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank2": {
+        "exists": true,
+        "size": 14696
+      },
+      "model_rank3": {
+        "exists": true,
+        "size": 3397345082
+      },
+      "optimizer_rank3": {
+        "exists": true,
+        "size": 6171911046
+      },
+      "extra_state_rank3": {
+        "exists": true,
+        "size": 14760
+      }
+    },
+    "data_pt": true,
+    "tracker": "120"
+  },
+  "training_log": {
+    "exists": true,
+    "steps_seen": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+    ],
+    "missing_steps": [],
+    "all_steps_present": true,
+    "resume_line_present": true,
+    "metrics_parsed": 1240,
+    "non_finite_metrics": {},
+    "error_pattern_counts_before_final_val": {
+      "cuda_oom": 0,
+      "nccl_error": 0,
+      "nccl_warn": 12,
+      "ray_worker_died": 0,
+      "wiki_search_error": 0,
+      "wiki_tool_exec_failed": 0,
+      "traceback": 0,
+      "cuda_error": 0
+    }
+  },
+  "state_resume_evidence": {
+    "resume_source": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/extra_state_world_size_4_rank_0.pt",
+      "keys": [
+        "lr_scheduler",
+        "rng"
+      ],
+      "lr_scheduler_last_epoch": 60,
+      "expected_last_epoch": 60,
+      "rng_present": true,
+      "rng_substates": [
+        "cpu",
+        "cuda",
+        "numpy",
+        "random"
+      ]
+    },
+    "end": {
+      "path": "/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu/global_step_70/actor/extra_state_world_size_4_rank_0.pt",
+      "keys": [
+        "lr_scheduler",
+        "rng"
+      ],
+      "lr_scheduler_last_epoch": 70,
+      "expected_last_epoch": 70,
+      "rng_present": true,
+      "rng_substates": [
+        "cpu",
+        "cuda",
+        "numpy",
+        "random"
+      ]
+    }
+  },
+  "state_resume_ok": true,
+  "quota_semantics": {
+    "available": true,
+    "n_step_records": 10,
+    "n_generation_calls": 121,
+    "n_group_records": 320,
+    "n_rollout_records": 8960,
+    "quota_error_lines": 0,
+    "quota_error_examples": [],
+    "steps_covered": [
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+    ],
+    "steps_missing": [],
+    "all_steps_recorded": true,
+    "steps_with_wrong_batch_size": [],
+    "batch_size_definition": "step-level groups = mixed_kept_cum + quota_actual (must be 32); `stopping_call_rollouts` is only that call's materialised rollouts",
+    "calls_with_quota_actual_gt_2": 0,
+    "calls_with_wrong_quota_target": 0,
+    "steps_without_exactly_one_stopping_call": [],
+    "calls_where_stopping_disagrees_with_mixed_count": 0,
+    "non_stopping_calls_with_insertions": 0,
+    "quota_formula_holds_all_steps": true,
+    "quota_formula_violations": [],
+    "steps_short_of_design_quota": [],
+    "n_steps_short_of_design_quota": 0,
+    "efficiency_groups": 20,
+    "mixed_groups": 300,
+    "efficiency_groups_with_k_not_8": 0,
+    "efficiency_groups_without_cost_variation": 0,
+    "efficiency_groups_reward_out_of_1_1.05": 0,
+    "efficiency_groups_em_mean_not_1": 0,
+    "mixed_groups_reward_out_of_0_1": 0,
+    "mixed_groups_reward_mean_not_equal_em": 0,
+    "rollouts_mixed_reward_not_equal_em": 0,
+    "rollouts_wrong_with_nonzero_reward": 0,
+    "rollouts_efficiency_reward_or_em_wrong": 0,
+    "rollouts_published_metric_inconsistent": 0,
+    "rollouts_reward_tensor_mismatch": 0,
+    "wrong_rollouts": 1182,
+    "zero_search_rollouts": 0,
+    "zero_search_share": 0.0,
+    "malformed_metadata_rollouts": 0,
+    "malformed_metadata_share": 0.0,
+    "rollouts_skipped_neutralised_metric": 6400,
+    "rollouts_checked_for_metric_consistency": 2560,
+    "advantage_nan_total": 0,
+    "advantage_inf_total": 0,
+    "advantage_nan_total_manager_field": 0,
+    "advantage_nan_total_recomputed": 0,
+    "advantage_inf_total_recomputed": 0,
+    "advantage_recomputed_per_step": {
+      "61": {
+        "n": 256,
+        "groups": 32,
+        "nan": 0,
+        "inf": 0,
+        "mean": 5.204170427930421e-18,
+        "std": 0.9372424642932687,
+        "min": -2.474866734172715,
+        "max": 2.474866734172715
+      },
+      "62": {
+        "n": 1536,
+        "groups": 192,
+        "nan": 0,
+        "inf": 0,
+        "mean": -2.8912057932946786e-18,
+        "std": 0.3820038102751492,
+        "min": -2.474866734172715,
+        "max": 2.474866734172715
+      },
+      "63": {
+        "n": 256,
+        "groups": 32,
+        "nan": 0,
+        "inf": 0,
+        "mean": -6.765421556309548e-17,
+        "std": 0.9372417363323738,
+        "min": -2.474866734172715,
+        "max": 2.474866734172715
+      },
+      "64": {
+        "n": 1536,
+        "groups": 191,
+        "nan": 0,
+        "inf": 0,
+        "mean": 1.3877787807814457e-17,
+        "std": 0.3945861195366121,
+        "min": -2.474866734172715,
+        "max": 2.474866734172715
+      },
+      "65": {
+        "n": 256,
+        "groups": 32,
+        "nan": 0,
+        "inf": 0,
+        "mean": 1.1796119636642288e-16,
+        "std": 0.9372423253232471,
+        "min": -2.474866734172715,
+        "max": 2.474866734172715
+      },
+      "66": {
+        "n": 1536,
+        "groups": 192,
+        "nan": 0,
+        "inf": 0,
+        "mean": -4.669297356170906e-17,
+        "std": 0.38200373605179877,
+        "min": -2.474866734172715,
+        "max": 2.474866734172715
+      },
+      "67": {
+        "n": 1536,
+        "groups": 192,
+        "nan": 0,
+        "inf": 0,
+        "mean": 2.6020852139652106e-17,
+        "std": 0.38792608365169307,
+        "min": -2.474866734172715,
+        "max": 2.474866734172715
+      },
+      "68": {
+        "n": 256,
+        "groups": 32,
+        "nan": 0,
+        "inf": 0,
+        "mean": 1.1102230246251565e-16,
+        "std": 0.9372422653238279,
+        "min": -2.474866734172715,
+        "max": 2.474866734172715
+      },
+      "69": {
+        "n": 1536,
+        "groups": 192,
+        "nan": 0,
+        "inf": 0,
+        "mean": -4.85722573273506e-17,
+        "std": 0.38200349923690646,
+        "min": -2.474866734172715,
+        "max": 2.474866734172715
+      },
+      "70": {
+        "n": 256,
+        "groups": 32,
+        "nan": 0,
+        "inf": 0,
+        "mean": -1.717376241217039e-16,
+        "std": 0.9372417545745501,
+        "min": -2.474866734172715,
+        "max": 2.474866734172715
+      }
+    },
+    "manager_calls_served": 121,
+    "manager_calls_recorded": 121,
+    "unrecorded_calls": [],
+    "n_unrecorded_calls": 0,
+    "oversized_returned_batches": [],
+    "n_oversized_returned_batches": 0,
+    "kept_nothing_calls": 5,
+    "all_manager_calls_recorded": true,
+    "steps_with_generation_batch_gaps": {},
+    "calls_returning_unexpected_rollout_counts": [],
+    "n_calls_returning_unexpected_rollout_counts": 0,
+    "derived_inserted_ids_per_step": {
+      "61": [
+        "61:158926",
+        "61:38894"
+      ],
+      "62": [
+        "62:87334",
+        "62:81395"
+      ],
+      "63": [
+        "63:151066",
+        "63:44677"
+      ],
+      "64": [
+        "64:1502",
+        "64:142018"
+      ],
+      "65": [
+        "65:111687",
+        "65:162331"
+      ],
+      "66": [
+        "66:102841",
+        "66:116730"
+      ],
+      "67": [
+        "67:122020",
+        "67:135360"
+      ],
+      "68": [
+        "68:93312",
+        "68:165073"
+      ],
+      "69": [
+        "69:118891",
+        "69:145928"
+      ],
+      "70": [
+        "70:93945",
+        "70:11671"
+      ]
+    },
+    "steps_with_inconsistent_inserted_ids": [],
+    "id_list_note": "inserted ids are re-derived from quota_groups records of the stopping call; the D1 manager field repeated one id due to a leaked loop variable (fixed for D2)",
+    "per_step": {
+      "61": {
+        "generation_batches": 12,
+        "quota_actual": 2,
+        "candidate_groups_seen": 1920,
+        "mixed_groups_seen": 33,
+        "efficiency_groups_seen": 7,
+        "efficiency_cache_size": 2,
+        "eff_shortfall": 0,
+        "needs_injection": true,
+        "inserted_ids": [
+          "61:158926",
+          "61:38894"
+        ],
+        "inserted_ids_as_recorded": [
+          "61:158926",
+          "61:38894"
+        ],
+        "displaced_ids": [
+          "61:113321",
+          "61:148830",
+          "61:94116"
+        ],
+        "mixed_kept_in_stop_call": [
+          "61:67891"
+        ],
+        "mixed_dropped_in_step": 3,
+        "optimizer_batch_groups": 32,
+        "stopping_call_rollouts": 24,
+        "mixed_kept_cum": 30,
+        "advantage_mean": 2.312964634635743e-17,
+        "advantage_std": 0.9555078547086473,
+        "advantage_nan_recomputed": 0,
+        "advantage_inf_recomputed": 0
+      },
+      "62": {
+        "generation_batches": 11,
+        "quota_actual": 2,
+        "candidate_groups_seen": 1760,
+        "mixed_groups_seen": 33,
+        "efficiency_groups_seen": 2,
+        "efficiency_cache_size": 2,
+        "eff_shortfall": 0,
+        "needs_injection": true,
+        "inserted_ids": [
+          "62:87334",
+          "62:81395"
+        ],
+        "inserted_ids_as_recorded": [
+          "62:87334",
+          "62:81395"
+        ],
+        "displaced_ids": [
+          "62:41022",
+          "62:85763",
+          "62:143767"
+        ],
+        "mixed_kept_in_stop_call": [
+          "62:52372"
+        ],
+        "mixed_dropped_in_step": 3,
+        "optimizer_batch_groups": 32,
+        "stopping_call_rollouts": 24,
+        "mixed_kept_cum": 30,
+        "advantage_mean": 0.0,
+        "advantage_std": 0.9555048767143585,
+        "advantage_nan_recomputed": 0,
+        "advantage_inf_recomputed": 0
+      },
+      "63": {
+        "generation_batches": 10,
+        "quota_actual": 2,
+        "candidate_groups_seen": 1600,
+        "mixed_groups_seen": 32,
+        "efficiency_groups_seen": 3,
+        "efficiency_cache_size": 2,
+        "eff_shortfall": 0,
+        "needs_injection": true,
+        "inserted_ids": [
+          "63:151066",
+          "63:44677"
+        ],
+        "inserted_ids_as_recorded": [
+          "63:151066",
+          "63:44677"
+        ],
+        "displaced_ids": [
+          "63:82338",
+          "63:25460"
+        ],
+        "mixed_kept_in_stop_call": [
+          "63:11995"
+        ],
+        "mixed_dropped_in_step": 2,
+        "optimizer_batch_groups": 32,
+        "stopping_call_rollouts": 24,
+        "mixed_kept_cum": 30,
+        "advantage_mean": -7.771561172376096e-16,
+        "advantage_std": 0.9555006934034834,
+        "advantage_nan_recomputed": 0,
+        "advantage_inf_recomputed": 0
+      },
+      "64": {
+        "generation_batches": 12,
+        "quota_actual": 2,
+        "candidate_groups_seen": 1920,
+        "mixed_groups_seen": 33,
+        "efficiency_groups_seen": 10,
+        "efficiency_cache_size": 2,
+        "eff_shortfall": 0,
+        "needs_injection": true,
+        "inserted_ids": [
+          "64:1502",
+          "64:142018"
+        ],
+        "inserted_ids_as_recorded": [
+          "64:1502",
+          "64:142018"
+        ],
+        "displaced_ids": [
+          "64:79786",
+          "64:57937",
+          "64:25155"
+        ],
+        "mixed_kept_in_stop_call": [],
+        "mixed_dropped_in_step": 3,
+        "optimizer_batch_groups": 32,
+        "stopping_call_rollouts": 16,
+        "mixed_kept_cum": 30,
+        "advantage_mean": 0.0,
+        "advantage_std": 0.9660544511886039,
+        "advantage_nan_recomputed": 0,
+        "advantage_inf_recomputed": 0
+      },
+      "65": {
+        "generation_batches": 12,
+        "quota_actual": 2,
+        "candidate_groups_seen": 1920,
+        "mixed_groups_seen": 33,
+        "efficiency_groups_seen": 12,
+        "efficiency_cache_size": 2,
+        "eff_shortfall": 0,
+        "needs_injection": true,
+        "inserted_ids": [
+          "65:111687",
+          "65:162331"
+        ],
+        "inserted_ids_as_recorded": [
+          "65:111687",
+          "65:162331"
+        ],
+        "displaced_ids": [
+          "65:20410",
+          "65:130480",
+          "65:17937"
+        ],
+        "mixed_kept_in_stop_call": [],
+        "mixed_dropped_in_step": 3,
+        "optimizer_batch_groups": 32,
+        "stopping_call_rollouts": 16,
+        "mixed_kept_cum": 30,
+        "advantage_mean": 1.7208456881689926e-15,
+        "advantage_std": 0.9660522480703188,
+        "advantage_nan_recomputed": 0,
+        "advantage_inf_recomputed": 0
+      },
+      "66": {
+        "generation_batches": 14,
+        "quota_actual": 2,
+        "candidate_groups_seen": 2240,
+        "mixed_groups_seen": 33,
+        "efficiency_groups_seen": 11,
+        "efficiency_cache_size": 2,
+        "eff_shortfall": 0,
+        "needs_injection": true,
+        "inserted_ids": [
+          "66:102841",
+          "66:116730"
+        ],
+        "inserted_ids_as_recorded": [
+          "66:102841",
+          "66:116730"
+        ],
+        "displaced_ids": [
+          "66:74332",
+          "66:93118"
+        ],
+        "mixed_kept_in_stop_call": [],
+        "mixed_dropped_in_step": 3,
+        "optimizer_batch_groups": 32,
+        "stopping_call_rollouts": 16,
+        "mixed_kept_cum": 30,
+        "advantage_mean": -4.496403249731884e-15,
+        "advantage_std": 0.9660457935163619,
+        "advantage_nan_recomputed": 0,
+        "advantage_inf_recomputed": 0
+      },
+      "67": {
+        "generation_batches": 14,
+        "quota_actual": 2,
+        "candidate_groups_seen": 2240,
+        "mixed_groups_seen": 34,
+        "efficiency_groups_seen": 5,
+        "efficiency_cache_size": 2,
+        "eff_shortfall": 0,
+        "needs_injection": true,
+        "inserted_ids": [
+          "67:122020",
+          "67:135360"
+        ],
+        "inserted_ids_as_recorded": [
+          "67:122020",
+          "67:135360"
+        ],
+        "displaced_ids": [
+          "67:10824",
+          "67:130458",
+          "67:36393",
+          "67:4865"
+        ],
+        "mixed_kept_in_stop_call": [
+          "67:132840",
+          "67:14164",
+          "67:119819"
+        ],
+        "mixed_dropped_in_step": 4,
+        "optimizer_batch_groups": 32,
+        "stopping_call_rollouts": 40,
+        "mixed_kept_cum": 30,
+        "advantage_mean": 5.773159728050814e-16,
+        "advantage_std": 0.9473114139984474,
+        "advantage_nan_recomputed": 0,
+        "advantage_inf_recomputed": 0
+      },
+      "68": {
+        "generation_batches": 9,
+        "quota_actual": 2,
+        "candidate_groups_seen": 1440,
+        "mixed_groups_seen": 33,
+        "efficiency_groups_seen": 5,
+        "efficiency_cache_size": 2,
+        "eff_shortfall": 0,
+        "needs_injection": true,
+        "inserted_ids": [
+          "68:93312",
+          "68:165073"
+        ],
+        "inserted_ids_as_recorded": [
+          "68:93312",
+          "68:165073"
+        ],
+        "displaced_ids": [
+          "68:97572",
+          "68:169292",
+          "68:154399"
+        ],
+        "mixed_kept_in_stop_call": [
+          "68:82454"
+        ],
+        "mixed_dropped_in_step": 3,
+        "optimizer_batch_groups": 32,
+        "stopping_call_rollouts": 24,
+        "mixed_kept_cum": 30,
+        "advantage_mean": 1.2027416100105863e-15,
+        "advantage_std": 0.9555063293915262,
+        "advantage_nan_recomputed": 0,
+        "advantage_inf_recomputed": 0
+      },
+      "69": {
+        "generation_batches": 14,
+        "quota_actual": 2,
+        "candidate_groups_seen": 2240,
+        "mixed_groups_seen": 32,
+        "efficiency_groups_seen": 9,
+        "efficiency_cache_size": 2,
+        "eff_shortfall": 0,
+        "needs_injection": true,
+        "inserted_ids": [
+          "69:118891",
+          "69:145928"
+        ],
+        "inserted_ids_as_recorded": [
+          "69:118891",
+          "69:145928"
+        ],
+        "displaced_ids": [
+          "69:109760",
+          "69:78808"
+        ],
+        "mixed_kept_in_stop_call": [
+          "69:63643"
+        ],
+        "mixed_dropped_in_step": 2,
+        "optimizer_batch_groups": 32,
+        "stopping_call_rollouts": 24,
+        "mixed_kept_cum": 30,
+        "advantage_mean": -3.1826393372587822e-15,
+        "advantage_std": 0.9554961519588581,
+        "advantage_nan_recomputed": 0,
+        "advantage_inf_recomputed": 0
+      },
+      "70": {
+        "generation_batches": 13,
+        "quota_actual": 2,
+        "candidate_groups_seen": 2080,
+        "mixed_groups_seen": 35,
+        "efficiency_groups_seen": 11,
+        "efficiency_cache_size": 2,
+        "eff_shortfall": 0,
+        "needs_injection": true,
+        "inserted_ids": [
+          "70:93945",
+          "70:11671"
+        ],
+        "inserted_ids_as_recorded": [
+          "70:93945",
+          "70:11671"
+        ],
+        "displaced_ids": [
+          "70:158565",
+          "70:43616",
+          "70:99033",
+          "70:101556",
+          "70:8932"
+        ],
+        "mixed_kept_in_stop_call": [],
+        "mixed_dropped_in_step": 5,
+        "optimizer_batch_groups": 32,
+        "stopping_call_rollouts": 16,
+        "mixed_kept_cum": 30,
+        "advantage_mean": -2.7478019859472624e-15,
+        "advantage_std": 0.9660435903783324,
+        "advantage_nan_recomputed": 0,
+        "advantage_inf_recomputed": 0
+      }
+    },
+    "quota_fill_rate": 1.0,
+    "steps_full_quota": 10,
+    "steps_used": 10,
+    "total_inserted_efficiency_groups": 20,
+    "inserted_ids_distinct_every_step": true,
+    "total_mixed_dropped": 31,
+    "total_displaced_mixed_groups": 30,
+    "total_eff_shortfall": 0,
+    "steps_needing_injection": 10,
+    "total_generation_batches": 121,
+    "mean_generation_batches_per_step": 12.1,
+    "quota_semantics_ok": true
+  },
+  "log_vs_diagnostics": {
+    "available": true,
+    "steps_cross_checked": 10,
+    "score_max_mismatches": 0,
+    "examples": [],
+    "log_score_max_consistent_with_quota": true
+  },
+  "tracker_reached_end_step": true,
+  "note_tracker": "tracker is experiment-wide; a D1 re-check after D2 shows 120 - the requirement is tracker >= END_STEP and a complete global_step_END_STEP",
+  "integrity_ok": true
+}

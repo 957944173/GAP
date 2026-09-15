@@ -1,0 +1,204 @@
+===== E1-E preflight 2026-09-14T09:27:22+08:00 =====
+--- [1/4] wiki retriever service
+tool config URL: (not found)
+LISTEN    0         2048             127.0.0.1:8008             0.0.0.0:*        users:(("pt_main_thread",pid=2230350,fd=120))                                  
+2230350 python3 /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/wiki_rag_server.py --index_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/e5_Flat.index --corpus_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/wiki-18.jsonl --topk 3 --retriever_name e5 --retriever_model /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../models/e5-base-v2 --faiss_gpu --host 127.0.0.1 --port 8008
+wiki HEALTHY at http://127.0.0.1:8008/retrieve -> REUSING (no duplicate server; nothing stopped)
+functional retrieval probe (truncated): {"result":[[{"id":"11115958","contents":"France\nregions (five of which are situated overseas) span a combined area of and a total population of 67.3 million (). France, a sovereign state, is a unitary semi-presidential republic with its capital in Paris, the country's largest city and main cultural
+--- [2/4] conda env + environment.sh
+sourced /data01/wyy/Graph-Agent-Planning/environment.sh
+conda env: parallel-agent (/home/nf5468m6/miniconda3/envs/parallel-agent)
+which python: /home/nf5468m6/miniconda3/envs/parallel-agent/bin/python
+python version: Python 3.10.14
+CUDA_VISIBLE_DEVICES=unset
+wiki functional probe OK
+torch 2.6.0+cu124 cuda 12.4 available True
+ray 2.43.0
+sglang 0.4.6.post5
+transformers 4.51.1
+pandas 2.2.3
+numpy 1.26.4
+python 3.10.14
+--- [3/4] GPU / process / ray preflight
+index, name, memory.used [MiB], memory.total [MiB], utilization.gpu [%]
+0, NVIDIA A800 80GB PCIe, 10171 MiB, 81920 MiB, 0 %
+1, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+2, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+3, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+GAP main_ppo processes: 0
+(none)
+ray processes: 0
+0
+sglang processes: 0
+0
+wiki processes: 1
+(E1-E kills no unknown process)
+--- [4/4] input integrity + output guards
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_0.pt (3397345082 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_1.pt (3397345082 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_2.pt (3397345082 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_3.pt (3397345082 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/optim_world_size_4_rank_0.pt (6171911046 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/optim_world_size_4_rank_3.pt (6171911046 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/extra_state_world_size_4_rank_0.pt (14632 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/extra_state_world_size_4_rank_3.pt (14760 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/data.pt (1492 B)
+OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet
+OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet
+OK      /data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml
+OK      /data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu
+OK      /data01/wyy/Graph-Agent-Planning/E1-E/code/e1e_scorer.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-E/code/e1e_reward_manager.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-E/code/pythonpath_e1e/sitecustomize.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-E/scripts/run_e1e_train.sh
+gap_step60 tracker=200
+ABSENT /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu
+ABSENT /data01/wyy/Graph-Agent-Planning/E1-E/runs/latest_D1.txt
+ABSENT /data01/wyy/Graph-Agent-Planning/E1-E/eval_results/latest_step70.txt
+wrote /data01/wyy/Graph-Agent-Planning/E1-E/manifests/original_files_manifest_pre.json (23 files)
+STATUS=OK
+WIKI_REUSED=true
+WIKI_STARTED=false
+WIKI_URL=http://127.0.0.1:8008/retrieve
+WIKI_PIDS=2230350
+GAP_STEP60_CKPT=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60
+GAP_STEP60_ACTOR_BYTES=45103143488
+PARALLEL_AGENT_ENV=parallel-agent
+TIMESTAMP=2026-09-14T09:27:27+08:00
+===== E1-E preflight DONE (STATUS=OK) =====
+===== E1-E preflight 2026-09-14T09:31:57+08:00 =====
+--- [1/4] wiki retriever service
+tool config URL: (not found)
+LISTEN    0         2048             127.0.0.1:8008             0.0.0.0:*        users:(("pt_main_thread",pid=2230350,fd=120))                                  
+2230350 python3 /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/wiki_rag_server.py --index_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/e5_Flat.index --corpus_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/wiki-18.jsonl --topk 3 --retriever_name e5 --retriever_model /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../models/e5-base-v2 --faiss_gpu --host 127.0.0.1 --port 8008
+wiki HEALTHY at http://127.0.0.1:8008/retrieve -> REUSING (no duplicate server; nothing stopped)
+functional retrieval probe (truncated): {"result":[[{"id":"11115958","contents":"France\nregions (five of which are situated overseas) span a combined area of and a total population of 67.3 million (). France, a sovereign state, is a unitary semi-presidential republic with its capital in Paris, the country's largest city and main cultural
+--- [2/4] conda env + environment.sh
+sourced /data01/wyy/Graph-Agent-Planning/environment.sh
+conda env: parallel-agent (/home/nf5468m6/miniconda3/envs/parallel-agent)
+which python: /home/nf5468m6/miniconda3/envs/parallel-agent/bin/python
+python version: Python 3.10.14
+CUDA_VISIBLE_DEVICES=unset
+wiki functional probe OK
+torch 2.6.0+cu124 cuda 12.4 available True
+ray 2.43.0
+sglang 0.4.6.post5
+transformers 4.51.1
+pandas 2.2.3
+numpy 1.26.4
+python 3.10.14
+--- [3/4] GPU / process / ray preflight
+index, name, memory.used [MiB], memory.total [MiB], utilization.gpu [%]
+0, NVIDIA A800 80GB PCIe, 10171 MiB, 81920 MiB, 0 %
+1, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+2, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+3, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+GAP main_ppo processes: 0
+(none)
+ray processes: 0
+0
+sglang processes: 0
+0
+wiki processes: 1
+(E1-E kills no unknown process)
+--- [4/4] input integrity + output guards
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_0.pt (3397345082 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_1.pt (3397345082 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_2.pt (3397345082 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_3.pt (3397345082 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/optim_world_size_4_rank_0.pt (6171911046 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/optim_world_size_4_rank_3.pt (6171911046 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/extra_state_world_size_4_rank_0.pt (14632 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/extra_state_world_size_4_rank_3.pt (14760 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/data.pt (1492 B)
+OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet
+OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet
+OK      /data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml
+OK      /data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu
+OK      /data01/wyy/Graph-Agent-Planning/E1-E/code/e1e_scorer.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-E/code/e1e_reward_manager.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-E/code/pythonpath_e1e/sitecustomize.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-E/scripts/run_e1e_train.sh
+gap_step60 tracker=200
+ABSENT /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu
+ABSENT /data01/wyy/Graph-Agent-Planning/E1-E/runs/latest_D1.txt
+ABSENT /data01/wyy/Graph-Agent-Planning/E1-E/eval_results/latest_step70.txt
+wrote /data01/wyy/Graph-Agent-Planning/E1-E/manifests/original_files_manifest_pre.json (23 files)
+STATUS=OK
+WIKI_REUSED=true
+WIKI_STARTED=false
+WIKI_URL=http://127.0.0.1:8008/retrieve
+WIKI_PIDS=2230350
+GAP_STEP60_CKPT=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60
+GAP_STEP60_ACTOR_BYTES=45103143488
+PARALLEL_AGENT_ENV=parallel-agent
+TIMESTAMP=2026-09-14T09:32:02+08:00
+===== E1-E preflight DONE (STATUS=OK) =====
+===== E1-E preflight 2026-09-14T11:58:06+08:00 =====
+--- [1/4] wiki retriever service
+tool config URL: (not found)
+LISTEN    0         2048             127.0.0.1:8008             0.0.0.0:*        users:(("pt_main_thread",pid=2230350,fd=120))                                  
+2230350 python3 /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/wiki_rag_server.py --index_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/e5_Flat.index --corpus_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/wiki-18.jsonl --topk 3 --retriever_name e5 --retriever_model /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../models/e5-base-v2 --faiss_gpu --host 127.0.0.1 --port 8008
+wiki HEALTHY at http://127.0.0.1:8008/retrieve -> REUSING (no duplicate server; nothing stopped)
+functional retrieval probe (truncated): {"result":[[{"id":"11115958","contents":"France\nregions (five of which are situated overseas) span a combined area of and a total population of 67.3 million (). France, a sovereign state, is a unitary semi-presidential republic with its capital in Paris, the country's largest city and main cultural
+--- [2/4] conda env + environment.sh
+sourced /data01/wyy/Graph-Agent-Planning/environment.sh
+conda env: parallel-agent (/home/nf5468m6/miniconda3/envs/parallel-agent)
+which python: /home/nf5468m6/miniconda3/envs/parallel-agent/bin/python
+python version: Python 3.10.14
+CUDA_VISIBLE_DEVICES=unset
+wiki functional probe OK
+torch 2.6.0+cu124 cuda 12.4 available True
+ray 2.43.0
+sglang 0.4.6.post5
+transformers 4.51.1
+pandas 2.2.3
+numpy 1.26.4
+python 3.10.14
+--- [3/4] GPU / process / ray preflight
+index, name, memory.used [MiB], memory.total [MiB], utilization.gpu [%]
+0, NVIDIA A800 80GB PCIe, 10171 MiB, 81920 MiB, 0 %
+1, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+2, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+3, NVIDIA A800 80GB PCIe, 9697 MiB, 81920 MiB, 0 %
+GAP main_ppo processes: 0
+(none)
+ray processes: 0
+0
+sglang processes: 0
+0
+wiki processes: 1
+(E1-E kills no unknown process)
+--- [4/4] input integrity + output guards
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_0.pt (3397345082 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_1.pt (3397345082 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_2.pt (3397345082 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/model_world_size_4_rank_3.pt (3397345082 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/optim_world_size_4_rank_0.pt (6171911046 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/optim_world_size_4_rank_3.pt (6171911046 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/extra_state_world_size_4_rank_0.pt (14632 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/actor/extra_state_world_size_4_rank_3.pt (14760 B)
+OK      /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60/data.pt (1492 B)
+OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/GAP-MHQA-RL-Dataset/GAP-RL-16w.cleaned.parquet
+OK      /data01/wyy/Graph-Agent-Planning/Agent/data/mhqa_agent/test_benchmarks/nq.cleaned.parquet
+OK      /data01/wyy/Graph-Agent-Planning/verl/verl/tools/config/search_tool_config/wiki_rag_config.yaml
+OK      /data01/wyy/Graph-Agent-Planning/experiments/exp_1_lr1e-5_wr0.03_bs1_ga8_4gpu
+OK      /data01/wyy/Graph-Agent-Planning/E1-E/code/e1e_scorer.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-E/code/e1e_reward_manager.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-E/code/pythonpath_e1e/sitecustomize.py
+OK      /data01/wyy/Graph-Agent-Planning/E1-E/scripts/run_e1e_train.sh
+gap_step60 tracker=200
+ABSENT /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu
+ABSENT /data01/wyy/Graph-Agent-Planning/E1-E/runs/latest_D1.txt
+ABSENT /data01/wyy/Graph-Agent-Planning/E1-E/eval_results/latest_step70.txt
+wrote /data01/wyy/Graph-Agent-Planning/E1-E/manifests/original_files_manifest_pre.json (23 files)
+STATUS=OK
+WIKI_REUSED=true
+WIKI_STARTED=false
+WIKI_URL=http://127.0.0.1:8008/retrieve
+WIKI_PIDS=2230350
+GAP_STEP60_CKPT=/data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60
+GAP_STEP60_ACTOR_BYTES=45103143488
+PARALLEL_AGENT_ENV=parallel-agent
+TIMESTAMP=2026-09-14T11:58:11+08:00
+===== E1-E preflight DONE (STATUS=OK) =====

@@ -1,0 +1,265 @@
+{
+  "checked_at": "2026-09-15T07:30:39",
+  "pre_manifest": "/data01/wyy/Graph-Agent-Planning/E1-E/manifests/original_files_manifest_pre.json",
+  "n_files_checked": 23,
+  "changed_files": [],
+  "missing_files": [
+    "verl/verl/workers/rollout/sglang_rollout.py"
+  ],
+  "entries": [
+    {
+      "path": "Agent/train/mhqa_agent/rl/run_gen_bs_supervisor.sh",
+      "pre_present": true,
+      "pre_sha256": "53b0a1a66a892d459c398d067313cc19b0732a32a0f1dcdbb636d2bbc723f73f",
+      "pre_mtime": 1788366779.3406346,
+      "exists": true,
+      "size": 1716,
+      "mtime": 1788366779.3406346,
+      "sha256": "53b0a1a66a892d459c398d067313cc19b0732a32a0f1dcdbb636d2bbc723f73f"
+    },
+    {
+      "path": "Agent/train/mhqa_agent/rl/train_dapo_mhqa_agent_wiki.sh",
+      "pre_present": true,
+      "pre_sha256": "b5d5199acb40fe4087375bcb161d4dc0d3e3bd57926969ac50d0cf81c87982d3",
+      "pre_mtime": 1787711214.581472,
+      "exists": true,
+      "size": 11665,
+      "mtime": 1787711214.581472,
+      "sha256": "b5d5199acb40fe4087375bcb161d4dc0d3e3bd57926969ac50d0cf81c87982d3"
+    },
+    {
+      "path": "Agent/train/mhqa_agent/rl/gen_bs_supervisor.py",
+      "pre_present": true,
+      "pre_sha256": "9bd7924cf343ccead0143d196f7795fabe023411f06ce1020f132c9c898d6bee",
+      "pre_mtime": 1787711223.2734437,
+      "exists": true,
+      "size": 19946,
+      "mtime": 1787711223.2734437,
+      "sha256": "9bd7924cf343ccead0143d196f7795fabe023411f06ce1020f132c9c898d6bee"
+    },
+    {
+      "path": "Agent/evaluation/mhqa_agent/eval_mhqa_agent_4gpu_common.sh",
+      "pre_present": true,
+      "pre_sha256": "846273934b71888ef41ea1fb8d41182f63a80ce50853825067200851150d1634",
+      "pre_mtime": 1787689710.9865487,
+      "exists": true,
+      "size": 12385,
+      "mtime": 1787689710.9865487,
+      "sha256": "846273934b71888ef41ea1fb8d41182f63a80ce50853825067200851150d1634"
+    },
+    {
+      "path": "Agent/evaluation/mhqa_agent/summarize_eval.py",
+      "pre_present": true,
+      "pre_sha256": "267e83456ee40e8093048d6f7ae782c940f10ecc8c9b3ead92a349740744aa7c",
+      "pre_mtime": 1787689710.9865487,
+      "exists": true,
+      "size": 14854,
+      "mtime": 1787689710.9865487,
+      "sha256": "267e83456ee40e8093048d6f7ae782c940f10ecc8c9b3ead92a349740744aa7c"
+    },
+    {
+      "path": "verl/verl/workers/reward_manager/batch.py",
+      "pre_present": true,
+      "pre_sha256": "d97743d1089546e711a1d38747bf80b87e40dc0a36d7869ca5499189396c0d4a",
+      "pre_mtime": 1782874343.8099792,
+      "exists": true,
+      "size": 5337,
+      "mtime": 1782874343.8099792,
+      "sha256": "d97743d1089546e711a1d38747bf80b87e40dc0a36d7869ca5499189396c0d4a"
+    },
+    {
+      "path": "verl/verl/workers/reward_manager/__init__.py",
+      "pre_present": true,
+      "pre_sha256": "7088f7e82eb864fe4b015e7c095979190a84a28bcc7ad9d4d5f48425a9f48eac",
+      "pre_mtime": 1782874343.8099792,
+      "exists": true,
+      "size": 1238,
+      "mtime": 1782874343.8099792,
+      "sha256": "7088f7e82eb864fe4b015e7c095979190a84a28bcc7ad9d4d5f48425a9f48eac"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/mhqa_train.py",
+      "pre_present": true,
+      "pre_sha256": "489de015503b707d32c7ecb008586befcf6e5dc0129750ce46d7ed3ebaa91c33",
+      "pre_mtime": 1782874343.808979,
+      "exists": true,
+      "size": 6008,
+      "mtime": 1782874343.808979,
+      "sha256": "489de015503b707d32c7ecb008586befcf6e5dc0129750ce46d7ed3ebaa91c33"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/mhqa_eval.py",
+      "pre_present": true,
+      "pre_sha256": "01caeda125325f75288d0f3575e863d04600909d3d890928675c2465a819084b",
+      "pre_mtime": 1782874343.808979,
+      "exists": true,
+      "size": 6064,
+      "mtime": 1782874343.808979,
+      "sha256": "01caeda125325f75288d0f3575e863d04600909d3d890928675c2465a819084b"
+    },
+    {
+      "path": "verl/verl/workers/rollout/sglang_rollout.py",
+      "pre_present": false,
+      "pre_sha256": null,
+      "pre_mtime": null,
+      "exists": false
+    },
+    {
+      "path": "verl/verl/workers/rollout/schemas.py",
+      "pre_present": true,
+      "pre_sha256": "de231824fa1000b1b8516777d40f6a4e843465f4108ff7d95a63872248e9d645",
+      "pre_mtime": 1782874343.8109791,
+      "exists": true,
+      "size": 14864,
+      "mtime": 1782874343.8109791,
+      "sha256": "de231824fa1000b1b8516777d40f6a4e843465f4108ff7d95a63872248e9d645"
+    },
+    {
+      "path": "verl/verl/trainer/ppo/ray_trainer.py",
+      "pre_present": true,
+      "pre_sha256": "29aecd3dcabfaa8aeb6891f3e36b642a0ab68f28ed4edc98866bda2caca4ccfc",
+      "pre_mtime": 1783328692.4529805,
+      "exists": true,
+      "size": 108763,
+      "mtime": 1783328692.4529805,
+      "sha256": "29aecd3dcabfaa8aeb6891f3e36b642a0ab68f28ed4edc98866bda2caca4ccfc"
+    },
+    {
+      "path": "verl/verl/trainer/ppo/reward.py",
+      "pre_present": true,
+      "pre_sha256": "0121d6609a9b6769496b979c02bbf795d9ee3a9b4eeec4b2dc5d4fb7675895e1",
+      "pre_mtime": 1782874343.8039792,
+      "exists": true,
+      "size": 5994,
+      "mtime": 1782874343.8039792,
+      "sha256": "0121d6609a9b6769496b979c02bbf795d9ee3a9b4eeec4b2dc5d4fb7675895e1"
+    },
+    {
+      "path": "verl/verl/trainer/ppo/core_algos.py",
+      "pre_present": true,
+      "pre_sha256": "127ef53e92e89093aae42f216abf96d1acbde995a62f658e1ceaa894d9ed6a56",
+      "pre_mtime": 1782874343.8029792,
+      "exists": true,
+      "size": 28396,
+      "mtime": 1782874343.8029792,
+      "sha256": "127ef53e92e89093aae42f216abf96d1acbde995a62f658e1ceaa894d9ed6a56"
+    },
+    {
+      "path": "verl/verl/utils/checkpoint/fsdp_checkpoint_manager.py",
+      "pre_present": true,
+      "pre_sha256": "b0d45b23ebf76174513e4b2fb47195c674b5013a93f7dc198d6930fae59e42ed",
+      "pre_mtime": 1782874343.8039792,
+      "exists": true,
+      "size": 14388,
+      "mtime": 1782874343.8039792,
+      "sha256": "b0d45b23ebf76174513e4b2fb47195c674b5013a93f7dc198d6930fae59e42ed"
+    },
+    {
+      "path": "environment.sh",
+      "pre_present": true,
+      "pre_sha256": "50adf9d3a6072c7c756dee133dbccf800041e6aae0a4bac35603684da58232d7",
+      "pre_mtime": 1782997718.5397902,
+      "exists": true,
+      "size": 2491,
+      "mtime": 1782997718.5397902,
+      "sha256": "50adf9d3a6072c7c756dee133dbccf800041e6aae0a4bac35603684da58232d7"
+    },
+    {
+      "path": "E1-0/runs/20260910_step60to70_e10/code/e10_reward_manager.py",
+      "pre_present": true,
+      "pre_sha256": "c425d2827f94394f87076d3c946cd4b7ebcca1016896c9131fe1430251cf391c",
+      "pre_mtime": 1789039446.0946498,
+      "exists": true,
+      "size": 30100,
+      "mtime": 1789039446.0946498,
+      "sha256": "c425d2827f94394f87076d3c946cd4b7ebcca1016896c9131fe1430251cf391c"
+    },
+    {
+      "path": "E1-A/code/e1a_scorer.py",
+      "pre_present": true,
+      "pre_sha256": "90cd57b6fd2c7bea764c0bc46382daa409ec9d3ae12ec982146cc7483f297032",
+      "pre_mtime": 1789065969.0350063,
+      "exists": true,
+      "size": 5447,
+      "mtime": 1789065969.0350063,
+      "sha256": "90cd57b6fd2c7bea764c0bc46382daa409ec9d3ae12ec982146cc7483f297032"
+    },
+    {
+      "path": "E1-A/code/e1a_reward_manager.py",
+      "pre_present": true,
+      "pre_sha256": "a5171a96cdde4b67d9f468fcc76fdcc8a41caeb8bdad67bff3b07caf798384b2",
+      "pre_mtime": 1789065985.463038,
+      "exists": true,
+      "size": 14097,
+      "mtime": 1789065985.463038,
+      "sha256": "a5171a96cdde4b67d9f468fcc76fdcc8a41caeb8bdad67bff3b07caf798384b2"
+    },
+    {
+      "path": "E1-B/code_changes/e1b_scorer.py",
+      "pre_present": true,
+      "pre_sha256": "5f09aa7867cd6cf6f217f5584dab4925b75bbd5de3d9b29aeccc023149308cab",
+      "pre_mtime": 1789096810.8672566,
+      "exists": true,
+      "size": 5447,
+      "mtime": 1789096810.8672566,
+      "sha256": "5f09aa7867cd6cf6f217f5584dab4925b75bbd5de3d9b29aeccc023149308cab"
+    },
+    {
+      "path": "E1-B/code_changes/e1b_reward_manager.py",
+      "pre_present": true,
+      "pre_sha256": "421df70264ffbd16fe8335b830efdf40e897a16313dd71b7938ea5fc7fbe8e95",
+      "pre_mtime": 1789096810.8672566,
+      "exists": true,
+      "size": 14097,
+      "mtime": 1789096810.8672566,
+      "sha256": "421df70264ffbd16fe8335b830efdf40e897a16313dd71b7938ea5fc7fbe8e95"
+    },
+    {
+      "path": "E1-C/FINAL_REPORT.md",
+      "pre_present": true,
+      "pre_sha256": "e5c427ed27a77e4a050de4851b9582abec397a8ae96f79a543a16f2812364f8e",
+      "pre_mtime": 1789217681.0396135,
+      "exists": true,
+      "size": 32476,
+      "mtime": 1789217681.0396135,
+      "sha256": "e5c427ed27a77e4a050de4851b9582abec397a8ae96f79a543a16f2812364f8e"
+    },
+    {
+      "path": "E1-C/code/e1c_common.py",
+      "pre_present": true,
+      "pre_sha256": "0764c9e1d96d15d93679e65f8128cd40342ffa293c0f446c2ec84e21fbebf504",
+      "pre_mtime": 1789216175.1857462,
+      "exists": true,
+      "size": 16356,
+      "mtime": 1789216175.1857462,
+      "sha256": "0764c9e1d96d15d93679e65f8128cd40342ffa293c0f446c2ec84e21fbebf504"
+    }
+  ],
+  "extra_checks": {
+    "verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py": {
+      "path": "verl/verl/workers/rollout/sglang_rollout/sglang_rollout.py",
+      "exists": true,
+      "sha256": "9dbe6d70541854c7c77daed2f1dc6e99c334849cc4a7e56e4bae755190ab5da3",
+      "size": 68648,
+      "e1_0_sha256": "9dbe6d70541854c7c77daed2f1dc6e99c334849cc4a7e56e4bae755190ab5da3",
+      "matches_e1_0": true
+    },
+    "verl/verl/workers/rollout/async_server.py": {
+      "path": "verl/verl/workers/rollout/async_server.py",
+      "exists": true,
+      "sha256": "ed494db51937b74e66cc07109b001ea64ca1e4ccd4cde01796ca8368136b5066",
+      "size": 9162
+    },
+    "verl/verl/workers/rollout/schemas.py": {
+      "path": "verl/verl/workers/rollout/schemas.py",
+      "exists": true,
+      "sha256": "de231824fa1000b1b8516777d40f6a4e843465f4108ff7d95a63872248e9d645",
+      "size": 14864,
+      "e1_0_sha256": "de231824fa1000b1b8516777d40f6a4e843465f4108ff7d95a63872248e9d645",
+      "matches_e1_0": true
+    }
+  },
+  "e1_0_reference_manifest": "/data01/wyy/Graph-Agent-Planning/E1-0/runs/20260910_step60to70_e10/code/original_files_manifest.txt",
+  "original_files_unchanged": true,
+  "note": "The pre-run list contained one typo (`verl/verl/workers/rollout/sglang_rollout.py`, which does not exist); the correct nested path is checked here against E1-0's independent 2026-09-10 hash."
+}

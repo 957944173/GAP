@@ -1,0 +1,1204 @@
+{
+  "part_a": {
+    "0": {
+      "steps": 50,
+      "steps_exact": 50,
+      "exact_match": true,
+      "per_step": {
+        "71": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "72": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 13,
+          "batches_want": 13
+        },
+        "73": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "74": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "75": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "76": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 13,
+          "batches_want": 13
+        },
+        "77": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "78": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "79": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "80": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "81": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "82": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "83": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 14,
+          "batches_want": 14
+        },
+        "84": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "85": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "86": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "87": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "88": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 14,
+          "batches_want": 14
+        },
+        "89": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "90": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "91": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "92": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "93": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "94": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "95": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "96": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "97": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "98": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "99": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 14,
+          "batches_want": 14
+        },
+        "100": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "101": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "102": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "103": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "104": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "105": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "106": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "107": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "108": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "109": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "110": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "111": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "112": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "113": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "114": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "115": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 13,
+          "batches_want": 13
+        },
+        "116": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 14,
+          "batches_want": 14
+        },
+        "117": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "118": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "119": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "120": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 7,
+          "batches_want": 7
+        }
+      }
+    },
+    "2": {
+      "steps": 50,
+      "steps_exact": 50,
+      "exact_match": true,
+      "per_step": {
+        "71": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "72": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 13,
+          "batches_want": 13
+        },
+        "73": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "74": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "75": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "76": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 13,
+          "batches_want": 13
+        },
+        "77": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "78": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "79": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "80": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "81": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "82": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "83": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 14,
+          "batches_want": 14
+        },
+        "84": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "85": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "86": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "87": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "88": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 14,
+          "batches_want": 14
+        },
+        "89": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "90": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "91": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "92": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "93": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "94": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "95": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "96": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "97": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "98": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "99": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 14,
+          "batches_want": 14
+        },
+        "100": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "101": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "102": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "103": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "104": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "105": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "106": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "107": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "108": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "109": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "110": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 11,
+          "batches_want": 11
+        },
+        "111": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "112": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "113": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 10,
+          "batches_want": 10
+        },
+        "114": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "115": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 13,
+          "batches_want": 13
+        },
+        "116": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 14,
+          "batches_want": 14
+        },
+        "117": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 9,
+          "batches_want": 9
+        },
+        "118": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 12,
+          "batches_want": 12
+        },
+        "119": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 8,
+          "batches_want": 8
+        },
+        "120": {
+          "matches": true,
+          "n_got": 32,
+          "n_want": 32,
+          "missing": [],
+          "extra": [],
+          "batches_got": 7,
+          "batches_want": 7
+        }
+      }
+    }
+  },
+  "part_b": {
+    "steps": [
+      71,
+      72,
+      73
+    ],
+    "per_step": {
+      "71": {
+        "n_groups": 32,
+        "calls_used": 9,
+        "n_prompt": 32,
+        "same_size": true,
+        "same_set": true,
+        "missing": [],
+        "extra": []
+      },
+      "72": {
+        "n_groups": 32,
+        "calls_used": 13,
+        "n_prompt": 32,
+        "same_size": true,
+        "same_set": true,
+        "missing": [],
+        "extra": []
+      },
+      "73": {
+        "n_groups": 32,
+        "calls_used": 12,
+        "n_prompt": 32,
+        "same_size": true,
+        "same_set": true,
+        "missing": [],
+        "extra": []
+      }
+    },
+    "all_same_size": true,
+    "all_same_set": true
+  },
+  "part_c": {
+    "optimizer_batch_size_all_32": true,
+    "quota_actual_le_2": true,
+    "inserted_groups_k8": true,
+    "inserted_groups_cost_variation_positive": true,
+    "stopping_invariant_across_q_batch_sizes": true,
+    "stopping_batch_independent_of_q": true,
+    "mixed_only_stopping": true,
+    "mixed_group_reward_equals_em": true,
+    "efficiency_group_reward_in_1_1.05": true,
+    "wrong_rollout_reward_zero": true,
+    "group_reward_std_finite": true,
+    "no_nan_inf_rewards": true,
+    "efficiency_ranking_correct": true
+  },
+  "pass": {
+    "part_a_planner_matches_e1e0": true,
+    "part_b_runtime_matches_e1e0": true,
+    "part_d_empty_keep_neutral": true,
+    "part_c_invariants": true
+  },
+  "part_d": {
+    "d1_forced_insertion": {
+      "71": {
+        "same_membership_as_without_injection": true,
+        "batch_groups": 32,
+        "calls_used_with_injection": 10,
+        "calls_used_without": 9,
+        "extra": [],
+        "missing": []
+      },
+      "72": {
+        "same_membership_as_without_injection": true,
+        "batch_groups": 32,
+        "calls_used_with_injection": 14,
+        "calls_used_without": 13,
+        "extra": [],
+        "missing": []
+      },
+      "73": {
+        "same_membership_as_without_injection": true,
+        "batch_groups": 32,
+        "calls_used_with_injection": 13,
+        "calls_used_without": 12,
+        "extra": [],
+        "missing": []
+      },
+      "74": {
+        "same_membership_as_without_injection": true,
+        "batch_groups": 32,
+        "calls_used_with_injection": 11,
+        "calls_used_without": 10,
+        "extra": [],
+        "missing": []
+      },
+      "75": {
+        "same_membership_as_without_injection": true,
+        "batch_groups": 32,
+        "calls_used_with_injection": 11,
+        "calls_used_without": 10,
+        "extra": [],
+        "missing": []
+      },
+      "76": {
+        "same_membership_as_without_injection": true,
+        "batch_groups": 32,
+        "calls_used_with_injection": 14,
+        "calls_used_without": 13,
+        "extra": [],
+        "missing": []
+      }
+    },
+    "d2_real_empty_keep_steps": {
+      "74": {
+        "empty_keep_batch_indices": [
+          1
+        ],
+        "batch_groups": 32,
+        "same_set_as_e1e0": true,
+        "extra": [],
+        "missing": []
+      },
+      "75": {
+        "empty_keep_batch_indices": [
+          3
+        ],
+        "batch_groups": 32,
+        "same_set_as_e1e0": true,
+        "extra": [],
+        "missing": []
+      },
+      "76": {
+        "empty_keep_batch_indices": [
+          6,
+          11
+        ],
+        "batch_groups": 32,
+        "same_set_as_e1e0": true,
+        "extra": [],
+        "missing": []
+      }
+    },
+    "d3_kept_nothing_records": 18,
+    "real_stream_empty_keep_steps": {
+      "74": [
+        1
+      ],
+      "75": [
+        3
+      ],
+      "76": [
+        6,
+        11
+      ],
+      "82": [
+        5
+      ],
+      "86": [
+        5
+      ],
+      "87": [
+        10
+      ],
+      "88": [
+        8
+      ],
+      "89": [
+        8
+      ],
+      "93": [
+        5
+      ],
+      "94": [
+        9
+      ],
+      "95": [
+        2
+      ],
+      "96": [
+        7
+      ],
+      "101": [
+        5
+      ],
+      "106": [
+        1
+      ],
+      "110": [
+        7
+      ],
+      "113": [
+        3
+      ],
+      "115": [
+        6,
+        8
+      ],
+      "116": [
+        0,
+        6
+      ]
+    },
+    "checks": {
+      "D1_inserted_no_keep_batch_is_neutral": true,
+      "D1_optimizer_batch_still_32_groups": true,
+      "D2_real_stream_contains_empty_keep_batches": true,
+      "D2_empty_keep_steps_match_e1e0": true,
+      "D2_empty_keep_steps_batch_32": true,
+      "D3_kept_nothing_calls_recorded": true
+    }
+  },
+  "part_d_checks": {
+    "D1_inserted_no_keep_batch_is_neutral": true,
+    "D1_optimizer_batch_still_32_groups": true,
+    "D2_real_stream_contains_empty_keep_batches": true,
+    "D2_empty_keep_steps_match_e1e0": true,
+    "D2_empty_keep_steps_batch_32": true,
+    "D3_kept_nothing_calls_recorded": true
+  },
+  "eff_groups_ranked": 434,
+  "section11_mapping": [
+    {
+      "requirement": "1. every optimizer batch = 32 groups",
+      "check": "optimizer_batch_size_all_32",
+      "pass": true
+    },
+    {
+      "requirement": "2. q <= 2",
+      "check": "quota_actual_le_2",
+      "pass": true
+    },
+    {
+      "requirement": "3. mixed-only stopping",
+      "check": "mixed_only_stopping",
+      "pass": true
+    },
+    {
+      "requirement": "4. quota does not change generation stopping",
+      "check": "stopping_invariant_across_q_batch_sizes",
+      "pass": true
+    },
+    {
+      "requirement": "4b. stopping generation batch identical for q=0..4",
+      "check": "stopping_batch_independent_of_q",
+      "pass": true
+    },
+    {
+      "requirement": "5. inserted groups have k = 8",
+      "check": "inserted_groups_k8",
+      "pass": true
+    },
+    {
+      "requirement": "6. inserted groups cost variation > 0",
+      "check": "inserted_groups_cost_variation_positive",
+      "pass": true
+    },
+    {
+      "requirement": "7. mixed group reward == EM",
+      "check": "mixed_group_reward_equals_em",
+      "pass": true
+    },
+    {
+      "requirement": "8. inserted group reward in [1, 1.05]",
+      "check": "efficiency_group_reward_in_1_1.05",
+      "pass": true
+    },
+    {
+      "requirement": "9. wrong rollout reward == 0",
+      "check": "wrong_rollout_reward_zero",
+      "pass": true
+    },
+    {
+      "requirement": "10. every group reward std finite",
+      "check": "group_reward_std_finite",
+      "pass": true
+    },
+    {
+      "requirement": "11. efficiency rollout ranking correct",
+      "check": "efficiency_ranking_correct",
+      "pass": true
+    },
+    {
+      "requirement": "12. no NaN / Inf",
+      "check": "no_nan_inf_rewards",
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

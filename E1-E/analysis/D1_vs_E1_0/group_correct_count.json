@@ -1,0 +1,15 @@
+{
+  "e1e_group_correct_count_hist": {},
+  "e1e_group_correct_count_mean": null,
+  "baseline_group_correct_count_hist": {
+    "0": 9876,
+    "1": 68,
+    "2": 45,
+    "3": 40,
+    "4": 40,
+    "5": 45,
+    "6": 33,
+    "7": 69,
+    "8": 8184
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "per_benchmark": {
+    "nq": {
+      "parallel_factor_mean": 1.7886426592797782,
+      "parallel_factor_p90": 3.0,
+      "parallel_factor_max": 100.0,
+      "parallel_sample_rate": 0.628808864265928,
+      "multi_query_round_rate": 0.628808864265928,
+      "parallel_factor_hist": {
+        "0": 3,
+        "1": 1373,
+        "2": 1803,
+        "3": 383,
+        "4": 37,
+        "5": 6,
+        "6": 1,
+        "7": 1,
+        "9": 2,
+        "100": 1
+      },
+      "n": 3610
+    },
+    "triviaqa": {
+      "parallel_factor_mean": 1.6845422265440828,
+      "parallel_factor_p90": 2.0,
+      "parallel_factor_max": 16.0,
+      "parallel_sample_rate": 0.5721357850070722,
+      "multi_query_round_rate": 0.5721357850070722,
+      "parallel_factor_hist": {
+        "0": 6,
+        "1": 4990,
+        "2": 5341,
+        "3": 777,
+        "4": 124,
+        "5": 37,
+        "6": 17,
+        "7": 6,
+        "8": 5,
+        "9": 2,
+        "10": 1,
+        "11": 2,
+        "12": 1,
+        "13": 2,
+        "16": 1
+      },
+      "n": 11312
+    },
+    "popqa": {
+      "parallel_factor_mean": 1.4625505582600697,
+      "parallel_factor_p90": 2.0,
+      "parallel_factor_max": 10.0,
+      "parallel_sample_rate": 0.39904090677904525,
+      "multi_query_round_rate": 0.39904090677904525,
+      "parallel_factor_hist": {
+        "0": 30,
+        "1": 8578,
+        "2": 4229,
+        "3": 811,
+        "4": 104,
+        "5": 9,
+        "6": 1,
+        "10": 1
+      },
+      "n": 13763
+    },
+    "hotpotqa": {
+      "parallel_factor_mean": 1.536151629749685,
+      "parallel_factor_p90": 2.0,
+      "parallel_factor_max": 6.5,
+      "parallel_sample_rate": 0.5241761210156672,
+      "multi_query_round_rate": 0.5241761210156672,
+      "parallel_factor_hist": {
+        "0": 3,
+        "1": 3693,
+        "2": 3558,
+        "3": 131,
+        "4": 16,
+        "5": 1,
+        "6": 2
+      },
+      "n": 7404
+    },
+    "2wikimultihopqa": {
+      "parallel_factor_mean": 1.5137464217557255,
+      "parallel_factor_p90": 2.0,
+      "parallel_factor_max": 6.0,
+      "parallel_sample_rate": 0.5426208651399491,
+      "multi_query_round_rate": 0.5426208651399491,
+      "parallel_factor_hist": {
+        "0": 7,
+        "1": 6981,
+        "2": 5431,
+        "3": 46,
+        "4": 105,
+        "5": 1,
+        "6": 5
+      },
+      "n": 12576
+    },
+    "musique": {
+      "parallel_factor_mean": 1.3457175445873082,
+      "parallel_factor_p90": 2.0,
+      "parallel_factor_max": 4.0,
+      "parallel_sample_rate": 0.3844877644131066,
+      "multi_query_round_rate": 0.3844877644131066,
+      "parallel_factor_hist": {
+        "0": 6,
+        "1": 1760,
+        "2": 593,
+        "3": 50,
+        "4": 2
+      },
+      "n": 2411
+    },
+    "bamboogle": {
+      "parallel_factor_mean": 1.22,
+      "parallel_factor_p90": 2.0,
+      "parallel_factor_max": 2.0,
+      "parallel_sample_rate": 0.224,
+      "multi_query_round_rate": 0.224,
+      "parallel_factor_hist": {
+        "1": 98,
+        "2": 27
+      },
+      "n": 125
+    }
+  },
+  "overall": {
+    "n_samples": 51201,
+    "macro_em": 0.3947142857142857,
+    "micro_em": 0.4325352239214078,
+    "retrieval_rounds_mean": 1.2949747075252436,
+    "search_queries_mean": 1.8748266635417277,
+    "parallel_factor_mean": 1.4477708735521235,
+    "parallel_sample_rate": 0.505732309915822,
+    "zero_search_rate": 0.00039061737075447747,
+    "no_answer_tag_rate": 0.0011718521122634324
+  }
+}

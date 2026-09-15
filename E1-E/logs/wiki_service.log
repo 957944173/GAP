@@ -1,0 +1,15 @@
+===== E1-E wiki record 2026-09-14T09:27:22+08:00 =====
+WIKI_REUSED=true WIKI_STARTED=false URL=http://127.0.0.1:8008/retrieve
+listener: LISTEN 0 2048 127.0.0.1:8008 0.0.0.0:* users:(("pt_main_thread",pid=2230350,fd=120)) 
+process:  2230350 python3 /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/wiki_rag_server.py --index_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/e5_Flat.index --corpus_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/wiki-18.jsonl --topk 3 --retriever_name e5 --retriever_model /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../models/e5-base-v2 --faiss_gpu --host 127.0.0.1 --port 8008
+functional retrieval probe OK
+===== E1-E wiki record 2026-09-14T09:31:57+08:00 =====
+WIKI_REUSED=true WIKI_STARTED=false URL=http://127.0.0.1:8008/retrieve
+listener: LISTEN 0 2048 127.0.0.1:8008 0.0.0.0:* users:(("pt_main_thread",pid=2230350,fd=120)) 
+process:  2230350 python3 /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/wiki_rag_server.py --index_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/e5_Flat.index --corpus_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/wiki-18.jsonl --topk 3 --retriever_name e5 --retriever_model /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../models/e5-base-v2 --faiss_gpu --host 127.0.0.1 --port 8008
+functional retrieval probe OK
+===== E1-E wiki record 2026-09-14T11:58:07+08:00 =====
+WIKI_REUSED=true WIKI_STARTED=false URL=http://127.0.0.1:8008/retrieve
+listener: LISTEN 0 2048 127.0.0.1:8008 0.0.0.0:* users:(("pt_main_thread",pid=2230350,fd=120)) 
+process:  2230350 python3 /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/wiki_rag_server.py --index_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/e5_Flat.index --corpus_path /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../data/mhqa_agent/wiki_rag/wiki-18.jsonl --topk 3 --retriever_name e5 --retriever_model /data01/wyy/Graph-Agent-Planning/Agent/tool_servers/wiki_server/../../models/e5-base-v2 --faiss_gpu --host 127.0.0.1 --port 8008
+functional retrieval probe OK

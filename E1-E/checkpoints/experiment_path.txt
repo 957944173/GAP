@@ -1,0 +1,8 @@
+# E1-E model checkpoints — location record (models are NOT copied into E1-E/)
+experiment_name = DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu
+experiment_dir  = /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu
+checkpoints     = global_step_70 (D1), global_step_{80,90,100,110,120} (D2)
+resume_source_D1 = /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-4gpu/global_step_60   # original GAP
+resume_source_D2 = /data01/wyy/Graph-Agent-Planning/experiments/DAPO-GAP3B-MHQA-Agent-E1E-q2-step60to120-4gpu/global_step_70  # E1-E's own
+notes            = FSDP shards stay in the experiment dir; only merged_hf/ subdirs (created by the
+                   evaluator) are added there; never symlinked or copied into E1-E/checkpoints/
